@@ -4,7 +4,7 @@
 
 ### IFCD0078 - Data Engineering
 
-**Alumno:** Rafa Velasco
+**Alumno:** Rafael Velasco
 
 **Servicio Azure seleccionado:** Azure Data Explorer
 
