@@ -2,11 +2,13 @@
 
 ## Actividad 1 - Principales servicios de Azure orientado a Datos
 
+### IFCD0078 - Data Engineering
+
 **Alumno:** Rafa Velasco
 
-**Repositorio:** IFCD0078_Bloque_02-Data_Engineering
-
 **Servicio Azure seleccionado:** Azure Data Explorer
+
+**Repositorio:** IFCD0078_Bloque_02-Data_Engineering
 
 **Fecha:** Junio 2026
 
