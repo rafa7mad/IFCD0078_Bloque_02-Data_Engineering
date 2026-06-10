@@ -17,12 +17,7 @@
 # Índice
 
 1. Introducción
-# 2. ¿Qué es Azure Data Explorer?
-
-![Flujo de trabajo de Azure Data Explorer](images/ADX_workflow.png)
-
-*Figura 1. Flujo de trabajo de Azure Data Explorer. Fuente: Microsoft Learn.*
-
+2. ¿Qué es Azure Data Explorer?
 3. Características principales
 4. Arquitectura de Azure Data Explorer
 5. Creación y configuración del servicio
@@ -34,3 +29,18 @@
 11. Referencias
 
 ---
+
+# 1. Introducción
+
+Texto...
+
+---
+
+# 2. ¿Qué es Azure Data Explorer?
+
+![Flujo de trabajo de Azure Data Explorer](images/ADX_workflow.png)
+
+*Figura 1. Flujo de trabajo de Azure Data Explorer. Fuente: Microsoft Learn.*
+
+Texto...
+
