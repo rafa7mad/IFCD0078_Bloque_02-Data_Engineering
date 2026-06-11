@@ -103,8 +103,214 @@ Una vez almacenados en Azure Data Explorer, los datos pueden ser consultados med
 * **Visualización:** Power BI, Grafana y aplicaciones web.
 
 
+## 5. Creación y configuración del servicio
+
+![Creación de un clúster y una base de datos en Azure Data Explorer](images/ADX_cluster_creation.png)
+
+*Figura 3. Clúster y bases de datos creadas en Azure Data Explorer. Fuente: Microsoft Learn.*
+
+Para comenzar a trabajar con Azure Data Explorer es necesario crear un clúster y, posteriormente, una o varias bases de datos donde se almacenarán los datos que se desean analizar. Microsoft proporciona diferentes métodos para realizar esta configuración, incluyendo el Portal de Azure, Azure CLI, PowerShell y plantillas ARM.
+
+Los pasos básicos para desplegar el servicio son los siguientes:
+
+| Paso | Descripción                                                                   |
+| ---- | ----------------------------------------------------------------------------- |
+| 1    | Crear un clúster de Azure Data Explorer.                                      |
+| 2    | Seleccionar la suscripción, grupo de recursos y región de Azure.              |
+| 3    | Configurar el nombre y tamaño inicial del clúster.                            |
+| 4    | Crear una base de datos dentro del clúster.                                   |
+| 5    | Ingerir datos desde archivos, Event Hubs, IoT Hub u otras fuentes.            |
+| 6    | Ejecutar consultas KQL para analizar la información almacenada.               |
+| 7    | Visualizar los resultados mediante Power BI u otras herramientas compatibles. |
+
+Una vez completada la configuración inicial, Azure Data Explorer permite escalar los recursos de forma dinámica para adaptarse al volumen de datos y a las necesidades de procesamiento de cada organización.
 
 
+## 6. Lenguaje Kusto Query Language (KQL)
+
+![Interfaz de Kusto Query Language](images/ADX_kql_query.png)
+
+*Figura 4. Interfaz de Kusto Explorer para la ejecución de consultas KQL. Fuente: Microsoft Learn.*
+
+Kusto Query Language (KQL) es el lenguaje de consultas utilizado por Azure Data Explorer para explorar, analizar y visualizar grandes volúmenes de datos de forma eficiente. Está diseñado específicamente para trabajar con datos de telemetría, registros (logs) y eventos, permitiendo obtener resultados rápidamente incluso sobre conjuntos de datos muy grandes.
+
+KQL utiliza una sintaxis sencilla basada en operadores encadenados mediante el carácter `|` (pipe), donde la salida de una operación se convierte en la entrada de la siguiente. Este enfoque facilita la lectura y el análisis de las consultas.
+
+### Ejemplo 1: Mostrar los primeros registros de una tabla
+
+```kusto
+StormEvents
+| take 10
+```
+
+Esta consulta devuelve los diez primeros registros de la tabla `StormEvents`.
+
+### Ejemplo 2: Contar registros por estado
+
+```kusto
+StormEvents
+| summarize TotalEventos=count() by State
+| sort by TotalEventos desc
+```
+
+Esta consulta agrupa los eventos por estado, calcula el número total de eventos registrados y los ordena de mayor a menor.
+
+### Ventajas de KQL
+
+* Sintaxis sencilla y fácil de aprender.
+* Optimizado para grandes volúmenes de datos.
+* Consultas rápidas sobre información histórica y en tiempo real.
+* Integración nativa con Azure Data Explorer, Microsoft Sentinel y Azure Monitor.
+* Posibilidad de generar visualizaciones directamente desde las consultas.
+
+Gracias a estas características, KQL se ha convertido en una herramienta fundamental para la monitorización, observabilidad y análisis de datos dentro del ecosistema Microsoft Azure.
+
+
+## 7. Caso práctico 1: Monitorización IoT
+
+![Arquitectura IoT con Azure Data Explorer](images/ADX_iot_architecture.png)
+
+*Figura 5. Arquitectura de análisis IoT mediante Azure IoT Hub y Azure Data Explorer. Fuente: Microsoft Learn.*
+
+Uno de los escenarios más habituales de Azure Data Explorer es la monitorización de dispositivos IoT (Internet of Things). En este tipo de soluciones, miles de sensores y dispositivos generan continuamente información que debe ser procesada y analizada en tiempo real.
+
+En este caso práctico, los dispositivos IoT envían datos de telemetría a través de Azure IoT Hub. Posteriormente, Azure Data Explorer recibe e ingiere estos eventos para almacenarlos y analizarlos mediante consultas KQL. Finalmente, los resultados pueden visualizarse mediante herramientas como Power BI o aplicaciones personalizadas.
+
+### Funcionamiento de la solución
+
+1. Los dispositivos IoT generan datos de forma continua.
+2. Azure IoT Hub recibe los mensajes enviados por los dispositivos.
+3. Azure Data Explorer ingiere y almacena los eventos recibidos.
+4. Los analistas ejecutan consultas KQL para detectar anomalías, tendencias o incidencias.
+5. Los resultados se muestran en paneles de control y herramientas de visualización.
+
+### Ejemplo de aplicación
+
+Una empresa de transporte dispone de cientos de vehículos equipados con sensores que registran:
+
+* Temperatura del motor.
+* Consumo de combustible.
+* Velocidad.
+* Posición GPS.
+
+Azure Data Explorer permite analizar esta información en tiempo real para detectar averías, optimizar rutas y mejorar el mantenimiento preventivo de la flota.
+
+### Beneficios
+
+* Monitorización en tiempo real.
+* Detección temprana de anomalías.
+* Escalabilidad para millones de eventos diarios.
+* Integración con servicios Azure orientados a IoT.
+* Mejora de la toma de decisiones basada en datos.
+
+
+## 8. Caso práctico 2: Análisis de logs y telemetría
+
+Además de los escenarios IoT, Azure Data Explorer es ampliamente utilizado para el análisis de registros (logs) y datos de telemetría generados por aplicaciones, servidores e infraestructuras tecnológicas.
+
+Las organizaciones generan millones de eventos diarios relacionados con accesos de usuarios, errores de aplicaciones, rendimiento de sistemas y actividad de red. Azure Data Explorer permite almacenar y consultar esta información de forma eficiente para identificar incidencias y mejorar el funcionamiento de los servicios.
+
+### Funcionamiento de la solución
+
+1. Las aplicaciones y servicios generan registros de actividad.
+2. Los datos son enviados a Azure Data Explorer mediante diferentes mecanismos de ingesta.
+3. Los registros se almacenan y organizan en tablas.
+4. Los equipos técnicos utilizan consultas KQL para analizar la información.
+5. Los resultados se visualizan mediante paneles de control y herramientas de monitorización.
+
+### Ejemplo de aplicación
+
+Una empresa de comercio electrónico dispone de una plataforma web que recibe miles de visitas diarias. Cada acceso genera registros que contienen información sobre:
+
+* Usuario.
+* Fecha y hora.
+* Dirección IP.
+* Tiempo de respuesta.
+* Errores producidos.
+* Recursos consumidos.
+
+Mediante Azure Data Explorer, los administradores pueden identificar rápidamente problemas de rendimiento, detectar errores recurrentes y analizar el comportamiento de los usuarios para mejorar la calidad del servicio.
+
+### Beneficios
+
+* Análisis rápido de grandes volúmenes de registros.
+* Identificación de incidencias en tiempo real.
+* Mejora del rendimiento de aplicaciones y servicios.
+* Integración con Azure Monitor y Microsoft Sentinel.
+* Mayor capacidad de supervisión y observabilidad.
+
+Este tipo de soluciones es especialmente útil en centros de datos, plataformas de comercio electrónico, servicios en la nube y entornos empresariales donde la disponibilidad y el rendimiento de las aplicaciones son factores críticos.
+
+
+## 9. Comparación con otros servicios Azure
+
+Microsoft Azure dispone de numerosos servicios orientados al procesamiento y análisis de datos. Cada uno de ellos está diseñado para resolver necesidades específicas, por lo que es importante seleccionar la herramienta adecuada según el escenario.
+
+La siguiente tabla resume las principales diferencias entre Azure Data Explorer y otros servicios relacionados:
+
+| Servicio               | Función principal                                            | Casos de uso habituales                                           |
+| ---------------------- | ------------------------------------------------------------ | ----------------------------------------------------------------- |
+| Azure Data Explorer    | Análisis rápido de grandes volúmenes de datos en tiempo real | Logs, telemetría, monitorización, IoT y observabilidad            |
+| Azure Data Factory     | Integración y movimiento de datos                            | Procesos ETL y ELT, migración y transformación de datos           |
+| Azure Databricks       | Procesamiento Big Data y Machine Learning                    | Ciencia de datos, ingeniería de datos e inteligencia artificial   |
+| Azure Stream Analytics | Procesamiento continuo de eventos en streaming               | Detección de eventos en tiempo real y análisis de flujos de datos |
+| Microsoft Purview      | Gobierno y catalogación de datos                             | Gestión, clasificación y cumplimiento normativo de los datos      |
+
+### ¿Cuándo utilizar Azure Data Explorer?
+
+Azure Data Explorer es la opción más adecuada cuando se necesita analizar grandes cantidades de eventos, registros o datos de telemetría con tiempos de respuesta muy reducidos. Su diseño está optimizado para consultas analíticas rápidas y para la monitorización de sistemas en tiempo real.
+
+### Diferencias con Azure Databricks
+
+Aunque ambos servicios pueden trabajar con grandes volúmenes de datos, Azure Databricks está orientado al procesamiento Big Data, la ingeniería de datos y el desarrollo de modelos de Machine Learning utilizando Apache Spark. Por su parte, Azure Data Explorer está especializado en la exploración y análisis interactivo de datos de telemetría y registros.
+
+### Diferencias con Azure Data Factory
+
+Azure Data Factory no es una plataforma de análisis, sino un servicio de integración de datos. Su función principal consiste en mover y transformar información entre distintos sistemas. En muchos proyectos, Data Factory se utiliza para cargar datos que posteriormente serán analizados en Azure Data Explorer.
+
+### Diferencias con Azure Stream Analytics
+
+Azure Stream Analytics está enfocado al procesamiento de flujos de eventos en tiempo real. Azure Data Explorer puede complementar este servicio almacenando y permitiendo consultar posteriormente los datos procesados para realizar análisis históricos y exploratorios.
+
+En muchos proyectos empresariales estos servicios no compiten entre sí, sino que trabajan de forma conjunta dentro de una misma arquitectura de datos.
+
+
+## 10. Conclusiones
+
+Azure Data Explorer es un servicio de análisis de datos de Microsoft Azure diseñado para procesar grandes volúmenes de información de forma rápida y eficiente. Su capacidad para ingerir, almacenar y consultar datos en tiempo casi real lo convierte en una solución especialmente adecuada para escenarios de monitorización, telemetría, observabilidad y análisis de dispositivos IoT.
+
+A lo largo de este trabajo se han estudiado las principales características de Azure Data Explorer, su arquitectura, el proceso de despliegue y configuración, así como el lenguaje de consultas Kusto Query Language (KQL). También se han analizado dos casos prácticos representativos relacionados con la monitorización IoT y el análisis de registros y telemetría.
+
+La comparación con otros servicios de Azure ha permitido comprender mejor el papel que desempeña Azure Data Explorer dentro del ecosistema de datos de Microsoft. Mientras que servicios como Azure Data Factory se orientan a la integración de datos y Azure Databricks al procesamiento Big Data y Machine Learning, Azure Data Explorer destaca por su capacidad para realizar consultas analíticas rápidas sobre grandes cantidades de eventos y registros.
+
+En conclusión, Azure Data Explorer es una herramienta potente y escalable que facilita la obtención de información útil a partir de datos operacionales, ayudando a las organizaciones a mejorar la supervisión de sus sistemas y la toma de decisiones basada en datos.
+
+
+## 11. Referencias
+
+1. Microsoft Learn. Azure Data Explorer Documentation.
+   https://learn.microsoft.com/es-es/azure/data-explorer/
+
+2. Microsoft Learn. ¿Qué es Azure Data Explorer?
+   https://learn.microsoft.com/es-es/azure/data-explorer/data-explorer-overview
+
+3. Microsoft Learn. Crear un clúster y una base de datos de Azure Data Explorer.
+   https://learn.microsoft.com/es-es/azure/data-explorer/create-cluster-and-database
+
+4. Microsoft Learn. Información general sobre la ingesta de datos en Azure Data Explorer.
+   https://learn.microsoft.com/es-es/azure/data-explorer/ingest-data-overview
+
+5. Microsoft Learn. Kusto Query Language (KQL).
+   https://learn.microsoft.com/es-es/kusto/
+
+6. Microsoft Learn. Kusto Explorer.
+   https://learn.microsoft.com/es-es/kusto/tools/kusto-explorer
+
+7. Microsoft Learn. IoT Analytics con Azure Data Explorer y Azure IoT Hub.
+   https://learn.microsoft.com/es-es/azure/architecture/solution-ideas/articles/iot-azure-data-explorer
+
+8. Microsoft Azure Architecture Center. Arquitecturas de análisis de datos.
+   https://learn.microsoft.com/es-es/azure/architecture/
 
 
 
