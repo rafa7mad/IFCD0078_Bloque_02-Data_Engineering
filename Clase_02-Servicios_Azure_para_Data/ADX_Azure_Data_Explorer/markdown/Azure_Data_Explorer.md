@@ -1,3 +1,7 @@
+
+
+
+
 # Azure Data Explorer (ADX)
 
 ## Actividad 1 - Principales servicios de Azure orientado a Datos
@@ -13,6 +17,8 @@
 **Fecha:** Junio de 2026
 
 ---
+
+<div style="page-break-after: always;"></div>
 
 # Índice
 
@@ -32,6 +38,8 @@
 
 ---
 
+<div style="page-break-after: always;"></div>
+
 ## 1. Introducción
 
 Las organizaciones generan diariamente grandes cantidades de datos procedentes de aplicaciones, dispositivos IoT, sistemas empresariales, redes y servicios en la nube. Para poder obtener información útil de estos datos es necesario disponer de plataformas capaces de almacenarlos, procesarlos y analizarlos de forma eficiente.
@@ -43,6 +51,8 @@ En este trabajo se estudia Azure Data Explorer (ADX), un servicio de análisis d
 
 
 ---
+
+<div style="page-break-after: always;"></div>
 
 ## 2. ¿Qué es Azure Data Explorer?
 
@@ -78,6 +88,8 @@ observabilidad, ciberseguridad y análisis de datos IoT.
 
 ---
 
+<div style="page-break-after: always;"></div>
+
 ## 3. Características principales
 
 Azure Data Explorer incorpora diversas características que lo convierten en una plataforma eficiente para el análisis de grandes volúmenes de datos. Su diseño está orientado a escenarios donde es necesario recopilar, almacenar y consultar información con una latencia muy baja y una alta capacidad de escalado.
@@ -106,6 +118,8 @@ Estas características hacen que Azure Data Explorer sea una solución especialm
 
 ---
 
+<div style="page-break-after: always;"></div>
+
 ## 4. Arquitectura de Azure Data Explorer
 
 ![Arquitectura de Azure Data Explorer](images/ADX_data_ingestion.png)
@@ -129,6 +143,8 @@ Una vez almacenados en Azure Data Explorer, los datos pueden ser consultados med
 
 
 ---
+
+<div style="page-break-after: always;"></div>
 
 ## 5. Creación y configuración del servicio
 
@@ -155,6 +171,8 @@ Una vez completada la configuración inicial, Azure Data Explorer permite escala
 
 
 ---
+
+<div style="page-break-after: always;"></div>
 
 ## 6. Lenguaje Kusto Query Language (KQL)
 
@@ -199,6 +217,8 @@ Gracias a estas características, KQL se ha convertido en una herramienta fundam
 
 ---
 
+<div style="page-break-after: always;"></div>
+
 ## 7. Caso práctico 1: Monitorización IoT
 
 ![Arquitectura IoT con Azure Data Explorer](images/ADX_iot_architecture.png)
@@ -240,6 +260,8 @@ Azure Data Explorer permite analizar esta información en tiempo real para detec
 
 ---
 
+<div style="page-break-after: always;"></div>
+
 ## 8. Caso práctico 2: Análisis de logs y telemetría
 
 Además de los escenarios IoT, Azure Data Explorer es ampliamente utilizado para el análisis de registros (logs) y datos de telemetría generados por aplicaciones, servidores e infraestructuras tecnológicas.
@@ -280,6 +302,8 @@ Este tipo de soluciones es especialmente útil en centros de datos, plataformas 
 
 
 ---
+
+<div style="page-break-after: always;"></div>
 
 ## 9. Comparación con otros servicios Azure
 
@@ -327,6 +351,8 @@ En muchos proyectos empresariales estos servicios no compiten entre sí, sino qu
 
 ---
 
+<div style="page-break-after: always;"></div>
+
 ## 10. Conclusiones
 
 Azure Data Explorer es un servicio de análisis de datos de Microsoft Azure diseñado para procesar grandes volúmenes de información de forma rápida y eficiente. Su capacidad para ingerir, almacenar y consultar datos en tiempo casi real lo convierte en una solución especialmente adecuada para escenarios de monitorización, telemetría, observabilidad y análisis de dispositivos IoT.
@@ -340,6 +366,8 @@ En conclusión, Azure Data Explorer es una herramienta potente y escalable que f
 
 
 ---
+
+<div style="page-break-after: always;"></div>
 
 ## 11. Referencias
 
