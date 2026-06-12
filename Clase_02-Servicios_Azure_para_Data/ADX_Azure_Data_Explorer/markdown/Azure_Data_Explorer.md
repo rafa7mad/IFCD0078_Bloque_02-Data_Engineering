@@ -16,7 +16,9 @@
 
 **Fecha:** Junio de 2026
 
----
+
+
+
 
 <div style="page-break-after: always;"></div>
 
@@ -36,7 +38,7 @@
 
 
 
----
+
 
 <div style="page-break-after: always;"></div>
 
@@ -50,8 +52,6 @@ En este trabajo se estudia Azure Data Explorer (ADX), un servicio de análisis d
 
 
 
----
-
 <div style="page-break-after: always;"></div>
 
 ## 2. ¿Qué es Azure Data Explorer?
@@ -63,18 +63,11 @@ Azure Data Explorer (ADX) es un servicio de análisis de datos totalmente admini
 
 *Figura 1. Flujo de trabajo de Azure Data Explorer. Fuente: Microsoft Learn.*
 
-La Figura 1 muestra el flujo de trabajo general de Azure Data Explorer. El 
-servicio permite crear bases de datos, ingerir datos desde múltiples orígenes 
-como Azure Event Hubs, Azure Blob Storage o Azure IoT Hub, procesarlos 
-mediante el motor analítico de ADX y consultarlos utilizando Kusto Query 
-Language (KQL). Los resultados pueden visualizarse posteriormente mediante 
-herramientas como Power BI o aplicaciones personalizadas.
+<div style="page-break-after: always;"></div>
 
+La Figura 1 muestra el flujo de trabajo general de Azure Data Explorer. El servicio permite crear bases de datos, ingerir datos desde múltiples orígenes como Azure Event Hubs, Azure Blob Storage o Azure IoT Hub, procesarlos mediante el motor analítico de ADX y consultarlos utilizando Kusto Query Language (KQL). Los resultados pueden visualizarse posteriormente mediante herramientas como Power BI o aplicaciones personalizadas.
 
-Gracias a su arquitectura escalable y a su capacidad para analizar millones de
-eventos por segundo, Azure Data Explorer es una solución ampliamente utilizada
-en escenarios de monitorización de infraestructuras, análisis de telemetría, 
-observabilidad, ciberseguridad y análisis de datos IoT.
+Gracias a su arquitectura escalable y a su capacidad para analizar millones de eventos por segundo, Azure Data Explorer es una solución ampliamente utilizada en escenarios de monitorización de infraestructuras, análisis de telemetría, observabilidad, ciberseguridad y análisis de datos IoT.
 
 ### Capacidades principales
 
@@ -85,8 +78,6 @@ observabilidad, ciberseguridad y análisis de datos IoT.
 - Soporte para escenarios de IoT, telemetría y análisis de registros.
 
 
-
----
 
 <div style="page-break-after: always;"></div>
 
@@ -115,9 +106,6 @@ Azure Data Explorer incorpora diversas características que lo convierten en una
 Estas características hacen que Azure Data Explorer sea una solución especialmente adecuada para escenarios de monitorización, observabilidad, análisis de telemetría, ciberseguridad y análisis de datos procedentes de dispositivos IoT.
 
 
-
----
-
 <div style="page-break-after: always;"></div>
 
 ## 4. Arquitectura de Azure Data Explorer
@@ -141,8 +129,6 @@ Una vez almacenados en Azure Data Explorer, los datos pueden ser consultados med
 * **Visualización:** Power BI, Grafana y aplicaciones web.
 
 
-
----
 
 <div style="page-break-after: always;"></div>
 
@@ -170,7 +156,6 @@ Una vez completada la configuración inicial, Azure Data Explorer permite escala
 
 
 
----
 
 <div style="page-break-after: always;"></div>
 
@@ -215,8 +200,6 @@ Gracias a estas características, KQL se ha convertido en una herramienta fundam
 
 
 
----
-
 <div style="page-break-after: always;"></div>
 
 ## 7. Caso práctico 1: Monitorización IoT
@@ -228,6 +211,8 @@ Gracias a estas características, KQL se ha convertido en una herramienta fundam
 Uno de los escenarios más habituales de Azure Data Explorer es la monitorización de dispositivos IoT (Internet of Things). En este tipo de soluciones, miles de sensores y dispositivos generan continuamente información que debe ser procesada y analizada en tiempo real.
 
 En este caso práctico, los dispositivos IoT envían datos de telemetría a través de Azure IoT Hub. Posteriormente, Azure Data Explorer recibe e ingiere estos eventos para almacenarlos y analizarlos mediante consultas KQL. Finalmente, los resultados pueden visualizarse mediante herramientas como Power BI o aplicaciones personalizadas.
+
+<div style="page-break-after: always;"></div>
 
 ### Funcionamiento de la solución
 
@@ -258,8 +243,6 @@ Azure Data Explorer permite analizar esta información en tiempo real para detec
 
 
 
----
-
 <div style="page-break-after: always;"></div>
 
 ## 8. Caso práctico 2: Análisis de logs y telemetría
@@ -289,6 +272,8 @@ Una empresa de comercio electrónico dispone de una plataforma web que recibe mi
 
 Mediante Azure Data Explorer, los administradores pueden identificar rápidamente problemas de rendimiento, detectar errores recurrentes y analizar el comportamiento de los usuarios para mejorar la calidad del servicio.
 
+<div style="page-break-after: always;"></div>
+
 ### Beneficios
 
 * Análisis rápido de grandes volúmenes de registros.
@@ -300,8 +285,6 @@ Mediante Azure Data Explorer, los administradores pueden identificar rápidament
 Este tipo de soluciones es especialmente útil en centros de datos, plataformas de comercio electrónico, servicios en la nube y entornos empresariales donde la disponibilidad y el rendimiento de las aplicaciones son factores críticos.
 
 
-
----
 
 <div style="page-break-after: always;"></div>
 
@@ -349,8 +332,6 @@ En muchos proyectos empresariales estos servicios no compiten entre sí, sino qu
 
 
 
----
-
 <div style="page-break-after: always;"></div>
 
 ## 10. Conclusiones
@@ -364,8 +345,6 @@ La comparación con otros servicios de Azure ha permitido comprender mejor el pa
 En conclusión, Azure Data Explorer es una herramienta potente y escalable que facilita la obtención de información útil a partir de datos operacionales, ayudando a las organizaciones a mejorar la supervisión de sus sistemas y la toma de decisiones basada en datos.
 
 
-
----
 
 <div style="page-break-after: always;"></div>
 
