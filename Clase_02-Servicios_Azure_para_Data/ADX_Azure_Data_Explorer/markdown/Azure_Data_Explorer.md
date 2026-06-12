@@ -348,24 +348,31 @@ En conclusión, Azure Data Explorer es una herramienta potente y escalable que f
    https://learn.microsoft.com/es-es/azure/data-explorer/
 
 - Microsoft Learn. ¿Qué es Azure Data Explorer?
+
    https://learn.microsoft.com/es-es/azure/data-explorer/data-explorer-overview
 
 - Microsoft Learn. Crear un clúster y una base de datos de Azure Data Explorer.
+
    https://learn.microsoft.com/es-es/azure/data-explorer/create-cluster-and-database
 
 - Microsoft Learn. Información general sobre la ingesta de datos en Azure Data Explorer.
+
    https://learn.microsoft.com/es-es/azure/data-explorer/ingest-data-overview
 
 - Microsoft Learn. Kusto Query Language (KQL).
+
    https://learn.microsoft.com/es-es/kusto/
 
 - Microsoft Learn. Kusto Explorer.
+
    https://learn.microsoft.com/es-es/kusto/tools/kusto-explorer
 
 - Microsoft Learn. IoT Analytics con Azure Data Explorer y Azure IoT Hub.
+
    https://learn.microsoft.com/es-es/azure/architecture/solution-ideas/articles/iot-azure-data-explorer
 
 - Microsoft Azure Architecture Center. Arquitecturas de análisis de datos.
+
    https://learn.microsoft.com/es-es/azure/architecture/
 
 
