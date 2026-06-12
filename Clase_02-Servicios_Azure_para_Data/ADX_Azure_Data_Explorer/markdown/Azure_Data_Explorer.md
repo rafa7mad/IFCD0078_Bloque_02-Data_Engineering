@@ -344,6 +344,7 @@ En conclusión, Azure Data Explorer es una herramienta potente y escalable que f
 ## 11. Referencias
 
 - Microsoft Learn. Azure Data Explorer Documentation.
+
    https://learn.microsoft.com/es-es/azure/data-explorer/
 
 - Microsoft Learn. ¿Qué es Azure Data Explorer?
