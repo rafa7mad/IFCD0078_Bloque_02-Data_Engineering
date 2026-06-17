@@ -1,0 +1,7 @@
+{
+    "workbench.editor.autoLockGroups": {
+        "mainThreadWebview-markdown.preview": true,
+        "notebookOutputEditor": true,
+        "default": true
+    }
+}
