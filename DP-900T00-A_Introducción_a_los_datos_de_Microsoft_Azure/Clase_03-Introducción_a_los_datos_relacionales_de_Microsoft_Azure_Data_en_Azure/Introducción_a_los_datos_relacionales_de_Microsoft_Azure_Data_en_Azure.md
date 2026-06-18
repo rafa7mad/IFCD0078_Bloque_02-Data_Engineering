@@ -625,5 +625,3 @@ En este módulo, ha aprendido a:
 <br>
 
 ---
-
-[def]: images/normalized_data.png
