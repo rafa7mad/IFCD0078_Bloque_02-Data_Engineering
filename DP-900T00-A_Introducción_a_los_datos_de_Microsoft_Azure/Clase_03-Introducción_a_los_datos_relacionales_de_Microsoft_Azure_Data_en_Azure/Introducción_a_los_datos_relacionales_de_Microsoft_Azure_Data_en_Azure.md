@@ -1,7 +1,7 @@
 # Introducción a los datos relacionales de Microsoft Azure Data en Azure
 Ruta de aprendizaje - 2 módulos
 
-Los datos relacionales son el núcleo de la mayoría de las aplicaciones empresariales y la base sobre la que se han creado muchas soluciones de datos empresariales. Microsoft Azure proporciona servicios para administrar bases de datos relacionales, lo que le permite crear nuevas aplicaciones o migrar las existentes a la nube. Esta ruta de aprendizaje le ayudará a prepararse para obtener la certificación Azure Data Fundamentals.
+Los datos relacionales son el núcleo de la mayoría de las aplicaciones empresariales y la base sobre la que se han creado muchas soluciones de datos empresariales. Microsoft Azure proporciona servicios para administrar bases de datos relacionales, lo que le permite crear nuevas aplicaciones o migrar las existentes a la nube. Esta ruta de aprendizaje le ayudará a prepararse para obtener la certificación [Azure Data Fundamentals](https://learn.microsoft.com/es-es/credentials/certifications/azure-data-fundamentals/?azure-portal=true&practice-assessment-type=certification).
 
 ## Exploración de conceptos fundamentales de datos relacionales
 
@@ -370,6 +370,7 @@ En este módulo ha aprendido a:
 <br>
 
 ---
+---
 
 ## Exploración de los servicios de bases de datos relacionales en Azure
 
@@ -396,6 +397,10 @@ En este módulo, explorará las opciones disponibles para los servicios de bases
 > Nota:
 >
 > Reconocemos que a diferentes personas les gusta aprender de diferentes maneras. Puede optar por completar este módulo en formato basado en vídeo o puede leer el contenido como texto e imágenes. El texto contiene más detalle que los vídeos, por lo que, en algunos casos, es posible que desee hacer referencia a él como material complementario para la presentación de vídeo.
+
+<br>
+
+---
 
 ### Descripción de los servicios y las capacidades de Azure SQL
 
