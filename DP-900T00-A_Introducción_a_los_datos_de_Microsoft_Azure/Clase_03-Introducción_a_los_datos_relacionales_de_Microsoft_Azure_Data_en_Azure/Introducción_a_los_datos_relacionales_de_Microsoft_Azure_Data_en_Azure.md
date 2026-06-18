@@ -34,7 +34,7 @@ En este módulo, obtendrá información sobre las características clave de las 
 
 En una base de datos relacional, modela colecciones de entidades del mundo real como tablas. Una entidad puede ser cualquier cosa para la que desee registrar información; Normalmente, los objetos y eventos importantes. Por ejemplo, en un ejemplo de sistema minorista, puede crear tablas para clientes, productos, pedidos y artículos de línea dentro de un pedido. Una tabla contiene filas y cada fila representa una sola instancia de una entidad. En el escenario comercial, cada fila de la tabla de clientes contiene los datos de un solo cliente, cada fila de la tabla de productos define un único producto, cada fila de la tabla de pedidos representa un pedido realizado por un cliente y cada fila de la tabla de elementos de línea representa un producto incluido en un pedido.
 
-![Flujo Exploración de conceptos fundamentales de datos relacionales](images/relational-tables.png)
+![Tablas relacionales](images/relational-tables.png)
 
 Las tablas relacionales son un formato para los datos estructurados y cada fila de una tabla tiene las mismas columnas; aunque en algunos casos, no todas las columnas necesitan tener un valor; por ejemplo, una tabla de cliente podría incluir una columna MiddleName ; que puede estar vacío (o NULL) para las filas que representan a los clientes sin nombre intermedio o cuyo nombre intermedio es desconocido.
 
@@ -71,9 +71,9 @@ Observe que los detalles del cliente y del producto se duplican para cada artíc
 
 Ahora veamos cómo cambia la normalización de la forma en que se almacenan los datos.
 
-![Flujo Exploración de conceptos fundamentales de datos relacionales](images/normalized-data.png)
+![Datos normalizados](images/normalized-data.png)
 
-![Flujo Exploración de conceptos fundamentales de datos relacionales](images/normalized-data.png)
+![Datos normalizados](./images/normalized-data.png)
 
 
 Cada entidad representada en los datos (cliente, producto, pedido de ventas y elemento de línea) se almacena en su propia tabla y cada atributo discreto de esas entidades se encuentra en su propia columna.
@@ -299,7 +299,7 @@ FROM Order AS o JOIN Customer AS c
 ON o.Customer = c.ID;
 ```
 
-![Flujo Exploración de conceptos fundamentales de datos relacionales](images/view.png)
+![Vista](images/view.png)
 
 Puede consultar la vista y filtrar los datos de la misma forma que una tabla. La consulta siguiente busca detalles de los pedidos de los clientes que viven en Seattle:
 
@@ -350,7 +350,7 @@ ON Product(Name);
 
 El índice crea una estructura basada en árbol que el optimizador de consultas del sistema de base de datos puede usar para buscar rápidamente filas en la tabla Product en función de un nombre especificado.
 
-![Flujo Exploración de conceptos fundamentales de datos relacionales](images/index.png)
+![Index](images/index.png)
 
 Para una tabla que contiene pocas filas, el uso del índice probablemente no sea más eficaz que simplemente leer toda la tabla y buscar las filas solicitadas por la consulta (en cuyo caso, el optimizador de consultas omitirá el índice). Pero cuando una tabla tiene muchas filas, los índices pueden mejorar drásticamente el rendimiento de las consultas.
 
