@@ -73,9 +73,6 @@ Ahora veamos cómo cambia la normalización de la forma en que se almacenan los 
 
 ![Datos normalizados](images/normalized-data.png)
 
-![Datos normalizados](./images/normalized-data.png)
-
-
 Cada entidad representada en los datos (cliente, producto, pedido de ventas y elemento de línea) se almacena en su propia tabla y cada atributo discreto de esas entidades se encuentra en su propia columna.
 
 La grabación de cada instancia de una entidad como una fila en una tabla específica de la entidad quita la duplicación de datos. Por ejemplo, para cambiar la dirección de un cliente, solo necesita modificar el valor en una sola fila.
