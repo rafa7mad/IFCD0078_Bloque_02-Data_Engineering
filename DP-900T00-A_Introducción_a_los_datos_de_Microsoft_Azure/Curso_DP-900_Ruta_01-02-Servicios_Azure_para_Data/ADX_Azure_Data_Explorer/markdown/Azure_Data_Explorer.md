@@ -60,6 +60,7 @@ Azure Data Explorer (ADX) es un servicio de análisis de datos totalmente admini
 
 
 ![Flujo de trabajo de Azure Data Explorer](images/ADX_workflow.png)
+(images/ADX_workflow.png)
 
 *Figura 1. Flujo de trabajo de Azure Data Explorer. Fuente: Microsoft Learn.*
 
