@@ -139,6 +139,8 @@ When you’ve finished exploring, you should delete the resources you created so
 
 Finish!
 
+![220_rg](images/220_rg.JPG)
+
 
 
 
