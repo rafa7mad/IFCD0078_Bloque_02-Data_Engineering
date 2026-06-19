@@ -44,6 +44,107 @@ En la página Crear base de datos SQL, introduce los siguientes valores:
 
 Luego, selecciona Siguiente: Redes.
 
+![040_basics_server](images/040_basics_server.jpg)
+
+![041_basics_server](images/041_basics_server.jpg)
+
+![042_basics_server](images/042_basics_server.jpg)
+
+<br>
+
+### Paso 4: Configurar reglas de firewall
+
+- En la sección Reglas de firewall, selecciona + Agregar dirección IP del cliente actual para permitir el acceso desde tu equipo.
+
+![050_redes_ip](images/050_redes_ip.jpg)
+
+<br>
+
+### Paso 5: Revisar y crear
+
+- Selecciona Revisar + Crear para validar la configuración.
+- Luego, haz clic en Crear para iniciar la implementación.
+
+![060_review_create](images/060_review_create.jpg)
+
+![061_mysqlflexibleserver](images/061_mysqlflexibleserver.jpg)
+
+<br>
+
+### Paso 6: Esperar a la implementación
+
+- Espera a que la implementación se complete.
+- Cuando termine, selecciona Ir al recurso para acceder al servidor MySQL recién creado.
+
+![062_mysqlflexibleserver_complete](images/062_mysqlflexibleserver_complete.jpg)
+
+<br>
+
+### Paso 7: Explorar y administrar el recurso
+
+- Desde la página del recurso, puedes revisar todas las opciones para administrar tu Azure Database for MySQL.
+
+![070_serverazuremysql](images/070_serverazuremysql.jpg)
+
+### Opciones para administrar Azure Database for MySQL
+
+### Settings
+
+- Databases
+
+Podemos añadir o eliminar bases de datos.
+Muestra las cuatro bases de datos del sistema que MySQL utiliza internamente para:
+- Usuarios y permisos.
+- Configuración del servidor.
+- Información de rendimiento.
+- Metadatos del sistema.
+
+![071_databases](images/071_databases.jpg)
+
+- Server Parameters
+
+Permiten configurar el comportamiento del motor MySQL mediante parámetros de administración como conexiones máximas, memoria, tiempos de espera y registro de actividad.
+Concepto relacionado:
+- Administración de bases de datos
+- Configuración del motor de base de datos
+
+![072_servers_parameters](images/072_servers_parameters.jpg)
+
+- Backup and Restore
+
+Azure Database for MySQL incluye mecanismos de copia de seguridad y restauración administrados por la plataforma para facilitar la recuperación ante errores o pérdidas de datos.
+Concepto relacionado:
+- Disponibilidad
+- Recuperación ante desastres
+- Copias de seguridad
+
+![073_backup_restore](images/073_backup_restore.jpg)
+
+### Monitoring 
+
+- Metrics
+
+Sirve para monitorizar el rendimiento mediante métricas como:
+- CPU
+- Memoria
+- Conexiones
+- IOPS
+- Almacenamiento
+
+![074_activity_log](images/074_activity_log.jpg)
+
+### Activity Log
+
+Muestra todas las operaciones realizadas sobre el recurso:
+- Creación del servidor.
+- Cambios de configuración.
+- Eliminaciones.
+- Actualizaciones.
+
+![075_metrics](images/075_metrics.jpg)
+
+
+## Conexion con CLI al servidor 
 
 
 
