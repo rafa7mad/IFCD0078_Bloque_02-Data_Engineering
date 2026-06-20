@@ -10,5 +10,4 @@ Ahora tiene la posibilidad de explorar los servicios de bases de datos relaciona
 
 Inicie el ejercicio y siga las instrucciones para explorar Azure SQL Database.
 
-[Launch Exercise]([https://](https://microsoftlearning.github.io/DP-900T00A-Azure-Data-Fundamentals/Instructions/Labs/dp900-01-sql-lab.html))
-
+[Launch Exercise](https://microsoftlearning.github.io/DP-900T00A-Azure-Data-Fundamentals/Instructions/Labs/dp900-01-sql-lab.html)
