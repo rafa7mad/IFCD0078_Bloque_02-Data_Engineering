@@ -143,10 +143,99 @@ Muestra todas las operaciones realizadas sobre el recurso:
 
 ![075_metrics](images/075_metrics.jpg)
 
+<br>
 
 ## Conexion con CLI al servidor 
 
+### Nos conectamos al servidor mediante CLI en Automation
 
+> </>Bash
+> 
+> mysql -h serverazuremysql260619.mysql.database.azure.com -u serveradmin -p
 
+![080_cli_conexion](images/080_cli_conexion.jpg)
 
+<br>
+
+### Creamos una base de datos de práctica nueva
+
+> </> SQL
+> 
+> CREATE DATABASE laboratorio;
+
+![081_cli_create](images/081_cli_create.jpg)
+
+### Seleccionar la base de datos
+
+> </> SQL> 
+> 
+> USE laboratorio;
+
+![082_cli_use](images/082_cli_use.jpg)
+
+<br>
+
+### Crear una tabla
+
+> </> SQL> 
+> 
+> CREATE TABLE productos (
+    id INT PRIMARY KEY,
+    nombre VARCHAR(50),
+    precio DECIMAL(10,2)
+> ); 
+
+![083_cli_create_table](images/083_cli_create_table.jpg)
+
+<br>
+
+### Insertar datos
+
+> </> SQL
+> 
+> INSERT INTO productos VALUES
+> (1,'Portatil',850.00),
+> (2,'Monitor',220.00),
+> (3,'Teclado',45.00);
+
+![084_cli_insert](images/084_cli_insert.jpg)
+
+<br>
+
+### Consultar los datos
+
+> </> SQL
+> 
+> SELECT * FROM productos;
+
+![085_cli_select](images/085_cli_select.jpg)
+
+<br>
+
+### Consulta con filtro
+
+> </> SQL> 
+> SELECT nombre, precio 
+> FROM productos
+> WHERE precio > 100;
+
+![086_cli_select_where](images/086_cli_select_where.jpg)
+
+<br>
+
+## Limpieza, eliminar el recurso
+
+### En el portal de Azure, accedemos a grupo de recursos
+
+![090_resource_groups](images/090_resource_groups.jpg)
+
+### Seleccione «Eliminar grupo de recursos», confirme la eliminación introduciendo el nombre del grupo y, a continuación, seleccione «Eliminar».
+
+![091_rgmysql](images/091_rgmysql.jpg)
+
+![092_rgmysql_delete](images/092_rgmysql_delete.jpg)
+
+### Comprobamos que el recuso ha sido eliminado
+
+![093_resource_groups_f](images/093_resource_groups_f.JPG)
 
