@@ -18,7 +18,7 @@
 - Buscamos Azure Database for PostgreSQL y seleccionamos la opción Azure Database for PostgreSQL.
 - Hacemos clic en Crear.
 
-![011](https://)
+![020](https://)
 
 <br>
 
@@ -35,9 +35,11 @@
 - En la sección de redes, agregamos nuestra IP actual para permitir el acceso desde nuestra ubicación.
 - Finalmente, revisamos toda la configuración y hacemos clic en Revisar y crear.
 
-![020](https://)
-![021](https://)
-![022](https://)
+![030](https://)
+
+![031](https://)
+
+![032](https://)
 
 <br>
 
@@ -46,4 +48,6 @@
 - Esperamos a que se complete la creación del recurso.
 - Una vez creado, podemos acceder a él haciendo clic en el botón Ir al recurso.
 
+![040](https://)
 
+![041](https://)
