@@ -90,7 +90,7 @@ Luego, selecciona Siguiente: Redes.
 
 ### Settings
 
-- Databases
+### - Databases
 
 Podemos añadir o eliminar bases de datos.
 Muestra las cuatro bases de datos del sistema que MySQL utiliza internamente para:
@@ -101,7 +101,7 @@ Muestra las cuatro bases de datos del sistema que MySQL utiliza internamente par
 
 ![071_databases](images/071_databases.jpg)
 
-- Server Parameters
+### - Server Parameters
 
 Permiten configurar el comportamiento del motor MySQL mediante parámetros de administración como conexiones máximas, memoria, tiempos de espera y registro de actividad.
 Concepto relacionado:
@@ -110,7 +110,7 @@ Concepto relacionado:
 
 ![072_servers_parameters](images/072_servers_parameters.jpg)
 
-- Backup and Restore
+### - Backup and Restore
 
 Azure Database for MySQL incluye mecanismos de copia de seguridad y restauración administrados por la plataforma para facilitar la recuperación ante errores o pérdidas de datos.
 Concepto relacionado:
@@ -122,7 +122,7 @@ Concepto relacionado:
 
 ### Monitoring 
 
-- Metrics
+### - Metrics
 
 Sirve para monitorizar el rendimiento mediante métricas como:
 - CPU
