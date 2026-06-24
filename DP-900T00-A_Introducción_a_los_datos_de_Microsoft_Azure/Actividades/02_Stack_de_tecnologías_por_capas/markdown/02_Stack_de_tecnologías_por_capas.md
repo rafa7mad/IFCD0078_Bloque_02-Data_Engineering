@@ -336,3 +336,11 @@ Garantizar la calidad, seguridad, monitorización y cumplimiento normativo en to
 * Normativas
 * Auditorías
 * Retención de datos
+
+<br>
+
+---
+
+<br>
+
+### ![Arquitectura de Datos en 6 capas + Capa Transversal](images/Arquitectura_Datos_6capas_Capa_Transversal.png)
