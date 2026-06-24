@@ -47,6 +47,8 @@ Los datos semiestructurados son información que tiene cierta estructura, pero q
 
 Un formato común para los datos semiestructurados es la notación de objetos JavaScript (JSON). En el ejemplo siguiente se muestran un par de documentos JSON que representan información de clientes. Cada documento de cliente incluye la dirección y la información de contacto, pero los campos específicos varían entre los clientes.
 
+> JSON
+>
 > // Customer 1  
 > {  
 >   "firstName": "Joe",  
