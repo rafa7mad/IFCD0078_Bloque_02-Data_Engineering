@@ -4,3 +4,5 @@
 
 ## Actividad 2 - Stack de tecnologías por capas
 
+## Actividad 3 - Soluciones Almacenamiento Azure
+
