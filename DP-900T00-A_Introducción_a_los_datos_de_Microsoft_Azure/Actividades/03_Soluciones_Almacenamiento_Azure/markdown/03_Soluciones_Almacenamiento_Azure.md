@@ -76,8 +76,6 @@ Sobre esta infraestructura, Microsoft añade las funcionalidades propias de Fabr
 | Son adecuados para Big Data y Analítica        |    ✔️   |     ✔️    |
 | Soportan formatos como Parquet y Delta Lake    |    ✔️   |     ✔️    |
 
----
-
 <br>
 
 ### Diferencias
@@ -91,7 +89,6 @@ Sobre esta infraestructura, Microsoft añade las funcionalidades propias de Fabr
 | Integración directa con todos los servicios de Microsoft Fabric.     | Requiere configurar las conexiones entre servicios.                                                |
 | Ofrece una experiencia unificada para analítica y gobierno del dato. | Proporciona la infraestructura de almacenamiento sobre la que se construyen soluciones analíticas. |
 
----
 
 <br>
 
@@ -154,7 +151,6 @@ Mientras que Azure Data Factory es un servicio independiente de Azure, Data Fact
 | Amplio catálogo de conectores |         ✔️         |          ✔️         |
 | Automatización y programación |         ✔️         |          ✔️         |
 | Monitorización de ejecuciones |         ✔️         |          ✔️         |
----
 
 <br>
 
@@ -206,9 +202,10 @@ Microsoft Fabric ofrece varias formas de acceder a datos externos:
 
 Estas opciones permiten integrar información procedente de múltiples plataformas en un único entorno analítico. De esta forma, una organización puede combinar datos de Azure, AWS, GCP, bases de datos locales o aplicaciones SaaS para realizar análisis, crear modelos de datos, desarrollar cuadros de mando en Power BI o entrenar modelos de Inteligencia Artificial, todo ello desde Microsoft Fabric.
 
-<br>
 
 ---
+
+<br>
 
 ## Actividad 3.3 Servicios equivalentes en AWS y GCP.
 
