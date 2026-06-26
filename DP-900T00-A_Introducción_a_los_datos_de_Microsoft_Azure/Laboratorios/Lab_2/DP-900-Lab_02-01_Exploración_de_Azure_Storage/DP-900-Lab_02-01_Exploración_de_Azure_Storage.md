@@ -2,6 +2,16 @@
 
 # [Exploración de Azure Storage](https://microsoftlearning.github.io/DP-900T00A-Azure-Data-Fundamentals/Instructions/Labs/dp900-02-storage-lab.html)
 
+In this lab, you’ll create an Azure Storage account, which is a secure place in the cloud to keep different kinds of data. You’ll then explore its four core services and see what each one is for:
+
+- Blob storage, for storing files such as images, documents, and data files.
+- Data Lake Storage Gen2, blob storage with real folders, used for big-data analytics.
+- Azure Files, cloud file shares that behave like a shared network drive.
+
+This kind of storage is called non-relational because, unlike a relational database, the data doesn’t have to be organized into related tables with a fixed structure. Don’t worry if these terms are new, every step is explained as you go.
+
+<br>
+
 ## Provision an Azure Storage account
 “Provisioning” just means creating and setting up a new resource. The first step in using Azure Storage is to create a storage account, which acts as a container for everything you store.
 
