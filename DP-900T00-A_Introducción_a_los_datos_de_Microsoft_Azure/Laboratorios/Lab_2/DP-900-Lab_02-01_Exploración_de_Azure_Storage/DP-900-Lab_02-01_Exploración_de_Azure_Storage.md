@@ -226,7 +226,122 @@ El soporte para Azure Data Lake Store Gen2 te permite usar carpetas jerárquicas
 
 8. Close the Upload blob panel if it’s still open, and verify that a product_data folder now contains the product2.json file.
 
+![48_product2json](images/48_product2json.jpg)
+
+<br>
+
+> ! Tip: Adding a second file post-upgrade confirms seamless continuity: existing blobs still work, and new ones gain hierarchical benefits such as directory ACLs (Access Control Lists).
+
+9. On the left side, in the Data storage section, select Containers.
+
+![49_data_storage](images/49_data_storage.jpg)
+
+<br>
+
+10. Open the data container, and verify that the product_data folder you created is listed.
+
+![50_product_data.jpg](images/50_product_data.jpg)
+
+<br>
+
+11. Select the ‧‧‧ icon at the right-end of the folder, and note that with hierarchical namespace enabled, you can perform configuration tasks at the folder-level; including renaming folders and setting permissions (Manage ACL).
+
+![51_product_data](images/51_product_data.jpg)
+
+<br>
+
+> ! Tip: Real folders let you apply least-privilege security at folder granularity, rename safely, and speed recursive listings versus scanning thousands of prefixed blob names.
+
+<br>
+
+12. Use the X icon at the top right in the data page to close the page and return to the Containers page.
+
+![52_containers](images/52_containers.jpg)
+
+![52b_containers](images/52b_containers.jpg)
+
+<br>
+
+## Explore Azure Files
+
+Azure Files provides a way to create cloud-based file shares.
+
+> ! Tip: Azure Files offers SMB/NFS endpoints for lift‑and‑shift scenarios where apps expect a traditional file system. It complements (not replaces) blob storage by supporting file locks and OS-native tooling.
+
+> ! Note: Because you enabled hierarchical namespace (Azure Data Lake Storage Gen2) earlier, file shares for this account are managed under Classic file shares. On a storage account without hierarchical namespace, this menu item is simply named File shares, but the steps to create and connect to a share are the same.
+
+<br>
+
+1. In the Azure portal page for your storage account, on the left side, in the Data storage section, select Classic file shares.
+
+![61_classic_flie_shares](images/61_classic_flie_shares.jpg)
+
+<br>
+
+2. In the Classic file shares page, select ＋ Classic file share. On the Basics tab, enter the name files and leave the Access tier set to Transaction optimized.
+
+![62_classic_flie_shares](images/62_classic_flie_shares.jpg)
+
+<br>
+
+3. Select Next: Backup > and clear the Enable backup checkbox to disable backup. Then select Review + create, and on the Review + create tab, select Create.
+
+![63_classic_flie_shares_backup](images/63_classic_flie_shares_backup.jpg)
+
+![63b_classic_flie_shares_backup](images/63b_classic_flie_shares_backup.jpg)
+
+<br>
+
+> ! Tip: Disabling backup keeps costs down for a short-lived lab environment — you would enable it for production resilience.
+
+<br>
+
+4. When the files share has been created, return to the Classic file shares page and open your new files share.
+
+![64_files_share](images/64_files_share.jpg)
+
+<br>
+
+5. At the top of the page, select Connect. Then in the Connect pane, note that there are tabs for common operating systems (Windows, Linux, and macOS) that contain scripts you can run to connect to the shared folder from a client computer.
+
+![65_files_share_connect](images/65_files_share_connect.jpg)
+
+![65b_files_share_connect](images/65b_files_share_connect.jpg)
+
+<br>
+
+> !Tip: The generated scripts show exactly how to mount the share using platform-native commands, illustrating hybrid access patterns from virtual machines, containers, or on-prem servers.
+
+6. Close the Connect pane and then close the files page to return to the Classic file shares page for your Azure storage account.
+
+![66_files_share](images/66_files_share.jpg)
+
+<br>
+
+## Clean up
+
+When you’ve finished exploring Azure Storage, you should delete the resources you created so you don’t incur any further costs.
+
+<br>
+
+1. In the Azure portal, navigate to the resource group you created at the start of the lab (for example, dp900-lab-rg).
+
+![71_resource_ group](images/71_resource_%20group.jpg)
+
+<br>
+
+2. Select Delete resource group, confirm the deletion by entering the resource group name, and select Delete.
+
+![72_resource_ group_dp900](images/72_resource_%20group_dp900.jpg)
+
+![72b_resource_ group_dp900](images/72_resource_%20group_dp900.jpg)
+
 
 
 <br>
 
+> !Tip: Deleting the resource group removes the storage account and everything inside it in a single step. This is the quickest way to make sure nothing is left running and costing money.
+
+<br>
+
+In this lab, you created an Azure Storage account and explored blob storage, Data Lake Storage Gen2, and Azure Files. You’ve now seen the main ways Azure stores non-relational data!
