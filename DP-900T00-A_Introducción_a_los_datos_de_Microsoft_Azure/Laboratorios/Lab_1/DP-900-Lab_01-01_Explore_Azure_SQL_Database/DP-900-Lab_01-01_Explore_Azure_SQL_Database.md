@@ -137,7 +137,7 @@ When you’ve finished exploring, you should delete the resources you created so
 
 ![210_rgbd_delete](images/210_rgbd_delete.JPG)
 
-Verify that the resource group has been deleted.
+We verified that the resource group had been removed.
 
 ![220_rg](images/220_rg.JPG)
 
