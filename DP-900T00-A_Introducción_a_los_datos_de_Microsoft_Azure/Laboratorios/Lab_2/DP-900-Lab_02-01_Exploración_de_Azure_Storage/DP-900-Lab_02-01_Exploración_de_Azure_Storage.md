@@ -336,7 +336,11 @@ When you’ve finished exploring Azure Storage, you should delete the resources 
 
 ![72b_resource_ group_dp900](images/72_resource_%20group_dp900.jpg)
 
+<br>
 
+We verified that the resource group had been removed.
+
+![72c_resource_ group_cleanup](images/72c_resource_%20group_cleanup.jpg)
 
 <br>
 
