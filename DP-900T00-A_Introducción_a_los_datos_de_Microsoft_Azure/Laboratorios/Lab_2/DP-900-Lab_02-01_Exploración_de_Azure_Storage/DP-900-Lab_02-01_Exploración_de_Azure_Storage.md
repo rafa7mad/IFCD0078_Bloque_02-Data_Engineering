@@ -220,7 +220,7 @@ El soporte para Azure Data Lake Store Gen2 te permite usar carpetas jerárquicas
 
 7. In the Upload blob panel, select the product2.json file you saved on your local computer. Then select the Upload button.
 
-
+![47_product2json](images/47_product2json.jpg)
 
 <br>
 
