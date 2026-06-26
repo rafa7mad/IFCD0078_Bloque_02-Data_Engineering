@@ -172,9 +172,61 @@ Folders in blob storage are virtual, and only exist as part of the path of a blo
 
 El soporte para Azure Data Lake Store Gen2 te permite usar carpetas jerárquicas para organizar y gestionar el acceso a blobs. También te permite usar almacenamiento en blob de Azure para alojar sistemas de archivos distribuidos para plataformas comunes de análisis de big data.
 
+> ! **Tip**: Turning on hierarchical namespace makes folders behave like real directories. It also lets you do folder actions safely (all at once, without errors) and gives you file-permission controls similar to those in Linux. This is especially helpful when working with big data tools like Spark or Hadoop, or when managing large, organized data lakes.
+
+<br>
+
+1. Download the product2.json JSON file from https://aka.ms/product2.json and save it on your computer in the same folder where you downloaded product1.json previously - you’ll upload it to blob storage later.
+
+<br>
+
+2. In the Azure portal page for your storage account, on the left side, scroll down to the Settings section, and select Data Lake Gen2 upgrade.
+
+<br>
+
+3. In the Data Lake Gen2 upgrade page, expand and complete each step to upgrade your storage account to enable hierarchical namespace and support Azure Data Lake Storage Gen. This may take some time.
+
+![40_data_lake_gen2](images/40_data_lake_gen2.jpg)
+
+![40b_data_lake_gen2](images/40a_data_lake_gen2.jpg)
+
+> If we have problems in step 2, we need to check that all the "Recovery" options in "Data Protection" are not checked, that is, they are all disabled.
+
+![40b2_data_lake_gen2](images/40b2_data_lake_gen2.jpg)
+
+![40b3_data_lake_gen2](images/40b3_data_lake_gen2.jpg)
+
+![40c_data_lake_gen2](images/40c_data_lake_gen2.jpg)
+
+<br>
+
+4. When the upgrade is complete, in the pane on the left side, in the top section, select Storage browser and navigate back to the root of your data blob container, which still contains the product_data folder.
+
+![44_data_product_data](images/44_data_product_data.jpg)
+
+<br>
+
+5. Select the product_data folder, and verify it still contains the product1.json file you uploaded previously.
+
+![45_product1json](images/45_product1json.jpg)
+
+<br>
+
+6.Use the ⤒ Upload button to open the Upload blob panel.
+
+![46_product1json](images/46_product1json.jpg)
+
+<br>
+
+7. In the Upload blob panel, select the product2.json file you saved on your local computer. Then select the Upload button.
 
 
 
+<br>
+
+8. Close the Upload blob panel if it’s still open, and verify that a product_data folder now contains the product2.json file.
 
 
+
+<br>
 
