@@ -22,7 +22,7 @@ You’ll create (“provision”) a Cosmos DB account, add some sample data, vie
 
 2. In the Azure Cosmos DB for NoSQL tile, select Create.
 
-images
+![02_azure_cosmos_db_create](images/02_azure_cosmos_db_create.jpg)
 
 <br>
 
@@ -42,8 +42,9 @@ images
 - Apply Free-Tier Discount: Select Apply if available
 - Limit total account throughput: Unselected
 
-images
+![03_create_basics](images/03_create_basics.jpg)
 
+![03b_create_basics](images/03b_create_basics.jpg)
 
 <br>
 
@@ -55,7 +56,7 @@ images
 
 4. When the configuration has been validated, select Create.
 
-images
+![04_review_create](images/04_review_create.jpg)
 
 <br>
 
@@ -65,7 +66,9 @@ images
 
 5. Wait for deployment to complete. Then go to the deployed resource.
 
-images
+![05_review_create](images/05_review_create.jpg)
+
+![05b_review_create](images/05b_review_create.jpg)
 
 <br>
 
@@ -75,13 +78,13 @@ Throughout this procedure, close any tips that are displayed in the portal.
 
 1. On the page for your new Cosmos DB account, in the pane on the left, select Data Explorer.
 
-images 
+![11_cosmos_overview](images/11_cosmos_overview.jpg)
 
 <br>
 
 2. In the Data Explorer page, select Launch quick start.
 
-images
+![12_cosmos_dataexplorer](images/12_cosmos_dataexplorer.jpg)
 
 <br>
 
@@ -91,7 +94,9 @@ images
 
 3. In the New Container pane, review the pre-populated settings for the sample database (a database named SampleDB, a container named SampleContainer, and a partition key of /categoryId), and then select OK. A short guided tutorial may appear alongside the pane; you can step through it with Next or simply select OK to continue.
 
-images
+![13_cosmos_newcontainer](images/13_cosmos_newcontainer.jpg)
+
+![13b_cosmos_newcontainer](images/13b_cosmos_newcontainer.jpg)
 
 <br>
 
@@ -99,7 +104,7 @@ images
 
 4. Observe the status in the panel at the bottom of the screen until the SampleDB database and its SampleContainer container has been created (which may take a minute or so).
 
-images
+![14_cosmos_newcontainer](images/14_cosmos_newcontainer.jpg)
 
 <br>
 
@@ -107,13 +112,13 @@ images
 
 1. In the Data Explorer page, expand the SampleDB database and the SampleContainer container, and select Items to see a list of items in the container. The items represent product data, each with a unique id and other properties. Select any item to see a JSON representation of its data in the pane on the right.
 
-images
+![21_scontainer_item](images/21_scontainer_item.jpg)
 
 <br>
 
 2. At the top of the page, select New Item to create a new blank item.
 
-images
+![22_scontainer_newitem](images/22_scontainer_newitem.jpg)
 
 <br>
 
@@ -139,11 +144,13 @@ images
 > 
 > 
 
-images
+![23_scontainer_newitem](images/23_scontainer_newitem.jpg)
 
 <br>
 
 4. After saving the new item, notice that additional metadata properties are added automatically.
+
+![24_scontainer_newitem](images/24_scontainer_newitem.jpg)
 
 > ! Tip: Cosmos DB stores items as JSON (JavaScript Object Notation), so you can add fields that fit your scenario without a rigid schema. The id must be unique within the container. After you save, Cosmos DB adds system properties (like timestamps and internal identifiers) to help manage and optimize your data:
 > 
@@ -165,19 +172,19 @@ images
 
 1. In the Data Explorer page, select the New SQL Query icon.
 
-images 
+![31_query](images/31_query.jpg) 
 
 <br>
 
 2. In the SQL Query editor, review the default query (SELECT * FROM c) and use the Execute Query button to run it.
 
-images 
+![32_query](images/32_query.jpg)
 
 <br>
 
 3. Review the results, which includes the full JSON representation of all items.
 
-images 
+![33_query](images/33_query.jpg)
 
 <br>
 
@@ -193,13 +200,15 @@ images
 > 
 > WHERE CONTAINS(c.name,"Helmet")
 
+![34_query](images/34_query.jpg)
+
 > ! Tip: The NoSQL API uses familiar, SQL-like queries to search JSON documents. SELECT * FROM c lists all items, and CONTAINS filters by text inside a property—useful for quick searches without extra setup.
 
 <br>
 
 5. Use the Execute Query button to run the revised query and review the results, which includes JSON entities for any items with a name field containing the text “Helmet”.
 
-images
+![35_query](images/35_query.jpg)
 
 <br>
 
@@ -207,7 +216,7 @@ images
 
 You’ve seen how to create and query JSON entities in a Cosmos DB database by using the data explorer interface in the Azure portal. In a real scenario, an application developer would use one of the many programming language specific software development kits (SDKs) to call the NoSQL API and work with data in the database.
 
-images 
+![36_query](images/36_query.jpg)
 
 <br>
 
@@ -217,13 +226,15 @@ When you’ve finished exploring Azure Cosmos DB, you should delete the resource
 
 1. In the Azure portal, navigate to the resource group that contains your Cosmos DB account.
 
-images
+![41_resource_group](images/41_resource_group.jpg)
 
 <br>
 
 2. Select Delete resource group, confirm the deletion by entering the resource group name, and select Delete.
 
-images 
+![42_resource_group_delete](images/42_resource_group_delete.jpg) 
+
+![42b_resource_group_delete](images/42b_resource_group_delete.jpg)
 
 <br>
 
@@ -233,6 +244,7 @@ images
 
 We verified that the resource group had been removed.
 
+![43]()
 
 <br>
 
