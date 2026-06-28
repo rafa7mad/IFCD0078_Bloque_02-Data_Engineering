@@ -244,7 +244,7 @@ When you’ve finished exploring Azure Cosmos DB, you should delete the resource
 
 We verified that the resource group had been removed.
 
-![43]()
+![42c_resource_group](images/42c_resource_group.jpg)
 
 <br>
 
