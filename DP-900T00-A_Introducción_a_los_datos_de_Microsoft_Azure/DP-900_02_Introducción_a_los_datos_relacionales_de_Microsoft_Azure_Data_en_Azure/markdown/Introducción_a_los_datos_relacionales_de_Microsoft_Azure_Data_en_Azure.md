@@ -114,14 +114,14 @@ Los usuarios que planean trabajar específicamente con un único sistema de base
 > 
 > Los ejemplos de código SQL de este módulo se basan en el dialecto Transact-SQL, a menos que se indique lo contrario. La sintaxis de otros dialectos suele ser similar, pero puede variar en algunos detalles.
 
-#### Tipos de instrucciones SQL
+### Tipos de instrucciones SQL
 Las instrucciones SQL se agrupan en tres grupos lógicos principales:
 
 - Lenguaje de definición de datos (DDL)
 - Lenguaje de control de datos (DCL)
 - Lenguaje de manipulación de datos (DML)
 
-#### Instrucciones DDL
+### Instrucciones DDL
 Las instrucciones DDL se usan para crear, modificar y quitar tablas y otros objetos de una base de datos (tabla, procedimientos almacenados, vistas, etc.).
 
 Las instrucciones de DDL más habituales son las siguientes:
@@ -156,7 +156,7 @@ CREATE TABLE Product
 
 Los tipos de datos disponibles para las columnas de una tabla variarán entre los sistemas de administración de bases de datos. Sin embargo, la mayoría de los sistemas de administración de bases de datos admiten tipos numéricos como INT (un número entero o entero), DECIMAL (un número decimal) y tipos de cadena como VARCHAR (VARCHAR significa datos de caracteres de longitud variable). Para obtener más información, consulte la documentación del sistema de administración de bases de datos seleccionado.
 
-#### Instrucciones DCL
+### Instrucciones DCL
 
 Los administradores de bases de datos suelen usar instrucciones DCL para administrar el acceso a objetos de una base de datos concediéndoles, denegando o revocando permisos a usuarios o grupos específicos.
 
@@ -178,7 +178,7 @@ ON Product
 TO user1;
 ```
 
-#### Instrucciones DML
+### Instrucciones DML
 
 Las instrucciones DML se usan para manipular las filas de las tablas. Estas instrucciones permiten recuperar (consultar) datos, insertar nuevas filas o modificar filas existentes. También puede eliminar filas si ya no las necesita.
 
@@ -282,7 +282,7 @@ VALUES (99, 'Drill', 4.99);
 
 Además de las tablas, una base de datos relacional puede contener otras estructuras que ayudan a optimizar la organización de los datos, encapsular acciones mediante programación y mejorar la velocidad de acceso. En esta unidad, obtendrá información sobre tres de estas estructuras con más detalle: vistas, procedimientos almacenados e índices.
 
-#### ¿Qué es una vista?
+### ¿Qué es una vista?
 
 Una vista es una tabla virtual basada en los resultados de una consulta SELECT . Podría decirse que una vista es como una ventana que muestra unas filas concretas de una o varias tablas subyacentes. Por ejemplo, podría crear una vista en las tablas Order y Customer que recuperan los datos del pedido y del cliente para proporcionar un único objeto que facilita la determinación de las direcciones de entrega de los pedidos:
 
@@ -307,7 +307,7 @@ FROM Deliveries
 WHERE City = 'Seattle';
 ```
 
-#### ¿Qué es un procedimiento almacenado?
+### ¿Qué es un procedimiento almacenado?
 
 Un procedimiento almacenado define instrucciones SQL que se pueden ejecutar a petición. Los procedimientos almacenados se usan para encapsular la lógica de programación en una base de datos para las acciones que las aplicaciones deben realizar al trabajar con datos.
 
@@ -331,7 +331,7 @@ SQL
 EXEC RenameProduct 201, 'Spanner';
 ```
 
-#### ¿Qué es un índice?
+### ¿Qué es un índice?
 
 Un índice le ayuda a buscar datos en una tabla. Piense en un índice sobre una tabla como en el índice al final de un libro. El índice de un libro contiene un conjunto ordenado de entradas, con las páginas en las que aparece cada una. Cuando quieras encontrar una referencia a un elemento del libro, la buscas en el índice. Puede usar los números de página del índice para ir directamente a las páginas correctas del libro. Sin el índice, es posible que tenga que leer todo el libro para encontrar el contenido que está buscando.
 
@@ -412,7 +412,7 @@ Azure SQL es un término colectivo para referirse a una familia de servicios de 
 
 - **Azure SQL Database** : un servicio de base de datos PaaS totalmente administrado y altamente escalable diseñado para la nube. Este servicio incluye las principales capacidades de base de datos de SQL Server local y es una buena opción cuando hay que crear una aplicación en la nube.
 
-#### **Comparación de los servicios de Azure SQL**
+### **Comparación de los servicios de Azure SQL**
 
 | Característica | SQL Server en Máquinas virtuales de Azure | Azure SQL Managed Instance | Azure SQL Database |
 |----------------|------------------------------------------|----------------------------|--------------------|
@@ -427,7 +427,7 @@ Azure SQL es un término colectivo para referirse a una familia de servicios de 
 
 <br>
 
-#### **SQL Server en Azure Virtual Machines**
+### **SQL Server en Azure Virtual Machines**
 
 SQL Server en Virtual Machines le permite usar versiones completas de SQL Server en la nube sin tener que administrar ningún hardware local. Este es un ejemplo del enfoque de IaaS.
 
@@ -446,14 +446,14 @@ Estas funcionalidades le permiten:
 - Tener todo preparado para migrar mediante lift-and-shift las aplicaciones existentes que requieren una migración rápida a la nube con cambios mínimos o sin cambios.
 - Escalar verticalmente la plataforma en la que se ejecuta SQL Server asignando más memoria, potencia de CPU y espacio en disco a la máquina virtual. Puede cambiar rápidamente el tamaño de una máquina virtual Azure sin necesidad de reinstalar el software que se ejecuta en ella.
 
-#### Ventajas empresariales
+### Ventajas empresariales
 
 La ejecución de SQL Server en máquinas virtuales le permite satisfacer necesidades empresariales exclusivas y diversas a través de una combinación de implementaciones locales y hospedadas en la nube, a la vez que usa el mismo conjunto de productos de servidor, herramientas de desarrollo y conocimientos en estos entornos.
 
 No siempre es fácil para las empresas cambiar su DBMS a un servicio totalmente administrado. Puede ser necesario cumplir requisitos específicos para poder migrar a un servicio administrado que requiere realizar cambios en la base de datos y en las aplicaciones que lo usan. Por esta razón, el uso de máquinas virtuales puede ofrecer una solución, pero no elimina la necesidad de administrar el DBMS tan cuidadosamente como lo haría en el entorno local.
 
 
-#### Azure SQL Managed Instance
+### Azure SQL Managed Instance
 
 Azure SQL Managed Instance permite ejecutar eficazmente una instancia totalmente controlable de SQL Server en la nube. Además, puede instalar varias bases de datos en la misma instancia y tiene un control total sobre esta instancia, como el que tendría sobre un servidor local. Con SQL Managed Instance se automatizan las copias de seguridad, la aplicación de revisiones de software, la supervisión de bases de datos y otras tareas generales, pero sigue teniendo control total sobre la seguridad y la asignación de recursos para las bases de datos. Puede encontrar información detallada en ¿Qué es Azure SQL Managed Instance?.
 
@@ -461,13 +461,13 @@ Las instancias administradas usan otros servicios de plataforma de Azure para co
 
 Todas las comunicaciones se cifran y firman mediante certificados para proteger los datos.
 
-#### Casos de uso
+### Casos de uso
 
 Considere la posibilidad de usar Azure SQL Managed Instance si desea migrar mediante lift-and-shift una instancia local de SQL Server y todas sus bases de datos a la nube, sin incurrir en la sobrecarga de administración de ejecutar SQL Server en una máquina virtual.
 
 Azure SQL Managed Instance proporciona un mayor grado de compatibilidad con SQL Server locales que Azure SQL Database. Si tiene una solución de SQL Server existente con características avanzadas que desea trasladar a la nube con cambios mínimos, SQL Managed Instance es la mejor opción. Para comprobar la compatibilidad con un sistema local existente, puede instalar Data Migration Assistant (DMA). Esta herramienta analiza sus bases de datos en SQL Server e informa de los problemas que podrían bloquear la migración a una instancia administrada.
 
-#### Ventajas empresariales
+### Ventajas empresariales
 
 Permite a un administrador del sistema dedicar menos tiempo a tareas administrativas, ya que el servicio las realiza automáticamente o las simplifica en gran medida. Entre las tareas automatizadas se incluyen: la instalación y revisión del software del sistema operativo y del sistema de administración de bases de datos, el cambio de tamaño y la configuración de instancias dinámicas, la realización de copias de seguridad, la replicación de bases de datos (incluidas las bases de datos del sistema), la configuración de alta disponibilidad, y la configuración de flujos de datos de supervisión del estado y del rendimiento.
 
@@ -475,7 +475,7 @@ Tiene una compatibilidad casi completa con SQL Server Enterprise Edition, que se
 
 Admite inicios de sesión del motor de base de datos de SQL Server e inicios de sesión integrados en Microsoft Entra ID. Los inicios de sesión del motor de base de datos de SQL Server incluyen un nombre de usuario y una contraseña. Debe escribir sus credenciales cada vez que se conecta al servidor. Los inicios de sesión de Microsoft Entra utilizan las credenciales asociadas al inicio de sesión actual del equipo, y no es necesario proporcionarlas cada vez que se conecte al servidor.
 
-#### Azure SQL Database
+### Azure SQL Database
 
 Azure SQL Database es una oferta de PaaS de Microsoft. Después de crear un servidor de bases de datos administrado en la nube, debe implementar las bases de datos en este otro servidor.
 
@@ -485,19 +485,19 @@ Azure SQL Database es una oferta de PaaS de Microsoft. Después de crear un serv
 
 Azure SQL Database está disponible como una base de datos única o un grupo elástico.
 
-#### Base de datos única
+### Base de datos única
 
 Esta opción le permite configurar y ejecutar rápidamente una sola base de datos de SQL Server. Puede crear y ejecutar un servidor de bases de datos en la nube y acceder a la base de datos a través de este servidor. Microsoft administra el servidor, por lo que solo tiene que configurar la base de datos, crear las tablas y rellenarlas con sus datos. Puede escalar la base de datos si necesita más espacio de almacenamiento, memoria o potencia de procesamiento. De forma predeterminada, los recursos están asignados previamente y se le cobra por hora por los recursos que ha solicitado. También puede especificar una configuración sin servidor . En esta configuración, Microsoft crea su propio servidor, que se puede compartir entre las bases de datos que pertenecen a otros suscriptores de Azure. En este caso, Microsoft garantiza la privacidad de su base de datos. Su base de datos se escala automáticamente y los recursos se asignan o desasignan según sea necesario.
 
-#### Grupo elástico
+### Grupo elástico
 
 Esta opción es similar a Base de datos única, excepto que, por defecto, varias bases de datos pueden compartir los mismos recursos, como la memoria, el espacio de almacenamiento de datos y la capacidad de procesamiento, a través de la multitenencia. Los recursos se conocen como un grupo. Al crear un grupo, solo sus bases de datos pueden usarlo. Este modelo es útil si tiene bases de datos con requisitos de recursos que varían con el tiempo, además, puede ayudarle a reducir los costos. Por ejemplo, su base de datos de nóminas puede requerir una gran cantidad de potencia de CPU al final de cada mes a medida que se encarga del procesamiento de nóminas, pero en otras ocasiones la base de datos podría estar mucho menos activa. Es posible que tenga otra base de datos para ejecutar informes. Esta base de datos podría activarse durante varios días a mediados del mes mientras se generan informes de administración, pero podría tener una carga más ligera en otras ocasiones. La opción Grupo elástico le permite usar los recursos disponibles en el grupo y liberarlos una vez que se haya completado el procesamiento.
 
-#### Hiperescala
+### Hiperescala
 
 El nivel de servicio Hiperescala admite bases de datos muy grandes (hasta 100 TB) con escalado rápido a petición y copia de seguridad rápida y restauración independientemente del tamaño de los datos.
 
-#### Casos de uso
+### Casos de uso
 
 Azure SQL Database ofrece la mejor opción por un costo bajo con administración mínima. No es totalmente compatible con las instalaciones de SQL Server locales. A menudo se usa en nuevos proyectos en la nube, donde el diseño de la aplicación puede acomodar los cambios necesarios en las aplicaciones.
 
@@ -510,7 +510,7 @@ Azure SQL Database se suele usar para:
 - Aplicaciones que requieren alta disponibilidad.
 - Sistemas con una carga variable que necesitan escalar y reducir verticalmente el servidor de bases de datos de forma rápida.
 
-#### Ventajas empresariales
+### Ventajas empresariales
 
 Azure SQL Database actualiza automáticamente el software de SQL Server y le aplica revisiones para asegurarse de que siempre se ejecuta la versión más reciente y más segura del servicio.
 
@@ -536,7 +536,7 @@ La asistencia de inteligencia artificial en Azure SQL Database puede sugerir opt
 
 Además de los servicios de Azure SQL, los servicios de datos de Azure están disponibles para otros sistemas populares de bases de datos relacionales, como MySQL y PostgreSQL. La razón principal de incluir estos servicios es permitir que las organizaciones que los usan en aplicaciones locales migren a Azure rápidamente, sin necesidad de realizar cambios significativos en sus aplicaciones.
 
-#### ¿Qué son MySQL y PostgreSQL?
+### ¿Qué son MySQL y PostgreSQL?
 
 MySQL y PostgreSQL son sistemas de administración de bases de datos relacionales que se adaptan a diferentes especializaciones.
 
@@ -546,7 +546,7 @@ PostgreSQL es una base de datos híbrida de objetos relacionales. Puede almacena
 
 PostgreSQL dispone de su propio lenguaje de consulta llamado pgsql. Este lenguaje es una variante del lenguaje de consulta relacional estándar, SQL, y cuenta con características que permiten escribir procedimientos almacenados que se ejecutan en la base de datos.
 
-#### Azure Database for MySQL
+### Azure Database for MySQL
 
 Azure Database for MySQL es una implementación de PaaS de MySQL en la nube de Azure que se basa en la edición Community de MySQL.
 
@@ -558,7 +558,7 @@ Azure Database for MySQL proporciona un sistema de base de datos global que se p
 
 Hay algunas operaciones que no están disponibles con Azure Database for MySQL. Estas funciones están relacionadas principalmente con la seguridad y la administración. Azure administra estos aspectos del propio servidor de bases de datos.
 
-#### Ventajas de Azure Database for MySQL
+### Ventajas de Azure Database for MySQL
 
 Azure Database for MySQL ofrece las siguientes características:
 - Características de alta disponibilidad integradas.
@@ -575,17 +575,17 @@ Los servidores de Azure Database for MySQL proporcionan funcionalidades de super
 Azure Database for MySQL: servidor flexible
 La opción de implementación flexible-servidor es un servicio de base de datos totalmente administrado diseñado para proporcionar un control y flexibilidad más granulares sobre las funciones de administración de bases de datos y las opciones de configuración. Proporciona controles de optimización de costos y es la opción de implementación recomendada para las nuevas cargas de trabajo. Con una cuenta gratuita de Azure, puede usar servidor flexible gratis durante 12 meses.
 
-#### Base de Datos de Azure para PostgreSQL
+### Base de Datos de Azure para PostgreSQL
 
 Si prefiere PostgreSQL, puede elegir Azure Database for PostgreSQL ejecutar una implementación de PaaS de PostgreSQL en la nube de Azure. Este servicio proporciona las mismas ventajas de disponibilidad, rendimiento, escalado, seguridad y administración que MySQL.
 
 Algunas características de las bases de datos locales de PostgreSQL no están disponibles en Azure Database for PostgreSQL. Estas características están relacionadas principalmente con las extensiones que los usuarios pueden agregar a una base de datos para realizar tareas especializadas, como escribir procedimientos almacenados en varios lenguajes de programación (distintos de pgsql, el cual está disponible) e interactuar directamente con el sistema operativo. Se admite un conjunto básico de las extensiones que se usan con más frecuencia, y la lista de extensiones disponibles se revisa continuamente.
 
-#### Servidor flexible de base de datos de Azure para PostgreSQL
+### Servidor flexible de base de datos de Azure para PostgreSQL
 
 La opción de implementación de servidor flexible para PostgreSQL es un servicio de base de datos totalmente administrado. Proporciona un elevado nivel de control y personalizaciones de configuración de servidor, así como controles de optimización de costos. Con una cuenta gratuita de Azure, puede usar servidor flexible gratis durante 12 meses.
 
-#### Ventajas de Azure Database for PostgreSQL
+### Ventajas de Azure Database for PostgreSQL
 
 Azure Database for PostgreSQL es un servicio de alta disponibilidad. Integra mecanismos de conmutación por error y de detección de errores.
 
