@@ -34,6 +34,8 @@ Azure Storage y Microsoft OneLake ofrecen una variedad de opciones para almacena
 
 Azure Blob Storage es un servicio que le permite almacenar grandes cantidades de datos no estructurados como objetos binarios grandes, o blobs, en la nube. Los blobs son una manera eficaz de almacenar archivos de datos en un formato optimizado para el almacenamiento basado en la nube, y las aplicaciones pueden leerlos y escribirlos mediante la API de almacenamiento de blobs de Azure.
 
+<br>
+
 ![11_azure-blob-storage](images/11_azure-blob-storage.png)
 
 En una cuenta de Azure Storage, los blobs se almacenan en contenedores. Un contenedor proporciona una manera cómoda de agrupar blobs relacionados. Puede controlar quién puede leer y escribir blobs dentro de un contenedor en el nivel de contenedor. La autenticación de Microsoft Entra ID (servicio de administración de identidades y accesos de Azure) es el método de inicio de sesión recomendado para Azure Blob Storage, ya que permite asignar permisos precisos mediante el control de acceso basado en roles de Azure (RBAC), un sistema que controla quién puede realizar acciones específicas en los recursos de Azure.
@@ -48,6 +50,8 @@ Azure Blob Storage admite tres tipos de blobs diferentes:
 
 - Blobs en anexos. Un blob de anexión es un blob de bloques optimizado para admitir operaciones de anexión. Solo puede agregar bloques al final de un blob de anexión; no se admite la actualización o eliminación de bloques existentes. Cada bloque puede tener un tamaño distinto, de hasta 4 MB. El tamaño máximo de un blob de anexos es poco más de 195 GB.
 
+<br>
+
 ![12_azure-blob-types](images/12_azure-blob-types.png)
 
 Blob Storage proporciona cuatro niveles de acceso, lo que ayuda a equilibrar la latencia de acceso y el costo de almacenamiento:
@@ -60,11 +64,15 @@ Blob Storage proporciona cuatro niveles de acceso, lo que ayuda a equilibrar la 
 
 - El nivel Archivo proporciona el menor costo de almacenamiento, pero una mayor latencia. El nivel de acceso de archivo está pensado para los datos históricos que no deben perderse, pero que raramente se necesitan. Los datos deben permanecer en el nivel de archivo durante un mínimo de 180 días para evitar penalizaciones de eliminación anticipada. Los blobs del nivel de acceso de archivo se almacenan de forma eficaz en un estado sin conexión. La latencia de lectura típica para los niveles de acceso frecuente, esporádico y frío son unos pocos milisegundos, pero para el nivel de archivo, los datos pueden tardar hasta 15 horas en estar disponibles. Para recuperar un blob desde el nivel de acceso de archivo, debe cambiar el nivel de acceso a acceso frecuente, esporádico o en frío. Con ello, el blob se rehidratará. Solo puede leer el blob una vez que se ha completado el proceso de rehidratación.
 
+<br>
+
 ![13_azure-blob-access-tiers](images/13_azure-blob-access-tiers.png)
 
 Puede crear directivas de administración del ciclo de vida para los blobs de una cuenta de almacenamiento. Una directiva de administración del ciclo de vida puede trasladar automáticamente un blob de acceso frecuente a acceso esporádico y en frío y, a continuación, al nivel de acceso de archivo, a medida que pasa el tiempo y se usa con menos frecuencia (la directiva se basa en el número de días transcurridos desde la última modificación). Una directiva de administración del ciclo de vida también puede organizarse para eliminar blobs obsoletos.
 
 Azure Storage también proporciona opciones de redundancia integradas para mantener los datos de alta disponibilidad y protegidos contra errores. El almacenamiento con redundancia local (LRS) mantiene tres copias de los datos dentro de un único centro de datos. El almacenamiento con redundancia de zona (ZRS) distribuye copias en tres zonas de disponibilidad de la región primaria, por lo que los datos permanecen accesibles incluso si una zona deja de funcionar. Para la protección contra desastres regionales, el almacenamiento con redundancia geográfica (GRS) y el almacenamiento con redundancia de zona geográfica (GZRS) replican los datos de forma asincrónica en una región secundaria a cientos de kilómetros de distancia. También puede habilitar el acceso de lectura a la región secundaria (RA-GRS o RA-GZRS) para que la aplicación pueda leer datos de la región secundaria incluso antes de que se produzca una conmutación por error.
+
+<br>
 
 ![14_azure-storage-redundancy](images/14_azure-storage-redundancy.png)
 
@@ -120,6 +128,8 @@ Azure Files es básicamente una manera de crear recursos compartidos de red basa
 Puede crear Azure File Storage en una cuenta de almacenamiento. Azure Files permite compartir grandes cantidades de datos en una sola cuenta de almacenamiento, hasta 256 TiB para cuentas basadas en SSD e incluso más para cuentas basadas en HDD. Estos datos se pueden distribuir en cualquier número de comparticiones de archivos de la cuenta. El tamaño máximo de un solo archivo es 4 TiB, pero puede establecer cuotas para limitar el tamaño de cada recurso compartido por debajo de esta figura. Actualmente, Azure File Storage admite hasta 2000 identificadores simultáneos por archivo o directorio.
 
 Después de crear una cuenta de almacenamiento, puede cargar archivos en Azure File Storage mediante Azure Portal o herramientas como la utilidad AzCopy . También puede usar el servicio Azure File Sync para sincronizar copias almacenadas en caché local de archivos compartidos con los datos de Azure File Storage.
+
+<br>
 
 ![18_azure-files-architecture](images/18_azure-files-architecture.png)
 
@@ -246,6 +256,8 @@ Cosmos DB usa una jerarquía de recursos de cuatro niveles para organizar los da
 
 La clave de partición es una propiedad que elige distribuir datos entre particiones lógicas. Cada partición lógica puede hospedar un máximo de 20 GB de datos. Una clave de partición bien elegida( una con muchos valores distintos e incluso una distribución de datos entre esos valores) es importante para mantener el rendimiento equilibrado a medida que crece la base de datos.
 
+<br>
+
 ![21_cosmos-db-hierarchy](images/21_cosmos-db-hierarchy.png)
 
 Cosmos DB crea y mantiene automáticamente índices en todas las propiedades de elemento de forma predeterminada. No es necesario definir un esquema por adelantado ni administrar índices manualmente; el servicio controla ambos.
@@ -270,6 +282,8 @@ Las réplicas convergen con el tiempo; la garantía más débil, pero la mayor d
 | | |
 
 Para la mayoría de las aplicaciones transaccionales, la coherencia de sesión es el punto de partida recomendado.
+
+<br>
 
 ![22_cosmos-db-global-consistency](images/22_cosmos-db-global-consistency.png)
 
@@ -315,7 +329,192 @@ En la unidad siguiente, verá las distintas API compatibles con Cosmos DB y cóm
 
 ### Identificación de las API de Azure Cosmos DB
 
-3/6
+En la unidad anterior, ha explorado qué es Azure Cosmos DB y cómo organiza los datos. Una de sus características más prácticas es que no le bloquea en un solo lenguaje de consulta o modelo de datos. En su lugar, Cosmos DB expone varias API compatibles con el protocolo de conexión para que los desarrolladores usen herramientas, bibliotecas y sintaxis conocidas para trabajar con sus datos, incluso cuando se migra una aplicación existente.
+
+### ¿Por qué Cosmos DB admite varias API?
+
+Al crear una cuenta de Cosmos DB, elija la API que se va a usar. Esa opción determina cómo interactúa la aplicación con la base de datos: con qué formato de datos envía, con qué lenguaje de consulta usa y con qué bibliotecas cliente funciona. Internamente, Cosmos DB almacena datos en su propio formato; la API actúa como una capa de abstracción en la parte superior.
+
+La principal ventaja es la portabilidad. Si el equipo ya tiene una aplicación basada en MongoDB o Apache Cassandra, puede apuntarla en Cosmos DB con cambios mínimos de código y obtener una distribución global, un rendimiento administrado y las ventajas inherentes del Acuerdo de Nivel de Servicio en el proceso.
+
+Las cinco API admitidas son: **NoSQL, MongoDB, Table, Apache Cassandra y Apache Gremlin**. Cada uno está diseñado para un tipo diferente de datos o caso de uso.
+
+![24_cosmos-db-apis](images/24_cosmos-db-apis.png)
+
+<br>
+
+### Cosmos DB para NoSQL
+
+Azure Cosmos DB para NoSQL es la API nativa de Cosmos DB. Almacena datos como documentos JSON y le permite consultar con una sintaxis similar a SQL.
+
+> ! Nota:
+>
+> Esta API se llamó anteriormente a la API de SQL. Se cambió el nombre a la API de NoSQL en 2023. Si ve documentación anterior que hace referencia a la "API de SQL", es el mismo servicio.
+
+Se recomienda la API de NoSQL para las nuevas aplicaciones.
+
+Una consulta tiene este aspecto:
+
+SQL
+---
+```sql
+SELECT *
+FROM customers c
+WHERE c.id = "joe@litware.com"
+```
+
+El resultado es un documento JSON:
+
+JSON
+---
+```json
+{
+    "id": "joe@litware.com",
+    "name": "Joe Jones",
+    "address": {
+        "street": "1 Main St.",
+        "city": "Seattle"
+    }
+}
+```
+<br>
+
+>  Sugerencia
+> 
+> Cosmos DB para NoSQL admite la duplicación de Fabric, que replica automáticamente los datos operativos en Microsoft Fabric, sin necesidad de canalizaciones. Esto facilita la ejecución de análisis en datos activos sin afectar a la carga de trabajo transaccional.
+
+### Cosmos DB for MongoDB
+
+Azure Cosmos DB para MongoDB es compatible con controladores y bibliotecas cliente de MongoDB, por lo que las aplicaciones de MongoDB existentes pueden conectarse a Cosmos DB sin cambios significativos en el código.
+
+Los datos se almacenan en formato BSON (JSON binario: una codificación binaria de JSON) y las consultas usan el lenguaje de consulta mongoDB (MQL), una sintaxis compacta orientada a objetos donde se llama a métodos en objetos de colección. Para buscar un producto por identificador:
+
+JavaScript
+---
+```javascript
+db.products.find({id: 123})
+```
+
+Resultado:
+
+JSON
+---
+```json
+{
+   "id": 123,
+   "name": "Hammer",
+   "price": 2.99
+}
+```
+
+Esta API es una opción natural cuando el equipo ya tiene experiencia en MongoDB o cuando va a migrar una carga de trabajo de MongoDB existente a un servicio en la nube administrado.
+
+### Cosmos DB para Table
+
+Azure Cosmos DB para Table almacena datos como pares clave-valor en tablas, con el mismo modelo de programación que Azure Table Storage. Si ya tiene una aplicación de Azure Table Storage, puede conectarse a Cosmos DB para Table con cambios mínimos de código.
+
+Lo que gana en comparación con Azure Table Storage incluye mayor escalabilidad, distribución global, índices secundarios automáticos y escalabilidad automática instantánea. Una tabla podría tener este aspecto:
+
+---
+| Clave de Partición | RowKey |	Nombre | Correo electrónico |
+|--------------------|--------|--------|--------------------|
+| 1 | 123 |	Joe Jones |	joe@litware.com |
+| 1	| 124 |	Samir | Nadoy | samir@northwind.com |
+---
+
+Cada fila se identifica mediante una combinación PartitionKey y RowKey . Puede recuperar una fila específica a través de un punto de conexión de estilo REST:
+
+text
+---
+```text
+https://endpoint/Customers(PartitionKey='1',RowKey='124')
+```
+
+<br>
+
+> ! Sugerencia 
+> 
+> Azure Table Storage sigue estando disponible y compatible, pero Cosmos DB para Table es la opción recomendada para las nuevas cargas de trabajo que necesitan almacenamiento de clave-valor a escala.
+
+### Cosmos DB para Apache Cassandra
+
+Azure Cosmos DB para Apache Cassandra es compatible con Apache Cassandra, una base de datos de código abierto que usa un modelo de almacenamiento de familia de columnas. En las tablas de familia de columnas, las filas no tienen que contener las mismas columnas, a diferencia de una tabla relacional en la que el esquema se fija para todas las filas.
+
+Por ejemplo, una tabla Employees podría tener este aspecto:
+
+---
+| ID |	Nombre | Gestor |
+|----|---------|--------|
+| 1 | Sue Smith | |
+| 2	| Ben Chan | Sue Smith |
+---
+
+Cassandra usa CQL (lenguaje de consulta de Cassandra), que tiene una sintaxis similar a SQL. Para recuperar un registro específico:
+
+SQL
+---
+```sql
+SELECT * FROM Employees WHERE ID = 2
+```
+
+Esta API es una buena opción para los equipos que migran una carga de trabajo de Apache Cassandra a una base de datos en la nube totalmente administrada.
+
+### Cosmos DB for Apache Gremlin
+
+Azure Cosmos DB para Apache Gremlin está diseñado para trabajar con datos de grafos, un modelo en el que las entidades se representan como vértices (nodos) y las relaciones como aristas. Las bases de datos de grafos son útiles cuando las conexiones entre los datos son tan importantes como los propios datos: piense en redes sociales, motores de recomendaciones, detección de fraudes y jerarquías organizativas.
+
+![25_graph](images/25_graph.png)
+
+En el ejemplo anterior, los vértices de empleados y departamentos están conectados por aristas que representan relaciones jerárquicas y la pertenencia al departamento.
+
+Gremlin es el lenguaje de consulta que se usa para atravesar y manipular datos de grafos. Para agregar un vértice de empleado y conectarlo a uno existente:
+
+apache
+---
+```apache
+g.addV('employee').property('id', '3').property('firstName', 'Alice')
+g.V('3').addE('reports to').to(g.V('1'))
+```
+
+Para recuperar todos los vértices del empleado en orden de identificación:
+
+apache
+---
+```apache
+g.V().hasLabel('employee').order().by('id')
+```
+
+Con cinco API entre las que elegir, puede hacer coincidir la interfaz de Cosmos DB con el modelo de datos, las aptitudes existentes del equipo y el código de la aplicación. En la unidad siguiente, obtendrá experiencia práctica con Cosmos DB directamente.
+
+<br>
+
+---
+
+### Ejercicio: exploración de Azure Cosmos DB
+
+Ahora es su oportunidad para explorar Azure Cosmos DB.
+
+> ! Nota:> 
+> 
+> Para completar este laboratorio, necesitará una suscripción de Azure en la que tenga acceso administrativo.
+
+Inicie el ejercicio y siga las instrucciones.
+
+[Launch Exercise](https://microsoftlearning.github.io/DP-900T00A-Azure-Data-Fundamentals/Instructions/Labs/dp900-03-cosmos-lab.html)
+
+<br>
+
+---
+
+### Resumen
+
+Azure Cosmos DB proporciona una solución de base de datos de escala global para datos no rerelationales.
+
+En este módulo, ha aprendido a:
+
+- Describir e las características y funcionalidades clave de Azure Cosmos DB
+- Identificación de las API de Azure Cosmos DB
+- Aprovisionar y usar una instancia de Azure Cosmos DB
 
 
 <br>
