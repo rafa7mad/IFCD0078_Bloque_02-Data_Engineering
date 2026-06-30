@@ -197,3 +197,127 @@ En este módulo ha aprendido a:
 <br>
 
 ---
+
+---
+
+## Exploración de los aspectos básicos de Azure Cosmos DB
+
+Azure Cosmos DB proporciona un almacén altamente escalable para datos no rerelationales.
+
+### Objetivos de aprendizaje
+En este módulo, ha aprendido a hacer lo siguiente:
+- Describir las funcionalidades y características clave de Azure Cosmos DB
+- Identificar las API admitidas en Azure Cosmos DB
+- Aprovisione y explore una base de datos de Azure Cosmos DB.
+
+<br>
+
+---
+
+### Introducción
+
+Las bases de datos relacionales almacenan datos en tablas relacionales, pero a veces la estructura que impone este modelo puede ser demasiado rígida y, a menudo, conduce a un rendimiento deficiente a menos que dedique tiempo a implementar un ajuste detallado. Existen otros modelos, denominados colectivamente bases de datos NoSQL. Estos modelos almacenan datos en otras estructuras, como documentos, gráficos, almacenes de clave-valor y almacenes de familias de columnas.
+
+Azure Cosmos DB es un servicio de base de datos en la nube altamente escalable para datos NoSQL.
+
+<br>
+
+---
+
+### Descripción de Azure Cosmos DB
+
+En la unidad anterior, ha aprendido que Azure Cosmos DB es un servicio de base de datos en la nube altamente escalable para NoSQL datos. En esta unidad, explorará lo que hace que sea diferente de las bases de datos relacionales tradicionales, cómo organiza los datos internamente y cuándo es la opción adecuada para la aplicación.
+
+#### ¿Qué es Azure Cosmos DB?
+
+Azure Cosmos DB es un servicio de base de datos NoSQL totalmente administrado en Azure, una oferta de plataforma como servicio (PaaS). Microsoft controla toda la infraestructura subyacente: aprovisionamiento de servidores, aplicación de revisiones, actualizaciones y copias de seguridad. Se centra en la lógica de la aplicación mientras Cosmos DB controla la sobrecarga operativa.
+
+Cosmos DB es independiente del esquema. Los elementos almacenados en el mismo contenedor no necesitan compartir la misma estructura. Un elemento puede tener cinco propiedades; otro en el mismo contenedor podría tener 15 completamente diferentes. Esta flexibilidad hace que Cosmos DB sea adecuado para las aplicaciones en las que las formas de datos cambian con el tiempo o varían entre registros.
+
+Microsoft usa Cosmos DB internamente para algunos de sus servicios más exigentes, como Xbox Live, Microsoft 365 y las partes principales de Azure. Esos servicios administran colectivamente miles de millones de operaciones al día, lo que le da una idea de la escala para la que se crea Cosmos DB.
+
+#### Cómo Azure Cosmos DB organiza los datos
+
+Cosmos DB usa una jerarquía de recursos de cuatro niveles para organizar los datos:
+- Account: recurso de Azure de nivel superior. Una sola cuenta puede contener bases de datos ilimitadas.
+- Base de datos: un espacio de nombres lógico que agrupa los contenedores relacionados.
+- Contenedor: la unidad principal de almacenamiento y escalado. Configure la clave de partición, el rendimiento, la directiva de indexación y un período de vida opcional (TTL) en el nivel de contenedor.
+- Elementos: entidades de datos individuales almacenadas dentro de un contenedor. En función de la API que use, los elementos se pueden llamar documentos, filas, nodos o bordes.
+
+La clave de partición es una propiedad que elige distribuir datos entre particiones lógicas. Cada partición lógica puede hospedar un máximo de 20 GB de datos. Una clave de partición bien elegida( una con muchos valores distintos e incluso una distribución de datos entre esos valores) es importante para mantener el rendimiento equilibrado a medida que crece la base de datos.
+
+![21_cosmos-db-hierarchy](images/21_cosmos-db-hierarchy.png)
+
+Cosmos DB crea y mantiene automáticamente índices en todas las propiedades de elemento de forma predeterminada. No es necesario definir un esquema por adelantado ni administrar índices manualmente; el servicio controla ambos.
+
+#### Distribución global y rendimiento
+
+Cosmos DB se ha creado para la distribución global. Agregue regiones de Azure a su cuenta en cualquier momento y el servicio replica sus datos automáticamente en cada una. Los usuarios de diferentes ubicaciones leen y escriben en la réplica regional más cercana, lo que mantiene la latencia baja independientemente de dónde estén.
+
+Las cuentas de escritura en varias regiones proporcionan garantías de alta disponibilidad. En el percentil 99, las lecturas suelen completarse en alrededor de 4 milisegundos y escrituras en alrededor de 5 milisegundos.
+
+Dado que las réplicas existen en varias regiones, debe decidir cómo deben estar las réplicas coherentes entre sí. Cosmos DB ofrece cinco niveles de coherencia para que pueda optimizar ese equilibrio:
+
+Las réplicas convergen con el tiempo; la garantía más débil, pero la mayor disponibilidad.
+
+| Nivel de coherencia | Descripción |
+|---------------------|-------------|
+| Fuerte | Cada lectura refleja la escritura más reciente. |
+| Obsolescencia limitada | Las lecturas van por detrás de las escrituras en un intervalo configurable (tiempo o número de versiones). |
+| Sesión | La coherencia se garantiza dentro de una sola sesión de cliente. Este es el nivel más usado. |
+| Prefijo coherente | Las lecturas nunca ven escrituras desordenadas, pero pueden ver datos obsoletos.  |
+| Eventual | Las réplicas convergen con el tiempo; la garantía más débil, pero la mayor disponibilidad. |
+| | |
+
+Para la mayoría de las aplicaciones transaccionales, la coherencia de sesión es el punto de partida recomendado.
+
+![22_cosmos-db-global-consistency](images/22_cosmos-db-global-consistency.png)
+
+#### Modos de rendimiento y precios
+
+Cosmos DB mide la capacidad en unidades de solicitud por segundo (RU/s). Una RU/s equivale aproximadamente al costo de leer un elemento de 1 KB. Cada operación (lecturas, escrituras, consultas y eliminaciones) consume cierto número de RU/s, lo que proporciona una única métrica para razonar sobre el rendimiento y el costo.
+
+Hay tres modos de rendimiento disponibles:
+
+| Modo de rendimiento | Descripción |
+|---------------------|-------------|
+| Dedicado | El rendimiento se reserva exclusivamente para un único contenedor. |
+| compartido | El rendimiento se asigna a nivel de base de datos y se comparte entre un máximo de 25 contenedores. |
+| Sin servidor | No es necesario aprovisionar capacidad de procesamiento por adelantado; solo se paga por cada solicitud. Ideal para cargas de trabajo con tráfico imprevisible o bajo. |
+| | |
+
+<br>
+
+> ! Nota:
+> 
+> Las cuentas sin servidor se limitan a una sola región de Azure. Si la aplicación requiere distribución global entre varias regiones, use en su lugar una cuenta de rendimiento aprovisionada.
+
+La opción de escalabilidad automática le permite establecer un máximo de RU/s y Cosmos DB ajusta automáticamente la capacidad dentro de ese intervalo en función de la demanda real.
+
+![23_cosmos-db-throughput-modes](images/23_cosmos-db-throughput-modes.png)
+
+
+#### Cuándo usar Cosmos DB
+
+Cosmos DB es una opción segura para las aplicaciones que necesitan esquema flexible, alcance global y latencia baja coherente:
+- IoT y telemetría: ingesta rápida de datos de dispositivos de alta frecuencia, disponibles para el procesamiento casi en tiempo real.
+- Juegos: perfiles de jugador, tablas de clasificación y estadísticas en el juego que requieren tiempos de respuesta de milisegundos de un solo dígito.
+- Comercio minorista y comercio electrónico: catálogos de productos, carros de compras y canalizaciones de pedidos a cualquier escala.
+- Aplicaciones web y móviles: experiencias de usuario personalizadas, características sociales e integraciones de terceros.
+
+Algunas cargas de trabajo no son una buena opción. Si la aplicación depende de combinaciones complejas de varias tablas, Azure SQL Database es más adecuada. En el caso del análisis histórico a gran escala, considere Microsoft Fabric o Azure Synapse Analytics en su lugar.
+
+En la unidad siguiente, verá las distintas API compatibles con Cosmos DB y cómo cada una le permite trabajar con los datos mediante herramientas conocidas y lenguajes de consulta.
+
+<br>
+
+---
+
+### Identificación de las API de Azure Cosmos DB
+
+3/6
+
+
+<br>
+
+---
