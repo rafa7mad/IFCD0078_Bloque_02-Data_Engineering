@@ -43,13 +43,23 @@ Las soluciones de análisis de datos a gran escala combinan el almacenamiento de
 
 <br>
 
+![11_large-scale-analytics.png](images/11_large-scale-analytics.png)
 
+La combinación de almacenamiento de lago de datos flexible y análisis de SQL de almacenamiento de datos ha llevado a la aparición de un diseño de análisis a gran escala a menudo denominado almacenamiento de datos.
 
+> ! Nota: 
+> 
+> Reconocemos que a diferentes personas les gusta aprender de diferentes maneras. Puede optar por completar este módulo en formato basado en vídeo o puede leer el contenido como texto e imágenes. El texto contiene más detalle que los vídeos, por lo que, en algunos casos, es posible que desee hacer referencia a él como material complementario para la presentación de vídeo.
 
+<br>
 
+---
 
+### Descripción de la arquitectura de un almacenamiento de datos
 
+1/2/7
 
+https://learn.microsoft.com/es-es/training/modules/examine-components-of-modern-data-warehouse/2-describe-warehousing?pivots=text
 
 
 
