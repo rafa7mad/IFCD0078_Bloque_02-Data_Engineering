@@ -103,6 +103,7 @@ Microsoft Fabric aprovisiona automáticamente OneLake, basado en Azure Data Lake
 OneLake es un lago de datos único, unificado y lógico diseñado para toda su organización. OneLake viene automáticamente con todos los inquilinos de Microsoft Fabric y sirve como repositorio central para todos los datos de análisis. Ya sea estructurado o no estructurado, OneLake admite cualquier tipo de archivo y permite usar los mismos datos en varios motores analíticos sin movimiento de datos ni duplicación.
 
 ### Ventajas clave de OneLake
+
 - Lago de datos de toda la organización Antes de OneLake, la creación de varios lagos de datos para diferentes grupos empresariales era común. Ahora, OneLake proporciona una solución colaborativa, lo que garantiza que toda la organización comparte un único lago de datos.
 
 - Propiedad distribuida y colaboración Dentro de un inquilino, puede crear áreas de trabajo, lo que permite que diferentes partes de la organización administren sus elementos de datos. Esta propiedad distribuida promueve la colaboración al tiempo que mantiene los límites de gobernanza.
@@ -122,6 +123,8 @@ Para obtener más información, vea [OneLake, OneDrive para obtener datos](https
 Muchos sistemas locales que incluyen una red de equipos internos usan recursos compartidos de archivos. Un recurso compartido de archivos le permite almacenar un archivo en un equipo y conceder acceso a ese archivo a usuarios y aplicaciones que se ejecutan en otros equipos. Esta estrategia puede funcionar bien para los equipos de la misma red de área local, pero no se escala bien, ya que el número de usuarios aumenta o si los usuarios se encuentran en diferentes sitios.
 
 Azure Files es básicamente una manera de crear recursos compartidos de red basados en la nube, como normalmente se encuentran en organizaciones locales para que los documentos y otros archivos estén disponibles para varios usuarios. Al hospedar recursos compartidos de archivos en Azure, las organizaciones pueden eliminar los costos de hardware y la sobrecarga de mantenimiento, y beneficiarse de la alta disponibilidad y el almacenamiento en la nube escalable para los archivos.
+
+<br>
 
 ![17_azure-files](images/17_azure-files.png)
 
@@ -156,6 +159,8 @@ Azure Table Storage es una solución de almacenamiento NoSQL que usa tablas que 
 Sin embargo, no se confunda al pensar que una tabla de Azure Table Storage es como una tabla de una base de datos relacional. Una tabla de Azure le permite almacenar datos semiestructurados. Todas las filas de una tabla deben tener una clave única (compuesta por una clave de partición y una clave de fila) y, al modificar los datos de una tabla, una columna de marca de tiempo registra la fecha y hora en que se realizó la modificación; pero aparte de eso, las columnas de cada fila pueden variar. Las tablas de Azure Table Storage no tienen los conceptos de claves externas, relaciones, procedimientos almacenados, vistas u otros objetos que puede encontrar en una base de datos relacional.
 
 Los datos de Azure Table Storage suelen estar desnormalizados y cada fila contiene todos los datos de una entidad lógica. Por ejemplo, una tabla que contiene información del cliente puede almacenar el nombre, el nombre de familia, uno o varios números de teléfono y una o varias direcciones para cada cliente. El número de campos de cada fila puede ser diferente, en función de la cantidad de números de teléfono y direcciones de cada cliente, y de los detalles registrados para cada dirección. En una base de datos relacional, esta información se dividiría en varias filas de varias tablas.
+
+<br>
 
 ![19_azure-tables](images/19_azure-tables.png)
 
@@ -238,7 +243,7 @@ Azure Cosmos DB es un servicio de base de datos en la nube altamente escalable p
 
 En la unidad anterior, ha aprendido que Azure Cosmos DB es un servicio de base de datos en la nube altamente escalable para NoSQL datos. En esta unidad, explorará lo que hace que sea diferente de las bases de datos relacionales tradicionales, cómo organiza los datos internamente y cuándo es la opción adecuada para la aplicación.
 
-#### ¿Qué es Azure Cosmos DB?
+### ¿Qué es Azure Cosmos DB?
 
 Azure Cosmos DB es un servicio de base de datos NoSQL totalmente administrado en Azure, una oferta de plataforma como servicio (PaaS). Microsoft controla toda la infraestructura subyacente: aprovisionamiento de servidores, aplicación de revisiones, actualizaciones y copias de seguridad. Se centra en la lógica de la aplicación mientras Cosmos DB controla la sobrecarga operativa.
 
@@ -246,7 +251,7 @@ Cosmos DB es independiente del esquema. Los elementos almacenados en el mismo co
 
 Microsoft usa Cosmos DB internamente para algunos de sus servicios más exigentes, como Xbox Live, Microsoft 365 y las partes principales de Azure. Esos servicios administran colectivamente miles de millones de operaciones al día, lo que le da una idea de la escala para la que se crea Cosmos DB.
 
-#### Cómo Azure Cosmos DB organiza los datos
+### Cómo Azure Cosmos DB organiza los datos
 
 Cosmos DB usa una jerarquía de recursos de cuatro niveles para organizar los datos:
 - Account: recurso de Azure de nivel superior. Una sola cuenta puede contener bases de datos ilimitadas.
@@ -262,7 +267,7 @@ La clave de partición es una propiedad que elige distribuir datos entre partici
 
 Cosmos DB crea y mantiene automáticamente índices en todas las propiedades de elemento de forma predeterminada. No es necesario definir un esquema por adelantado ni administrar índices manualmente; el servicio controla ambos.
 
-#### Distribución global y rendimiento
+### Distribución global y rendimiento
 
 Cosmos DB se ha creado para la distribución global. Agregue regiones de Azure a su cuenta en cualquier momento y el servicio replica sus datos automáticamente en cada una. Los usuarios de diferentes ubicaciones leen y escriben en la réplica regional más cercana, lo que mantiene la latencia baja independientemente de dónde estén.
 
@@ -287,7 +292,7 @@ Para la mayoría de las aplicaciones transaccionales, la coherencia de sesión e
 
 ![22_cosmos-db-global-consistency](images/22_cosmos-db-global-consistency.png)
 
-#### Modos de rendimiento y precios
+### Modos de rendimiento y precios
 
 Cosmos DB mide la capacidad en unidades de solicitud por segundo (RU/s). Una RU/s equivale aproximadamente al costo de leer un elemento de 1 KB. Cada operación (lecturas, escrituras, consultas y eliminaciones) consume cierto número de RU/s, lo que proporciona una única métrica para razonar sobre el rendimiento y el costo.
 
@@ -311,7 +316,7 @@ La opción de escalabilidad automática le permite establecer un máximo de RU/s
 ![23_cosmos-db-throughput-modes](images/23_cosmos-db-throughput-modes.png)
 
 
-#### Cuándo usar Cosmos DB
+### Cuándo usar Cosmos DB
 
 Cosmos DB es una opción segura para las aplicaciones que necesitan esquema flexible, alcance global y latencia baja coherente:
 - IoT y telemetría: ingesta rápida de datos de dispositivos de alta frecuencia, disponibles para el procesamiento casi en tiempo real.
