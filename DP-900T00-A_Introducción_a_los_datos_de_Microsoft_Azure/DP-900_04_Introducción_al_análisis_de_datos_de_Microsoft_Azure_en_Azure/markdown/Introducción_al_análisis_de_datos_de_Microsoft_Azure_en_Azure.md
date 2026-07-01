@@ -250,8 +250,7 @@ El ejercicio está diseñado para que pueda familiarizarse con algunos elementos
 
 Inicie el ejercicio y siga las instrucciones.
 
-[Launch Exercise
-]([https://](https://go.microsoft.com/fwlink/?linkid=2262126))
+[Launch Exercise](https://microsoftlearning.github.io/DP-900T00A-Azure-Data-Fundamentals/Instructions/Labs/dp900-04b-fabric-lake-lab.html)
 
 <br>
 ---
@@ -543,7 +542,7 @@ Ahora es su oportunidad de explorar la inteligencia en tiempo real de Microsoft 
 
 Inicie el ejercicio y siga las instrucciones.
 
-[Launch Exercise]([https://](https://go.microsoft.com/fwlink/?linkid=2261875))
+[Launch Exercise](https://microsoftlearning.github.io/DP-900T00A-Azure-Data-Fundamentals/Instructions/Labs/dp900-05c-fabric-realtime-lab.html)
 
 <br>
 
