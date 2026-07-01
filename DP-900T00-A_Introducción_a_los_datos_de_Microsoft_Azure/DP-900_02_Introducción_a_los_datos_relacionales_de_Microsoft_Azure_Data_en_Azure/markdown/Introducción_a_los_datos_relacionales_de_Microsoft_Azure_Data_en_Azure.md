@@ -1,9 +1,25 @@
-# Introducción a los datos relacionales de Microsoft Azure Data en Azure
+# Índice
+
 Ruta de aprendizaje - 2 módulos
+
+1. [Exploración de conceptos fundamentales de datos relacionales](#exploración-de-conceptos-fundamentales-de-datos-relacionales)
+2. [Exploración de los servicios de bases de datos relacionales en Azure](#exploración-de-los-servicios-de-bases-de-datos-relacionales-en-azure)
+
+<br>
+
+---
+
+<br>
+
+# Introducción a los datos relacionales de Microsoft Azure Data en Azure
 
 Los datos relacionales son el núcleo de la mayoría de las aplicaciones empresariales y la base sobre la que se han creado muchas soluciones de datos empresariales. Microsoft Azure proporciona servicios para administrar bases de datos relacionales, lo que le permite crear nuevas aplicaciones o migrar las existentes a la nube. Esta ruta de aprendizaje le ayudará a prepararse para obtener la certificación [Azure Data Fundamentals](https://learn.microsoft.com/es-es/credentials/certifications/azure-data-fundamentals/?azure-portal=true&practice-assessment-type=certification).
 
-## Exploración de conceptos fundamentales de datos relacionales
+<br>
+
+---
+
+# Exploración de conceptos fundamentales de datos relacionales
 
 Los sistemas de bases de datos relacionales son una manera común de almacenar y administrar datos transaccionales y analíticos en organizaciones de cualquier tamaño de todo el mundo.
 
@@ -18,7 +34,7 @@ En este módulo aprenderá a:
 
 ---
 
-### Introducción
+## Introducción
 
 Cuando se empezaron a usar los sistemas informáticos, cada aplicación almacenaba los datos en su propia estructura, que era única. Cuando los desarrolladores querían crear aplicaciones para usar esos datos, necesitaban mucha información sobre la estructura de datos en particular para encontrar los que necesitaban. Estas estructuras de datos eran ineficaces, costosas de mantener y difíciles de optimizar para que la aplicación tuviera un buen rendimiento. El modelo de base de datos relacional se diseñó para resolver el problema de varias estructuras de datos arbitrarias. El modelo relacional proporciona una forma estándar de representar y consultar datos que cualquier aplicación puede usar. Una de las principales ventajas del modelo de base de datos relacional es su uso de tablas, que son una manera intuitiva, eficaz y flexible de almacenar y acceder a la información estructurada.
 
@@ -30,7 +46,7 @@ En este módulo, obtendrá información sobre las características clave de las 
 
 ---
 
-### Comprender los datos relacionales
+## Comprender los datos relacionales
 
 En una base de datos relacional, modela colecciones de entidades del mundo real como tablas. Una entidad puede ser cualquier cosa para la que desee registrar información; Normalmente, los objetos y eventos importantes. Por ejemplo, en un ejemplo de sistema minorista, puede crear tablas para clientes, productos, pedidos y artículos de línea dentro de un pedido. Una tabla contiene filas y cada fila representa una sola instancia de una entidad. En el escenario comercial, cada fila de la tabla de clientes contiene los datos de un solo cliente, cada fila de la tabla de productos define un único producto, cada fila de la tabla de pedidos representa un pedido realizado por un cliente y cada fila de la tabla de elementos de línea representa un producto incluido en un pedido.
 
@@ -44,7 +60,7 @@ Cada columna almacena datos de un tipo de datos específico. Por ejemplo, es pro
 
 ---
 
-### Comprensión de la normalización
+## Comprensión de la normalización
 
 La normalización es un término que usan los profesionales de bases de datos para un proceso de diseño de esquemas que minimiza la duplicación de datos y exige la integridad de los datos.
 
@@ -87,7 +103,7 @@ En algunos casos, una clave (principal o externa) se puede definir como una clav
 
 ---
 
-### Exploración de SQL
+## Exploración de SQL
 
 SQL significa Lenguaje de consulta estructurado y se usa para comunicarse con una base de datos relacional. Es el lenguaje estándar para los sistemas de administración de bases de datos relacionales. Las instrucciones SQL se usan para realizar tareas como actualizar o recuperar datos de una base de datos. Algunos sistemas comunes de administración de bases de datos relacionales que usan SQL incluyen Microsoft SQL Server, Azure SQL Database, Azure SQL Managed Instance, SQL Server en Azure Virtual Machines, MySQL, PostgreSQL, y Oracle.
 
@@ -278,7 +294,7 @@ VALUES (99, 'Drill', 4.99);
 
 ---
 
-### Descripción de objetos de base de datos
+## Descripción de objetos de base de datos
 
 Además de las tablas, una base de datos relacional puede contener otras estructuras que ayudan a optimizar la organización de los datos, encapsular acciones mediante programación y mejorar la velocidad de acceso. En esta unidad, obtendrá información sobre tres de estas estructuras con más detalle: vistas, procedimientos almacenados e índices.
 
@@ -357,7 +373,7 @@ Puede crear muchos índices en una tabla. Por lo tanto, si también desea encont
 
 ---
 
-### Resumen
+## Resumen
 
 Las bases de datos relacionales son una manera común de que las aplicaciones transaccionales almacenen y administren datos. Constan de un esquema de tablas, que están vinculados a través de valores de clave comunes. Use SQL para consultar y manipular los datos de las tablas y puede enriquecer la base de datos mediante la creación de objetos como vistas, procedimientos almacenados e índices.
 
@@ -370,9 +386,14 @@ En este módulo ha aprendido a:
 <br>
 
 ---
+
+[Volver al índice](#índice)
+
 ---
 
-## Exploración de los servicios de bases de datos relacionales en Azure
+<br>
+
+# Exploración de los servicios de bases de datos relacionales en Azure
 
 Microsoft Azure proporciona varios servicios para bases de datos relacionales. Puede elegir el sistema de administración de bases de datos relacionales que mejor se adapte a sus necesidades y hospedar datos relacionales en la nube.
 
@@ -386,7 +407,7 @@ En este módulo aprenderá a:
 
 ---
 
-### Introducción
+## Introducción
 
 Azure admite varios servicios de base de datos, lo que permite ejecutar en la nube diversos sistemas de administración de bases de datos relacionales conocidos, por ejemplo, SQL Server, PostgreSQL y MySQL.
 
@@ -402,7 +423,7 @@ En este módulo, explorará las opciones disponibles para los servicios de bases
 
 ---
 
-### Descripción de los servicios y las capacidades de Azure SQL
+## Descripción de los servicios y las capacidades de Azure SQL
 
 Azure SQL es un término colectivo para referirse a una familia de servicios de base de datos basados en Microsoft SQL Server en Azure. Los servicios específicos de Azure SQL incluyen los siguientes:
 
@@ -427,7 +448,7 @@ Azure SQL es un término colectivo para referirse a una familia de servicios de 
 
 <br>
 
-### **SQL Server en Azure Virtual Machines**
+### SQL Server en Azure Virtual Machines
 
 SQL Server en Virtual Machines le permite usar versiones completas de SQL Server en la nube sin tener que administrar ningún hardware local. Este es un ejemplo del enfoque de IaaS.
 
@@ -532,7 +553,7 @@ La asistencia de inteligencia artificial en Azure SQL Database puede sugerir opt
 
 ----
 
-### Descripción de los servicios de Azure para bases de datos de código abierto
+## Descripción de los servicios de Azure para bases de datos de código abierto
 
 Además de los servicios de Azure SQL, los servicios de datos de Azure están disponibles para otros sistemas populares de bases de datos relacionales, como MySQL y PostgreSQL. La razón principal de incluir estos servicios es permitir que las organizaciones que los usan en aplicaciones locales migren a Azure rápidamente, sin necesidad de realizar cambios significativos en sus aplicaciones.
 
@@ -597,7 +618,7 @@ Azure Database for PostgreSQL registra información de las consultas que se ejec
 
 ---
 
-### Ejercicio: exploración de servicios de base de datos relacionales de Azure
+## Ejercicio: exploración de servicios de base de datos relacionales de Azure
 
 Ahora tiene la posibilidad de explorar los servicios de bases de datos relacionales en Azure.
 
@@ -607,13 +628,13 @@ Ahora tiene la posibilidad de explorar los servicios de bases de datos relaciona
 
 Inicie el ejercicio y siga las instrucciones para explorar Azure SQL Database.
 
-[Launch Exercise.](https://go.microsoft.com/fwlink/?linkid=2261872)
+[Launch Exercise.](https://microsoftlearning.github.io/DP-900T00A-Azure-Data-Fundamentals/Instructions/Labs/dp900-01-sql-lab.html)
 
 <br>
 
 ---
 
-### Resumen
+## Resumen
 
 Azure admite una variedad de servicios de base de datos que puede usar para admitir nuevas aplicaciones en la nube o migrar aplicaciones existentes a la nube.
 
@@ -625,3 +646,9 @@ En este módulo, ha aprendido a:
 <br>
 
 ---
+
+[Volver al índice](#índice)
+
+---
+
+<br>
