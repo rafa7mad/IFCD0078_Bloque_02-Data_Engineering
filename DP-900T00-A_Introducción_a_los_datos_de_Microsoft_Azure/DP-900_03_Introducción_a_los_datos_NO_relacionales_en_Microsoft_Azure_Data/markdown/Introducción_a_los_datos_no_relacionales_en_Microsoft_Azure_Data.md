@@ -206,7 +206,7 @@ Ahora es su oportunidad para explorar Azure Storage.
 
 Inicie el ejercicio y siga las instrucciones.
 
-[Launch Exercise]([https://](https://go.microsoft.com/fwlink/?linkid=2261876))
+[Launch Exercise](https://microsoftlearning.github.io/DP-900T00A-Azure-Data-Fundamentals/Instructions/Labs/dp900-02-storage-lab.html)
 
 <br>
 
