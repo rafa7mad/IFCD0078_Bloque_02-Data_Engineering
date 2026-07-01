@@ -253,6 +253,7 @@ Inicie el ejercicio y siga las instrucciones.
 [Launch Exercise](https://microsoftlearning.github.io/DP-900T00A-Azure-Data-Fundamentals/Instructions/Labs/dp900-04b-fabric-lake-lab.html)
 
 <br>
+
 ---
 
 ## Resumen
