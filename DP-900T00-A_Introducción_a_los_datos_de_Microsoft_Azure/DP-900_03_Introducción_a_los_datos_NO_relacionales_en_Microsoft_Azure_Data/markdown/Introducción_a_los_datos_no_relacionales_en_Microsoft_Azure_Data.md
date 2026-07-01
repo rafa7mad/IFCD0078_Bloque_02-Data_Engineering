@@ -1,9 +1,25 @@
+# Índice
+
+Ruta de aprendizaje - 2 módulos
+
+1. [Explorar Azure Storage para datos no relacionales](#explorar-azure-storage-para-datos-no-relacionales)
+2. [Exploración de los aspectos básicos de Azure Cosmos DB](#exploración-de-los-aspectos-básicos-de-azure-cosmos-db)
+
+<br>
+
+---
+
+<br>
+
 # Introducción a los datos no relacionales en Microsoft Azure Data
 
 Los datos no relacionales son una manera común de que las aplicaciones almacenen y consulten datos sin sufrir la sobrecarga de un esquema relacional. En Microsoft Azure, puede usar Azure Storage y Azure Cosmos DB para crear almacenes de datos seguros y altamente escalables para datos no relacionales. Esta ruta de aprendizaje lo ayuda a prepararse para la certificación [Azure Data Fundamentals](https://learn.microsoft.com/es-es/credentials/certifications/azure-data-fundamentals/?azure-portal=true&practice-assessment-type=certification).
 
+<br>
 
-## Explorar Azure Storage para datos no relacionales
+---
+
+# Explorar Azure Storage para datos no relacionales
 
 Azure Storage es un servicio básico en Microsoft Azure que se usa normalmente para almacenar datos no relacionados.
 
@@ -20,7 +36,7 @@ En este módulo aprenderá a:
 
 ---
 
-### Introducción
+## Introducción
 
 La mayoría de las aplicaciones de software necesitan almacenar datos. Por lo general, los datos se almacenan en una base de datos relacional, en la que se organizan en tablas relacionadas y se administran mediante el Lenguaje de consulta estructurado (SQL). Sin embargo, muchas aplicaciones no necesitan la estructura rígida de una base de datos relacional y dependen del almacenamiento no relacional (a menudo denominado NoSQL).
 
@@ -30,7 +46,7 @@ Azure Storage y Microsoft OneLake ofrecen una variedad de opciones para almacena
 
 ---
 
-### Exploración de Azure Blob Storage
+## Exploración de Azure Blob Storage
 
 Azure Blob Storage es un servicio que le permite almacenar grandes cantidades de datos no estructurados como objetos binarios grandes, o blobs, en la nube. Los blobs son una manera eficaz de almacenar archivos de datos en un formato optimizado para el almacenamiento basado en la nube, y las aplicaciones pueden leerlos y escribirlos mediante la API de almacenamiento de blobs de Azure.
 
@@ -80,7 +96,7 @@ Azure Storage también proporciona opciones de redundancia integradas para mante
 
 ---
 
-### Exploración de Azure Data Lake Storage Gen2
+## Exploración de Azure Data Lake Storage Gen2
 
 Azure Data Lake Storage Gen2 es una solución de lago de datos a escala en la nube integrada en Azure Storage. Combina la escalabilidad y el control de costos de los Azure Blob Storage, incluidos los niveles de almacenamiento y la administración del ciclo de vida, con un sistema de archivos jerárquico compatible con los principales sistemas de análisis.
 
@@ -94,7 +110,7 @@ Para crear un sistema de archivos de Azure Data Lake Storage Gen2, debes habilit
 
 ---
 
-### Explorar Microsoft OneLake en Fabric
+## Explorar Microsoft OneLake en Fabric
 
 Microsoft Fabric aprovisiona automáticamente OneLake, basado en Azure Data Lake Gen 2.
 
@@ -118,7 +134,7 @@ Para obtener más información, vea [OneLake, OneDrive para obtener datos](https
 
 ---
 
-### Explorar Azure Files
+## Explorar Azure Files
 
 Muchos sistemas locales que incluyen una red de equipos internos usan recursos compartidos de archivos. Un recurso compartido de archivos le permite almacenar un archivo en un equipo y conceder acceso a ese archivo a usuarios y aplicaciones que se ejecutan en otros equipos. Esta estrategia puede funcionar bien para los equipos de la misma red de área local, pero no se escala bien, ya que el número de usuarios aumenta o si los usuarios se encuentran en diferentes sitios.
 
@@ -148,7 +164,7 @@ Azure Files admite dos protocolos comunes de uso compartido de archivos de red:
 
 ---
 
-### Exploración de tablas de Azure
+## Exploración de tablas de Azure
 
 Azure Table Storage es una solución de almacenamiento NoSQL que usa tablas que contienen key/value elementos de datos. Cada elemento se representa mediante una fila que contiene columnas para los campos de datos que deben almacenarse.
 
@@ -180,7 +196,7 @@ La clave de una tabla de Azure Table Storage consta de dos elementos; la clave p
 
 ---
 
-### Ejercicio: Exploración de Azure Storage
+## Ejercicio: Exploración de Azure Storage
 
 Ahora es su oportunidad para explorar Azure Storage.
 
@@ -196,7 +212,7 @@ Inicie el ejercicio y siga las instrucciones.
 
 ---
 
-### Resumen
+## Resumen
 
 Azure Storage es un servicio clave de Microsoft Azure y permite una amplia gama de soluciones y escenarios de almacenamiento de datos.
 
@@ -213,9 +229,13 @@ En este módulo ha aprendido a:
 
 ---
 
+[Volver al índice](#índice)
+
 ---
 
-## Exploración de los aspectos básicos de Azure Cosmos DB
+<br>
+
+# Exploración de los aspectos básicos de Azure Cosmos DB
 
 Azure Cosmos DB proporciona un almacén altamente escalable para datos no rerelationales.
 
@@ -521,7 +541,10 @@ En este módulo, ha aprendido a:
 - Identificación de las API de Azure Cosmos DB
 - Aprovisionar y usar una instancia de Azure Cosmos DB
 
-
 <br>
+
+---
+
+[Volver al índice](#índice)
 
 ---
