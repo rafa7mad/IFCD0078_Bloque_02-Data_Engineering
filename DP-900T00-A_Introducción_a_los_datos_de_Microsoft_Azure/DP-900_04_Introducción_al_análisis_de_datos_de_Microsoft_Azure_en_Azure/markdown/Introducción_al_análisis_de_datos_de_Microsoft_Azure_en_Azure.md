@@ -765,7 +765,7 @@ Ahora es su oportunidad de explorar el modelado y la visualización de datos con
 
 Inicie el ejercicio y siga las instrucciones.
 
-[Launch Exercise]([https://](https://go.microsoft.com/fwlink/?linkid=2262124))
+[Launch Exercise](https://microsoftlearning.github.io/DP-900T00A-Azure-Data-Fundamentals/Instructions/Labs/dp900-pbi-06-lab.html)
 
 <br>
 
