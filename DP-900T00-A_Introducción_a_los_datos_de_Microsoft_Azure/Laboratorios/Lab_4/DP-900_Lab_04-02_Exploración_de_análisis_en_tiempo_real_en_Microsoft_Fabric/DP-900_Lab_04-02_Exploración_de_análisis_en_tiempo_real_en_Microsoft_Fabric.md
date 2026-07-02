@@ -118,4 +118,69 @@ The eventstream captures the real-time taxi data, but it doesn’t currently sto
 
 <br>
 
+2. In the **Eventhouse** pane that opens on the right, configure the destination:
+
+- For D**ata ingestion mode**, select **Event processing before ingestion**.
+- Leave the default **Destination name** (*Eventhouse*).
+- For **Workspace**, select the workspace you created earlier (for example, *dp900-realtime*).
+- For **Eventhouse**, select **Create new**, name the eventhouse *taxi-eventhouse*, and select **Done**.
+  The **KQL Database** is automatically set to the same name.
+
+!
+
+<br>
+
+3. For KQL Destination table, select **Create new**, name the table *yellow-taxi*, and select **Done**. Make sure **Activate ingestion after adding the data source** is selected, and then select **Save**.
+
+!
+
+<br>
+
+4. On the canvas, an **Eventhouse** destination node is added. Make sure it’s connected to the **taxi-data-stream** node. If the stream and the eventhouse aren’t joined, drag a connection from the circle on the right edge of the stream node to the **Eventhouse** node.
+
+!
+
+<br>
+
+5. On the toolbar, select **Publish** to make your changes live.
+
+>! ***Tip**: Changes you make on the canvas stay in Edit mode until you publish them. Publishing switches the eventstream to Live mode and starts moving events to the eventhouse.*
+
+! 
+
+<br>
+
+6. After the eventstream switches to **Live** mode, the **taxi** source, the **taxi-data-stream**, and the **Eventhouse** destination each show a status of **Active**. Select the **Eventhouse** node, and in the pane below the canvas select the **Data preview** tab. Wait a few minutes for ingestion to start, selecting **Refresh** until rows of taxi data appear.
+
+!
+
+<br>
+
+>! ***Tip**: After publishing, it can take a few minutes before the first events are written to the table. If the preview is empty, wait and select Refresh again.*
+
+Now let’s explore how you can query and analyze the captured data.
+
+<br>
+
+---
+
+## Query the captured data
+
+The eventstream loads the real-time taxi data into the **yellow-taxi** table in your KQL database. You can query that table to explore the captured data.
+
+>! ***Tip**: KQL is designed for fast exploration of time-stamped, high-volume data. Querying lets you validate ingestion and start analysis immediately.*
+
+1. In the menu bar on the left, select **Workspaces**, open your workspace (for example, *dp900-realtime*), and then select the **taxi-eventhouse** KQL database.
+
+!
+
+<br>
+
+2.
+
+
+
+
+
+
 
