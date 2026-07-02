@@ -274,7 +274,11 @@ If you’ve finished exploring Real-Time Intelligence in Fabric, you can delete 
 
 <br>
 
+---
 
+[Volver al inicio](#dp-900t00a-azure-data-fundamentals)
+
+---
 
 
 

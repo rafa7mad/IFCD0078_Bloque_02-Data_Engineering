@@ -253,6 +253,6 @@ If you’ve finished exploring Microsoft Fabric, you can delete the workspace yo
 
 ---
 
-[Volver al índice](#explore-data-analytics-in-microsoft-fabric)
+[Volver al inicio](#dp-900t00a-azure-data-fundamentals)
 
 ---
