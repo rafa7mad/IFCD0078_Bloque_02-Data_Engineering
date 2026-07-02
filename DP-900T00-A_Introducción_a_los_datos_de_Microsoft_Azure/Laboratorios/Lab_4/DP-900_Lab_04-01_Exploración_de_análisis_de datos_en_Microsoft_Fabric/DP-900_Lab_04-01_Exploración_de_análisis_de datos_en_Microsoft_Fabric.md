@@ -247,6 +247,8 @@ If you’ve finished exploring Microsoft Fabric, you can delete the workspace yo
 
 ![35_delete_workspace](images/35_delete_workspace.jpg)
 
+![36_my_workspace_cleaned](images/36_my_workspace_cleaned.jpg)
+
 <br>
 
 ---
