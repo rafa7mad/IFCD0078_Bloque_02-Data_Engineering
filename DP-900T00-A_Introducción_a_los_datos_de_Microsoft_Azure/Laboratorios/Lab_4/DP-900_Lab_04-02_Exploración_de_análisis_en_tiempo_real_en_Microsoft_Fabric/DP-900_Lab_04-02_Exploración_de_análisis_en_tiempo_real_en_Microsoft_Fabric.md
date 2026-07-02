@@ -174,14 +174,99 @@ The eventstream loads the real-time taxi data into the **yellow-taxi** table in 
 
 1. In the menu bar on the left, select **Workspaces**, open your workspace (for example, *dp900-realtime*), and then select the **taxi-eventhouse** KQL database.
 
-!
+![60_taxi-eventhouse](images/60_taxi-eventhouse.jpg)
 
 <br>
 
-2.
+2. On the database page, note that the **taxi-eventhouse** database contains a **taxi-eventhouse_queryset** and the **yellow-taxi** table you created earlier.
 
+![61_taxi-eventhouse_yellow-taxi](images/61_taxi-eventhouse_yellow-taxi.jpg)
 
+<br>
 
+3. In the pane on the left, select the **taxi-eventhouse_queryset**. It opens with some sample KQL queries that you can use as a starting point.
+
+![62_taxi-eventhouse_queryset](images/62_taxi-eventhouse_queryset.jpg)
+
+<br>
+
+4. Select all of the text in the query pane and delete it. Then enter the following query and select **Run** to see 100 rows of data from the table:
+
+Code
+```kql
+ ['yellow-taxi']
+ | take 100
+```
+
+> Code
+> 
+>  ['yellow-taxi']
+>  | take 100
+
+![63_taxi-eventhouse_queryset_run](images/63_taxi-eventhouse_queryset_run.jpg)
+
+<br>
+
+>! ***Note**: The table name is wrapped in ['...'] because yellow-taxi contains a hyphen. KQL uses this syntax for names that include special characters.*
+
+>! ***Tip**: take 100 is a quick health check—confirm rows are arriving and inspect a small sample without scanning everything.*
+
+5. Replace the query with the following code to show the number of taxi pickups for each hour, and then select **Run**:
+
+Code
+```kql
+ ['yellow-taxi']
+ | summarize PickupCount = count() by bin(todatetime(tpep_pickup_datetime), 1h)
+```
+
+> Code 
+> 
+>  ['yellow-taxi']
+>  | summarize PickupCount = count() by bin(todatetime(tpep_pickup_datetime), 1h)
+
+The results appear in a table with a row for each hour and the count of pickups.
+
+![64_taxi-eventhouse_queryset_2](images/64_taxi-eventhouse_queryset_2.jpg)
+
+<br>
+
+>! ***Tip**: *bin(..., 1h)* groups events into hourly buckets, making it easy to spot trends over time.*
+
+6. To visualize the hourly trend, below the query results select the **Table 1** drop-down and add a visual. In the **Visual Formatting** pane on the right, set the **Visual type** to **Column chart**. The hourly pickup counts are displayed as a column chart.
+
+![65_taxi-eventhouse_queryset2_visual](images/65_taxi-eventhouse_queryset2_visual.jpg)
+
+![66_taxi-eventhouse_queryset2_visual](images/66_taxi-eventhouse_queryset2_visual.jpg)
+
+<br>
+
+7. Wait a few seconds and select **Run** again, noting that the pickup counts change as new data is added to the table from the real-time stream.
+
+>! ***Tip**: The stream keeps adding data, so results change over time. Re-running shows how aggregations update as fresh events arrive.*
+
+![67_taxi-eventhouse_queryset2_run2](images/67_taxi-eventhouse_queryset2_run2.jpg)
+
+<br>
+
+---
+
+## Clean up resources
+
+In this exercise, you created an eventhouse, captured real-time data using an eventstream, and queried the captured data in a KQL database table.
+
+If you’ve finished exploring Real-Time Intelligence in Fabric, you can delete the workspace you created for this exercise.
+
+>! ***Tip**: Deleting the workspace removes all items created in the lab and helps prevent ongoing charges.*
+
+1. In the bar on the left, select the icon for your workspace.
+
+2. In the toolbar, select **Workspace settings**.
+
+3. In the **General** section, select **Remove this workspace**.
+
+!
+
+<br>
 
 
 
