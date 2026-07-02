@@ -114,7 +114,7 @@ The eventstream captures the real-time taxi data, but it doesn’t currently sto
 
 1. With the **taxi-data** eventstream open on the design canvas in **Edit mode**, on the toolbar select **Add destination**, and then select **Eventhouse**.
 
-!
+![41_eventhouse](images/41_eventhouse.jpg)
 
 <br>
 
@@ -126,19 +126,21 @@ The eventstream captures the real-time taxi data, but it doesn’t currently sto
 - For **Eventhouse**, select **Create new**, name the eventhouse *taxi-eventhouse*, and select **Done**.
   The **KQL Database** is automatically set to the same name.
 
-!
+![42_eventhouse_conf](images/42_eventhouse_conf.jpg)
 
 <br>
 
 3. For KQL Destination table, select **Create new**, name the table *yellow-taxi*, and select **Done**. Make sure **Activate ingestion after adding the data source** is selected, and then select **Save**.
 
-!
+![43_eventhouse_table](images/43_eventhouse_table.jpg)
+
+![44_eventhouse_save](images/44_eventhouse_save.jpg)
 
 <br>
 
 4. On the canvas, an **Eventhouse** destination node is added. Make sure it’s connected to the **taxi-data-stream** node. If the stream and the eventhouse aren’t joined, drag a connection from the circle on the right edge of the stream node to the **Eventhouse** node.
 
-!
+![45_eventhouse_publish](images/45_eventhouse_publish.jpg)
 
 <br>
 
@@ -146,13 +148,13 @@ The eventstream captures the real-time taxi data, but it doesn’t currently sto
 
 >! ***Tip**: Changes you make on the canvas stay in Edit mode until you publish them. Publishing switches the eventstream to Live mode and starts moving events to the eventhouse.*
 
-! 
+![46_eventhouse_publish_loading](images/46_eventhouse_publish_loading.jpg)
 
 <br>
 
 6. After the eventstream switches to **Live** mode, the **taxi** source, the **taxi-data-stream**, and the **Eventhouse** destination each show a status of **Active**. Select the **Eventhouse** node, and in the pane below the canvas select the **Data preview** tab. Wait a few minutes for ingestion to start, selecting **Refresh** until rows of taxi data appear.
 
-!
+![47_eventhouse_live](images/47_eventhouse_live.jpg)
 
 <br>
 
