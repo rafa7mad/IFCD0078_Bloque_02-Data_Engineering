@@ -84,6 +84,10 @@ Code
 
 ![19_import_data_web_load](images/19_import_data_web_load.jpg)
 
+<br>
+
+---
+
 ## Explore a data model
 
 The three tables of data you’ve imported have been loaded into a data model, which you’ll now explore and refine.
