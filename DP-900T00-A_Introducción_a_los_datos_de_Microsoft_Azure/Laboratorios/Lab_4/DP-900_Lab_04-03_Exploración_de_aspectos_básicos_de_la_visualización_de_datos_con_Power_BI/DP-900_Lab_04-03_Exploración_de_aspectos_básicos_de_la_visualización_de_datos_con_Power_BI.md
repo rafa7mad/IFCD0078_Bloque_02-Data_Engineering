@@ -195,7 +195,7 @@ The revenue is formatted as currency, as you specified in the model. However, yo
 
 6. With the table still selected, in the **Visualizations** pane, select the **Stacked column chart** visualization. The table is changed to a column chart showing revenue by category.
 
-![](images)
+![36_visualizations_stacked_column_chart](images/36_visualizations_stacked_column_chart.jpg)
 
 <br>
 
@@ -203,8 +203,7 @@ The revenue is formatted as currency, as you specified in the model. However, yo
 
 7. Above the selected column chart, select the ↓ icon to turn on drill-down. Then in the chart, select any column to drill down and see the revenue for the individual products in this category. This capability is possible because you defined a hierarchy of categories and products.
 
-
-![](images)
+![37_visualizations_drill_down](images/37_visualizations_drill_down.jpg)
 
 <br>
 
@@ -216,7 +215,7 @@ The revenue is formatted as currency, as you specified in the model. However, yo
 
 10. With the new column chart selected, in the Visualizations pane, select Pie chart and then resize the chart and position it next to the revenue by category column chart.
  
-![](images)
+![40_visualizations_pie_chart](images/40_visualizations_pie_chart.jpg)
 
 <br>
 
@@ -224,7 +223,7 @@ The revenue is formatted as currency, as you specified in the model. However, yo
 
 11. Select a blank area of the report, and then in the Data pane, select the City field in the customers table and then select the Revenue field in the orders table. This results in a map showing sales revenue by city. Rearrange and resize the visualizations as needed:
 
-![](images)
+![41_visualizations_map](images/41_visualizations_map.jpg)
 
 <br>
 
@@ -232,17 +231,13 @@ The revenue is formatted as currency, as you specified in the model. However, yo
 
 12. In the map, note that you can drag, double-click, use a mouse-wheel, or pinch and drag on a touch screen to interact. Then select a specific city, and note that the other visualizations in the report are modified to highlight the data for the selected city.
 
-![](images)
+![42_visualizations_map](images/42_visualizations_map.jpg)
 
 <br>
 
 >! Tip: Cross-highlighting lets users interact with one visual and see related changes across the page—turning a static report into an interactive experience.
 
 13. On the File menu, select Save. Then save the file with an appropriate .pbix file name. You can open the file and explore data modeling and visualization further at your leisure.
-
-![](images)
-
-<br>
 
 >! **Tip**: Saving a .pbix keeps your model, queries, and report together so you can reopen and iterate later.
 
@@ -256,11 +251,9 @@ If you’ve a [Power BI service](https://app.powerbi.com/home?language=en-US&exp
 
 ## Clean up
 
-Unlike the other labs in this course, this exercise didn’t create any paid Azure resources, so there’s nothing to delete or switch off. The report you built is saved as a *.pbix* file on your own computer.
+Unlike the other labs in this course, <u>this exercise didn’t create any paid Azure resources, so there’s nothing to delete or switch off</u>. The report you built is saved as a *.pbix* file on your own computer.
 
 In this lab, you imported data from multiple sources into Power BI Desktop, connected it into a simple data model, and built an interactive report with a table, charts, and a map. You’ve taken your first steps with turning raw data into visual insights!
-
-![](images)
 
 <br>
 
