@@ -211,9 +211,9 @@ The revenue is formatted as currency, as you specified in the model. However, yo
 
 8. Use the ↑ icon to drill back up to the category level. Then select the (↓) icon to turn off the drill-down feature.
 
-9. Select a blank area of the report, and then in the Data pane, select the Quantity field in the orders table and the Category field in the products table. This step results in another column chart showing sales quantity by product category.
+9. Select a blank area of the report, and then in the **Data** pane, select the **Quantity** field in the **orders** table and the **Category** field in the **products** table. This step results in another column chart showing sales quantity by product category.
 
-10. With the new column chart selected, in the Visualizations pane, select Pie chart and then resize the chart and position it next to the revenue by category column chart.
+10. With the new column chart selected, in the **Visualizations** pane, select **Pie chart** and then resize the chart and position it next to the revenue by category column chart.
  
 ![40_visualizations_pie_chart](images/40_visualizations_pie_chart.jpg)
 
@@ -221,7 +221,7 @@ The revenue is formatted as currency, as you specified in the model. However, yo
 
 >! **Tip**: Showing quantity by category as a pie highlights proportional contribution, complementing the revenue column chart.
 
-11. Select a blank area of the report, and then in the Data pane, select the City field in the customers table and then select the Revenue field in the orders table. This results in a map showing sales revenue by city. Rearrange and resize the visualizations as needed:
+11. Select a blank area of the report, and then in the **Data** pane, select the **City** field in the **customers** table and then select the **Revenue** field in the **orders** table. This results in a map showing sales revenue by city. Rearrange and resize the visualizations as needed:
 
 ![41_visualizations_map](images/41_visualizations_map.jpg)
 
@@ -237,7 +237,7 @@ The revenue is formatted as currency, as you specified in the model. However, yo
 
 >! Tip: Cross-highlighting lets users interact with one visual and see related changes across the page—turning a static report into an interactive experience.
 
-13. On the File menu, select Save. Then save the file with an appropriate .pbix file name. You can open the file and explore data modeling and visualization further at your leisure.
+13. On the **File** menu, select **Save**. Then save the file with an appropriate .pbix file name. You can open the file and explore data modeling and visualization further at your leisure.
 
 >! **Tip**: Saving a .pbix keeps your model, queries, and report together so you can reopen and iterate later.
 
