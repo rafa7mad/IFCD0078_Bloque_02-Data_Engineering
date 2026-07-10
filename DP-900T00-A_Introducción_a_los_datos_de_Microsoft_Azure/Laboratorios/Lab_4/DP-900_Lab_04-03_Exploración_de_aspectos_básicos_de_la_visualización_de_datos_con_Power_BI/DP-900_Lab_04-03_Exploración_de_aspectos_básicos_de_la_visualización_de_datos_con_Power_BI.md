@@ -103,7 +103,7 @@ Code
 
 1. In the **orders** table, select the **Revenue** field and then in the Properties pane, set its **Format** property to **Currency**:
 
-![21_model_data](images/21_model_data.jpg)
+![21_model_data_orders](images/21_model_data_orders.jpg)
 
 <br>
 
@@ -113,19 +113,19 @@ This step will ensure that revenue values are displayed as currency in report vi
 
 2. In the products table, right-click the **Category** field (or open its ⋮ menu) and select **Create hierarchy**. This step creates a hierarchy named **Category Hierarchy**. You may need to expand or scroll in the **products** table to see this - you can also see it in the **Fields** pane:
 
-![](images)
+![22_model_data_products](images/22_model_data_products.jpg)
 
 <br>
 
 3. In the products table, right-click the **ProductName** field (or open its ⋮ menu) and select **Add to hierarchy > Category Hierarchy**. This adds the **ProductName** field to the hierarchy you created previously.
 
-![](images)
+![23_model_data_productname](images/23_model_data_productname.jpg)
 
 <br>
 
 4. In the **Fields** pane, right-click **Category Hierarchy** (or open its … menu) and select **Rename**. Then rename the hierarchy to **Categorized Product**.
 
-![](images)
+![24_model_data_categorizedproduct](images/24_model_data_categorizedproduct.jpg)
 
 <br>
 
@@ -133,9 +133,11 @@ This step will ensure that revenue values are displayed as currency in report vi
 
 5. On the left-side edge, select the **Table view** tab, and then in the **Data** pane, select the **customers** table.
 
+![25_tabla_view](images/25_tabla_view.jpg)
+
 6. Select the **City** column header, and then set its **Data Category** property to **City**:
 
-![](images)
+![26_tabla_view_city](images/26_tabla_view_city.jpg)
 
 <br>
 
@@ -153,7 +155,7 @@ Now you’re almost ready to create a report. First you need to check some setti
 
 1. On the **File** menu, select **Options and Settings**. Then select **Options**, and in the **Security** section, ensure that **Use Map and Filled Map visuals** is enabled and select **OK**.
 
-![](images)
+![31_options_security_maps](images/31_options_security_maps.jpg)
 
 <br>
 
@@ -163,13 +165,13 @@ This setting ensures that you can include map visualizations in reports.
 
 2. On the left-side edge, select the **Report view** tab and view the report design interface.
 
-![](images)
+![32_report_view](images/32_report_view.jpg)
 
 <br>
 
 3. In the ribbon, above the report design surface, select **Text Box** and add a text box containing the text **Sales Report** to the report. Format the text to make it bold with a font size of 32.
 
-![](images)
+![33_report_view_text](images/33_report_view_text.jpg)
 
 <br>
 
@@ -177,7 +179,7 @@ This setting ensures that you can include map visualizations in reports.
 
 4. Select any empty area on the report to de-select the text box. Then in the **Data** pane, expand **Products** and select the **Categorized Products** field. This step adds a table to the report.
 
-![](images)
+![34_data_products_categorized](images/34_data_products_categorized.jpg)
 
 <br>
 
@@ -187,7 +189,7 @@ This setting ensures that you can include map visualizations in reports.
 
 The revenue is formatted as currency, as you specified in the model. However, you didn’t specify the number of decimal places, so the values include fractional amounts. It won’t matter for the visualizations you’re going to create, but you could go back to the **Model** or **Data** tab and change the decimal places if you wish.
 
-![](images)
+![35_data_orders_revenue](images/35_data_orders_revenue.jpg)
 
 <br>
 
