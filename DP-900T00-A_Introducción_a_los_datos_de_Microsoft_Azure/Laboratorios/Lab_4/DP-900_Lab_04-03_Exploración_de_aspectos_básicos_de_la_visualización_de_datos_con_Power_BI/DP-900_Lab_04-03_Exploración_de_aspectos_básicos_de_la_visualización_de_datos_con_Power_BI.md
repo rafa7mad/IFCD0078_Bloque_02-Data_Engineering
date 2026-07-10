@@ -23,8 +23,7 @@ If Microsoft Power BI Desktop is not already installed on your Windows computer,
 
 1. Open Power BI Desktop. The application interface should look similar to this:
 
-![](images)
-![ejemplo](images/06-pbi-lab-power-bi-start.png)
+![11_Power_BI](images/11_Power_BI.jpg)
 
 <br>
 
@@ -32,7 +31,7 @@ Now you’re ready to import the data for your report.
 
 2. On the Power BI Desktop welcome screen, select **Get data from other sources**, and then in the list of data sources, select **Web** and then select **Connect**.
 
-![](images)
+![12_import_data_web](images/12_import_data_web.JPG)
 
 <br>
 
@@ -45,24 +44,21 @@ Code
 
 >! Tip: Using the Web connector with sample CSV files means everyone works from the same clean data — no local files or credentials needed.
 
-image
-
-
 4. In the Access Web content dialog, select **Connect**.
 
-image
+![13_import_data_web_connect](images/13_import_data_web_connect.jpg)
 
 5. Verify that the URL opens a dataset containing customer data, as shown below. Then select **Load** to load the data into the data model for your report.
 
-![](images)
+![15_import_data_web_load](images/15_import_data_web_load.jpg)
 
 <br>
 
 >! Tip: Loading the data directly is fastest for this lab. You can always apply transformations later in Power Query if needed.
 
-6. In the main Power BI Desktop window, in the Data menu, select Get data, then select Web:
+6. In the main Power BI Desktop window, in the Data menu, select **Get dat**a, then select **Web**:
 
-![](images)
+![16_import_data_getdata](images/16_import_data_getdata.jpg)
 
 <br>
 
@@ -72,11 +68,9 @@ Code
 ```
 https://github.com/MicrosoftLearning/DP-900T00A-Azure-Data-Fundamentals/raw/master/power-bi/products.csv
 ```
-
-image
-
 8. In the dialog, select **Load** to load the product data in this file into the data model.
 
+![18_import_data_web_load](images/18_import_data_web_load.jpg)
 image
 
 9. Repeat the previous three steps to import a third dataset containing order data from the following URL:
@@ -88,7 +82,7 @@ Code
 
 >! Tip: Bringing in Customers, Products, and Orders creates a small, realistic model. Multiple related tables let you analyze across entities (for example, revenue by product category and city).
 
-image
+![19_import_data_web_load](images/19_import_data_web_load.jpg)
 
 ## Explore a data model
 
@@ -105,7 +99,7 @@ Code
 
 1. In the **orders** table, select the **Revenue** field and then in the Properties pane, set its **Format** property to **Currency**:
 
-![](images)
+![21_model_data](images/21_model_data.jpg)
 
 <br>
 
