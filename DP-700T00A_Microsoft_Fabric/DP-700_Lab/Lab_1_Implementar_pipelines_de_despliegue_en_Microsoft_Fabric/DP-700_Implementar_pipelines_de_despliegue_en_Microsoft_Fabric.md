@@ -1,4 +1,4 @@
-## DP-700T00A-Implementación-de-soluciones-de-ingeniería-de-datos-mediante-Microsoft-Fabric
+## DP-700T00A-Implement-data-engineering-solutions-using-Microsoft-Fabric
 
 # [Implement deployment pipelines in Microsoft Fabric]()
 
@@ -138,9 +138,9 @@ In this exercise, you created a deployment pipeline, and assigned stages to the 
 
 - After deleting the pipeline, select the icon for each workspace to view all of the items it contains.
 
-- In the menu on the top toolbar, select Workspace settings.
+- In the menu on the top toolbar, select **Workspace settings**.
 
-- In the General section, select Remove this workspace.
+- In the **General** section, select **Remove this workspace**.
 
 ![imagen](images)
 
@@ -148,6 +148,6 @@ In this exercise, you created a deployment pipeline, and assigned stages to the 
 
 ---
 
-[Volver al inicio](#DP-700T00A-Implementación-de-soluciones-de-ingeniería-de-datos-mediante-Microsoft-Fabric)
+[Volver al inicio](#dp-700t00a-implement-data-engineering-solutions-using-microsoft-fabric)
 
 ---
