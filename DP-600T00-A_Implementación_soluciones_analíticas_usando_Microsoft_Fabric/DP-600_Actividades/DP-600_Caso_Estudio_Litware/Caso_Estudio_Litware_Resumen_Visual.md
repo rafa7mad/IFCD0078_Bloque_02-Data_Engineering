@@ -300,3 +300,7 @@ Entre varias soluciones válidas, elegir la que:
 3. Minimice desarrollo y mantenimiento.
 4. Evite duplicar lógica.
 5. Mantenga el mejor rendimiento posible.
+
+
+
+
