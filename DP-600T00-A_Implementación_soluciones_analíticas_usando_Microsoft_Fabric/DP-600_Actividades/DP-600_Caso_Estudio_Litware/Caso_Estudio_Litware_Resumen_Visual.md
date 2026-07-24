@@ -29,7 +29,9 @@ La empresa lleva tres años usando Power BI, pero todavía no ha habilitado capa
 | Product | CRM | 200 MB |
 | Customer satisfaction surveys | SurveyMonkey | 500 GB |
 
-![Volumen relativo de las fuentes](litware_volumen_datos.png)
+![Volumen relativo de las fuentes](imagesv/)
+
+![Volumen relativo de las fuentes](imagesv/litware_arquitectura_poc.png)
 
 > La fuente dominante es la de encuestas de satisfacción, con **500 GB**.
 

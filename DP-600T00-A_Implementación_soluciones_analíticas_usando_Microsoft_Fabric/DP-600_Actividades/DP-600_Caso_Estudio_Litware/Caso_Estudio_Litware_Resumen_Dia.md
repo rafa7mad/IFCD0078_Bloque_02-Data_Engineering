@@ -1,4 +1,4 @@
-### CASO DE ESTUDIO LITWARE
+# CASO DE ESTUDIO LITWARE
 
 ![Caso_Estudio_Litware_Dia_01](images/Caso_Estudio_Litware_Dia_01.png)
 
