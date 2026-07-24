@@ -29,9 +29,7 @@ La empresa lleva tres años usando Power BI, pero todavía no ha habilitado capa
 | Product | CRM | 200 MB |
 | Customer satisfaction surveys | SurveyMonkey | 500 GB |
 
-![Volumen relativo de las fuentes](imagesv/)
-
-![Volumen relativo de las fuentes](imagesv/litware_arquitectura_poc.png)
+![Volumen relativo de las fuentes](images/litware_volumen_datos.png)
 
 > La fuente dominante es la de encuestas de satisfacción, con **500 GB**.
 
@@ -94,7 +92,8 @@ En `AnalyticsPOC` se crearán:
 
 ## 5. Arquitectura lógica del PoC
 
-![Arquitectura lógica de Litware](litware_arquitectura_poc.png)
+![Arquitectura lógica de Litware](images/litware_arquitectura_poc.png)
+
 
 ```mermaid
 flowchart LR
