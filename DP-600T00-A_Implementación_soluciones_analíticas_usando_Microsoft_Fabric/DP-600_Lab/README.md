@@ -19,11 +19,5 @@
 ### Implementar canalizaciones de implementación en Microsoft Fabric
 ### Lab  - Exercise [Implement](https:/)
 
-<br>
-
----
 
 
-### 
-### Lab 
-### 
