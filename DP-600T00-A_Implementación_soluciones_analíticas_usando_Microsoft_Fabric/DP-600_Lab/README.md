@@ -13,10 +13,14 @@
 
 ---
 
-## Ruta de aprendizaje
-## Administración de un entorno de Microsoft Fabric
-### Implementar canalizaciones de implementación en Microsoft Fabric
-### Lab  - Exercise [Implement](https:/)
+## Ruta de aprendizaje 2
+## Diseño y transformación de datos de análisis en Microsoft Fabric
 
+### Modulo 2
+### Diseñar modelos dimensionales para análisis en Microsoft Fabric
+### Ejercicio: Diseño e implementación de un modelo dimensional
+### [Design and implement a dimensional model](https://microsoftlearning.github.io/mslearn-fabric/Instructions/Labs/26-design-dimensional-models.html)
 
+<br>
 
+---
