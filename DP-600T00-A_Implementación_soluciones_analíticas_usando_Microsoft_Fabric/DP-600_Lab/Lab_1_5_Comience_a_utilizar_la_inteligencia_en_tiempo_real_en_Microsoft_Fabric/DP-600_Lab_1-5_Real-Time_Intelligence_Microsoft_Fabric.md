@@ -6,6 +6,7 @@ This lab takes approximately 30 minutes to complete.
 
 >! Tip: For related training content, see Get started with Real-Time Intelligence in Microsoft Fabric.
 
+
 ## Create a workspace
 
 >! Note: You need access to a Fabric paid or trial capacity to complete this exercise. For information about the free Fabric trial, see Fabric trial.
