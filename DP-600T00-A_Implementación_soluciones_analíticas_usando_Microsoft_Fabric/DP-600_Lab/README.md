@@ -37,10 +37,11 @@
 
 ---
 
-## Ruta de aprendizaje 
-## Diseñar y administrar modelos semánticos en Microsoft Fabric
-
 ### Modulo 3
 ### Optimización del rendimiento del modelo semántico
 ### Ejercicio: Diagnóstico y corrección de un informe lento
 ### [Optimize semantic model performance](https://microsoftlearning.github.io/mslearn-fabric/Instructions/Labs/16-optimize-semantic-model-performance.html)
+
+<br>
+
+---
