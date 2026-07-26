@@ -506,6 +506,7 @@ When you finish exploring your data warehouse, delete the workspace you created 
 3. In the General section, select Remove this workspace.
 
 <br>
+
 ---
 
 <br>
