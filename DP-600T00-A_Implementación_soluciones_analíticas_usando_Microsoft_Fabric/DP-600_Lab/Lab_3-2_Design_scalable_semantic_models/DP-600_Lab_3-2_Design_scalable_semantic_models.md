@@ -224,6 +224,4 @@ To finish the exercise, close Power BI Desktop - no need to save the file.
 
 <br>
 
-[Up](#design-design-scalable-semantic-models)
-
-
+[Up](#design-scalable-semantic-models)
