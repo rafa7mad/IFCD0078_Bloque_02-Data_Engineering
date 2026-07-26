@@ -21,8 +21,7 @@ This lab takes approximately 30 minutes to complete.
 
 4. When your new workspace opens, it should be empty.
 
-![images](images)
-Screenshot of an empty workspace in Fabric.
+![001_workspace](images/001_workspace.JPG)
 
 <br>
 
@@ -38,19 +37,21 @@ Now you’re ready to find and ingest real-time data from a streaming source. To
 
 >! Note: If you don’t see the Real-Time hub, select the ellipsis (…) and then pin the Real-Time hub to the menu bar.
 
-![images](images)
-Screenshot of pinning the Real-Time hub to the menu bar.
+![011_Real_time](images/011_Real_time.jpg)
 
 <br>
 
 2. In the Real-Time hub, select Add data.
 
-![images](images)
-Screenshot of the Real-Time hub.
+![012_add_data](images/012_add_data.jpg)
 
 <br>
 
 3. Select the Stock market sample data source.
+
+![013_Stock_market](images/013_Stock_market.jpg)
+
+<br>
 
 4. Configure the data source as follows:
 - Source name: stock
@@ -59,8 +60,7 @@ Screenshot of the Real-Time hub.
 
 >! The default stream associated with this data will automatically be named *stock-data-stream*.
 
-![images](images)
-Screenshot of a new eventstream.
+![014_stock](images/014_stock.jpg)
 
 <br>
 
@@ -68,8 +68,7 @@ Screenshot of a new eventstream.
 
 6. Select Open eventstream. The eventstream will show the stock source and the stock-data-stream on the design canvas:
 
-![images](images)
-Screenshot of the eventstream canvas.
+![016_eventstream](images/016_eventstream.jpg)
 
 <br>
 
