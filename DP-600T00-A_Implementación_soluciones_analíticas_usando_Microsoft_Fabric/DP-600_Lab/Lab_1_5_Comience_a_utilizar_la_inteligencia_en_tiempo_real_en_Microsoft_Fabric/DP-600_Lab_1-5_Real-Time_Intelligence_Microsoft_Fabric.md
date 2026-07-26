@@ -84,31 +84,36 @@ The eventstream ingests the real-time stock data, but doesn’t currently do any
 
     Close any tips or prompts that are displayed until you see your new empty eventhouse.
 
-![images](images)
-Screenshot of a new eventhouse
+![021_Eventhouse](images/021_Eventhouse.jpg)
 
 <br>
 
 2. In the pane on the left, note that your eventhouse contains a KQL database with the same name as the eventhouse. You can create tables for your real-time data in this database, or create additional databases as necessary.
 
 3. Select the database, and note that there is an associated queryset. This file contains some sample KQL queries that you can use to get started querying the tables in your database.
-   However, currently there are no tables to query. Let’s resolve that problem by getting data from the eventstream into a new table.
+However, currently there are no tables to query. Let’s resolve that problem by getting data from the eventstream into a new table.
+
+![023_KQL_database](images/023_KQL_database.jpg)
+
+<br>
 
 4. In the main page of your KQL database, select Get data.
 
 5. For the data source, select Eventstream > Existing eventstream.
 
+![025_Existing_eventstream](images/025_Existing_eventstream.jpg)
+
+<br>
+
 6. In the Select or create a destination table pane, create a new table named stock. Then in the Configure the data source pane, select your workspace and the stock-data eventstream and name the connection stock-table.
 
-![images](images)
-Screenshot of configuration for loading a table from an eventstream.
+![026_stock-table](images/026_stock-table.jpg)
 
 <br>
 
 7. Use the Next button to complete the steps to inspect the data and then finish the configuration. Then close the configuration window to see your eventhouse with the stock table.
 
-![images](images)
-Screenshot of and eventhouse with a table.
+![027_connection](images/027_connection.jpg)
 
 <br>
 
@@ -118,8 +123,7 @@ The connection between the stream and the table has been created. Let’s verify
 
 The eventstream now shows a destination for the stream:
 
-![images](images)
-Screenshot an eventstream with a destination.
+![028_Open_eventstream](images/028_Open_eventstream.jpg)
 
 <br>
 
@@ -147,8 +151,7 @@ code
 
 4. Select the query code and run it to see 100 rows of data from the table.
 
-![images](images)
-Screenshot of a KQL query.
+![034_queryset_query](images/034_queryset_query.jpg)
 
 <br>
 
@@ -161,7 +164,12 @@ code
  | project symbol, avgPrice
 
 6. Highlight the modified query and run it to see the results.
+
+![036_average](images/036_average.jpg)
+
 7. Wait a few seconds and run it again, noting that the average prices change as new data is added to the table from the real-time stream.
+
+![037_average](images/037_average.JPG)
 
 <br>
 
