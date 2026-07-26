@@ -24,3 +24,23 @@
 <br>
 
 ---
+
+## Ruta de aprendizaje 3
+## Diseñar y administrar modelos semánticos en Microsoft Fabric
+
+### Modulo 2
+### Diseñar modelos semánticos para el escalado en Microsoft Fabric
+### Ejercicio: Diseñar un modelo semántico para la escalabilidad en Fabric
+### [Design scalable semantic models](https://microsoftlearning.github.io/mslearn-fabric/Instructions/Labs/15-design-scalable-semantic-models.html)
+
+<br>
+
+---
+
+## Ruta de aprendizaje 
+## 
+
+### Modulo 
+### 
+### Ejercicio: D
+### [Optimize semantic model performance](https://microsoftlearning.github.io/mslearn-fabric/Instructions/Labs/16-optimize-semantic-model-performance.html)
