@@ -45,3 +45,13 @@
 <br>
 
 ---
+
+### Modulo 4
+### Aplicar la seguridad del modelo semántico
+### Ejercicio: Implementación de RLS para un modelo semántico
+### [Enforce semantic model security](https://microsoftlearning.github.io/mslearn-fabric/Instructions/Labs/17-enforce-model-security.html)
+
+<br>
+
+---
+
