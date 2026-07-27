@@ -183,10 +183,14 @@ Now that you have a table that is being populated by stream of data, you can use
 2. On the toolbar, select Save to dashboard. Then pin the query in a new dashboard with the following settings:
 - Dashboard name: Stock Dashboard
 - Tile name: Average Prices
+
+![042_Stock_Dashboard](images/042_Stock_Dashboard.jpg)
+
+<br>
+
 3. Create the dashboard and open it. It should look like this:
 
-![images](images)
-Screenshot of a new dashboard.
+![043_Average_Prices](images/043_Average_Prices.jpg)
 
 <br>
 
@@ -194,15 +198,13 @@ Screenshot of a new dashboard.
 5. Select the Edit (pencil) icon for the Average Prices tile.
 6. In the Visual formatting pane, change the Visual from Table to Column chart:
 
-![images](images)
-Screenshot of a dashboard tile being edited.
+![046_Column_chart](images/046_Column_chart.jpg)
 
 <br>
 
 7. At the top of the dashboard, select Apply changes and view your modified dashboard:
 
-![images](images)
-Screenshot of a dashboard with a chart tile.
+![047_Apply_changes](images/047_Apply_changes.jpg)
 
 <br>
 
