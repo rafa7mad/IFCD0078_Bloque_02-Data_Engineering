@@ -73,15 +73,13 @@ In this task, you define a static filter on the Sales Territory table for two re
 
 2. Notice the stacked column chart shows data for all regions. That changes once RLS is applied.
 
-![32_regions](images/32_regions.png)
-Screenshot of a stacked column chart displaying sales data for multiple regions.
+    ![32_regions](images/32_regions.png)
 
 <br>
 
 3. On the Modeling ribbon, in the Security group, select Manage roles.
 
-![33_Manage_roles](images/33_Manage_roles.png)
-Screenshot of the Modeling ribbon with the Manage roles option in the Security group.
+    ![33_Manage_roles](images/33_Manage_roles.png)
 
 <br>
 
@@ -93,7 +91,7 @@ Screenshot of the Modeling ribbon with the Manage roles option in the Security g
 - Condition = Equals
 - Value = Australia
 
-![images](images)
+    ![images](images)
 Screenshot of the Rules section showing the filter configuration for the Australia region.
 
 <br>
