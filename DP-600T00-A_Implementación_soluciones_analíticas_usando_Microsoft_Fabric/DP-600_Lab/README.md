@@ -1,5 +1,5 @@
 # DP-600T00-A: Implementación de soluciones de análisis mediante Microsoft Fabric
-# DP-600 Laboratorios
+# Laboratorios - Ejercicios 
 
 ## Ruta de aprendizaje 1
 ## Exploración de almacenes de datos de análisis en Microsoft Fabric
