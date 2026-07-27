@@ -255,7 +255,9 @@ Real-Time Intelligence in Microsoft Fabric includes a technology named Activator
 
 Your alert may not have been triggered, in which case the history will contain no data. If the average stock price ever changes by more than 100, the activator will send you an email and the alert will be recorded in the history.
 
-![056_History](images/056_History.jpg)
+![056A_History](images/056A_History.jpg)
+
+![056B_email](images/056B_email.jpg)
 
 <br>
 
