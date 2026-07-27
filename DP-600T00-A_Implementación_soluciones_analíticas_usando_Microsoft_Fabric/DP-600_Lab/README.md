@@ -23,6 +23,13 @@
 
 <br>
 
+### Modulo 3
+### Transformación de datos mediante Flujos de datos Gen2 en Microsoft Fabric
+### Ejercicio: Transformación de datos con flujos de datos Gen2
+### [Transform data using dataflows in Microsoft Fabric](https://microsoftlearning.github.io/mslearn-fabric/Instructions/Labs/26b-transform-data-dataflows.html)
+
+<br>
+
 ---
 
 ## Ruta de aprendizaje 3
@@ -35,16 +42,12 @@
 
 <br>
 
----
-
 ### Modulo 3
 ### Optimización del rendimiento del modelo semántico
 ### Ejercicio: Diagnóstico y corrección de un informe lento
 ### [Optimize semantic model performance](https://microsoftlearning.github.io/mslearn-fabric/Instructions/Labs/16-optimize-semantic-model-performance.html)
 
 <br>
-
----
 
 ### Modulo 4
 ### Aplicar la seguridad del modelo semántico
