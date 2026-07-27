@@ -232,17 +232,30 @@ Real-Time Intelligence in Microsoft Fabric includes a technology named Activator
     - Item: Create a new item
     - New item name: A unique name of your choice
 
-![images](images)
-Screenshot of alert settings.
+![052A_alert](images/052A_alert.jpg)
+
+![052B_alert](images/052B_alert.jpg)
 
 <br>
 
 3. Create the alert and wait for it to be saved. Then close the pane confirming it has been created.
+
+![053_add_rule](images/053_add_rule.jpg)
+
+<br>
+
 4. In the menu bar on the left, select the page for your workspace (saving any unsaved changes to your dashboard if prompted).
 5. On the workspace page, view the items you have created in this exercise, including the activator for your alert.
+
+![055_items](images/055_items.jpg)
+
+<br>
+
 6. Open the activator, and in its page, under the avgPrice node, select the unique identifier for your alert. Then view its History tab.
 
 Your alert may not have been triggered, in which case the history will contain no data. If the average stock price ever changes by more than 100, the activator will send you an email and the alert will be recorded in the history.
+
+![056_History](images/056_History.jpg)
 
 <br>
 
