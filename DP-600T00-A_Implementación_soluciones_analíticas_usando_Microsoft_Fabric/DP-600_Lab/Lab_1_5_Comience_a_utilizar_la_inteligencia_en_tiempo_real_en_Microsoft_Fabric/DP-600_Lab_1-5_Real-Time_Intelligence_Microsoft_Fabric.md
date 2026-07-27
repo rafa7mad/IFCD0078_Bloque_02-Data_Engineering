@@ -273,6 +273,10 @@ If you’ve finished exploring Real-Time Intelligence in Fabric, you can delete 
 2. In the toolbar, select Workspace settings.
 3. In the General section, select Remove this workspace.
 
+![063A_Remove_this_workspace](images/063A_Remove_this_workspace.jpg)
+
+![063B_Home](images/063B_Home.jpg)
+
 <br>
 
 ---
