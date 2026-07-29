@@ -280,12 +280,10 @@ If you’ve finished exploring dataflows in Microsoft Fabric, you can delete the
 
 <br>
 
-[empty](images)
+![043_myworkspace](images/043_myworkspace.jpg)
 
 <br>
 
 ---
-
-<br>
 
 [Up](#transform-data-using-dataflows-in-microsoft-fabric)
