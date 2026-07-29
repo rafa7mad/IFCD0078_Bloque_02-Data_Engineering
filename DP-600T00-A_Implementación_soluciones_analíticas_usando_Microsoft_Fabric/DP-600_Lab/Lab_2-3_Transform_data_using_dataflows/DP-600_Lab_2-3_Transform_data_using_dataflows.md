@@ -25,8 +25,7 @@ In this task, you create a Fabric-enabled workspace to organize the resources fo
 3. Create a new workspace with a name of your choice, selecting a licensing mode that includes Fabric capacity (Trial, Premium, or Fabric).
 4. When your new workspace opens, it should be empty.
 
-![images](images)
-Screenshot of an empty workspace in Fabric.
+![001_workspace](images/001_workspace.JPG)
 
 <br>
 
@@ -40,8 +39,7 @@ In this task, you create a lakehouse that serves as the destination for your tra
 
 After a minute or so, a new empty lakehouse is created.
 
-![images](images)
-Screenshot of a new lakehouse.
+![002_lakehouse](images/002_lakehouse.jpg)
 
 <br>
 
@@ -51,8 +49,9 @@ Dataflows provide a reusable, no-code transformation layer that can refresh on a
 
 1. In the home page for your lakehouse, select Get data > New Dataflow Gen2. After a few seconds, the Power Query editor for your new dataflow opens.
 
-![images](images)
-Screenshot of the Power Query editor for a new dataflow.
+![011A_dataflow](images/011A_dataflow.jpg)
+
+![011B_dataflow](images/011B_dataflow.jpg)
 
 <br>
 
@@ -64,10 +63,13 @@ Screenshot of the Power Query editor for a new dataflow.
     - data gateway: (none)
     - Authentication kind: Anonymous
 
+![012_data_csv](images/012_data_csv.jpg)
+
+<br>
+
 3. Select Next to preview the file data, and then select Create to create the data source. The Power Query editor shows the data source and an initial set of query steps to format the data.
 
-![images](images)
-Screenshot of query data loaded in the Power Query editor.
+![013_power_query](images/013_power_query.jpg)
 
 <br>
 
@@ -94,9 +96,7 @@ Removing extra columns reduces the data retrieved from the source and is one of 
 1. Select the Home tab on the ribbon. Select Choose Columns.
 
 >1 Tip: Expand the ribbon to see larger icons.
-
-![images](images)
-Screenshot of the Expand ribbon option.
+![021_expand_the_ribbon](images/021_expand_the_ribbon.jpg)
 
 <br>
 
@@ -108,6 +108,9 @@ Screenshot of the Expand ribbon option.
     - OrderQty
     - LineItemTotal
 
+![022_choose_colums](images/022_choose_colums.jpg)
+
+
 <br>
 
 ### Filter rows
@@ -117,6 +120,10 @@ Filtering rows before other transformations reduces the volume of data that subs
 1. Select the OrderDate column header. Select the drop-down arrow, and then select Remove empty.
 
 2. Select the OrderQty column header. Select the drop-down arrow, select Number Filters, and then select Greater Than. Enter 0 as the value and select OK.
+
+![023_orderdate](images/023_orderdate.jpg)
+
+![023B_orderdate](images/023B_orderdate.jpg)
 
 <br>
 
@@ -130,8 +137,7 @@ Correct data types are essential for calculations, sorting, and filtering, and t
     - OrderQty = Whole Number
     - LineItemTotal = Decimal Number
 
-![images](images)
-Screenshot of the Data type field.
+![031_data_types](images/031_data_types.jpg)
 
 <br>
 
@@ -147,6 +153,10 @@ Renaming columns typically breaks query folding, so it comes after the foldable 
 
 >! Tip: You can also rename columns by right-clicking the column header and selecting Rename.
 
+![033_rename](images/033_rename.jpg)
+
+<br>
+
 ### Add a calculated column
 
 Deriving the per-unit price from the line total gives report builders a column they can use for price comparisons, discount analysis, and cost breakdowns without recalculating in every report. In this task, you create a Unit Price column by dividing Line Total by Quantity.
@@ -160,8 +170,7 @@ Deriving the per-unit price from the line total gives report builders a column t
 
 3. Select OK. Verify that the new Unit Price column appears in the data preview with calculated values.
 
-![images](images)
-Screenshot of the new custom column dialog.
+![033B_add_column](images/033B_add_column.jpg)
 
 <br>
 
@@ -175,15 +184,13 @@ Understanding the applied steps list helps you debug transformation issues, opti
 
 3. Notice how some steps have an extra icon near the Settings gear icon. This icon indicates whether the step can be evaluated within the data source, meaning supports query folding. This lab uses a CSV file, which doesn’t support query folding. However, it’s important to be familiar with this icon to know if you can improve the performance by changing the order of your steps.
 
-![images](images)
-Screenshot of the applied steps.
+![033C_applied_steps_0](images/033C_applied_steps.jpg)
 
 <br>
 
 4. Notice how the Data destination is already set to Lakehouse. Hover over the lakehouse to see it’s defaulting to the lakehouse you created. The default data destination is set because you created the dataflow directly from that lakehouse. The experience is different if you create the dataflow separately.
 
-![images](images)
-Screenshot of the Data destination.
+![034_data_destination](images/034_data_destination.jpg)
 
 <br>
 
@@ -195,9 +202,17 @@ Publishing makes the dataflow available for scheduled refreshes and team collabo
 
 >! Note: Saving automatically publishes and validates your dataflow. The first refresh runs after saving.
 
+![035_save_run](images/035_save_run.jpg)
+
+<br>
+
 2. Wait for the dataflow to finish refreshing. This may take a few minutes. When complete, navigate back to your workspace.
 
 >! Note: You can check the Recent runs from the Home tab on the ribbon to see when the dataflow succeeds.
+
+![036_run_dataflow](images/036_run_dataflow.jpg)
+
+<br>
 
 3. Navigate back to your lakehouse.
 
@@ -209,12 +224,21 @@ Publishing makes the dataflow available for scheduled refreshes and team collabo
 
 6. Notice the Unit Price column has inconsistent decimal places. Some values show two decimal places, while others show more. To fix this, go back to the dataflow by selecting it in your workspace.
 
+![037_table_orders](images/037_table_orders.jpg)
+
+<br>
+
 7. Select the Unit Price column header. On the Transform tab, select Rounding, and then select Round…. Enter 2 for the number of decimal places and select OK.
+
+![038_round](images/038_round.jpg)
+
+<br>
 
 8. Select Save and run to publish the updated dataflow. Wait for the refresh to complete, then navigate back to your lakehouse and verify the Unit Price column now shows consistent two-decimal formatting.
 
-![images](images)
-Screenshot of the transformed orders table.
+![039_unit_price](images/039_unit_price.jpg)
+
+![040_spark_sql](images/040_spark_sql.jpg)
 
 <br>
 
@@ -244,11 +268,19 @@ If you’ve finished exploring dataflows in Microsoft Fabric, you can delete the
 
 1. Navigate to Microsoft Fabric in your browser.
 2. In the bar on the left, select the icon for your workspace to view all of the items it contains.
+
+![041_workspace](images/041_workspace.jpg)
+
+<br>
+
 3. Select Workspace settings and in the General section, scroll down and select Remove this workspace.
 4. Select Delete to delete the workspace.
 
-![images](images)
-empty
+![042_workspace_remove](images/042_workspace_remove.jpg)
+
+<br>
+
+[empty](images)
 
 <br>
 
@@ -256,4 +288,4 @@ empty
 
 <br>
 
-[Up](#enforce-semantic-model-security)
+[Up](#transform-data-using-dataflows-in-microsoft-fabric)
