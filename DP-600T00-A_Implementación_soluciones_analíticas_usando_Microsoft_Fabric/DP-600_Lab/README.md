@@ -1,8 +1,12 @@
 # [DP-600T00-A Implementación de soluciones de análisis mediante Microsoft Fabric](https://learn.microsoft.com/es-es/training/courses/dp-600t00)
-# Laboratorios - Ejercicios 
+# Laboratorios - Ejercicios
+
+<br>
 
 ## Ruta de aprendizaje 1
 ## Exploración de almacenes de datos de análisis en Microsoft Fabric
+
+<br>
 
 ### Módulo 1.5 - Comienza con la Inteligencia en Tiempo Real en Microsoft Fabric
 ### Ejercicio: Introducción a Real-Time Intelligence en Microsoft 
