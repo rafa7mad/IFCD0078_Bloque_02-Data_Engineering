@@ -176,4 +176,4 @@ Open your -prod workspace. In the toolbar, select Workspace settings, then in th
 
 ---
 
-[Up](#Manage the semantic model lifecycle)
+[Up](#manage-the-semantic-model-lifecycle)
