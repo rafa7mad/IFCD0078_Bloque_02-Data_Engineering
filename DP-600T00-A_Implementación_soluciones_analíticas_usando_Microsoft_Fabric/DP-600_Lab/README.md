@@ -17,8 +17,7 @@
 
 <br>
 
-## Ruta de aprendizaje 2
-## Diseño y transformación de datos de análisis en Microsoft Fabric
+## Ruta 2 Diseño y transformación de datos de análisis en Microsoft Fabric
 
 <br>
 
@@ -50,8 +49,7 @@
 
 <br>
 
-## Ruta de aprendizaje 3
-## Diseñar y administrar modelos semánticos en Microsoft Fabric
+## Ruta 3 Diseñar y administrar modelos semánticos en Microsoft Fabric
 
 <br>
 
@@ -89,8 +87,7 @@
 
 <br>
 
-## Ruta de aprendizaje 4
-## Preparación de los datos de análisis listos para la inteligencia artificial en Microsoft Fabric
+## Ruta 4 Preparación de los datos de análisis listos para la inteligencia artificial en Microsoft Fabric
 
 <br>
 
@@ -112,8 +109,7 @@
 
 <br>
 
-## Ruta de aprendizaje 5
-## Protección y control de los datos de análisis en Microsoft Fabric
+## Ruta 5 Protección y control de los datos de análisis en Microsoft Fabric
 
 <br>
 
