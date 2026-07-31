@@ -124,7 +124,7 @@
 
 <br>
 
-### Módulo5.2 - Proteger un Microsoft Fabric data warehouse
+### Módulo 5.2 - Proteger un Microsoft Fabric data warehouse
 ### Ejercicio: Protección de un almacén en Microsoft Fabric
 ### [Secure data in a data warehouse](https://microsoftlearning.github.io/mslearn-fabric/Instructions/Labs/06d-secure-data-warehouse.html)
 
