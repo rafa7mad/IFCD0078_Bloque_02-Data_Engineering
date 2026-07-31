@@ -30,6 +30,20 @@
 
 <br>
 
+### Modulo 4
+### Transformación de datos con Notebooks en Microsoft Fabric
+### Ejercicio: Transforma datos con notekoooks en Microsoft Fabric
+### [Transform data with notebooks in Microsoft Fabric](https://microsoftlearning.github.io/mslearn-fabric/Instructions/Labs/26c-transform-data-notebooks.html)
+
+<br>
+
+### Modulo 5
+### Transformación de datos con consultas T-SQL en Microsoft Fabric
+### Ejercicio: Transforma datos con consultas T-SQL
+### [Transform data with T-SQL in a Fabric warehouse](https://learn.microsoft.com/es-es/training/modules/fabric-transform-data-tsql/6-exercise)
+
+<br>
+
 ---
 
 ## Ruta de aprendizaje 3
