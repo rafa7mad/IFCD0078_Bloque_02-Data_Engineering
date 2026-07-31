@@ -16,8 +16,12 @@
 
 ---
 
+<br>
+
 ## Ruta de aprendizaje 2
 ## Diseño y transformación de datos de análisis en Microsoft Fabric
+
+<br>
 
 ### Módulo 2.2 - Diseñar modelos dimensionales para análisis en Microsoft Fabric
 ### Ejercicio: Diseño e implementación de un modelo dimensional
