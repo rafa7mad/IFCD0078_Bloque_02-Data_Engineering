@@ -49,8 +49,12 @@
 
 ---
 
+<br>
+
 ## Ruta de aprendizaje 3
 ## Diseñar y administrar modelos semánticos en Microsoft Fabric
+
+<br>
 
 ### Módulo 3.1 - Crear cálculos DAX en modelos semánticos
 ### Ejercicio: Crear cálculos DAX
@@ -84,8 +88,12 @@
 
 ---
 
+<br>
+
 ## Ruta de aprendizaje 4
 ## Preparación de los datos de análisis listos para la inteligencia artificial en Microsoft Fabric
+
+<br>
 
 ### Módulo 4.1 - Preparación de la capa semántica para la inteligencia artificial en Microsoft Fabric
 ### Ejercicio: Preparación de un modelo semántico para la inteligencia artificial
@@ -103,8 +111,12 @@
 
 ---
 
+<br>
+
 ## Ruta de aprendizaje 5
 ## Protección y control de los datos de análisis en Microsoft Fabric
+
+<br>
 
 ### Módulo 5.1 - Protección del acceso a datos en Microsoft Fabric
 ### Ejercicio: Protección del acceso a datos en Microsoft Fabric
