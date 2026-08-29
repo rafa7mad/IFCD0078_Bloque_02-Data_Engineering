@@ -6,120 +6,147 @@ In this exercise, you work with sales, customer, and product data for a retail a
 
 This exercise takes approximately 30 minutes to complete.
 
-Tip: For related training content, see Transform data using notebooks in Microsoft Fabric.
+>! Tip: For related training content, see Transform data using notebooks in Microsoft Fabric.
 
-Set up the environment
+## Set up the environment
 Note: You need access to a Fabric paid or trial capacity to complete this exercise. For information about the free Fabric trial, see Fabric trial.
 
-Create a workspace
+### Create a workspace
+
 In this task, you create a Fabric workspace with capacity licensing and a new lakehouse.
 
-Navigate to the Microsoft Fabric home page at https://app.fabric.microsoft.com/home?experience=fabric in a browser, and sign in with your Fabric credentials.
+1. Navigate to the Microsoft Fabric home page at https://app.fabric.microsoft.com/home?experience=fabric in a browser, and sign in with your Fabric credentials.
 
-In the menu bar on the left, select Workspaces (the icon looks similar to 🗇).
+2. In the menu bar on the left, select Workspaces (the icon looks similar to 🗇).
 
-Create a new workspace with a name of your choice, selecting a licensing mode that includes Fabric capacity (Trial, Premium, or Fabric).
+3. Create a new workspace with a name of your choice, selecting a licensing mode that includes Fabric capacity (Trial, Premium, or Fabric).
 
-When your new workspace opens, it should be empty.
+4. When your new workspace opens, it should be empty.
 
-![image](iamges)
-Screenshot of an empty workspace in Fabric.
+![001_workspace_0](images/001_workspace_0.JPG)
 
-In the workspace, select + New item, then select Lakehouse.
+<br>
 
-Give the lakehouse a name (for example, Sales) and select Create.
+5. In the workspace, select + New item, then select Lakehouse.
 
-The lakehouse will open once created. Close it and navigate back to your workspace for the next task.
+6. Give the lakehouse a name (for example, Sales) and select Create.
 
-Generate sample data
+7. The lakehouse will open once created. Close it and navigate back to your workspace for the next task.
+
+### Generate sample data
+
 In this task, you download a pre-built notebook, upload it to your workspace, attach it to the lakehouse, and run the first cell to generate sample data.
 
-Download the Sales Data Transformation.ipynb notebook from https://github.com/MicrosoftLearning/mslearn-fabric/raw/main/Allfiles/Labs/26c/Sales%20Data%20Transformation.ipynb and save it locally.
+1. Download the Sales Data Transformation.ipynb notebook from https://github.com/MicrosoftLearning/mslearn-fabric/raw/main/Allfiles/Labs/26c/Sales%20Data%20Transformation.ipynb and save it locally.
 
-Return to the workspace and select Import > Notebook, then select Upload. Select the Sales Data Transformation.ipynb file.
+2. Return to the workspace and select Import > Notebook, then select Upload. Select the Sales Data Transformation.ipynb file.
 
-In the workspace item list, select the Sales Data Transformation notebook to open it.
+3. In the workspace item list, select the Sales Data Transformation notebook to open it.
 
-In the Explorer pane on the left, select Add to add a data source, then select your lakehouse (for example, Sales). The notebook is now attached to the lakehouse and tables you create are accessible in the Explorer pane.
+![002_lakehouse_and_notebook_0](images/002_lakehouse_and_notebook_0.JPG)
 
-In the notebook, run the first code cell by pressing Shift+Enter. The code creates three Delta tables in the lakehouse.
+<br>
 
-Notice that raw_sales contains 11 rows — including a duplicate row (order_id 10 appears twice) and a null value in the region column. These quality issues are intentional and represent common problems in real source data.
+4. In the Explorer pane on the left, select Add to add a data source, then select your lakehouse (for example, Sales). The notebook is now attached to the lakehouse and tables you create are accessible in the Explorer pane.
+
+5. In the notebook, run the first code cell by pressing Shift+Enter. The code creates three Delta tables in the lakehouse.
+
+>! Notice that raw_sales contains 11 rows — including a duplicate row (order_id 10 appears twice) and a null value in the region column. These quality issues are intentional and represent common problems in real source data.
 
 In the Explorer pane, select ↻ Refresh next to Tables to confirm that raw_sales, customers, and products appear.
 
-Screenshot of the new tables in the Sales lakehouse.
+![021_new-tables](images/021_new-tables.png)
 
-Shape and clean the sales data
+![021b_new-tables](images/021b_new-tables.JPG)
+
+<br>
+
+## Shape and clean the sales data
+
 Real-world data rarely arrives clean. In this section, you remove duplicates, handle null values, add a calculated column, and create a conditional column to categorize each order by value.
 
-In the notebook, scroll to the Shape and clean the sales data section. Review the markdown cell that describes the four transformations, then run the code cell below it.
+1. In the notebook, scroll to the Shape and clean the sales data section. Review the markdown cell that describes the four transformations, then run the code cell below it.
 
 The query applies four transformations in a single pass: SELECT DISTINCT removes the duplicate row, COALESCE fills the null region, a calculated column computes the line total, and a CASE expression categorizes each order by value tier.
 
-Run the next code cell to verify the results.
+2. Run the next code cell to verify the results.
 
 The result shows 10 rows (the duplicate is gone). The row with order_id 6 shows Unknown for region. Every row has a line_total and value_tier value.
 
+![022](images)
 Screenshot of the expected result.
 
-Optionally, follow the Try it with Copilot prompt in the notebook to extend clean_sales with an additional column.
+<br>
 
-Join and aggregate the data
+>! Optionally, follow the Try it with Copilot prompt in the notebook to extend clean_sales with an additional column.
+
+## Join and aggregate the data
+
 Cleansed data becomes more useful when enriched with context from other tables. In this section, you join the sales data with customer and product reference tables, then create a regional revenue summary using aggregations.
 
-In the notebook, scroll to the Join and aggregate the data section and run the first code cell to join the three tables.
+1. In the notebook, scroll to the Join and aggregate the data section and run the first code cell to join the three tables.
 
-The INNER JOIN matches each sales row to its customer and product details. Rows that don’t match in both tables are excluded.
+The **INNER JOIN** matches each sales row to its customer and product details. Rows that don’t match in both tables are excluded.
 
 Run the next code cell to create a regional summary with aggregations.
 
-The output shows one row per region with order counts, total revenue, and average order value. The 10 detail rows are now collapsed into summary rows — one for each region.
+2. The output shows one row per region with order counts, total revenue, and average order value. The 10 detail rows are now collapsed into summary rows — one for each region.
 
+![022](images)
 Screenshot of the expected output.
 
-Optionally, follow the Try it with Copilot prompt in the notebook to create an additional aggregation by product category.
+<br>
 
-Apply window functions
-Window functions let you calculate values across related rows without collapsing the detail. In this section, you add running totals and order sequence numbers for each customer using SUM() OVER and ROW_NUMBER() OVER.
+>! Optionally, follow the Try it with Copilot prompt in the notebook to create an additional aggregation by product category.
 
-In the notebook, scroll to the Apply window functions section and run the code cell.
+## Apply window functions
 
+Window functions let you calculate values across related rows without collapsing the detail. In this section, you add running totals and order sequence numbers for each customer using **SUM() OVER** and **ROW_NUMBER() OVER**.
+
+1. In the notebook, scroll to the Apply window functions section and run the code cell.
 Unlike the aggregations in the previous section, the window functions keep all original rows. The PARTITION BY clause groups rows by customer, the ORDER BY clause determines the sequence, and each row gets a cumulative running_total and a sequential order_sequence number.
 
 Customers with multiple orders (like Contoso Ltd) show an increasing running total and sequential order numbers. The total row count is the same as the input.
 
+![022](images)
 Screenshot of the output.
 
-Optionally, follow the Try it with Copilot prompt in the notebook to apply a RANK window function to the data.
+<br>
 
-Write results to a Delta table
+>! Optionally, follow the Try it with Copilot prompt in the notebook to apply a RANK window function to the data.
+
+## Write results to a Delta table
+
 Persisting results as a Delta table makes the data available to reports, other notebooks, and downstream pipelines. In this section, you write the enriched sales view to a managed Delta table in the lakehouse.
 
-In the notebook, scroll to the Write results to a Delta table section and run the first code cell.
+1. In the notebook, scroll to the Write results to a Delta table section and run the first code cell.
 
-The CREATE OR REPLACE TABLE statement writes the enriched view as a permanent Delta table. The OR REPLACE option overwrites the table if it exists, which is useful when re-running the notebook during development.
+The **CREATE OR REPLACE TABLE** statement writes the enriched view as a permanent Delta table. The **OR REPLACE** option overwrites the table if it exists, which is useful when re-running the notebook during development.
 
-In the Explorer pane, select ↻ Refresh next to Tables and verify that gold_sales appears in the table list.
+2. In the Explorer pane, select ↻ Refresh next to Tables and verify that gold_sales appears in the table list.
 
-Run the next code cell to confirm the data is queryable.
+3. Run the next code cell to confirm the data is queryable.
 
 The result shows revenue by product category and region, confirming that the joined and enriched data was written correctly.
 
+![022](images)
 Screenshot of expected result.
 
-Optionally, follow the Try it with Copilot prompt in the notebook to query the Delta table for high-value orders.
+<br>
 
-Clean up resources
+>! Optionally, follow the Try it with Copilot prompt in the notebook to query the Delta table for high-value orders.
+
+## Clean up resources
+
 In this exercise, you created a notebook to generate sample data, clean and shape raw sales transactions, join multiple tables, apply aggregations and window functions, and write the results to a Delta table in a Microsoft Fabric lakehouse.
 
 If you’ve finished exploring, you can delete the workspace you created for this exercise.
 
-In the bar on the left, select the icon for your workspace to view all of the items it contains.
+1. In the bar on the left, select the icon for your workspace to view all of the items it contains.
 
-In the toolbar, select Workspace settings.
+2. In the toolbar, select Workspace settings.
 
-In the General section, select Remove this workspace.
+3. In the General section, select Remove this workspace.
 
 ![clean](iamges)
 
