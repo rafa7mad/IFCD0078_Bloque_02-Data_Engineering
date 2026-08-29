@@ -394,6 +394,12 @@ SQL
 | 2026-04-06 | Mountain Bike Pro |            1200.00 | 2026-01-01        |        1 |     1500.00 |
 | 2026-05-04 | Mountain Bike Pro |            1350.00 | 2026-03-01        |        1 |     1500.00 |
 
+<br>
+
+![031_scd_type2_0](images/031_scd_type2_0.JPG)
+
+<br>
+
 ### Simulate an SCD Type 1 change
 
 Now suppose the product name “Water Bottle” needs to be corrected to “Insulated Water Bottle.” An SCD Type 1 change overwrites the existing value in place, with no history tracking.
@@ -428,6 +434,10 @@ SQL
 | 6          | MB-PRO            | Mountain Bike Pro        |  1350.00 | 2026-03-01 | 9999-12-31 | 1 |
 | 2          | RB-ELT            | Road Bike Elite          |   900.00 | 2026-01-01 | 9999-12-31 | 1 |
 | 4          | WB-STD            | Insulated Water Bottle   |     5.00 | 2026-01-01 | 9999-12-31 | 1 |
+
+<br>
+
+![032_scd_type1_0](images/032_scd_type1_0.JPG)
 
 <br>
 
@@ -478,6 +488,10 @@ SCD tracking: Type 2 on product cost; Type 1 on product name and all customer at
 
 <br>
 
+![040_verify_design_0](images/040_verify_design_0.JPG)
+
+<br>
+
 ---
 
 ## Try it with Copilot (Optional)
@@ -500,6 +514,10 @@ Copilot can assist with several tasks in this exercise:
 
 <br>
 
+**Unfortunately, Copilot isn't available with Fabric trial account.**
+
+<br>
+
 ---
 
 ## Clean up resources
@@ -512,6 +530,10 @@ When you finish exploring your data warehouse, delete the workspace you created 
 1. In the bar on the left, select the icon for your workspace to view all of the items it contains.
 2. In the toolbar, select Workspace settings.
 3. In the General section, select Remove this workspace.
+
+<br>
+
+![050_home_0](images/050_home_0.JPG)
 
 <br>
 
