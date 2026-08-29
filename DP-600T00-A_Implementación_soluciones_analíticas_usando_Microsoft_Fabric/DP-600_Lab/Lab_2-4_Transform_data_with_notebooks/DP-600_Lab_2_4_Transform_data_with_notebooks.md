@@ -69,12 +69,15 @@ Real-world data rarely arrives clean. In this section, you remove duplicates, ha
 
 The query applies four transformations in a single pass: SELECT DISTINCT removes the duplicate row, COALESCE fills the null region, a calculated column computes the line total, and a CASE expression categorizes each order by value tier.
 
+![031_shape_and_clean_0](images/031_shape_and_clean_0.JPG)
+
+<br>
+
 2. Run the next code cell to verify the results.
 
 The result shows 10 rows (the duplicate is gone). The row with order_id 6 shows Unknown for region. Every row has a line_total and value_tier value.
 
-![022](images)
-Screenshot of the expected result.
+![032_verify_shape_and_clean_0](images/032_verify_shape_and_clean_0.JPG)
 
 <br>
 
@@ -84,7 +87,7 @@ Screenshot of the expected result.
 
 Cleansed data becomes more useful when enriched with context from other tables. In this section, you join the sales data with customer and product reference tables, then create a regional revenue summary using aggregations.
 
-1. In the notebook, scroll to the Join and aggregate the data section and run the first code cell to join the three tables.
+1. In the notebook, scroll to the **Join and aggregate the data** section and run the first code cell to join the three tables.
 
 The **INNER JOIN** matches each sales row to its customer and product details. Rows that don’t match in both tables are excluded.
 
@@ -92,24 +95,24 @@ Run the next code cell to create a regional summary with aggregations.
 
 2. The output shows one row per region with order counts, total revenue, and average order value. The 10 detail rows are now collapsed into summary rows — one for each region.
 
-![022](images)
-Screenshot of the expected output.
+![041_join_and_aggregate_0](images/041_join_and_aggregate_0.JPG)
 
 <br>
 
->! Optionally, follow the Try it with Copilot prompt in the notebook to create an additional aggregation by product category.
+>! Optionally, follow the **Try it with Copilot** prompt in the notebook to create an additional aggregation by product category.
+
+<br>
 
 ## Apply window functions
 
 Window functions let you calculate values across related rows without collapsing the detail. In this section, you add running totals and order sequence numbers for each customer using **SUM() OVER** and **ROW_NUMBER() OVER**.
 
 1. In the notebook, scroll to the Apply window functions section and run the code cell.
-Unlike the aggregations in the previous section, the window functions keep all original rows. The PARTITION BY clause groups rows by customer, the ORDER BY clause determines the sequence, and each row gets a cumulative running_total and a sequential order_sequence number.
+Unlike the aggregations in the previous section, the window functions keep all original rows. The **PARTITION BY** clause groups rows by customer, the **ORDER BY** clause determines the sequence, and each row gets a cumulative **running_total** and a sequential **order_sequenc**e number.
 
 Customers with multiple orders (like Contoso Ltd) show an increasing running total and sequential order numbers. The total row count is the same as the input.
 
-![022](images)
-Screenshot of the output.
+![051_apply_window_functions_0](images/051_apply_window_functions_0.JPG)
 
 <br>
 
@@ -119,22 +122,29 @@ Screenshot of the output.
 
 Persisting results as a Delta table makes the data available to reports, other notebooks, and downstream pipelines. In this section, you write the enriched sales view to a managed Delta table in the lakehouse.
 
-1. In the notebook, scroll to the Write results to a Delta table section and run the first code cell.
+1. In the notebook, scroll to the **Write results to a Delta table** section and run the first code cell.
 
 The **CREATE OR REPLACE TABLE** statement writes the enriched view as a permanent Delta table. The **OR REPLACE** option overwrites the table if it exists, which is useful when re-running the notebook during development.
 
-2. In the Explorer pane, select ↻ Refresh next to Tables and verify that gold_sales appears in the table list.
+2. In the **Explorer** pane, select ↻ **Refresh** next to Tables and verify that **gold_sales** appears in the table list.
+
+![061_write_delta_table](images/061_write_delta_table.jpg)
+
+<br>
 
 3. Run the next code cell to confirm the data is queryable.
 
 The result shows revenue by product category and region, confirming that the joined and enriched data was written correctly.
 
-![022](images)
-Screenshot of expected result.
+![062_write_delta_table_0](images/062_write_delta_table_0.JPG)
 
 <br>
 
 >! Optionally, follow the Try it with Copilot prompt in the notebook to query the Delta table for high-value orders.
+
+**Unfortunately, Copilot isn't available with Fabric trial account.**
+
+<br>
 
 ## Clean up resources
 

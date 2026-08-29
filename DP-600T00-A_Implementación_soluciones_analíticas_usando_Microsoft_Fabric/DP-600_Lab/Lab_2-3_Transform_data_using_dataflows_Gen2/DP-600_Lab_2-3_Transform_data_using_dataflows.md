@@ -258,6 +258,10 @@ Copilot translates natural language instructions into Power Query steps, which a
 
 <br>
 
+**Unfortunately, Copilot isn't available with Fabric trial account.**
+
+<br>
+
 ---
 
 ## Clean up resources
