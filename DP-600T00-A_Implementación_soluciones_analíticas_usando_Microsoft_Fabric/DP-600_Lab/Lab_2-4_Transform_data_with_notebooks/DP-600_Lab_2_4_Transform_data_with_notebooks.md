@@ -158,7 +158,7 @@ If you’ve finished exploring, you can delete the workspace you created for thi
 
 3. In the General section, select Remove this workspace.
 
-![clean](iamges)
+![070_clean_up_resources_0](images/070_clean_up_resources_0.JPG)
 
 <br>
 
