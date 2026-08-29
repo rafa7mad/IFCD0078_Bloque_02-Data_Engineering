@@ -37,7 +37,7 @@ In this task, you create a Fabric workspace with capacity licensing and a new la
 
 In this task, you download a pre-built notebook, upload it to your workspace, attach it to the lakehouse, and run the first cell to generate sample data.
 
-1. Download the Sales Data Transformation.ipynb notebook from https://github.com/MicrosoftLearning/mslearn-fabric/raw/main/Allfiles/Labs/26c/Sales%20Data%20Transformation.ipynb and save it locally.
+1. Download the [Sales Data Transformation.ipynb](https://raw.githubusercontent.com/MicrosoftLearning/mslearn-fabric/main/Allfiles/Labs/26c/Sales%20Data%20Transformation.ipynb) notebook from https://github.com/MicrosoftLearning/mslearn-fabric/raw/main/Allfiles/Labs/26c/Sales%20Data%20Transformation.ipynb and save it locally.
 
 2. Return to the workspace and select Import > Notebook, then select Upload. Select the Sales Data Transformation.ipynb file.
 
