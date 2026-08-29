@@ -22,8 +22,7 @@ This lab takes approximately 30 minutes to complete.
 
 3. When your new workspace opens, it should be empty.
 
-![images](images)
-Screenshot of an empty workspace in Fabric.
+![010_workspace_0](images/010_workspace_0.jpg)
 
 <br>
 
@@ -35,8 +34,7 @@ Now that you have a workspace, create a data warehouse to host your dimensional 
 
 After a minute or so, a new warehouse is created and opens in the browser.
 
-![images](images)
-Screenshot of an empty warehouse in Fabric.
+![011_warehouse_0](images/011_warehouse_0.jpg)
 
 <br>
 
@@ -69,8 +67,7 @@ SQL
 
 >! Note: The f_ prefix identifies this as a fact table. This naming convention makes it easy for analysts and tools to distinguish fact tables from dimension tables. The fact table intentionally has no primary key, which is standard practice because it doesn’t serve a useful purpose for fact tables and would unnecessarily increase storage.
 
-![images](images)
-Screenshot of the new fact table and the successful code run.
+![012_table_f_sales_0](images/012_table_f_sales_0.JPG)
 
 <br>
 
@@ -155,8 +152,11 @@ SQL
 
 >! Tip: If the tables take a while to appear, refresh the browser page.
 
-![images](images)
-Screenshot of the loaded fact and dimension tables.
+![013_new-dim-tables](images/013_new-dim-tables.png)
+
+<br>
+
+![013_tables_dimensions_0](images/013_tables_dimensions_0.JPG)
 
 <br>
 
@@ -295,6 +295,10 @@ SQL
 
 <br>
 
+![021_query1_star_schema_0](images/021_query1_star_schema_0.JPG)
+
+<br>
+
 2. Create a new SQL query and run the following code to analyze sales by store region and customer segment:
 
 SQL
@@ -319,6 +323,10 @@ SQL
 | East    | Budget   |     140.00 |                1 |
 | West    | Premium  |    1570.00 |                2 |
 | West    | Standard |    3724.00 |                4 |
+
+<br>
+
+![022_query2_star_schema_0](images/022_query2_star_schema_0.JPG)
 
 <br>
 
