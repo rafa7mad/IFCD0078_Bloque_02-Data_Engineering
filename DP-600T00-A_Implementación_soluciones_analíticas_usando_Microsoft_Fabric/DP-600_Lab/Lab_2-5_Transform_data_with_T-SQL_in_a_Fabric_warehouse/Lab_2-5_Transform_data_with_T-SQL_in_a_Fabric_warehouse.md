@@ -356,6 +356,10 @@ SQL
  );
 ```
 
+![031_table_procedire_0](images/031_table_procedure_0.JPG)
+
+<br>
+
 2. Select New SQL query and run the following T-SQL to create the stored procedure:
 
 SQL
@@ -396,7 +400,11 @@ SQL
 
 The procedure accepts year and month parameters, deletes any existing rows for that period, and inserts freshly aggregated data. This delete-then-insert pattern is a full refresh for a specific period.
 
-Execute the procedure for January 2026, then query the results:
+![032_procedure_0](images/032_procedure_0.JPG)
+
+<br>
+
+3. Execute the procedure for January 2026, then query the results:
 
 SQL
 ```sql
@@ -408,7 +416,7 @@ SQL
 
 The **gold.monthly_sales** table contains aggregated sales data for January 2026.
 
-![099_myworkspace](images/099_myworkspace.jpg)
+![033_execute_procedure_0](images/033_execute_procedure_0.JPG)
 
 <br>
 
@@ -428,7 +436,7 @@ SQL
 
 The table now contains summary rows for January through April 2026, with each month showing data per product category.
 
-![099_myworkspace](images/099_myworkspace.jpg)
+![034_execute_procedure_accumulates_data_0](images/034_execute_procedure_accumulates_data_0.JPG)
 
 <br>
 
@@ -465,7 +473,7 @@ SQL
  FROM staging.dates;
 ```
 
-![099_myworkspace](images/099_myworkspace.jpg)
+![041_create_date_dimensional_0](images/041_create_date_dimensional_0.JPG)
 
 <br>
 
@@ -499,7 +507,7 @@ SQL
 
 The **IDENTITY** column generates a unique **BIGINT** surrogate key for each row automatically. In Fabric warehouse, **IDENTITY** columns must use the BIGINT data type and don’t support custom seed or increment values. The **effective_date**, **end_date**, and **is_current** columns support SCD Type 2 tracking, where you preserve historical versions of a record rather than overwriting changes.
 
-![099_myworkspace](images/099_myworkspace.jpg)
+![042_dim_customer_0](images/042_dim_customer_0.JPG)
 
 <br>
 
@@ -523,7 +531,7 @@ SQL
  FROM staging.products;
 ```
 
-![099_myworkspace](images/099_myworkspace.jpg)
+![043_dim_product_0](images/043_dim_product_0.JPG)
 
 <br>
 
