@@ -247,23 +247,27 @@ In this task, you will create field parameters to change visuals.
 
 ### Edit field parameters
 
-In this task, you will edit the Sales Figures field parameter by directly modifying its DAX expression.
+In this task, you will edit the **Sales Figures** field parameter by directly modifying its DAX expression.
 
-Select the Salesperson Performance tab at the bottom of the canvas. Notice the clustered bar chart to switch the chart between Sales by Month and Target by Month.
+1. Select the **Salesperson Performance** tab at the bottom of the canvas. Notice the clustered bar chart to switch the chart between Sales by Month and Target by Month.
 
-While creating the bookmark buttons allows you to change the visual type with each option, if you need to switch between many measures, you will have to create a bookmark button for each of them and that can be very time consuming. Instead, we can use a field parameter with all the measures we want to analyze and quickly switch between them.
+>! While creating the bookmark buttons allows you to change the visual type with each option, if you need to switch between many measures, you will have to create a bookmark button for each of them and that can be very time consuming. Instead, we can use a field parameter with all the measures we want to analyze and quickly switch between them.
 
-Salesperson performance page before changes.
 
-Select the bar chart visual and replace the Total Sales field in X-axis with the Sales Figures field parameter.
+![071_field-parameters-bar-chart-start](images/071_field-parameters-bar-chart-start.png)
 
-Create a Slicer visual and drag the Sales Figures parameter to the Field area.
+<br>
+
+2. Select the bar chart visual and replace the **Total Sales** field in **X-axis** with the **Sales Figures** field parameter.
+
+3. Create a **Slicer** visual and drag the **Sales Figures** parameter to the **Field** area.
 
 For this visual you still need to evaluate the Target by Month, which is not in the field parameter.
 
-Select the Sales Figures parameter in the Data pane and add the Target field in the parameter’s DAX expression as below:
+1. Select the **Sales Figures** parameter in the Data pane and add the Target field in the parameter’s DAX expression as below:
 
-code
+Code
+```code
 Sales Figures = {
  ("Total Sales", NAMEOF('Sales'[Total Sales]), 0),
  ("Profit", NAMEOF('Sales'[Profit]), 1),
@@ -271,13 +275,17 @@ Sales Figures = {
  ("Orders", NAMEOF('Sales'[Orders]), 3),
  ("Target", NAMEOF('Targets'[Target]), 4)
 }
-Commit the changes and verify that the visual changes as you select the different Sales figures.
+```
 
-Delete the bookmark buttons, and observe the final state of the report page.
+2. Commit the changes and verify that the visual changes as you select the different Sales figures.
 
-Final state of Salesperson Performance with field parameters.
+3. Delete the bookmark buttons, and observe the final state of the report page.
 
-Lab complete
+![072_field-parameters-bar-chart-final](images/072_field-parameters-bar-chart-final.png)
+
+<br>
+
+## Lab complete
 To finish the exercise, close Power BI Desktop - no need to save the file.
 
 <br>
