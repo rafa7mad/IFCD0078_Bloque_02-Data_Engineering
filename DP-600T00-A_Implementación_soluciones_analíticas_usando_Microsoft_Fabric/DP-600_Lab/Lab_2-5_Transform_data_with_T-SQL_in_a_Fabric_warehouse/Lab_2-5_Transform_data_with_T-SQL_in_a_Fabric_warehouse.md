@@ -199,7 +199,7 @@ SQL
 
 The **INNER JOIN** combines each order with its customer details. The **GROUP BY** clause collapses rows into region and segment groups with aggregate measures.
 
-![image](images)
+![012_query_join_groupby_0](images/012_query_join_groupby_0.JPG)
 
 <br>
 
@@ -229,13 +229,15 @@ SQL
  ORDER BY o.customer_id, o.order_date;
 ```
 
-![image](images)
-
 <br>
 
 Unlike **GROUP BY**, window functions keep every row in the result. **ROW_NUMBER** assigns a sequence within each customer’s orders, **SUM ... OVER** computes a running total, and **LAG** retrieves the previous order’s amount for comparison.
 
 Customers with multiple orders (like Contoso Ltd) show increasing running totals and sequential order numbers. The first order for each customer shows **NULL** for **prev_order_amount**.
+
+![013_query_groupby_row_number_0](images/013_query_groupby_row_number_0.JPG)
+
+<br>
 
 4. Select **New SQL query** and run the following CTE query that calculates monthly totals with a year-to-date running total:
 
@@ -262,7 +264,7 @@ SQL
 
 The CTE aggregates orders into monthly totals first, and then the outer query applies a window function to compute a year-to-date running total. CTEs break complex queries into readable, named steps.
 
-![099_myworkspace](images/099_myworkspace.jpg)
+![014_query_cte_0](images/014_query_cte_0.JPG)
 
 <br>
 
@@ -306,7 +308,7 @@ SQL
 
 The view joins orders with dates and products, then aggregates sales by month and product category. Because views don’t store data, the results always reflect the current state of the staging tables.
 
-![099_myworkspace](images/099_myworkspace.jpg)
+![021_view_reusable_logic_0](images/021_view_reusable_logic_0.JPG)
 
 <br>
 
@@ -322,7 +324,7 @@ SQL
 
 The results show monthly sales totals broken down by product category. The view appears under **Schemas** > **gold** > **Views** in the **Explorer** pane after you select **Refresh**.
 
-![099_myworkspace](images/099_myworkspace.jpg)
+![022_verify_view_0](images/022_verify_view_0.JPG)
 
 <br>
 
