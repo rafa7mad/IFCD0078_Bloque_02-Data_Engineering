@@ -572,7 +572,7 @@ SQL
 
 The fact table load translates natural business keys (like customer_id) into surrogate keys from the dimension tables. The join to dim.customer filters on is_current = 1 to link each fact row to the current version of the customer record.
 
-![099_myworkspace](images/099_myworkspace.jpg)
+![044_fact_sales_0](images/044_fact_sales_0.JPG)
 
 <br>
 
@@ -599,7 +599,7 @@ SQL
 
 The results show 11 completed orders with customer names, segments, product names, and categories resolved from the dimension tables.
 
-![099_myworkspace](images/099_myworkspace.jpg)
+![045_verify_dimensions_0](images/045_verify_dimensions_0.JPG)
 
 <br>
 
@@ -656,7 +656,7 @@ The results should include the following 11 objects:
 
 <br>
 
-![099_myworkspace](images/099_myworkspace.jpg)
+![051_verify_the final_state_0](images/051_verify_the_final_state_0.JPG)
 
 <br>
 
