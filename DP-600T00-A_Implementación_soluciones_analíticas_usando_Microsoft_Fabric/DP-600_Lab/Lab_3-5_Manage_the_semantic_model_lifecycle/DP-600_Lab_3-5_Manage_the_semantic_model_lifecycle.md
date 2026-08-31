@@ -6,11 +6,13 @@ In this exercise, you create a lakehouse with sample data, then use SemPy in a F
 
 This lab takes approximately 45 minutes to complete.
 
->! **Tip**: For related training content, see Manage the semantic model development lifecycle.
+>! **Tip**: For related training content, see [Manage the semantic model development lifecycle](https://learn.microsoft.com/training/modules/manage-semantic-model-lifecycle/).
 
 ## Set up the environment
 
->! **Note**: You need access to a Fabric paid or trial capacity to complete this exercise. Paid capacities must include Power BI capabilities, or you need a separate Power BI Pro or Premium Per User license. For information about the free Fabric trial, see Fabric trial.
+<br>
+
+>! **Note**: You need access to a Fabric paid or trial capacity to complete this exercise. Paid capacities must include Power BI capabilities, or you need a separate Power BI Pro or Premium Per User license. For information about the free Fabric trial, see [Fabric trial](https://aka.ms/fabrictrial).
 
 ### Create workspaces
 
@@ -18,7 +20,7 @@ In this task, you create two workspaces for the deployment pipeline stages: Deve
 
 1. Navigate to the [Microsoft Fabric home page](https://app.fabric.microsoft.com/home?experience=fabric) at https://app.fabric.microsoft.com/home?experience=fabric in a browser, and sign in with your Fabric credentials.
 2. In the menu bar on the left, select **Workspaces** (the icon looks similar to 🗇).
-3. Create a new workspace with a name of your choice followed by **-dev** (for example, **SalesLifecycle-dev**), selecting a licensing mode that includes Fabric capacity (Trial, Premium, or Fabric). Remember this base name because you use it for the production workspace and the deployment pipeline.
+3. Create a new workspace with a name of your choice followed by **-dev** (for example, **SalesLifecycle-dev**), selecting a licensing mode that includes Fabric capacity (*Trial*, *Premium*, or *Fabric*). Remember this base name because you use it for the production workspace and the deployment pipeline.
 4. When your new workspace opens, it should be empty.
 
 ![imagen](images)
