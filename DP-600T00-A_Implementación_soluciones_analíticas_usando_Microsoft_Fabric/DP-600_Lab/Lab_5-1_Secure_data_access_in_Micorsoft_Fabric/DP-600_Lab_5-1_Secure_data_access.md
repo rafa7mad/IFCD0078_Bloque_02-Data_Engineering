@@ -13,4 +13,4 @@
 
 ---
 
-[Up](#secure_data_access_in_microsoft_fabric)
+[Up](#secure-data-access-in-microsoft-fabric)
