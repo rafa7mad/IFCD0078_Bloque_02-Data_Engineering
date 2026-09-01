@@ -195,3 +195,10 @@ In the bar on the left, select the icon for your workspace to view all of the it
 In the toolbar, select Workspace settings.
 In the General section, select Remove this workspace.
 
+![imagen](images)
+
+<br>
+
+---
+
+[Up](#secure-data-access-in-microsoft-fabric)
