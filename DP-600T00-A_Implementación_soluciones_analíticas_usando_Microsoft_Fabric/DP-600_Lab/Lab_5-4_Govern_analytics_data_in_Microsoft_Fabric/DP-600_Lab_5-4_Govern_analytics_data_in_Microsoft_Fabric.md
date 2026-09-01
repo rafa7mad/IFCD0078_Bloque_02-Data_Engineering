@@ -201,4 +201,4 @@ In the General section, select Remove this workspace.
 
 ---
 
-[Up](#secure-data-access-in-microsoft-fabric)
+[Up](#govern-analytics-data-in-microsoft-fabric)
