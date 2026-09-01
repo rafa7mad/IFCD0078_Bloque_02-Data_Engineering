@@ -220,4 +220,4 @@ In the General section, select Remove this workspace.
 
 ---
 
-[Up](#secure-data-in-data-warehouse)
+[Up](#secure-data-in-a-data-warehouse)
