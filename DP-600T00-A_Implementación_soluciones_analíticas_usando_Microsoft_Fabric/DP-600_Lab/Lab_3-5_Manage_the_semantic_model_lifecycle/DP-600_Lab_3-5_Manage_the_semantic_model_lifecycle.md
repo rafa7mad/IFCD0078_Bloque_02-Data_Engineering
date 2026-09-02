@@ -1,5 +1,7 @@
 # Manage the semantic model lifecycle
 
+<br>
+
 Analytics teams that publish directly to production without validation or structured deployment risk breaking reports, losing change history, and serving incorrect data. A defined lifecycle process prevents these problems by catching issues before content reaches business users.
 
 In this exercise, you create a lakehouse with sample data, then use SemPy in a Fabric notebook to inspect the semantic model’s structure and validate data quality. When validation reveals missing relationships that produce incorrect DAX results, you use SemPy’s read/write TOM connection to fix the model programmatically. After confirming the model is correct, you create a deployment pipeline with Development and Production stages and promote the validated content from Development to Production. These tasks follow the **Validate** → **Fix** → **Deploy** stages of the semantic model lifecycle.
@@ -7,6 +9,8 @@ In this exercise, you create a lakehouse with sample data, then use SemPy in a F
 This lab takes approximately 45 minutes to complete.
 
 >! **Tip**: For related training content, see [Manage the semantic model development lifecycle](https://learn.microsoft.com/training/modules/manage-semantic-model-lifecycle/).
+
+<br>
 
 ## Set up the environment
 

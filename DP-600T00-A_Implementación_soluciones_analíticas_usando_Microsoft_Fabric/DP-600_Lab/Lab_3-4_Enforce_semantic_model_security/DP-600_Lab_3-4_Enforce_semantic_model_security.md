@@ -1,5 +1,7 @@
 # Enforce semantic model security
 
+<br>
+
 In this exercise, you implement row-level security (RLS) on a Power BI semantic model. You start by reviewing the model and creating static roles, then import a salesperson mapping table and configure a dynamic role that filters data based on user identity.
 
 In this exercise, you learn how to:

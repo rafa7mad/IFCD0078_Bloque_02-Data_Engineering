@@ -1,5 +1,7 @@
 # Optimize semantic model performance
 
+<br>
+
 In this exercise, you open a Power BI Desktop report built on AdventureWorks sales data. The report contains measures that use inefficient DAX patterns. You use Performance analyzer to capture timing data, identify the most expensive visual, analyze the DAX query, apply an optimization, and re-measure to confirm the improvement. You also explore cardinality by examining column statistics in the model. You learn how to:
 
 * Use Performance analyzer to capture and interpret timing data for report visuals.
