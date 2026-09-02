@@ -18,7 +18,9 @@ You learn how to:
 
 <br>
 
-** Set up the environment
+## Set up the environment
+
+<br>
 
 >! **Note**: You need a paid Fabric capacity to complete this exercise. A Fabric trial doesn’t support Copilot capabilities. For information about Fabric licenses, see [Microsoft Fabric licenses](https://learn.microsoft.com/fabric/enterprise/licenses).
 
