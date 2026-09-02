@@ -1,5 +1,7 @@
 # Transform data with T-SQL in a Fabric warehouse
 
+<br>
+
 A Microsoft Fabric warehouse provides full read-write T-SQL capabilities for transforming data. Unlike the SQL analytics endpoint on a lakehouse (which is read-only), a warehouse supports **INSERT**, **UPDATE**, **DELETE**, and **CREATE TABLE AS SELECT** (CTAS) statements. This makes the warehouse the right place for building transformation logic that needs to persist results.
 
 In this exercise, you work with staging sales, customer, and product data in a Fabric warehouse. You write T-SQL queries to filter, join, and aggregate data. You create a view for reusable transformation logic, build a stored procedure with parameters for repeatable processing, and create and load dimensional tables. These tasks reinforce the query, view, stored procedure, and dimensional modeling techniques covered in this module.
@@ -9,6 +11,8 @@ This exercise takes approximately 45 minutes to complete.
 >! Tip: For related training content, see Transform data using T-SQL in Microsoft Fabric.
 
 >! Note: This exercise includes optional prompts to explore Copilot capabilities.
+
+<br>
 
 ## Set up the environment
 

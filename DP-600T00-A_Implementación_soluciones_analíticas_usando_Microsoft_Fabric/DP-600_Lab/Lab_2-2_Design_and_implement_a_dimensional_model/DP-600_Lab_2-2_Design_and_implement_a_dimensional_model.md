@@ -1,5 +1,7 @@
 # Design and implement a dimensional model
 
+<br>
+
 In Microsoft Fabric, a data warehouse provides full T-SQL semantics for creating and managing dimensional models. Dimensional models organize data into fact tables that capture business events and dimension tables that provide the context for analysis. This structure, known as a star schema, is the recommended approach for most analytics workloads and the foundation for Power BI semantic models.
 
 In this exercise, you design and implement a star schema dimensional model for Contoso Retail, a fictional retail organization that needs to analyze sales performance across stores, products, customers, and time periods. You create the fact and dimension tables in a Fabric Warehouse, load sample data, and run analytical queries that join the fact table to dimension tables as a star schema.
@@ -10,6 +12,7 @@ This lab takes approximately 30 minutes to complete.
 
 >! Tip: For related training content, see Design dimensional models for analytics in Microsoft Fabric.
 
+<br>
 
 ## Create a workspace
 

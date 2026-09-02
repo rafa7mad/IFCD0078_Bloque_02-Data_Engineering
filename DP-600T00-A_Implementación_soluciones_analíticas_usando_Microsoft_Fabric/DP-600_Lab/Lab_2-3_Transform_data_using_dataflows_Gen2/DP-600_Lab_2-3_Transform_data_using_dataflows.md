@@ -1,5 +1,7 @@
 # Transform data using dataflows in Microsoft Fabric
 
+<br>
+
 Dataflows in Microsoft Fabric provide a low-code, Power Query-based transformation experience for preparing analytical data. When your team includes members who are familiar with Power Query from Excel or Power BI Desktop, dataflows let them apply those skills to enterprise-scale data preparation without writing Spark or T-SQL code.
 
 In this exercise, you create a Dataflow Gen2 to connect to sample sales data, apply a series of Power Query transformations to clean and shape the data, and load the results to a lakehouse table. The transformations you apply represent common data preparation tasks: filtering rows, removing unnecessary columns, changing data types, renaming columns, and creating calculated columns. These are the steps that produce analytics-ready tables for downstream reporting and AI experiences.

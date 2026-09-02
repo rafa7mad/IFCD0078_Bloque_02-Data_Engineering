@@ -1,5 +1,7 @@
 # Transform data with notebooks in Microsoft Fabric
 
+<br>
+
 Notebooks in Microsoft Fabric provide an interactive, code-based environment for transforming lakehouse data at scale using Apache Spark. You write and run code in individual cells, see results immediately, and iterate step by step. For analytics engineers working with SQL, Spark SQL extends familiar syntax to work with large datasets—and the %%sql magic command lets you run SQL directly in notebook cells.
 
 In this exercise, you work with sales, customer, and product data for a retail analytics organization. The raw data has quality issues: duplicate rows, null values, and inconsistent formatting. You clean and shape the data, join multiple tables, calculate aggregations and window functions, and write the results to Delta tables in a lakehouse. These are the same transformation patterns you explored in the module’s conceptual units.
@@ -8,8 +10,11 @@ This exercise takes approximately 30 minutes to complete.
 
 >! Tip: For related training content, see Transform data using notebooks in Microsoft Fabric.
 
+<br>
+
 ## Set up the environment
-Note: You need access to a Fabric paid or trial capacity to complete this exercise. For information about the free Fabric trial, see Fabric trial.
+
+>! Note: You need access to a Fabric paid or trial capacity to complete this exercise. For information about the free Fabric trial, see Fabric trial.
 
 ### Create a workspace
 

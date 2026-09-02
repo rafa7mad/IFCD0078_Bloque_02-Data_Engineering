@@ -1,11 +1,14 @@
 # Get started with Real-Time Intelligence in Microsoft Fabric
 
+<br>
+
 Microsoft Fabric provides Real-Time Intelligence, enabling you to create analytical solutions for real-time data streams. In this exercise, you’ll use the Real-Time Intelligence capabilities in Microsoft Fabric to ingest, analyze, and visualize a real-time stream of stock market data.
 
 This lab takes approximately 30 minutes to complete.
 
 >! Tip: For related training content, see Get started with Real-Time Intelligence in Microsoft Fabric.
 
+<br>
 
 ## Create a workspace
 
