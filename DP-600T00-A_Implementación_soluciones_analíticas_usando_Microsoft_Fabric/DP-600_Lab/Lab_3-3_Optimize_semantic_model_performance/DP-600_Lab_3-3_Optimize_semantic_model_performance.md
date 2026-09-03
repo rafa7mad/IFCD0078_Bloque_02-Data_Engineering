@@ -20,7 +20,7 @@ This lab takes approximately 30 minutes to complete.
 
 You need [Power BI Desktop](https://www.microsoft.com/download/details.aspx?id=58494) (November 2025 or newer) installed to complete this exercise. Note: UI elements may vary slightly depending on your version.
 
-1. Open a web browser and enter the following URL to download the 16-optimize-performance zip folder:
+1. Open a web browser and enter the following URL to download the [16-optimize-performance zip folder](https://github.com/MicrosoftLearning/mslearn-fabric/raw/refs/heads/main/Allfiles/Labs/16/16-optimize-performance.zip):
 
 https://github.com/MicrosoftLearning/mslearn-fabric/raw/refs/heads/main/Allfiles/Labs/16/16-optimize-performance.zip
 
@@ -31,6 +31,8 @@ https://github.com/MicrosoftLearning/mslearn-fabric/raw/refs/heads/main/Allfiles
 >! **Note**: Ignore and close any warnings asking to apply changes, but don’t select Discard changes.
 
 This file contains an AdventureWorks sales model with a report page that includes several visuals. Some measures in this model use intentionally inefficient DAX patterns that you identify and fix.
+
+<br>
 
 ## Capture a performance baseline
 
@@ -64,7 +66,7 @@ In this task, you export the DAX query for the **Table** visual and examine its 
 
 2. Select **Run in DAX query view**. Power BI Desktop opens DAX query view with the visual’s generated query.
 
-3. Select **Run** to execute the query. The result grid shows values for each fiscal year: **Total_Sales** and **Sales_YoY_Growth**.
+3. Select **Run** to execute the query. The result grid shows values for each fiscal year: `Total_Sales` and `Sales_YoY_Growth`.
 
 4. Review the generated query. It looks something like this:
 
@@ -91,7 +93,7 @@ Code
 ```
 <br>
 
->! This query is not the measure definition itself. Power BI generates this query to populate the visual. **SUMMARIZECOLUMNS** groups the data by year, **ROLLUPADDISSUBTOTAL** adds the grand total row, and **TOPN** caps the row count. The measures ([**Total Sales**] and [**Sales YoY Growth**]) are referenced by name, but their formulas aren’t shown here because they live in the model. To see the actual measure logic, you need to look in the formula bar.
+>! This query is not the measure definition itself. Power BI generates this query to populate the visual. `SUMMARIZECOLUMNS` groups the data by year, `ROLLUPADDISSUBTOTAL` adds the grand total row, and `TOPN` caps the row count. The measures (`[Total Sales]` and `[Sales YoY Growth]`) are referenced by name, but their formulas aren’t shown here because they live in the model. To see the actual measure logic, you need to look in the formula bar.
 
 5. Switch back to **Report view**. In the **Data** pane, expand the **Sales** table and select the **Sales YoY Growth** measure. The formula bar shows the measure definition:
 
@@ -107,13 +109,13 @@ Code
 ```
 <br>
 
-6. Look at the formula. The **CALCULATE**([**Total Sales**], **SAMEPERIODLASTYEAR**('**Date**'[**Date**])) expression appears twice, in the numerator and the denominator, but it calculates the same value both times. This means the engine evaluates the prior-year sales calculation twice per row in the query, which is wasteful.
+6. Look at the formula. The `CALCULATE**([Total Sales], SAMEPERIODLASTYEAR('Date'[Date]))` expression appears twice, in the numerator and the denominator, but it calculates the same value both times. This means the engine evaluates the prior-year sales calculation twice per row in the query, which is wasteful.
 
 Common inefficient patterns like this include:
 
-* **Repeated subexpressions**: The same **CALCULATE** evaluated multiple times without storing it in a **VAR**.
-* **FILTER on a full table**: **FILTER**(**Sales**, ...) iterating every row instead of using a column predicate in CALCULATE.
-* **COUNTROWS(FILTER(…)**): Counting rows by iterating a filtered table instead of using **CALCULATE**(**COUNTROWS**(...), ...).
+* **Repeated subexpressions**: The same `CALCULATE` evaluated multiple times without storing it in a `VAR`.
+* **FILTER on a full table**: `FILTER(Sales, ...)` iterating every row instead of using a column predicate in CALCULATE.
+* **COUNTROWS(FILTER(…)**): Counting rows by iterating a filtered table instead of using `CALCULATE(COUNTROWS(...), ...)`.
 
 The **Sales YoY Growth** measure has a repeated subexpression — the prior-year calculation is evaluated twice. In the next task, you fix this by storing it in a variable.
 
@@ -138,7 +140,7 @@ Code
 
 <br>
 
-The **VAR** stores the prior-year result once. The **RETURN** expression references **SalesPriorYear** twice without recalculating it.
+The `VAR` stores the prior-year result once. The `RETURN` expression references `SalesPriorYear` twice without recalculating it.
 
 3. Press **Enter** to confirm the formula change.
 
@@ -165,7 +167,7 @@ Screenshot of the DAX query results showing YoY Growth values by year.
 
 ## Examine column cardinality
 
-In this task, you use the **COLUMNSTATISTICS**() DAX function to see how many distinct values each column contains. Columns with high cardinality compress less efficiently and consume more memory. Understanding where cardinality is highest helps you make informed decisions about model design.
+In this task, you use the `COLUMNSTATISTICS()` DAX function to see how many distinct values each column contains. Columns with high cardinality compress less efficiently and consume more memory. Understanding where cardinality is highest helps you make informed decisions about model design.
 
 1. Switch to **DAX query view** in Power BI Desktop.
 
@@ -226,17 +228,17 @@ If Copilot is available in your Power BI Desktop environment, try these addition
 
 2. Switch to DAX query view. Paste the query and ask Copilot:
 
-    **Simplify this DAX query and suggest performance improvements.**
+    `Simplify this DAX query and suggest performance improvements.`
 
 3. Review Copilot’s suggestions. Compare them to the manual optimization you applied.
 
 4. Ask Copilot:
 
-    **Explain why evaluating the same CALCULATE expression twice is slower than using a variable.**
+    `Explain why evaluating the same CALCULATE expression twice is slower than using a variable.`
 
 5. Optionally, ask Copilot to generate a new measure using best practices from the start:
 
-    **Write a measure that calculates profit margin percentage using variables for Sales and Cost.**
+    `Write a measure that calculates profit margin percentage using variables for Sales and Cost.`
 
 >! **Note**: Copilot generates new insights and suggestions without changing the measures you already optimized.
 
