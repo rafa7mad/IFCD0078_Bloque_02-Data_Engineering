@@ -2,29 +2,29 @@
 
 <br>
 
-A Microsoft Fabric warehouse provides full read-write T-SQL capabilities for transforming data. Unlike the SQL analytics endpoint on a lakehouse (which is read-only), a warehouse supports **INSERT**, **UPDATE**, **DELETE**, and **CREATE TABLE AS SELECT** (CTAS) statements. This makes the warehouse the right place for building transformation logic that needs to persist results.
+A Microsoft Fabric warehouse provides full read-write T-SQL capabilities for transforming data. Unlike the SQL analytics endpoint on a lakehouse (which is read-only), a warehouse supports `INSERT`, `UPDATE`, `DELETE`, and `CREATE TABLE AS SELECT` (CTAS) statements. This makes the warehouse the right place for building transformation logic that needs to persist results.
 
 In this exercise, you work with staging sales, customer, and product data in a Fabric warehouse. You write T-SQL queries to filter, join, and aggregate data. You create a view for reusable transformation logic, build a stored procedure with parameters for repeatable processing, and create and load dimensional tables. These tasks reinforce the query, view, stored procedure, and dimensional modeling techniques covered in this module.
 
 This exercise takes approximately 45 minutes to complete.
 
->! Tip: For related training content, see Transform data using T-SQL in Microsoft Fabric.
+>! **Tip**: For related training content, see [Transform data using T-SQL in Microsoft Fabric](https://learn.microsoft.com/training/modules/fabric-transform-data-tsql/).
 
->! Note: This exercise includes optional prompts to explore Copilot capabilities.
+>! **Note**: This exercise includes optional prompts to explore Copilot capabilities.
 
 <br>
 
 ## Set up the environment
 
->! Note: You need access to a Fabric paid or trial capacity to complete this exercise. For information about the free Fabric trial, see Fabric trial.
+>! **Note**: You need access to a Fabric paid or trial capacity to complete this exercise. For information about the free Fabric trial, see Fabric trial.
 
 ### Create a workspace
 
 In this task, you create a Fabric workspace for the exercise.
 
-1. Navigate to the Microsoft Fabric home page at https://app.fabric.microsoft.com/home?experience=fabric in a browser, and sign in with your Fabric credentials.
-2. In the menu bar on the left, select Workspaces (the icon looks similar to 🗇).
-3. Create a new workspace with a name of your choice, selecting a licensing mode that includes Fabric capacity (Trial, Premium, or Fabric).
+1. Navigate to the [Microsoft Fabric home page](https://app.fabric.microsoft.com/home?experience=fabric) at <br> https://app.fabric.microsoft.com/home?experience=fabric in a browser, and sign in with your Fabric credentials.
+2. In the menu bar on the left, select **Workspaces** (the icon looks similar to 🗇).
+3. Create a new workspace with a name of your choice, selecting a licensing mode that includes Fabric capacity (*Trial, Premium, or Fabric*).
 4. When your new workspace opens, it should be empty.
 
 ![001_workspace_0](images/001_workspace_0.JPG)
@@ -33,9 +33,9 @@ In this task, you create a Fabric workspace for the exercise.
 
 In this task, you create a warehouse to store and transform data.
 
-1. On the menu bar on the left, select Create. In the New page, under the Data Warehouse section, select Warehouse. Give it a name of your choice.
+1. On the menu bar on the left, select **Create**. In the **New** page, under the **Data Warehouse** section, select **Warehouse**. Give it a name of your choice.
 
->! Note: If the Create option is not pinned to the sidebar, select the ellipsis (…) option first.
+>! **Note**: If the **Create** option is not pinned to the sidebar, select the ellipsis (…) option first.
 
 After a minute or so, a new warehouse is created.
 
@@ -47,9 +47,11 @@ After a minute or so, a new warehouse is created.
 
 In this task, you create schemas and staging tables, then insert sample data that simulates raw sales transactions, customers, and products.
 
-1. In your warehouse, select New SQL query from the toolbar and run the following T-SQL to create schemas and staging tables:
+1. In your warehouse, select **New SQL query** from the toolbar and run the following T-SQL to create schemas and staging tables:
 
->! Tip: If you are in a lab VM and have any problems entering the code, you can download the 26d-snippets.txt file from https://github.com/MicrosoftLearning/mslearn-fabric/raw/main/Allfiles/Labs/26d/26d-snippets.txt, saving it on the VM. The file contains all the T-SQL code used in this lab.
+>! **Tip**: If you are in a lab VM and have any problems entering the code, you can download the [26d-snippets.txt](https://github.com/MicrosoftLearning/mslearn-fabric/raw/main/Allfiles/Labs/26d/26d-snippets.txt) file from <br>
+https://github.com/MicrosoftLearning/mslearn-fabric/raw/main/Allfiles/Labs/26d/26d-snippets.txt <br>
+, saving it on the VM. The file contains all the T-SQL code used in this lab.
 
 SQL
 ```sql
@@ -143,7 +145,7 @@ SQL
  ('2026-06-15', 2026, 6, 'June', 2);
  ```
 
-2. Use the Refresh button in the Explorer pane to verify the tables appear under the staging schema.
+2. Use the **Refresh** button in the **Explorer** pane to verify the tables appear under the **staging** schema.
 
 ![003_tables_and_load_data_0](images/003_tables_and_load_data_0.JPG)
 
@@ -153,7 +155,7 @@ SQL
 
 Querying is the first step in any data transformation workflow. In this section, you write T-SQL queries that filter, shape, join, aggregate, and apply window functions to the staging data.
 
-1. Select New SQL query to open a new query tab. Run the following query to filter completed orders and add calculated columns:
+1. Select **New SQL query** to open a new query tab. Run the following query to filter completed orders and add calculated columns:
 
 SQL
 ```sql
@@ -176,7 +178,7 @@ SQL
  WHERE status = 'Completed';
 ```
 
-This query filters to completed orders, replaces null discounts with zero using **ISNULL**, calculates line totals and net amounts, and classifies each order into a tier using a **CASE** expression.
+This query filters to completed orders, replaces null discounts with zero using `ISNULL`, calculates line totals and net amounts, and classifies each order into a tier using a `CASE` expression.
 
 ![011_transform_data_0](images/011_transform_data_0.JPG)
 
@@ -201,13 +203,13 @@ SQL
  ORDER BY total_sales DESC;
 ```
 
-The **INNER JOIN** combines each order with its customer details. The **GROUP BY** clause collapses rows into region and segment groups with aggregate measures.
+The `INNER JOIN` combines each order with its customer details. The `GROUP BY` clause collapses rows into region and segment groups with aggregate measures.
 
 ![012_query_join_groupby_0](images/012_query_join_groupby_0.JPG)
 
 <br>
 
-3. Select New SQL query and run the following query to apply window functions that compute running totals and order sequences per customer:
+3. Select **New SQL query** and run the following query to apply window functions that compute running totals and order sequences per customer:
 
 SQL
 ```sql
@@ -235,9 +237,9 @@ SQL
 
 <br>
 
-Unlike **GROUP BY**, window functions keep every row in the result. **ROW_NUMBER** assigns a sequence within each customer’s orders, **SUM ... OVER** computes a running total, and **LAG** retrieves the previous order’s amount for comparison.
+Unlike `GROUP BY`, window functions keep every row in the result. `ROW_NUMBER` assigns a sequence within each customer’s orders, `SUM ... OVER` computes a running total, and `LAG` retrieves the previous order’s amount for comparison.
 
-Customers with multiple orders (like Contoso Ltd) show increasing running totals and sequential order numbers. The first order for each customer shows **NULL** for **prev_order_amount**.
+Customers with multiple orders (like Contoso Ltd) show increasing running totals and sequential order numbers. The first order for each customer shows `NULL` for `prev_order_amount`.
 
 ![013_query_groupby_row_number_0](images/013_query_groupby_row_number_0.JPG)
 
@@ -280,13 +282,15 @@ If Copilot is available in your warehouse, open a new SQL query, select the **Co
 
 Review the generated T-SQL and run it. This creates a new query result without modifying any of the data you explored in Task 1.
 
+**Unfortunately, Copilot isn't available with Fabric trial account.**
+
 <br>
 
 ## Create a view for reusable logic
 
 Views let you encapsulate complex query logic so consumers can reuse it without rewriting joins and aggregations. In this section, you create a view that summarizes monthly sales by product category.
 
-1. Select New SQL query and run the following T-SQL to create a monthly sales summary view:
+1. Select **New SQL query** and run the following T-SQL to create a monthly sales summary view:
 
 SQL
 ```sql
@@ -338,13 +342,15 @@ Open a new SQL query, select the **Copilot** button, and enter a prompt such as:
 
 >! “Create a view called gold.vw_customer_summary that shows total sales and order count per customer, including their segment and region”
 
-Review the generated T-SQL. If it looks correct, run it to create a second view. This adds a new view without changing **gold.vw_monthly_sales**.
+Review the generated T-SQL. If it looks correct, run it to create a second view. This adds a new view without changing `gold.vw_monthly_sales`.
+
+<br>
 
 ## Build a stored procedure with parameters
 
 Stored procedures go beyond views by supporting write operations, parameters, and multi-step logic. In this section, you create a stored procedure that refreshes a summary table for a specific month.
 
-1. Select New SQL query and run the following T-SQL to create a target table for the procedure:
+1. Select **New SQL query** and run the following T-SQL to create a target table for the procedure:
 
 SQL
 ```sql
@@ -364,7 +370,7 @@ SQL
 
 <br>
 
-2. Select New SQL query and run the following T-SQL to create the stored procedure:
+2. Select **New SQL query** and run the following T-SQL to create the stored procedure:
 
 SQL
 ```sql
@@ -418,7 +424,7 @@ SQL
  SELECT * FROM gold.monthly_sales;
 ```
 
-The **gold.monthly_sales** table contains aggregated sales data for January 2026.
+The `gold.monthly_sales` table contains aggregated sales data for January 2026.
 
 ![033_execute_procedure_0](images/033_execute_procedure_0.JPG)
 
@@ -446,17 +452,19 @@ The table now contains summary rows for January through April 2026, with each mo
 
 ### Try it with Copilot (Optional)
 
-Open a new SQL query, select the Copilot button, and enter a prompt such as:
+Open a new SQL query, select the **Copilot** button, and enter a prompt such as:
 
 >! “Write a stored procedure called gold.usp_top_customers that accepts a @year parameter and returns the top 5 customers by total sales for that year”
 
-Review the generated T-SQL. This creates a new procedure without changing gold.usp_refresh_monthly_sales.
+Review the generated T-SQL. This creates a new procedure without changing `gold.usp_refresh_monthly_sales`.
+
+<br>
 
 ## Create and load dimensional tables
 
 Dimensional tables organize data into a star schema optimized for analytics and semantic models. In this section, you create dimension and fact tables, then load them from the staging data using surrogate key lookups.
 
-1. Select New SQL query and run the following T-SQL to create and load the date dimension:
+1. Select **New SQL query** and run the following T-SQL to create and load the date dimension:
 
 SQL
 ```sql
@@ -509,7 +517,7 @@ SQL
  FROM staging.customers;
 ```
 
-The **IDENTITY** column generates a unique **BIGINT** surrogate key for each row automatically. In Fabric warehouse, **IDENTITY** columns must use the BIGINT data type and don’t support custom seed or increment values. The **effective_date**, **end_date**, and **is_current** columns support SCD Type 2 tracking, where you preserve historical versions of a record rather than overwriting changes.
+The `IDENTITY` column generates a unique `BIGINT` surrogate key for each row automatically. In Fabric warehouse, `IDENTITY` columns must use the BIGINT data type and don’t support custom seed or increment values. The `effective_date`, `end_date`, and `is_current` columns support SCD Type 2 tracking, where you preserve historical versions of a record rather than overwriting changes.
 
 ![042_dim_customer_0](images/042_dim_customer_0.JPG)
 
@@ -574,7 +582,7 @@ SQL
  WHERE o.status = 'Completed';
 ```
 
-The fact table load translates natural business keys (like customer_id) into surrogate keys from the dimension tables. The join to dim.customer filters on is_current = 1 to link each fact row to the current version of the customer record.
+The fact table load translates natural business keys (like `customer_id`) into surrogate keys from the dimension tables. The join to `dim.customer` filters on `is_current = 1` to link each fact row to the current version of the customer record.
 
 ![044_fact_sales_0](images/044_fact_sales_0.JPG)
 
@@ -609,13 +617,15 @@ The results show 11 completed orders with customer names, segments, product name
 
 ### Try it with Copilot (Optional)
 
-Open a new SQL query, select the Copilot button, and enter a prompt such as:
+Open a new SQL query, select the **Copilot** button, and enter a prompt such as:
 
 >! “Write a query that shows total sales amount by product category and quarter using the fact.sales and dimension tables”
 
 Review and run the generated T-SQL. This queries the dimensional model you built without modifying any tables.
 
 **Unfortunately, Copilot isn't available with Fabric trial account.**
+
+<br>
 
 ## Verify the final state
 
@@ -664,7 +674,7 @@ The results should include the following 11 objects:
 
 <br>
 
-> Note: If you also ran the optional Copilot prompts, you may see additional objects like **gold.vw_customer_summary** or **gold.usp_top_customers**.
+> **Note**: If you also ran the optional Copilot prompts, you may see additional objects like `gold.vw_customer_summary` or `gold.usp_top_customers`.
 
 <br>
 
