@@ -238,7 +238,7 @@ If the relationship requires configuration, complete these steps:
 
 >! **Note**: Select the Departments table (not Hospitals) because it contains both the department identifier and the hospital reference. The Hospitals table has no column pointing back to departments, so it can’t express the direction of the relationship.
 
-2.Configure the entity type mappings:
+2. Configure the entity type mappings:
 
 * Under **1. Source entity type**: Select **Departments**
     * **Source column**: Select **DepartmentId**
