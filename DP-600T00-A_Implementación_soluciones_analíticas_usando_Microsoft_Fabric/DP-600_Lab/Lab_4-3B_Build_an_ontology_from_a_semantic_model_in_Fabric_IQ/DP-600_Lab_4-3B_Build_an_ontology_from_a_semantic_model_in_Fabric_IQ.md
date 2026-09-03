@@ -55,10 +55,10 @@ You’ll download sample CSV files, upload them to the lakehouse, and convert th
 
 3. Convert each uploaded file to a table:
 
-    1. In **Explorer**, select the **Files** folder, where you should see all five CSV files
-    2. For each file, select the **ellipsis (…)** to the right of the file name
-    3. Select **Load to Tables > New table**
-    4. Configure the table:
+    * In **Explorer**, select the **Files** folder, where you should see all five CSV files
+    * For each file, select the **ellipsis (…)** to the right of the file name
+    * Select **Load to Tables > New table**
+    * Configure the table:
 
         * **Table name**: Fabric pre-fills this from the filename with a lowercase first letter (e.g., `hospitals`, `departments`, `rooms`, `patients`, and `vitalSignEquipment`).
         * **Column header**: Check **Use header for column names**
@@ -101,7 +101,7 @@ Now you’ll create a Power BI semantic model from your lakehouse. As you define
     * Select all five tables: **hospitals, departments, rooms, patients, vitalSignEquipment**.
     * Select **Confirm**.
 
->! **Note**: If the tables don’t appear in the list, refresh your browser and try again.
+    >! **Note**: If the tables don’t appear in the list, refresh your browser and try again.
 
     * The semantic model opens directly, showing your five tables.
 
@@ -115,21 +115,24 @@ Screenshot showing the New semantic model dialog with the model name entered and
 Relationships in the semantic model define how tables connect to each other. These relationships become the relationship types in your ontology.
 
 1. In the ribbon, select **Manage relationships > + New relationship**.
-2. Create the first relationship with these settings, then select Save:
+2. Create the first relationship with these settings, then select **Save**:
 
-    * **From table**: departments	**Column**: HospitalId
-    * **To table**: hospitals	**Column**: HospitalId
-    * **Cardinality**: Many to one (*:1)
-    * **Cross filter direction**: Both
-    * Select **Save**
+    - **From table:** departments &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **Column:** HospitalId
+
+    - **To table:** hospitals &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **Column:** HospitalId
+
+    - **Cardinality:** Many to one (*:1)
+    - **Cross filter direction:** Both
+    - Select **Save**
+
 
 3. Select **+ New relationship** again and create three more relationships:
 
-| From table         | From column   | To table    | To column    |
-|--------------------|---------------|-------------|--------------|
-| rooms              | DepartmentId  | departments | DepartmentId |
-| patients           | CurrentRoomId | rooms       | RoomId       |
-| vitalsignequipment | PatientId     | patients    | PatientId    |
+    | From table         | From column   | To table    | To column    |
+    |--------------------|---------------|-------------|--------------|
+    | rooms              | DepartmentId  | departments | DepartmentId |
+    | patients           | CurrentRoomId | rooms       | RoomId       |
+    | vitalsignequipment | PatientId     | patients    | PatientId    |
 
 Use the same settings for each: cardinality **Many to one (*:1)**, cross filter **Both**, then **Save**.
 
