@@ -71,13 +71,13 @@ In this task, you define a static filter on the `Sales Territory` table for two 
 
 2. Notice the stacked column chart shows data for all regions. That changes once RLS is applied.
 
-    ![32_regions](images/32_regions.png)
+    ![032_regions](images/032_regions.png)
 
 <br>
 
 3. On the **Modeling** ribbon, in the **Security** group, select **Manage role**s.
 
-    ![33_Manage_roles](images/33_Manage_roles.png)
+    ![033_Manage_roles](images/033_Manage_roles.png)
 
 <br>
 
@@ -171,7 +171,7 @@ In this task, you create a relationship between the `Salesperson` table and the 
 
 5. Check the **Apply security filter in both directions** checkbox and **OK**.
 
-    ![55_Apply_security_ filter_in_both_directions](images/55_Apply_security_%20filter_in_both_directions.png)
+    ![055_Apply_security_ filter_in_both_directions](images/055_Apply_security_%20filter_in_both_directions.png)
 
 <br>
 
@@ -201,7 +201,7 @@ In this section, you create one dynamic role that filters the `Salesperson` tabl
 
 1. On the **Modeling** ribbon, in the **Security** group, select **Manage roles**.
 
-    ![61_Manage_roles](images/61_Manage_roles.png)
+    ![061_Manage_roles](images/061_Manage_roles.png)
 
 2. Select **+ New**, name the role `Salespeople`, select the `Salesperson` table, and then select **Switch to DAX editor**.
 
@@ -237,7 +237,7 @@ In this task, you confirm that the same role returns a different filtered result
 
 3. Check the `Salespeople` role, then select **OK**.
 
-![images](images)
+![071_enforce-model-security-image70](images/071_enforce-model-security-image70.png)
 Screenshot of the View as Other user dialog with email and role selection.
 
 4. Verify the report now shows data for only the `Northeast` region (michael9’s assigned territory).
