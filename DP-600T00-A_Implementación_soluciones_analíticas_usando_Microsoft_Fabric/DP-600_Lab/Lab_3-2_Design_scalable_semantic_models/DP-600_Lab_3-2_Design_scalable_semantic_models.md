@@ -16,15 +16,19 @@ This lab takes approximately 30 minutes to complete.
 
 ## Before you start
 
->! Note: You need Power BI Desktop (November 2025 or newer) installed to complete this exercise.
+>! **Note**: You need [Power BI Desktop](https://www.microsoft.com/download/details.aspx?id=58494) (November 2025 or newer) installed to complete this exercise.
 
-1. Download the [Sales Analysis starter file](https://github.com/MicrosoftLearning/mslearn-fabric/raw/main/Allfiles/Labs/15/15-scalable-semantic-models.zip) from https://github.com/MicrosoftLearning/mslearn-fabric/raw/main/Allfiles/Labs/15/15-scalable-semantic-models.zip and save it locally.
+1. Download the [Sales Analysis starter file](https://github.com/MicrosoftLearning/mslearn-fabric/raw/main/Allfiles/Labs/15/15-scalable-semantic-models.zip) from <br>
+    https://github.com/MicrosoftLearning/mslearn-fabric/raw/main/Allfiles/Labs/15/15-scalable-semantic-models.zip <br> 
+    and save it locally.
 
 2. Extract the folder to the **C:\Users\Student\Downloads\15-scalable-semantic-models** folder.
 
 3. Open the **15-Starter-Sales Analysis.pbix** file.
 
->! Ignore and close any warnings asking to apply changes - don’t select Discard changes.
+    >! Ignore and close any warnings asking to apply changes - don’t select Discard changes.
+
+<br>
 
 ## Work with relationships
 
@@ -50,7 +54,7 @@ In this task, you will open a pre-developed Power BI Desktop solution to learn a
 
 >! The **Date** column in the **Date** table is a unique column representing the “one” side of the relationships. Filters applied to any column of the **Date** table propagate to the **Sales** table using one of the relationships.*
 
-4. Hover the cursor over each of the three relationships to highlight the “many” side column in the Sales table.
+4. Hover the cursor over each of the three relationships to highlight the “many” side column in the **Sales** table.
 
 5. Notice that the relationship between **Date** and **OrderDate** is active. The current model design indicates that the **Date** table is a role-playing dimension. This dimension could play the role of order date, due date, or ship date. Which role depends on the analytical requirements of the report.
 
@@ -86,13 +90,11 @@ In this task, you will visualize the total sales by year and use inactive relati
 
 <br>
 
->! The table visual shows the sum of the T**otal Sales** column grouped by year. But what does **Year** mean? Because there’s an active relationship between the **Date** and **Sales** tables to the **OrderDate** column, **Year** means the fiscal year in which the orders were made.
-
-<br>
+>! The table visual shows the sum of the **Total Sales** column grouped by year. But what does **Year** mean? Because there’s an active relationship between the **Date** and **Sales** tables to the **OrderDate** column, **Year** means the fiscal year in which the orders were made.
 
 ### Use inactive relationships
 
-In this task, you will use the **USERELATIONSHIP** function to make an inactive relationship active.
+In this task, you will use the `USERELATIONSHIP` function to make an inactive relationship active.
 
 1. In the **Data** pane, right-click the **Sales** table, and then select **New measure**.
 
@@ -180,7 +182,7 @@ The last calculation item should return values in percentage only, so it needs a
 
 1. In the **Properties** pane of the YoY item, enable the **Dynamic format string** feature.
 
-2. In the DAX formula bar, verify that the field to its left is set as **Format**, and write the following format string: **"0.##%"**
+2. In the DAX formula bar, verify that the field to its left is set as **Format**, and write the following format string: `"0.##%"`
 
 3. Confirm that your calculation group looks as follows:
 
@@ -188,7 +190,7 @@ The last calculation item should return values in percentage only, so it needs a
 
 <br>
 
-## Apply a calculation group to measures
+### Apply a calculation group to measures
 
 In this task, you will visualize how the calculation items affect measures in a visual.
 
@@ -216,7 +218,7 @@ In this task, you will visualize how the calculation items affect measures in a 
 
 In this task, you will create field parameters to change visuals.
 
-1. Select the Modeling tab in the top ribbon, then expand the New parameter button and select Fields.
+1. Select the **Modeling** tab in the top ribbon, then expand the **New parameter** button and select **Fields**.
 
 ![061_design-scalable-semantic-models-image16](images/061_design-scalable-semantic-models-image16.png)
 
@@ -224,10 +226,10 @@ In this task, you will create field parameters to change visuals.
 
 2. In the Parameters window, rename the parameter to **Sales Figures**, verify that the option **Add slicer to this page** is checked, and add the following fields from the **Sales** table:
 
-- Total Sales
-- Profit
-- Profit Margin
-- Orders
+    - Total Sales
+    - Profit
+    - Profit Margin
+    - Orders
 
 ![062_design-scalable-semantic-models-image17](images/062_design-scalable-semantic-models-image17.png)
 
