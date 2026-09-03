@@ -191,8 +191,8 @@ Now that you have a table that is being populated by stream of data, you can use
 1. In the query editor, select the KQL query you used to retrieve the average stock prices for the last five minutes.
 2. On the toolbar, select **Save to dashboard**. Then pin the query **in a new dashboard** with the following settings:
 
-    - **Dashboard name**: ```Stock Dashboard```
-    - **Tile name**: ```Average Prices```
+    - **Dashboard name**: `Stock Dashboard`
+    - **Tile name**: `Average Prices`
 
 ![042_Stock_Dashboard](images/042_Stock_Dashboard.jpg)
 
