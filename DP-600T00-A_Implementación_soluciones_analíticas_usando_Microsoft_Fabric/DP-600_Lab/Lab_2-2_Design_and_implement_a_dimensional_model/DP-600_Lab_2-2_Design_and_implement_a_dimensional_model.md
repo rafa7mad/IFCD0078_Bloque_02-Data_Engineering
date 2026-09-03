@@ -4,24 +4,26 @@
 
 In Microsoft Fabric, a data warehouse provides full T-SQL semantics for creating and managing dimensional models. Dimensional models organize data into fact tables that capture business events and dimension tables that provide the context for analysis. This structure, known as a star schema, is the recommended approach for most analytics workloads and the foundation for Power BI semantic models.
 
-In this exercise, you design and implement a star schema dimensional model for Contoso Retail, a fictional retail organization that needs to analyze sales performance across stores, products, customers, and time periods. You create the fact and dimension tables in a Fabric Warehouse, load sample data, and run analytical queries that join the fact table to dimension tables as a star schema.
+In this exercise, you design and implement a star schema dimensional model for Contoso Retail, a fictional retail organization that needs to analyze sales performance across stores, products, customers, and time periods. You create the fact and dimension tables in a Fabric Warehouse, load sample data, and run analytical queries that join the fact table to dimension tables as a **star schema**.
 
 You also implement slowly changing dimension (SCD) patterns to handle data that changes over time, demonstrating how Type 1 (overwrite) and Type 2 (historical tracking) changes work in practice.
 
 This lab takes approximately 30 minutes to complete.
 
->! Tip: For related training content, see Design dimensional models for analytics in Microsoft Fabric.
+>! **Tip**: For related training content, see [Design dimensional models for analytics in Microsoft Fabric](https://learn.microsoft.com/training/modules/design-dimensional-models-fabric/).
 
 <br>
 
 ## Create a workspace
 
->! Note: You need access to a Fabric paid or trial capacity to complete this exercise. For information about the free Fabric trial, see Fabric trial.
-> 1. Navigate to the Microsoft Fabric home page at https://app.fabric.microsoft.com/home?experience=fabric in a browser, and sign in with your Fabric credentials.
+>! Note: You need access to a Fabric paid or trial capacity to complete this exercise. For information about the free Fabric trial, see [Fabric trial](https://aka.ms/fabrictrial).
+> 1. Navigate to the [Microsoft Fabric home page](https://app.fabric.microsoft.com/home?experience=fabric) at https://app.fabric.microsoft.com/home?experience=fabric in a browser, and sign in with your Fabric credentials.
 
-1. In the menu bar on the left, select Workspaces (the icon looks similar to 🗇).
+<br>
 
-2. Choose a Fabric and Power BI workspace type in the Advanced section. The choices might be: Fabric, Fabric trial, Power BI Premium.
+1. In the menu bar on the left, select **Workspaces** (the icon looks similar to 🗇).
+
+2. Choose a **Fabric and Power BI workspace type** in the Advanced section. The choices might be: *Fabric, Fabric trial, Power BI Premium*.
 
 3. When your new workspace opens, it should be empty.
 
@@ -33,7 +35,7 @@ This lab takes approximately 30 minutes to complete.
 
 Now that you have a workspace, create a data warehouse to host your dimensional model.
 
-1. In your workspace, select + New item, and then select Warehouse in the Store Data section. Name it ContosoDW.
+1. In your workspace, select **+ New item**, and then select **Warehouse** in the Store Data section. Name it **ContosoDW**.
 
 After a minute or so, a new warehouse is created and opens in the browser.
 
@@ -41,13 +43,11 @@ After a minute or so, a new warehouse is created and opens in the browser.
 
 <br>
 
----
-
 ## Create the fact table
 
-The fact table captures the business events you want to measure — for Contoso Retail, that’s sales transactions. The grain is one row per sales transaction line item. The numeric columns you aggregate in queries are called measures: quantity, unit price, sales amount, and discount amount. The table also includes foreign keys that link each transaction to four dimension tables.
+The fact table captures the business events you want to measure — for Contoso Retail, that’s sales transactions. The grain is **one row per sales transaction line item**. The numeric columns you aggregate in queries are called **measures**: quantity, unit price, sales amount, and discount amount. The table also includes foreign keys that link each transaction to four dimension tables.
 
-1. In your warehouse, select the New SQL query button on the toolbar, and enter the following T-SQL statement:
+1. In your warehouse, select the **New SQL query** button on the toolbar, and enter the following T-SQL statement:
 
 SQL
 ```sql
@@ -64,25 +64,25 @@ SQL
  );
 ```
 
-2. Use the ▷ Run button to run the SQL script.
+2. Use the ▷ **Run** button to run the SQL script.
 
-3. Use the Refresh button on the toolbar to refresh the view. In the Explorer pane, expand Schemas > dbo > Tables and verify that the f_Sales table has been created.
+3. Use the **Refresh** button on the toolbar to refresh the view. In the **Explorer** pane, expand **Schemas > dbo > Tables** and verify that the **f_Sales** table has been created.
 
->! Note: The f_ prefix identifies this as a fact table. This naming convention makes it easy for analysts and tools to distinguish fact tables from dimension tables. The fact table intentionally has no primary key, which is standard practice because it doesn’t serve a useful purpose for fact tables and would unnecessarily increase storage.
+    >! **Note**: The `f_` prefix identifies this as a fact table. This naming convention makes it easy for analysts and tools to distinguish fact tables from dimension tables. The fact table intentionally has no primary key, which is standard practice because it doesn’t serve a useful purpose for fact tables and would unnecessarily increase storage.
+
+<br>
 
 ![012_table_f_sales_0](images/012_table_f_sales_0.JPG)
 
 <br>
 
----
-
 ## Create the dimension tables
 
 Dimension tables provide the context that makes fact data meaningful. They answer the who, what, when, and where behind every measurement. For this model, you need four dimensions: date, store, product, and customer.
 
-The product and store dimensions include SCD Type 2 tracking columns (*ValidFrom*, *ValidTo*, *IsCurrent*) because the business needs to track historical changes to product costs and store regional assignments. The customer and date dimensions use simpler structures because only corrections (Type 1) are needed for customers, and the date dimension is static reference data.
+The product and store dimensions include SCD Type 2 tracking columns (`ValidFrom`, `ValidTo`, `IsCurrent`) because the business needs to track historical changes to product costs and store regional assignments. The customer and date dimensions use simpler structures because only corrections (Type 1) are needed for customers, and the date dimension is static reference data.
 
-1. On the Home menu tab, select New SQL query and run the following code to create all four dimension tables:
+1. On the **Home** menu tab, select **New SQL query** and run the following code to create all four dimension tables:
 
 SQL
 ```sql
@@ -148,12 +148,13 @@ SQL
      JoinDate DATE NOT NULL
  );
 ```
+>! **Note**: The date dimension uses the `YYYYMMDD` integer format as its surrogate key. This is the accepted practice for date dimensions because it’s both meaningful and efficient. The fiscal year starts in July, so January 2026 falls in fiscal quarter 3. The store and product dimensions include a `NaturalKey` column (the source system identifier) and three SCD Type 2 tracking columns: `ValidFrom`, `ValidTo`, and `IsCurrent`. The surrogate key (`StoreKey`, `ProductKey`) uniquely identifies each version of a dimension member. This design is essential for tracking historical changes, which you implement later in this exercise.
 
->! Note: The date dimension uses the YYYYMMDD integer format as its surrogate key. This is the accepted practice for date dimensions because it’s both meaningful and efficient. The fiscal year starts in July, so January 2026 falls in fiscal quarter 3. The store and product dimensions include a NaturalKey column (the source system identifier) and three SCD Type 2 tracking columns: ValidFrom, ValidTo, and IsCurrent. The surrogate key (StoreKey, ProductKey) uniquely identifies each version of a dimension member. This design is essential for tracking historical changes, which you implement later in this exercise.
+2. Use the **Refresh** button on the toolbar. In the **Explorer** pane, verify that all five tables (**f_Sales, d_Date, d_Store, d_Product, d_Customer**) appear under **Schemas > dbo > Tables**.
 
-2. Use the Refresh button on the toolbar. In the Explorer pane, verify that all five tables (f_Sales, d_Date, d_Store, d_Product, d_Customer) appear under Schemas > dbo > Tables.
+    >! **Tip**: If the tables take a while to appear, refresh the browser page.
 
->! Tip: If the tables take a while to appear, refresh the browser page.
+<br>
 
 ![013_new-dim-tables](images/013_new-dim-tables.png)
 
@@ -163,11 +164,9 @@ SQL
 
 <br>
 
----
-
 ## Add table constraints
 
-Now that the fact and dimension tables exist, connect them into a star schema by adding foreign key constraints, loading sample data, and running analytical queries. In Fabric Warehouse, table constraints (primary keys and foreign keys) can’t be defined inline within a CREATE TABLE statement — use ALTER TABLE to add them after the tables are created. Constraints are NOT ENFORCED and serve as metadata that documents the relationships between tables. This metadata helps Power BI auto-detect relationships when you create a semantic model from the warehouse.
+Now that the fact and dimension tables exist, connect them into a star schema by adding foreign key constraints, loading sample data, and running analytical queries. In Fabric Warehouse, table constraints (primary keys and foreign keys) can’t be defined inline within a CREATE TABLE statement — use ALTER TABLE to add them after the tables are created. Constraints are `NOT ENFORCED` and serve as metadata that documents the relationships between tables. This metadata helps Power BI auto-detect relationships when you create a semantic model from the warehouse.
 
 1. Create a new SQL query and run the following code to add primary keys to each dimension table and foreign keys to the fact table:
 
@@ -203,9 +202,8 @@ SQL
      ADD CONSTRAINT FK_Sales_Customer FOREIGN KEY (CustomerKey)
          REFERENCES d_Customer(CustomerKey) NOT ENFORCED;
 ```
-<br>
 
----
+<br>
 
 ## Load sample data
 With the schema in place, load sample data so you can query the star schema. This block inserts rows into all five tables.
@@ -262,8 +260,6 @@ SQL
 
 <br>
 
----
-
 ## Query the star schema
 
 1. Create a new SQL query and run the following code to analyze sales by product category and month:
@@ -283,7 +279,7 @@ SQL
  ORDER BY d.[Month], p.Category;
 ```
 
->! Notice how the query reflects the star schema design: the fact table (f_Sales) joins to each dimension table to bring in descriptive attributes. The SUM functions aggregate the numeric columns from the fact table, and the GROUP BY clause uses dimension attributes to define the grouping.
+>! Notice how the query reflects the star schema design: the fact table (`f_Sales`) joins to each dimension table to bring in descriptive attributes. The `SUM` functions aggregate the numeric columns from the fact table, and the `GROUP BY` clause uses dimension attributes to define the grouping.
 
 | MonthName | Category    | TotalSales | TotalQuantity | TotalDiscounts |
 |-----------|-------------|-----------:|--------------:|---------------:|
@@ -333,21 +329,20 @@ SQL
 
 <br>
 
----
-
 ## Implement SCD patterns
 
 Dimension data changes over time. Customers move, products get repriced, and stores get reassigned to different regions. Slowly changing dimension (SCD) patterns define how your dimensional model responds to these changes.
 
 The product dimension uses two SCD patterns:
-- Type 2 (add new row) for UnitCost — the business needs to track cost changes for historical margin analysis.
-- Type 1 (overwrite) for ProductName — name corrections should apply to all history.
+- **Type 2 (add new row)** for `UnitCost` — the business needs to track cost changes for historical margin analysis.
+- **Type 1 (overwrite)** for `ProductName` — name corrections should apply to all history.
 
 ### Simulate an SCD Type 2 change
 
 Suppose the cost of the Mountain Bike Pro increases from $1,200 to $1,350 effective March 1, 2026. An SCD Type 2 change expires the current row and inserts a new version.
 
 1. Create a new SQL query and run the following code to:
+
     - Expire the current product version
     - Insert the new version
     - Add a sale that references the updated product
@@ -426,8 +421,8 @@ SQL
 ```
 
 >! Notice that:
-    - MB-PRO has two rows: the expired version (ProductKey 1, cost $1,200) and the current version (ProductKey 6, cost $1,350). This is SCD Type 2.
-    - WB-STD has one row with the corrected name “Insulated Water Bottle.” The original name is gone. This is SCD Type 1.
+    - **MB-PRO** has two rows: the expired version (ProductKey 1, cost $1,200) and the current version (ProductKey 6, cost $1,350). This is SCD Type 2.
+    - **WB-STD** has one row with the corrected name “Insulated Water Bottle.” The original name is gone. This is SCD Type 1.
 
 | ProductKey | ProductNaturalKey | ProductName              | UnitCost | ValidFrom | ValidTo    | IsCurrent |
 |-----------:|-------------------|--------------------------|---------:|-----------|------------|----------:|
@@ -443,8 +438,6 @@ SQL
 ![032_scd_type1_0](images/032_scd_type1_0.JPG)
 
 <br>
-
----
 
 ## Verify the design
 
@@ -477,25 +470,25 @@ SQL
 ```
 
 2. Review the results. Confirm that the model supports:
-    - Sales by time period: The date dimension enables grouping by year, quarter, month, and day.
-    - Sales by location: The store dimension provides geographic hierarchy (Region > Country > State > City).
-    - Sales by product: The product dimension provides product hierarchy (Category > Subcategory > Brand > Product).
-    - Sales by customer segment: The customer dimension enables segmentation by segment and loyalty tier.
+
+    - **Sales by time period**: The date dimension enables grouping by year, quarter, month, and day.
+    - **Sales by location**: The store dimension provides geographic hierarchy (Region > Country > State > City).
+    - **Sales by product**: The product dimension provides product hierarchy (Category > Subcategory > Brand > Product).
+    - **Sales by customer segment**: The customer dimension enables segmentation by segment and loyalty tier.
 
 3. Review the results considering the following design summary:
-- Schema type: Star schema with one fact table (f_Sales) and four dimension tables (d_Date, d_Store, d_Product, d_Customer)
-- Grain: One row per sales transaction line item
-- Measures: Quantity (additive), UnitPrice (non-additive), SalesAmount (additive), DiscountAmount (additive). Additive measures can be summed across all dimensions. Non-additive measures (like unit price) can’t be summed meaningfully — they should be averaged or used in calculations instead.
-- Hierarchies: Date (Year > Quarter > Month > Day), Store (Region > Country > State > City), Product (Category > Subcategory > Brand > Product)
-SCD tracking: Type 2 on product cost; Type 1 on product name and all customer attributes (as demonstrated in this exercise). The store dimension also includes SCD Type 2 columns by design.
+
+- **Schema type**: Star schema with one fact table (`f_Sales`) and four dimension tables (`d_Date`, `d_Store`, `d_Product`, `d_Customer`)
+- **Grain**: One row per sales transaction line item
+- **Measures**: Quantity (additive), UnitPrice (non-additive), SalesAmount (additive), DiscountAmount (additive). Additive measures can be summed across all dimensions. Non-additive measures (like unit price) can’t be summed meaningfully — they should be averaged or used in calculations instead.
+- **Hierarchies**: Date (Year > Quarter > Month > Day), Store (Region > Country > State > City), Product (Category > Subcategory > Brand > Product)
+**SCD tracking**: Type 2 on product cost; Type 1 on product name and all customer attributes (as demonstrated in this exercise). The store dimension also includes SCD Type 2 columns by design.
 
 <br>
 
 ![040_verify_design_0](images/040_verify_design_0.JPG)
 
 <br>
-
----
 
 ## Try it with Copilot (Optional)
 
@@ -511,17 +504,15 @@ Copilot can assist with several tasks in this exercise:
 
 **Example prompt:**
 
->"Write a query that shows total sales revenue and discount amount by store region and product category for Q1 2026, using the f_Sales fact table with d_Store and d_Product dimensions."
+>`"Write a query that shows total sales revenue and discount amount by store region and product category for Q1 2026, using the f_Sales fact table with d_Store and d_Product dimensions."` 
 
->! Tip: Complete the manual steps first to build understanding, then try Copilot to see how it accelerates common tasks.
+>! **Tip**: Complete the manual steps first to build understanding, then try Copilot to see how it accelerates common tasks.
 
 <br>
 
 **Unfortunately, Copilot isn't available with Fabric trial account.**
 
 <br>
-
----
 
 ## Clean up resources
 
@@ -531,8 +522,8 @@ In this exercise, you created a data warehouse with a star schema dimensional mo
 When you finish exploring your data warehouse, delete the workspace you created for this exercise.
 
 1. In the bar on the left, select the icon for your workspace to view all of the items it contains.
-2. In the toolbar, select Workspace settings.
-3. In the General section, select Remove this workspace.
+2. In the toolbar, select **Workspace settings**.
+3. In the **General** section, select **Remove this workspace**.
 
 <br>
 
