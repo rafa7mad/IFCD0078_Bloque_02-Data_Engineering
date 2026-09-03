@@ -6,22 +6,22 @@ Microsoft Fabric provides Real-Time Intelligence, enabling you to create analyti
 
 This lab takes approximately 30 minutes to complete.
 
->! **Tip**: For related training content, see Get started with Real-Time Intelligence in Microsoft Fabric.
+>! **Tip**: For related training content, see [Get started with Real-Time Intelligence in Microsoft Fabric](https://learn.microsoft.com/training/modules/get-started-kusto-fabric/).
 
 <br>
 
 ## Create a workspace
 
->! **Note**: You need access to a Fabric paid or trial capacity to complete this exercise. For information about the free Fabric trial, see Fabric trial.
+>! **Note**: You need access to a Fabric paid or trial capacity to complete this exercise. For information about the free Fabric trial, see [Fabric trial](https://aka.ms/fabrictrial).
 
->! **Note**: You need a Microsoft Fabric tenant to complete this exercise.
+>! **Note**: You need a [Microsoft Fabric tenant](https://learn.microsoft.com/fabric/get-started/fabric-trial) to complete this exercise.
 
-1. Navigate to the [Microsoft Fabric home page](https://app.fabric.microsoft.com/home?experience=fabric) at
+1. Navigate to the [Microsoft Fabric home page](https://app.fabric.microsoft.com/home?experience=fabric) at <br>
  https://app.fabric.microsoft.com/home?experience=fabric in a browser, and sign in with your Fabric credentials.
 
 2. In the menu bar on the left, select **Workspaces** (the icon looks similar to 🗇).
 
-3. Create a new workspace with a name of your choice, selecting a licensing mode that includes Fabric capacity (Trial, Premium, or Fabric).
+3. Create a new workspace with a name of your choice, selecting a licensing mode that includes Fabric capacity (*Trial, Premium, or Fabric*).
 
 4. When your new workspace opens, it should be empty.
 
@@ -39,7 +39,7 @@ Now you’re ready to find and ingest real-time data from a streaming source. To
 
 1. In the menu bar on the left, select the Real-Time hub.
 
->! **Note**: If you don’t see the **Real-Time hub**, select the ellipsis (…) and then pin the Real-Time hub to the menu bar.
+    >! **Note**: If you don’t see the **Real-Time hub**, select the ellipsis (…) and then pin the Real-Time hub to the menu bar.
 
 ![011_Real_time](images/011_Real_time.jpg)
 
@@ -58,6 +58,7 @@ Now you’re ready to find and ingest real-time data from a streaming source. To
 <br>
 
 4. Configure the data source as follows:
+
     - **Source name**: `stock`
     - **Workspace**: Select the workspace you created
     - **Eventstream name**: `stock-data`
@@ -86,7 +87,7 @@ The eventstream ingests the real-time stock data, but doesn’t currently do any
 
     >! **Note**: If the **Create** option is not pinned to the sidebar, you need to select the ellipsis (…) option first.
 
-    Close any tips or prompts that are displayed until you see your new empty eventhouse.
+Close any tips or prompts that are displayed until you see your new empty eventhouse.
 
 ![021_Eventhouse](images/021_Eventhouse.jpg)
 
