@@ -28,8 +28,7 @@ In this task, you create two workspaces for the deployment pipeline stages: Deve
 3. Create a new workspace with a name of your choice followed by `-dev` (for example, `SalesLifecycle-dev`), selecting a licensing mode that includes Fabric capacity (*Trial*, *Premium*, or *Fabric*). Remember this base name because you use it for the production workspace and the deployment pipeline.
 4. When your new workspace opens, it should be empty.
 
-![imagen](images)
-Screenshot of an empty workspace in Fabric.
+![011_workspace_0](images/011_workspace_0.JPG)
 
 <br>
 
@@ -38,6 +37,8 @@ Screenshot of an empty workspace in Fabric.
 >! **Note**: Both workspaces must be on Fabric or Premium capacity for deployment pipelines to work.
 
 6. Navigate back to your **-dev** workspace to continue with the exercise.
+
+<br>
 
 ### Import a notebook
 
@@ -53,6 +54,8 @@ In this task, you download the lab notebook that contains all the Python code fo
 
 4. Select **Upload** and browse to the **21b-manage-semantic-model-lifecycle.ipynb** file you downloaded. Select **Open**, then select **Upload**.
 
+![012_import_notebook_0](images/012_import_notebook_0.JPG)
+
 <br>
 
 ## Create a lakehouse and load data
@@ -67,14 +70,21 @@ In this task, you create a lakehouse and generate the sample data.
 
 4. Select the notebook you just uploaded — `21b-manage-semantic-model-lifecycle` — and select **Open**.
 
+![021_open_notebook_0](images/021_open_notebook_0.JPG)
+
+<br>
+
 5. Once in the notebook, run the first code cell under the `Generate sample data` heading.
 
->! Do **not** run any cells below the `Generate sample data` section yet. You need to create the semantic model first.
+    >! Do **not** run any cells below the `Generate sample data` section yet. You need to create the semantic model first.
+
+![022_generate_sample_data_0](images/022_generate_sample_data_0.JPG)
+
+<br>
 
 6. In the lakehouse explorer on the left, select the ellipsis … next to **Tables** and **Refresh** to confirm that `products`, `customers`, and `sales` tables appear.
 
-![imagen](images)
-Screenshot of the code completed and the lakehouse showing the created tables.
+![023_tables](images/023_tables.jpg)
 
 <br>
 
@@ -92,10 +102,14 @@ In this task, you create a Power BI semantic model from the lakehouse tables so 
 
 3. From the toolbar, select **New semantic model** and configure as follows:
 
-- **Name**: `SalesData`
-- **Workspace**: Your `-dev` workspace
-- **Storage mode**: Direct Lake on SQL
-- **Tables**: Select all
+    - **Name**: `SalesData`
+    - **Workspace**: Your `-dev` workspace
+    - **Storage mode**: Direct Lake on SQL
+    - **Tables**: Select all
+
+![033_new_semantic_model_0](images/033_new_semantic_model_0.JPG)
+
+<br>
 
 4. Confirm and wait for the model to create. *It can take a minute or two for the semantic model to be fully available*.
 
@@ -110,29 +124,55 @@ SemPy is a Python library in Fabric notebooks that connects to semantic models t
 1. Navigate back to the notebook and scroll down to the **Validate the semantic model with SemPy** heading in the notebook.
    Run each code cell in this section one at a time and review the output:
 
+![041_validate_sempy_0](images/041_validate_sempy_0.JPG)
+
+<br>
+
 2. Lists all tables in the `SalesData` semantic model to confirm it’s accessible.
 
     * The output shows three tables: `products`, `customers`, and `sales`.
+
+![042_tables_0](images/042_tables_0.JPG)
+
+<br>
 
 3. Lists every column across all tables, showing name, data type, and parent table. This helps you understand an unfamiliar model without opening Power BI Desktop.
     
     * The output shows a table with each column’s name, data type, and which table it belongs to.
 
+![043_columns_0](images/043_columns_0.JPG)
+
+<br>
+
 4. Checks for null values across all columns and duplicate primary keys. Nulls in foreign key columns mean rows can’t join to dimension tables, causing blanks in reports. Duplicates would inflate aggregations.
 
     * The output shows three null `CustomerKey` values and zero duplicate `SalesKey` values.
+
+![044_null_duplicate_0](images/044_null_duplicate_0.JPG)
+
+<br>
 
 5. Uses SemPy to discover potential relationships between tables by matching column name patterns (like `Key` suffixes) and checking value overlap.
 
     * The output shows one many-to-one relationship on `ProductKey` between the `sales` and `products` tables.
 
+![045_relationships_0](images/045_relationships_0.JPG)
+
+<br>
+
 6. Checks for orphaned foreign keys — values in the fact table that have no matching row in the dimension table. Orphaned keys cause blank rows in reports.
 
     * The output shows violations for `CustomerKey` value 99, which has no match in the `customers` table — meaning 10 sales records produce blank customer names.
 
+![046_violations_0](images/046_violations_0.JPG)
+
+<br>
+
 7. Evaluates a DAX query against the semantic model to verify calculations without opening Power BI Desktop.
 
     * The output shows the same total for every product category. **This is incorrect** — the totals should differ because each category contains different products at different prices. The identical values occur because the semantic model has no relationships, so the DAX engine can’t filter sales by category.
+
+![047_dax_query_0](images/047_dax_query_0.JPG)
 
 <br>
 
