@@ -22,9 +22,10 @@ This lab takes approximately 45 minutes to complete.
 
 In this task, you create two workspaces for the deployment pipeline stages: Development and Production.
 
-1. Navigate to the [Microsoft Fabric home page](https://app.fabric.microsoft.com/home?experience=fabric) at https://app.fabric.microsoft.com/home?experience=fabric in a browser, and sign in with your Fabric credentials.
+1. Navigate to the [Microsoft Fabric home page](https://app.fabric.microsoft.com/home?experience=fabric) at <br>
+    https://app.fabric.microsoft.com/home?experience=fabric in a browser, and sign in with your Fabric credentials.
 2. In the menu bar on the left, select **Workspaces** (the icon looks similar to 🗇).
-3. Create a new workspace with a name of your choice followed by **-dev** (for example, **SalesLifecycle-dev**), selecting a licensing mode that includes Fabric capacity (*Trial*, *Premium*, or *Fabric*). Remember this base name because you use it for the production workspace and the deployment pipeline.
+3. Create a new workspace with a name of your choice followed by `-dev` (for example, `SalesLifecycle-dev`), selecting a licensing mode that includes Fabric capacity (*Trial*, *Premium*, or *Fabric*). Remember this base name because you use it for the production workspace and the deployment pipeline.
 4. When your new workspace opens, it should be empty.
 
 ![imagen](images)
@@ -32,7 +33,7 @@ Screenshot of an empty workspace in Fabric.
 
 <br>
 
-5. Repeat the process to create a second workspace with the same base name followed by **-prod** (for example, **SalesLifecycle-prod**).
+5. Repeat the process to create a second workspace with the same base name followed by `-prod` (for example, `SalesLifecycle-prod`).
 
 >! **Note**: Both workspaces must be on Fabric or Premium capacity for deployment pipelines to work.
 
@@ -52,23 +53,25 @@ In this task, you download the lab notebook that contains all the Python code fo
 
 4. Select **Upload** and browse to the **21b-manage-semantic-model-lifecycle.ipynb** file you downloaded. Select **Open**, then select **Upload**.
 
+<br>
+
 ## Create a lakehouse and load data
 
 In this task, you create a lakehouse and generate the sample data.
 
 1. From the workspace toolbar, select **+ New item** and select **Lakehouse**.
 
-2. Name the lakehouse **SalesLakehouse**. It may take a minute for the lakehouse to create.
+2. Name the lakehouse `SalesLakehouse`. It may take a minute for the lakehouse to create.
 
 3. Once the lakehouse opens, select **Open notebook** > **Existing notebook** from the toolbar.
 
-4. Select the notebook you just uploaded — **21b-manage-semantic-model-lifecycle** — and select **Open**.
+4. Select the notebook you just uploaded — `21b-manage-semantic-model-lifecycle` — and select **Open**.
 
-5. Once in the notebook, run the first code cell under the Generate sample data heading.
+5. Once in the notebook, run the first code cell under the `Generate sample data` heading.
 
->! Do not run any cells below the **Generate sample data** section yet. You need to create the semantic model first.
+>! Do **not** run any cells below the `Generate sample data` section yet. You need to create the semantic model first.
 
-6. In the lakehouse explorer on the left, select the ellipsis … next to **Tables** and **Refresh** to confirm that **products**, **customers**, and **sales** tables appear.
+6. In the lakehouse explorer on the left, select the ellipsis … next to **Tables** and **Refresh** to confirm that `products`, `customers`, and `sales` tables appear.
 
 ![imagen](images)
 Screenshot of the code completed and the lakehouse showing the created tables.
@@ -89,12 +92,12 @@ In this task, you create a Power BI semantic model from the lakehouse tables so 
 
 3. From the toolbar, select **New semantic model** and configure as follows:
 
-- **Name**: SalesData
-- **Workspace**: Your -dev workspace
+- **Name**: `SalesData`
+- **Workspace**: Your `-dev` workspace
 - **Storage mode**: Direct Lake on SQL
 - **Tables**: Select all
 
-4. Confirm and wait for the model to create. It can take a minute or two for the semantic model to be fully available.
+4. Confirm and wait for the model to create. *It can take a minute or two for the semantic model to be fully available*.
 
 You now have a semantic model built upon a lakehouse that can be managed using SemPy in notebooks.
 
@@ -107,9 +110,9 @@ SemPy is a Python library in Fabric notebooks that connects to semantic models t
 1. Navigate back to the notebook and scroll down to the **Validate the semantic model with SemPy** heading in the notebook.
    Run each code cell in this section one at a time and review the output:
 
-2. Lists all tables in the **SalesData** semantic model to confirm it’s accessible.
+2. Lists all tables in the `SalesData` semantic model to confirm it’s accessible.
 
-    * The output shows three tables: **products**, **customers**, and **sales**.
+    * The output shows three tables: `products`, `customers`, and `sales`.
 
 3. Lists every column across all tables, showing name, data type, and parent table. This helps you understand an unfamiliar model without opening Power BI Desktop.
     
@@ -117,29 +120,29 @@ SemPy is a Python library in Fabric notebooks that connects to semantic models t
 
 4. Checks for null values across all columns and duplicate primary keys. Nulls in foreign key columns mean rows can’t join to dimension tables, causing blanks in reports. Duplicates would inflate aggregations.
 
-    * The output shows three null **CustomerKey** values and zero duplicate **SalesKey** values.
+    * The output shows three null `CustomerKey` values and zero duplicate `SalesKey` values.
 
-5. Uses SemPy to discover potential relationships between tables by matching column name patterns (like Key suffixes) and checking value overlap.
+5. Uses SemPy to discover potential relationships between tables by matching column name patterns (like `Key` suffixes) and checking value overlap.
 
-    * The output shows one many-to-one relationship on **ProductKey** between the **sales** and **products** tables.
+    * The output shows one many-to-one relationship on `ProductKey` between the `sales` and `products` tables.
 
 6. Checks for orphaned foreign keys — values in the fact table that have no matching row in the dimension table. Orphaned keys cause blank rows in reports.
 
-    * The output shows violations for **CustomerKey** value 99, which has no match in the **customers** table — meaning 10 sales records produce blank customer names.
+    * The output shows violations for `CustomerKey` value 99, which has no match in the `customers` table — meaning 10 sales records produce blank customer names.
 
 7. Evaluates a DAX query against the semantic model to verify calculations without opening Power BI Desktop.
 
-    * The output shows the same total for every product category. T**his is incorrect** — the totals should differ because each category contains different products at different prices. The identical values occur because the semantic model has no relationships, so the DAX engine can’t filter sales by category.
+    * The output shows the same total for every product category. **This is incorrect** — the totals should differ because each category contains different products at different prices. The identical values occur because the semantic model has no relationships, so the DAX engine can’t filter sales by category.
 
 <br>
 
 ## Fix the semantic model with SemPy
 
-The validation revealed that the DAX query returns identical totals for every category — a clear sign that the semantic model is missing relationships. In this task, you use SemPy’s **connect_semantic_model** function to open a read/write connection to the model’s Tabular Object Model (TOM) and programmatically add the missing relationships.
+The validation revealed that the DAX query returns identical totals for every category — a clear sign that the semantic model is missing relationships. In this task, you use SemPy’s `connect_semantic_model` function to open a read/write connection to the model’s Tabular Object Model (TOM) and programmatically add the missing relationships.
 
 1. In the notebook, scroll down to the **Fix the semantic model with SemPy** heading. Run each code cell in this section one at a time and review the output:
 
-2. Opens a read/write connection to the **SalesData** semantic model and creates two many-to-one relationships using the TOM API: **sales[ProductKey]** to **products[ProductKey]** and **sales[CustomerKey]** to **customers[CustomerKey]**. Changes save automatically when the connection closes, and the cell then refreshes the semantic model so the new relationships hold data.
+2. Opens a read/write connection to the `SalesData` semantic model and creates two many-to-one relationships using the TOM API: `sales[ProductKey]` to `products[ProductKey]` and `sales[CustomerKey]` to `customers[CustomerKey]`. Changes save automatically when the connection closes, and the cell then refreshes the semantic model so the new relationships hold data.
 
     * The output confirms two relationships were added and the semantic model was refreshed.
 
@@ -147,7 +150,7 @@ The validation revealed that the DAX query returns identical totals for every ca
     
     * The output shows different totals for each product category (Accessories, Bikes, Clothing), confirming the relationships are working.
 
->! Note: The **connect_semantic_model** function requires ReadWrite permissions on the semantic model and uses the XMLA read/write endpoint. Fabric Trial, Premium, and Fabric capacity workspaces have this endpoint enabled by default.
+>! **Note**: The `connect_semantic_model` function requires ReadWrite permissions on the semantic model and uses the XMLA read/write endpoint. Fabric Trial, Premium, and Fabric capacity workspaces have this endpoint enabled by default.
 
 You can now close the notebook and any other items you may still have open.
 
@@ -157,23 +160,23 @@ You can now close the notebook and any other items you may still have open.
 
 Deployment pipelines promote validated content from development to production through defined stages. In this task, you create a pipeline with two stages and assign the workspaces you created earlier.
 
-1. Navigate to your **-dev** workspace.
+1. Navigate to your `-dev` workspace.
 
 2. In the workspace toolbar, select **Create deployment pipeline**.
 
-3. In the Add a new deployment pipeline dialog, enter a name for the pipeline (for example, SalesData Deployment Pipeline) and select Next.
+3. In the **Add a new deployment pipeline** dialog, enter a name for the pipeline (for example, `SalesData Deployment Pipeline`) and select **Next**.
 
-4. In the pipeline structure step, you see three default stages: **Development**, **Test**, and **Production**. Delete the **Test** stage by selecting its delete icon so that only **Development** and **Production** remain. Select **Create and continue**.
+4. In the pipeline structure step, you see three default stages: `Development`, `Test`, and `Production`. Delete the `Test` stage by selecting its delete icon so that only `Development` and `Production` remain. Select **Create and continue**.
 
 ![061_21b-configure-pipeline](images/061_21b-configure-pipeline.png)
 
 <br>
 
-5. In the **Development** stage, select your **-dev** workspace and select the check to save the setting.
+5. In the **Development** stage, select your `-dev` workspace and select the check to save the setting.
 
 6. In the **Production** stage, select your **-prod** workspace and save.
 
-The pipeline shows two stages. The **Development** stage contains the **SalesLakehouse** lakehouse, notebook, and semantic model. The **Production** stage shows the assigned workspace with no content yet.
+The pipeline shows two stages. The `Development` stage contains the `SalesLakehouse` lakehouse, notebook, and semantic model. The `Production` stage shows the assigned workspace with no content yet.
 
 <br>
 
@@ -189,7 +192,7 @@ With both stages configured, you can compare and promote content. In this task, 
 
 <br>
 
-3. Select **Deploy**. In the deployment dialog, optionally add a note (for example, **Initial deployment - validated with SemPy**) and confirm the deployment.
+3. Select **Deploy**. In the deployment dialog, optionally add a note (for example, `Initial deployment - validated with SemPy`) and confirm the deployment.
 
 4. Wait for the deployment to complete. The pipeline view should indicate that both stages are in sync.
 
@@ -205,11 +208,11 @@ With both stages configured, you can compare and promote content. In this task, 
 
 In a notebook in your development workspace, ask Copilot:
 
-> Write a Python script using the Fabric REST API to automate a deployment pipeline deployment and send a notification on completion.
+> `Write a Python script using the Fabric REST API to automate a deployment pipeline deployment and send a notification on completion.`
 
 Review the generated code. This shows how teams automate deployments without manual steps. The generated code doesn’t trigger an actual deployment.
 
-> Write Python code to generate a data quality summary report for a FabricDataFrame. Include checks for null values, duplicate keys, and value distribution statistics.
+> `Write Python code to generate a data quality summary report for a FabricDataFrame. Include checks for null values, duplicate keys, and value distribution statistics.`
 
 Review the generated code. Copilot produces a reusable quality check script that you can adapt to validate other semantic models without modifying the tables you already created.
 
