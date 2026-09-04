@@ -256,7 +256,7 @@ In this task, you confirm that dynamic RLS denies data when no matching UPN row 
 
 3. Verify the report shows no data.
 
-![images](images)
+![072_enforce-model-security-no-match](images/072_enforce-model-security-no-match.png)
 Screenshot of the report canvas for an unmapped user showing no data.
 
 <br>
