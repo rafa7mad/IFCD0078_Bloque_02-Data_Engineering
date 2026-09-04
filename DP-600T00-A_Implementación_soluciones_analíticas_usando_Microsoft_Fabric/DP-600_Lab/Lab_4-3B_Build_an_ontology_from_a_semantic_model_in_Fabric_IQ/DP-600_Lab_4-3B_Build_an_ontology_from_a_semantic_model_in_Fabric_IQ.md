@@ -14,19 +14,23 @@ This lab takes approximately 45 minutes to complete.
 
 >! **Note**: You need access to a Fabric paid or trial capacity to complete this exercise. For information about the free Fabric trial, see Fabric trial. You’ll also need to enable the following [tenant settings](https://learn.microsoft.com/fabric/iq/ontology/overview-tenant-settings): **Enable Ontology item (preview)** and **User can create Graph (preview)**.
 
+<br>
+
 ## Create a workspace
 
-1. Navigate to the [Microsoft Fabric home page](https://app.fabric.microsoft.com/home?experience=fabric) at
+1. Navigate to the [Microsoft Fabric home page](https://app.fabric.microsoft.com/home?experience=fabric) at <br>
     https://app.fabric.microsoft.com/home?experience=fabric in a browser, and sign in with your Fabric credentials.
 2. In the menu bar on the left, select **Workspaces** (the icon looks similar to 🗇).
 3. Create a new workspace with a name of your choice, selecting a licensing mode in one of the following workspace types: *Fabric, Fabric Trial, or Power BI Premium*.
 4. When your new workspace opens, it should be empty.
 
+<br>
+
 ## Create a lakehouse with sample data
 
 Now you’ll create a lakehouse and load hospital operations data that will form the basis of your ontology.
 
-1. In your workspace, select + New item > Lakehouse.
+1. In your workspace, select **+ New item > Lakehouse**.
 2. Name the lakehouse `LamnaHealthcareLH` and select **Create**.
 3. When the lakehouse opens, you’ll upload CSV files and convert them to tables.
 
@@ -110,7 +114,7 @@ Screenshot showing the New semantic model dialog with the model name entered and
 
 <br>
 
-'### Define relationships between tables
+`### Define relationships between tables
 
 Relationships in the semantic model define how tables connect to each other. These relationships become the relationship types in your ontology.
 

@@ -14,7 +14,7 @@ This lab takes approximately 40 minutes to complete.
 
 ## Create a workspace
 
-1. Navigate to the [Microsoft Fabric home page](https://app.fabric.microsoft.com/home?experience=fabric) at
+1. Navigate to the [Microsoft Fabric home page](https://app.fabric.microsoft.com/home?experience=fabric) at <br>
     https://app.fabric.microsoft.com/home?experience=fabric in a browser, and sign in with your Fabric credentials.
 2. In the menu bar on the left, select **Workspaces** (the icon looks similar to 🗇).
 3. Create a new workspace with a name of your choice, selecting a licensing mode in one of the following workspace types: *Fabric, Fabric Trial, or Power BI Premium*.
