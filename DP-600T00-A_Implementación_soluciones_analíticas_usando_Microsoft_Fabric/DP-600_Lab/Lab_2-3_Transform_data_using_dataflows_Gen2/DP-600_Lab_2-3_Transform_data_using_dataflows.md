@@ -86,7 +86,7 @@ These transformations represent the most common data quality and preparation tas
 
 The first three tasks support query folding, where Power Query pushes operations back to the data source for more efficient execution. Placing these steps first maximizes the work that can be folded. Steps that follow, like renaming and custom columns, typically break the fold boundary and run locally in the Power Query engine.
 
->! **Tip**: In the Query Settings pane on the right side, notice that each transformation appears as a step in **Applied Steps**. You can select any step to see the data at that point in the transformation process.
+>! **Tip**: In the **Query Settings** pane on the right side, notice that each transformation appears as a step in **Applied Steps**. You can select any step to see the data at that point in the transformation process.
 
 <br>
 
@@ -222,7 +222,7 @@ Publishing makes the dataflow available for scheduled refreshes and team collabo
 
     >! **Tip**: If the table doesn’t appear, select **Refresh** in the … menu for the **Tables** folder.
 
-5. Verify that the data includes only the columns you selected and the Unit Price calculated column.
+5. Verify that the data includes only the columns you selected and the `Unit Price` calculated column.
 
 6. Notice the `Unit Price` column has inconsistent decimal places. Some values show two decimal places, while others show more. To fix this, go back to the dataflow by selecting it in your workspace.
 
@@ -244,9 +244,8 @@ Publishing makes the dataflow available for scheduled refreshes and team collabo
 
 <br>
 
----
-
 ## Try it with Copilot (Optional)
+
 Copilot translates natural language instructions into Power Query steps, which accelerates development and makes dataflows more accessible to team members who are less familiar with Power Query syntax. In this section, you explore how Copilot in Data Factory can assist with common transformations like filtering rows and adding calculated columns.
 
 | **Task**                         | **Copilot alternative**                                                                         |
