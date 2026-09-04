@@ -186,11 +186,19 @@ The validation revealed that the DAX query returns identical totals for every ca
 
     * The output confirms two relationships were added and the semantic model was refreshed.
 
+![048_s2_relationships_0](images/048_s2_relationships_0.JPG)
+
+<br>
+
 3. Re-runs the same DAX query from the validation step. Now that relationships exist, the DAX engine filters sales by product category and returns correct per-category totals.
     
     * The output shows different totals for each product category (Accessories, Bikes, Clothing), confirming the relationships are working.
 
 >! **Note**: The `connect_semantic_model` function requires ReadWrite permissions on the semantic model and uses the XMLA read/write endpoint. Fabric Trial, Premium, and Fabric capacity workspaces have this endpoint enabled by default.
+
+![049_dax_query_0](images/049_dax_query_0.JPG)
+
+<br>
 
 You can now close the notebook and any other items you may still have open.
 
