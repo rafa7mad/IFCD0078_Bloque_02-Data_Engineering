@@ -259,6 +259,10 @@ You’ll bind static data from lakehouse tables to four entities, then add both 
     The system usually auto-maps when names match.
 9. Select **Save**.
 
+![071_709_bind_hospital_0](images/071_709_bind_hospital_0.JPG)
+
+<br>
+
 ### Bind Department, Room, and Patient entities
 
 Follow the same binding process for these three entities, which only require static data bindings. The system automatically maps columns to properties when names match—just verify the mappings are correct.
