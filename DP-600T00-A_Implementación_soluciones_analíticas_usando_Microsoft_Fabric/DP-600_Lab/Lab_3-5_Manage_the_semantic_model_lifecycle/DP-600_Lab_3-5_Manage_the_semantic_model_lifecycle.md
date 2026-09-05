@@ -272,7 +272,7 @@ With both stages configured, you can compare and promote content. In this task, 
 
 ![075b_both_stages_0](images/075b_both_stages_0.JPG)
 
-![072_21b-final-state](images/072_21b-final-state.png)
+![075c_both_stages_0](images/075c_both_stages_0.JPG)
 
 <br>
 
@@ -306,7 +306,7 @@ If you’ve finished exploring, delete the resources you created for this exerci
 
 4. Open your **-prod** workspace. In the toolbar, select **Workspace settings**, then in the **General** section, select **Remove this workspace**.
 
-![imagen](images)
+![081_clean_up_resources_0](images/081_clean_up_resources_0.JPG)
 
 <br>
 
