@@ -4,11 +4,11 @@
 
 In this lab, you’ll create a complete Fabric IQ ontology for a fictitious healthcare company by manually building each component—entity types, properties, keys, relationships, and data bindings. The sample data represents hospitals, departments, rooms, patients, vital sign equipment, and vital signs readings.
 
->! [!IMPORTANT] Ontology in Microsoft Fabric is currently in preview.
+>! [!IMPORTANT] Ontology in Microsoft Fabric is currently in [preview](https://learn.microsoft.com/fabric/fundamentals/preview).
 
 This lab takes approximately 40 minutes to complete.
 
->! **Note**: You need access to a Fabric paid or trial capacity to complete this exercise. For information about the free Fabric trial, see Fabric trial. You’ll also need to enable the following tenant settings: **Enable Ontology item (preview)** and **User can create Graph (preview)**.
+>! **Note**: You need access to a Fabric paid or trial capacity to complete this exercise. For information about the free Fabric trial, see Fabric trial. You’ll also need to enable the following [tenant settings](https://learn.microsoft.com/fabric/iq/ontology/overview-tenant-settings): **Enable Ontology item (preview)** and **User can create Graph (preview)**.
 
 <br>
 
@@ -19,6 +19,8 @@ This lab takes approximately 40 minutes to complete.
 2. In the menu bar on the left, select **Workspaces** (the icon looks similar to 🗇).
 3. Create a new workspace with a name of your choice, selecting a licensing mode in one of the following workspace types: *Fabric, Fabric Trial, or Power BI Premium*.
 4. When your new workspace opens, it should be empty.
+
+![011_workspace_0](images/011_workspace_0.JPG)
 
 <br>
 
@@ -53,6 +55,12 @@ You’ll download sample data files, upload them to the lakehouse, and convert t
 
     >! **Note**: You’ll upload VitalSignsReadings.csv to an eventhouse later, not to the lakehouse.
 
+![021_upload_files_0](images/021_upload_files_0.JPG)
+
+![021b_upload_files_0](images/021b_upload_files_0.JPG)
+
+<br>
+
 3. Convert each uploaded file to a table:
 
     * In **Explorer**, select the **Files** folder, where you should see all five CSV files
@@ -66,10 +74,15 @@ You’ll download sample data files, upload them to the lakehouse, and convert t
     * Select **Load**
     * Repeat this process for all five files
 
+![023_load_to_tables_0](images/023_load_to_tables_0.JPG)
+
+![023b_load_to_tables_0](images/023b_configure_table_0.JPG)
+
+<br>
+
 4. Verify you have five tables in the **Tables** section: **hospitals**, **departments**, **rooms**, **patients**, and **vitalsignequipment** as shown in the image below.
 
-![imagen](images)
-Screenshot showing lakehouse Tables section with five tables: hospitals, departments, rooms, patients, and vitalsignequipment
+![024_tables_0](images/024_tables_0.JPG)
 
 <br>
 
@@ -81,19 +94,33 @@ Next, you’ll create an eventhouse to store real-time vital signs data that you
 2. Name the eventhouse **LamnaHealthcareEH** and select **Create**.
 3. A default KQL database is created with the same name. Select the KQL database to open it.
 
+![031_eventhouse_0](images/031_eventhouse_0.JPG)
+
+<br>
+
+
 ### Ingest vital signs data
 
 1. In the KQL database, select **Get data** > **Local file**.
 2. In the **Select or create a destination table** section, select + **New table** and enter **VitalSignsReadings** as the table name.
 3. Under **Add up to 1,000 files**, select **Browse for file**s and upload the VitalSignsReadings.csv file you downloaded earlier.
+
+![033_vitalsignsreadings_0](images/033_vitalsignsreadings_0.JPG)
+
+<br>
+
 4. Select **Next**, then continue through the ingestion wizard, keeping the default settings.
 5. Select **Finish** to complete the ingestion.
+
+![033c_vitalsignsreadings_0](images/033c_vitalsignsreadings_0.JPG)
+
+<br>
+
 6. Verify the **VitalSignsReadings** table appears in the KQL database.
 
     Your KQL database should now show the VitalSignsReadings table:
 
-![imagen](images)
-Screenshot showing KQL database with VitalSignsReadings table
+![036_verify_0](images/036_verify_0.JPG)
 
 <br>
 
@@ -104,6 +131,8 @@ Now you’ll create an empty ontology and build it step by step.
 1. In your workspace, select + **New item** > **Ontology (preview**).
 2. Name the ontology **LamnaHealthcareOntology** and select **Create**.
 3. The ontology canvas opens, empty and ready for you to build your data model.
+
+![041_ontology_0](images/041_ontology_0.JPG)
 
 <br>
 
@@ -116,6 +145,11 @@ You’ll create five entity types representing the healthcare domain. Follow the
 1. In the ontology ribbon, select **Add entity type**.
 2. Enter **Hospital** as the entity type name and select **Add Entity Type**.
 3. The Hospital entity type appears on the canvas.
+
+![053_hospital_0](images/053_hospital_0.JPG)
+
+<br>
+
 4. With the Hospital entity type selected, go to the **Entity type configuration** pane on the right.
 5. Select the **Properties** tab, then select **Add properties**.
 6. Add each property by entering the details below and selecting **+ Add** after each one:
@@ -127,11 +161,17 @@ You’ll create five entity types representing the healthcare domain. Follow the
 | City          | String    | Static        |
 | State         | String    | Static        |
 
+![056_properties_0](images/056_properties_0.JPG)
+
 7. After adding all properties, select **Save**.
 
 8. Now you need to define an entity key. An entity key is a property that uniquely identifies each instance of the entity type. For hospitals, each hospital has a unique HospitalId, so this will be the key.
 
     Select **Key: Add entity type key** and choose **HospitalId** as the key, select **Save**.
+
+![058_entity_type_key_0](images/058_entity_type_key_0.JPG)
+
+<br>
 
 ### Create remaining entity types
 
@@ -139,17 +179,16 @@ Follow the same process to create these four additional entity types with their 
 
 | Entity Type            | Property Name                                                                                      | Data Type                                                      | Property Type                                                | Entity Type Key |
 |------------------------|----------------------------------------------------------------------------------------------------|----------------------------------------------------------------|--------------------------------------------------------------|-----------------|
-| **Department**         | `DepartmentId`<br>`DepartmentName`<br>`HospitalId`<br>`Floor`                                    | Integer<br>String<br>Integer<br>Integer                        | Static<br>Static<br>Static<br>Static                         | DepartmentId    |
-| **Room**               | `RoomId`<br>`RoomNumber`<br>`DepartmentId`<br>`RoomType`                                         | Integer<br>String<br>Integer<br>String                         | Static<br>Static<br>Static<br>Static                         | RoomId          |
-| **Patient**            | `PatientId`<br>`FirstName`<br>`LastName`<br>`DateOfBirth`<br>`AdmissionDate`<br>`CurrentRoomId` | Integer<br>String<br>String<br>DateTime<br>DateTime<br>Integer | Static<br>Static<br>Static<br>Static<br>Static<br>Static   | PatientId       |
-| **VitalSignEquipment** | `EquipmentId`<br>`PatientId`<br>`EquipmentType`<br>`MonitoringStartDate`                         | String<br>Integer<br>String<br>DateTime                        | Static<br>Static<br>Static<br>Static                         | EquipmentId     |
+| **Department**         | `DepartmentId`<br>`DepartmentName`<br>`HospitalId`<br>`Floor`                                    | Integer<br>String<br>Integer<br>Integer                        | Static<br>Static<br>Static<br>Static                         | DepartmentId <br> <br> <br> <br>     |
+| **Room**               | `RoomId`<br>`RoomNumber`<br>`DepartmentId`<br>`RoomType`                                         | Integer<br>String<br>Integer<br>String                         | Static<br>Static<br>Static<br>Static                         | RoomId <br> <br> <br> <br>         |
+| **Patient**            | `PatientId`<br>`FirstName`<br>`LastName`<br>`DateOfBirth`<br>`AdmissionDate`<br>`CurrentRoomId` | Integer<br>String<br>String<br>DateTime<br>DateTime<br>Integer | Static<br>Static<br>Static<br>Static<br>Static<br>Static   | PatientId <br> <br> <br> <br> <br> <br>     |
+| **VitalSignEquipment** | `EquipmentId`<br>`PatientId`<br>`EquipmentType`<br>`MonitoringStartDate`                         | String<br>Integer<br>String<br>DateTime                        | Static<br>Static<br>Static<br>Static                         | EquipmentId <br> <br> <br> <br>    |
 
 <br>
 
 You now have five entity types with properties and keys defined. Verify that the Entity Types pane shows all five entity types, and that properties and entity type key have been defined for each entity:
 
-![imagen](images)
-Screenshot showing Entity Types pane on left with five entity types listed: Hospital, Department, Room, Patient, VitalSignEquipment
+![059_five_entity_types_0](images/059_five_entity_types_0.JPG)
 
 <br>
 
@@ -168,6 +207,10 @@ Now, you’ll create relationship types that model the healthcare entity relatio
 
 The Contains relationship line appears on the canvas connecting Hospital to Department. You’ll configure the data source later.
 
+![063_add_relationship_0](images/063_add_relationship_0.JPG)
+
+<br>
+
 ### Create remaining relationships
 
 Follow the same process to create these four additional relationships:
@@ -178,14 +221,17 @@ Follow the same process to create these four additional relationships:
 | **assignedTo**    | Patient              | Room               | Patients are assigned to rooms         |
 | **monitors**      | VitalSignEquipment   | Patient            | Vital sign equipment monitors patients |
 
+>! **Note**: I have added another additional relationship taking into account the image of the exercise.
+
+| Relationship Name | Source Entity Type   | Target Entity Type | Meaning                                |
+|-------------------|----------------------|--------------------|----------------------------------------|
+| **locatedIn**     | VitalSignEquipment   | Room               | VitalSignEquipment are in rooms        |
+
 Your ontology canvas should look similar to the image below. Depending on canvas layout and which entities are selected, you may need to pan or zoom to view all entity types and relationship lines.
 
-![imagen](images)
-Screenshot showing ontology canvas with entity types and relationship connections
-
-<br>
-
 Your ontology structure is complete. Now you need to bind entity properties to actual data sources.
+
+![064_ontology_canvas_0](images/064_ontology_canvas_0.JPG)
 
 <br>
 
