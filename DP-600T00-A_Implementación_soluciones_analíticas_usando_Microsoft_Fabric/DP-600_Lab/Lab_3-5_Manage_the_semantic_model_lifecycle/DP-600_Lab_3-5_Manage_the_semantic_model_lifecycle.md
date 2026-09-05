@@ -218,11 +218,21 @@ Deployment pipelines promote validated content from development to production th
 
 2. In the workspace toolbar, select **Create deployment pipeline**.
 
+![062_deployment_pipeline_0](images/062_deployment_pipeline_0.JPG)
+
+<br>
+
 3. In the **Add a new deployment pipeline** dialog, enter a name for the pipeline (for example, `SalesData Deployment Pipeline`) and select **Next**.
+
+![063_add_new_deploymen_pipeline_0](images/063_add_new_deploymen_pipeline_0.JPG)
+
+<br>
 
 4. In the pipeline structure step, you see three default stages: `Development`, `Test`, and `Production`. Delete the `Test` stage by selecting its delete icon so that only `Development` and `Production` remain. Select **Create and continue**.
 
-![061_21b-configure-pipeline](images/061_21b-configure-pipeline.png)
+![064_pipeline_structure_0](images/064_pipeline_structure_0.JPG)
+
+![064_21b-configure-pipeline](images/064_21b-configure-pipeline.JPG)
 
 <br>
 
@@ -231,6 +241,8 @@ Deployment pipelines promote validated content from development to production th
 6. In the **Production** stage, select your **-prod** workspace and save.
 
 The pipeline shows two stages. The `Development` stage contains the `SalesLakehouse` lakehouse, notebook, and semantic model. The `Production` stage shows the assigned workspace with no content yet.
+
+![066_two_stages_0](images/066_two_stages_0.JPG)
 
 <br>
 
