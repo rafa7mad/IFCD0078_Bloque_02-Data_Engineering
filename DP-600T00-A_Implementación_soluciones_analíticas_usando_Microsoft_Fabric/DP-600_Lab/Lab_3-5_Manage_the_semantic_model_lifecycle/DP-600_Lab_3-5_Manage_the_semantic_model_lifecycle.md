@@ -124,12 +124,6 @@ SemPy is a Python library in Fabric notebooks that connects to semantic models t
 1. Navigate back to the notebook and scroll down to the **Validate the semantic model with SemPy** heading in the notebook.
    Run each code cell in this section one at a time and review the output:
 
-   >! **Note**: The code for `Validate the semantic model with SemPy` and `Fix the semantic model with SemPy` is generating an error. 
-   It is necessary to specify the workspace where the semantic model is located in each Fabric  function. <br>
-   workspace="SalesLifecycle-dev"
-
-<br>
-
 ![041_validate_sempy](images/041_validate_sempy.jpg)
 
 <br>
@@ -194,6 +188,8 @@ The validation revealed that the DAX query returns identical totals for every ca
 
 ![048_s2_relationships_0](images/048_s2_relationships_0.JPG)
 
+![048b_relationships_0](images/048b_relationships_0.JPG)
+
 <br>
 
 3. Re-runs the same DAX query from the validation step. Now that relationships exist, the DAX engine filters sales by product category and returns correct per-category totals.
@@ -224,10 +220,6 @@ Deployment pipelines promote validated content from development to production th
 
 3. In the **Add a new deployment pipeline** dialog, enter a name for the pipeline (for example, `SalesData Deployment Pipeline`) and select **Next**.
 
-![063_add_new_deploymen_pipeline_0](images/063_add_new_deploymen_pipeline_0.JPG)
-
-<br>
-
 4. In the pipeline structure step, you see three default stages: `Development`, `Test`, and `Production`. Delete the `Test` stage by selecting its delete icon so that only `Development` and `Production` remain. Select **Create and continue**.
 
 ![064_pipeline_structure_0](images/064_pipeline_structure_0.JPG)
@@ -254,17 +246,31 @@ With both stages configured, you can compare and promote content. In this task, 
 
 2. Select the **Production** card to select all items for staging.
 
-![071_21b-staged-items](images/071_21b-staged-items.png)
+![072_deploy_prod_0](images/072_deploy_prod_0.JPG)
 
 <br>
 
 3. Select **Deploy**. In the deployment dialog, optionally add a note (for example, `Initial deployment - validated with SemPy`) and confirm the deployment.
 
+![073_deploy_dialog_0](images/073_deploy_dialog_0.JPG)
+
+![073b_deploy_dialog_0](images/073b_deploy_dialog_0.JPG)
+
+<br>
+
 4. Wait for the deployment to complete. The pipeline view should indicate that both stages are in sync.
+
+![074_both_stages_sync](images/074_both_stages_sync.jpg)
+
+<br>
 
 5. Navigate to your **-prod** workspace to verify the deployed items. You should see the lakehouse, semantic model, and other items from the development workspace.
 
 >! **Note**: After deployment, the production workspace contains copies of the items from development. Subsequent changes in development don’t appear in production until you deploy again, which gives you control over what reaches end users.
+
+![075_prod_0](images/075_prod_0.JPG)
+
+![075b_both_stages_0](images/075b_both_stages_0.JPG)
 
 ![072_21b-final-state](images/072_21b-final-state.png)
 
