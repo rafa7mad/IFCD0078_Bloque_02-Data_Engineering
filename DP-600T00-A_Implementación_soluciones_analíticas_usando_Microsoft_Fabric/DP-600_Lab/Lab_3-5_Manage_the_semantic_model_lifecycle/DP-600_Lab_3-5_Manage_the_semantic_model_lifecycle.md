@@ -124,7 +124,13 @@ SemPy is a Python library in Fabric notebooks that connects to semantic models t
 1. Navigate back to the notebook and scroll down to the **Validate the semantic model with SemPy** heading in the notebook.
    Run each code cell in this section one at a time and review the output:
 
-![041_validate_sempy_0](images/041_validate_sempy_0.JPG)
+   >! **Note**: The code for `Validate the semantic model with SemPy` and `Fix the semantic model with SemPy` is generating an error. 
+   It is necessary to specify the workspace where the semantic model is located in each Fabric  function. <br>
+   workspace="SalesLifecycle-dev"
+
+<br>
+
+![041_validate_sempy](images/041_validate_sempy.jpg)
 
 <br>
 
