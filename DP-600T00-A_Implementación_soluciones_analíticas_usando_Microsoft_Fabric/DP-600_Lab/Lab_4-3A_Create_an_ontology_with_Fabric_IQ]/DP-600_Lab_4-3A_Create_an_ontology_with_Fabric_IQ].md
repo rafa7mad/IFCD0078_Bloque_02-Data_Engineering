@@ -316,6 +316,10 @@ Notice the time-series data only has measurements and EquipmentId—not patient 
     * MonitoringStartDate → MonitoringStartDate
 8. Select Save.
 
+![072_VitalSignEquipment_Static_0](images/072_VitalSignEquipment_Static_0.JPG)
+
+<br>
+
 ### Bind time-series vital signs data
 
 Now you’ll add real-time vital signs readings as time-series properties.
@@ -343,12 +347,9 @@ Now you’ll add real-time vital signs readings as time-series properties.
 
 Your time-series binding configuration should look like this:
 
-![imagen](images)
-Screenshot showing time-series binding configuration with static key and time-series properties
-
-<br>
-
 8.Select Save to save the time-series binding.
+
+![073_VitalSignEquipment_time_series_0](images/073_VitalSignEquipment_time_series_0.JPG)
 
 Your VitalSignEquipment entity now has both static reference data (which monitors are where) and time-series data (actual vital sign readings over time).
 
@@ -381,12 +382,11 @@ Now you’ll configure each relationship type by specifying which table links th
 
 Your relationship configuration should look like this:
 
-![081_23-relationship-binding](images/081_23-relationship-binding.png)
-Screenshot showing relationship configuration pane with workspace, lakehouse, and column mappings
+4. Select **Create**
+
+![084_relationship_config_0](images/084_relationship_config_0.JPG)
 
 <br>
-
-4. Select **Create**
 
 ### Configure remaining relationships
 
@@ -414,13 +414,16 @@ Your ontology is now complete with entities, relationships, static data, and tim
     * **Property charts**: Bar charts showing the distribution of property values (like RoomType, RoomNumber, or DepartmentId)
     * **Entity instances table**: List of all individual room instances with their properties
 
-![imagen](images)
-Screenshot showing Room entity type overview with relationship graph, property charts, and entity instances table
+![093_preview_ontology_0](images/093_preview_ontology_0.JPG)
 
 <br>
 
 4. In the **Entity instances** table, select any room instance (for example, **ICU-302**).
 5. The instance view opens, showing the properties for this specific room and its connections to other entities.
+
+![095_instance_0](images/095_instance_0.JPG)
+
+<br>
 
 You’ve successfully built a complete ontology from the ground up—defining entity types, configuring relationships, binding data from both lakehouse tables and eventhouse streams, and creating a unified semantic layer. Your ontology now represents the healthcare domain with business vocabulary and connects operational data with real-time vital signs monitoring. This ontology is ready to power graph queries and AI agents.
 
@@ -433,8 +436,6 @@ You can keep this workspace and ontology to continue exploring Fabric IQ capabil
 1. In the bar on the left, select the icon for your workspace to view all of the items it contains.
 2. Select **Workspace settings**.
 3. In the **General** section, select **Remove this workspace**.
-
-![imagen](images)
 
 <br>
 
