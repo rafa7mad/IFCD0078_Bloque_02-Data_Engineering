@@ -114,9 +114,14 @@ Next, you’ll create an eventhouse to store real-time vital signs data as a tim
 
 4. Select **Next**, then continue through the ingestion wizard, keeping the default settings.
 5. Select **Finish** to complete the ingestion.
-6. Verify the **VitalSignsReadings** table appears in the KQL database with 20 rows.
 
 ![035_vitalsignsreadings_0](images/035_vitalsignsreadings_0.JPG)
+
+<br>
+
+6. Verify the **VitalSignsReadings** table appears in the KQL database with 20 rows.
+
+![036_verify_0](images/036_verify_0.JPG)
 
 <br>
 
@@ -138,8 +143,9 @@ Now you’ll create a Power BI semantic model from your lakehouse. As you define
 
     * The semantic model opens directly, showing your five tables.
 
-![041_24-new-semantic-model](images/041_24-new-semantic-model.png)
-Screenshot showing the New semantic model dialog with the model name entered and five tables selected
+![043a_semantic_model_0](images/043a_semantic_model_0.JPG)
+
+![043b_semantic_model_0](images/043b_semantic_model_0.JPG)
 
 <br>
 
@@ -158,6 +164,9 @@ Relationships in the semantic model define how tables connect to each other. The
     - **Cross filter direction:** Both
     - Select **Save**
 
+![043c_02_new_relationship_0](images/043c_02_new_relationship_0.JPG)
+
+<br>
 
 3. Select **+ New relationship** again and create three more relationships:
 
@@ -171,8 +180,9 @@ Use the same settings for each: cardinality **Many to one (*:1)**, cross filter 
 
 4. Verify your **Manage relationships** pane shows exactly 4 active relationships, matching the image below, then select **Close**.
 
-![042_24-semantic-model-relationships](images/042_24-semantic-model-relationships.png)
-Screenshot showing the Manage relationships pane with four active relationships
+![043c_02_new_relationship_0](images/043c_04_relationships_0.JPG)
+
+![043c_04b_relationships_0.JPG](images/043c_04b_relationships_0.JPG)
 
 <br>
 
@@ -188,8 +198,7 @@ Now that your semantic model is ready and your lakehouse data is in place, you�
 
 1. From the top ribbon, select **Generate Ontology**.
 
-![imagen](images)
-Screenshot showing the Generate Ontology button in the semantic model ribbon
+![051_generate_oncology](images/051_generate_oncology.jpg)
 
 <br>
 
@@ -202,6 +211,10 @@ Screenshot showing the Generate Ontology button in the semantic model ribbon
 Wait a few moments while the system is **Generating Ontology**.
 
 The system generates **5 entity types** (Hospitals, Departments, Rooms, Patients, VitalSignEquipment) with all their properties and **4 relationship types** based on the semantic model relationships. The VitalSignEquipment entity has static properties from the lakehouse, but doesn’t yet have the time-series vital signs readings from the eventhouse — you’ll add that as a second binding after configuring the relationship bindings.
+
+![053_oncology_0](images/053_oncology_0.JPG)
+
+<br>
 
 After generating the ontology, you need to complete the following tasks manually:
 
@@ -231,6 +244,10 @@ Each entity type needs a key property that uniquely identifies each instance. Du
 
 <br>
 
+![064_review_entity_0](images/064_review_entity_0.JPG)
+
+<br>
+
 ## Verify and configure relationship types
 
 The generated ontology includes relationship type definitions. During generation, relationship bindings to source data are created based on the semantic model structure. Depending on how the semantic model defines keys and relationships, some bindings are configured automatically while others require manual setup. You’ll verify each relationship and configure any that need it.
@@ -244,8 +261,9 @@ The image below shows a configured relationship using the `departments` table:
 * **Section 1** **(Source entity type)**: `DepartmentId` — identifies the department instance
 * **Section 2 (Target entity type)**: `HospitalId` — identifies which hospital the department belongs to
 
-![im061_24-relationship-bindingagen](images/061_24-relationship-binding.png)
-Screenshot showing relationship configuration pane with source and target entity column mappings
+<br>
+
+![071_deparment_hospitals_0](images/071_deparment_hospitals_0.JPG)
 
 <br>
 
@@ -279,6 +297,10 @@ If the relationship requires configuration, complete these steps:
     * **Source column**: Select **HospitalId**
 3. Select Apply or Create.
 
+![074_02_deparment_hospitals_0](images/074_02_deparment_hospitals_0.JPG)
+
+<br>
+
 ### Verify remaining relationships
 
 Verify the remaining three relationships. Configure any that require setup using the values in the table below:
@@ -291,6 +313,12 @@ Verify the remaining three relationships. Configure any that require setup using
 
 
 With all four relationships verified and configured, your ontology understands the complete healthcare data model: hospitals contain departments, departments contain rooms, patients are admitted to rooms, and vital sign equipment is assigned to patients.
+
+![074_03a_rooms_has_departments_0](images/074_03a_rooms_has_departments_0.JPG)
+
+![074_03b_patients_has_rooms](images/074_03b_patients_has_rooms.JPG)
+
+![074_03c_vitalsignequipment_has_patients](images/074_03c_vitalsignequipment_has_patients.JPG)
 
 <br>
 
