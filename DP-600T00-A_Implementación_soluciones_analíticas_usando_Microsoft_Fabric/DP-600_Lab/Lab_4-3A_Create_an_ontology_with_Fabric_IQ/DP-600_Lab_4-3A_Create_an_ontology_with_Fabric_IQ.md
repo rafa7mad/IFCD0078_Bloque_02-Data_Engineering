@@ -437,6 +437,8 @@ You can keep this workspace and ontology to continue exploring Fabric IQ capabil
 2. Select **Workspace settings**.
 3. In the **General** section, select **Remove this workspace**.
 
+<!-- ![imagen](images) -->
+
 <br>
 
 ---
