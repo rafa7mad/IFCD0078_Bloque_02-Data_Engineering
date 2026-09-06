@@ -24,6 +24,8 @@ This lab takes approximately 45 minutes to complete.
 3. Create a new workspace with a name of your choice, selecting a licensing mode in one of the following workspace types: *Fabric, Fabric Trial, or Power BI Premium*.
 4. When your new workspace opens, it should be empty.
 
+![011_workspace_0](images/011_workspace_0.JPG)
+
 <br>
 
 ## Create a lakehouse with sample data
@@ -57,6 +59,12 @@ You’ll download sample CSV files, upload them to the lakehouse, and convert th
 
 >! **Note**: Do not upload **VitalSignsReadings.csv** to the lakehouse. You’ll load it to the eventhouse in the next section, where it belongs as time-series data.
 
+![021_upload_files_0](images/021_upload_files_0.JPG)
+
+![021b_upload_files_0](images/021b_upload_files_0.JPG)
+
+<br>
+
 3. Convert each uploaded file to a table:
 
     * In **Explorer**, select the **Files** folder, where you should see all five CSV files
@@ -69,7 +77,16 @@ You’ll download sample CSV files, upload them to the lakehouse, and convert th
         * **Separator**: Leave as comma (`,`)
     * Select **Load**
     * Repeat this process for all five files
+
+![023_load_to_tables_0](images/023_load_to_tables_0.JPG)
+
+![023b_load_to_tables_0](images/023b_load_to_tables_0.JPG)
+
+<br>
+
 4. Verify you have five tables in the **Tables** section: `hospitals`, `departments`, `rooms`, `patients`, and `vitalSignEquipment`.
+
+![024_tables_0](images/024_tables_0.JPG)
 
 <br>
 
@@ -81,15 +98,27 @@ Next, you’ll create an eventhouse to store real-time vital signs data as a tim
 2. Name the eventhouse `LamnaHealthcareEH` and select **Create**.
 3. A default KQL database is created with the same name. Select the KQL database to open it.
 
+![031_eventhouse_0](images/031_eventhouse_0.JPG)
+
+<br>
+
 ### Ingest vital signs data
 
 1. Select the KQL database `LamnaHealthcareEH`, then select **Get data > Local file**.
 2. In the **Select or create a destination table** section, select **+ New table** and enter `VitalSignsReadings` as the table name.
 3. Under **Add up to 1,000 files**, select **Browse for files** and upload the **VitalSignsReadings.csv** file you downloaded earlier.
+
+![033_vitalsignsreadings_0](images/033_vitalsignsreadings_0.JPG)
+
+<br>
+
 4. Select **Next**, then continue through the ingestion wizard, keeping the default settings.
 5. Select **Finish** to complete the ingestion.
 6. Verify the **VitalSignsReadings** table appears in the KQL database with 20 rows.
 
+![035_vitalsignsreadings_0](images/035_vitalsignsreadings_0.JPG)
+
+<br>
 
 ## Create a semantic model
 
