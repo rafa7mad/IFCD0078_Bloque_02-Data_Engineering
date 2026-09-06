@@ -386,13 +386,16 @@ You’ll see tiles showing:
    * **Property charts**: Bar charts showing the distribution of property values (like RoomType, RoomNumber, or DepartmentId)
    * **Entity instances table**: List of all individual room instances with their properties
 
-![imagen](images)
-Screenshot showing Room entity type overview with relationship graph, property charts, and entity instances table
+![093_preview_ontology_0](images/093_preview_ontology_0.JPG)
 
 <br>
 
 4. In the **Entity instances** table, select any room instance (for example, **ICU-302**).
-5.The instance view opens, showing the properties for this specific room and its connections to other entities.
+5. The instance view opens, showing the properties for this specific room and its connections to other entities.
+
+![095_instance_0](images/095_instance_0.JPG)
+
+<br>
 
 You’ve successfully created a complete ontology by building a semantic model from your lakehouse, generating the ontology structure automatically, extending it with time-series data from an eventhouse, and connecting everything with relationship bindings. Your ontology now represents the healthcare domain with:
 
