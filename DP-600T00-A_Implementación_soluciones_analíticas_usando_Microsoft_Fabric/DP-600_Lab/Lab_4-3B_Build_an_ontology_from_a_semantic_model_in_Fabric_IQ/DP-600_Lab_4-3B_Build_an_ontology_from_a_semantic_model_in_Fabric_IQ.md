@@ -344,11 +344,6 @@ The VitalSignEquipment entity currently has only static properties from the lake
 
     > [!IMPORTANT] Time-series bindings require a matching key from static data. The static binding you already have provides EquipmentId as the key to link streaming readings to equipment entities.
 
-![081_time_series_binding_0](images/081_time_series_binding_0.JPG)
-![081_10_time_series_binding_0](images/081_10_time_series_binding_0.JPG)
-
-<br>
-
 9. Configure the time-series binding:
 
 * **Static section** - Maps the key to link streaming data to entities:
@@ -364,8 +359,9 @@ The VitalSignEquipment entity currently has only static properties from the lake
 
 Your configuration should look like this:
 
-![imagen](images)
-Screenshot showing time-series binding configuration with static key and time-series properties
+![081_time_series_binding_0](images/081_time_series_binding_0.JPG)
+
+![081_10_time_series_binding_0](images/081_10_time_series_binding_0.JPG)
 
 <br>
 
