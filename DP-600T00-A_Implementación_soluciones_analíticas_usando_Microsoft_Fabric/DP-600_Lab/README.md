@@ -7,7 +7,7 @@
 
 <br>
 
-### Módulo 1.5 - Comienza con la Inteligencia en Tiempo Real en Microsoft Fabric
+### Módulo 1.5 - Introducción a la Inteligencia en Tiempo Real en Microsoft Fabric
 ### Ejercicio: Introducción a Real-Time Intelligence en Microsoft
 ### [Get started with Real-Time Intelligence in Microsoft Fabric](https://microsoftlearning.github.io/mslearn-fabric/Instructions/Labs/07-real-time-Intelligence.html)
 
@@ -132,6 +132,7 @@
 <br>
 
 ---
+
 <br>
 
 [Inicio](#dp-600t00-a-implementación-de-soluciones-de-análisis-mediante-microsoft-fabric)
