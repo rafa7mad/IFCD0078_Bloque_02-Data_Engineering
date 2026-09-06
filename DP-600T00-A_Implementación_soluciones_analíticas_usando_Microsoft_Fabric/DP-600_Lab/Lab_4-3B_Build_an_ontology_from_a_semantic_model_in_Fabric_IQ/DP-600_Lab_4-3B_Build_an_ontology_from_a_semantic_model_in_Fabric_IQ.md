@@ -359,9 +359,9 @@ The VitalSignEquipment entity currently has only static properties from the lake
 
 Your configuration should look like this:
 
-![081_time_series_binding_0](images/081_time_series_binding_0.JPG)
-
 ![081_10_time_series_binding_0](images/081_10_time_series_binding_0.JPG)
+
+![081_11_time_series_binding_0](images/081_11_time_series_binding_0.JPG)
 
 <br>
 
