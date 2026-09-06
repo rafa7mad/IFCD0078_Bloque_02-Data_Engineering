@@ -1,4 +1,5 @@
 # [DP-700T00-A Implementación de soluciones de ingeniería de datos mediante Microsoft Fabric](https://learn.microsoft.com/es-es/training/courses/dp-700t00)
+## Rutas de aprendizaje, Ejercicios y Laboratorios
 
 <br>
 
