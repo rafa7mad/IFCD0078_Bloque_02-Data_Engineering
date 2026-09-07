@@ -1,10 +1,13 @@
 # Get started with Real-Time Dashboards in Microsoft Fabric
 
+<br>
+
 Real-time dashboards in Microsoft Fabric enable you to visualize and explore streaming data using the Kusto Query Language (KQL). In this exercise, you’ll explore how to create and use a real-time dashboard based on a real-time data source.
 
 This lab takes approximately 25 minutes to complete.
 
 Create a workspace
+
 Note: You need access to a Fabric paid or trial capacity to complete this exercise. For information about the free Fabric trial, see Fabric trial.
 
 Navigate to the Microsoft Fabric home page at https://app.fabric.microsoft.com/home?experience=fabric in a browser and sign in with your Fabric credentials.
