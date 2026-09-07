@@ -127,6 +127,8 @@ Code
 ```
 <br>
 
+![035b_Sales_YoY_Growth](images/035b_Sales_YoY_Growth.jpg)
+
 ![035_Sales_YoY_Growth](images/035_Sales_YoY_Growth.jpg)
 
 <br>
@@ -165,6 +167,8 @@ Code
 The `VAR` stores the prior-year result once. The `RETURN` expression references `SalesPriorYear` twice without recalculating it.
 
 3. Press **Enter** to confirm the formula change.
+
+![043b_optimized_version_0](images/043b_optimized_version_0.jpg)
 
 ![043_optimized_version](images/043_optimized_version.jpg)
 
