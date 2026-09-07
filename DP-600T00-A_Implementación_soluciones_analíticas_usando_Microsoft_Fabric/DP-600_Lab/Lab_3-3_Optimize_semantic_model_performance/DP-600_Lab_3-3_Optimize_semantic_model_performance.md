@@ -40,9 +40,17 @@ In this task, you use Performance analyzer to measure how long each visual takes
 
 1. In Power BI Desktop, navigate to the **Sales Overview** report page.
 
+![alt 021_sales_overview](images/021_sales_overview.jpg)
+
+<br>
+
 2. On the **Optimize** ribbon, select **Performance analyzer**.
 
-    The Performance analyzer pane opens on the right side of the report canvas.
+   The Performance analyzer pane opens on the right side of the report canvas.
+
+![022_perfomances_analyzer](images/022_perfomances_analyzer.jpg)
+
+<br>
 
 3. In the Performance analyzer pane, select **Start recording**.
 
@@ -50,11 +58,17 @@ In this task, you use Performance analyzer to measure how long each visual takes
 
 5. Wait for all visuals to finish loading, then select **Stop recording**.
 
+![025_stop_recording.jpg](images/025_stop_recording.jpg)
+
+<br>
+
 6. In the Performance analyzer results, expand the entry for the **Table** visual. This table displays Year, Total Sales, and Sales YoY Growth.
 
 7. Take note of the DAX query time (in milliseconds) for this visual. This is your baseline.
 
 >! **Note**: With the AdventureWorks dataset, query times may be small (under 500 ms). That’s expected — this dataset isn’t large. The goal is to learn the diagnostic process. Even a change from 80 ms to 30 ms demonstrates that the optimization worked. If all timings appear identical, select **Clear**, then select **Refresh visuals** again to get uncached measurements.
+
+![027_DAX_query_time_0](images/027_DAX_query_time_0.JPG)
 
 <br>
 
@@ -95,6 +109,10 @@ Code
 
 >! This query is not the measure definition itself. Power BI generates this query to populate the visual. `SUMMARIZECOLUMNS` groups the data by year, `ROLLUPADDISSUBTOTAL` adds the grand total row, and `TOPN` caps the row count. The measures (`[Total Sales]` and `[Sales YoY Growth]`) are referenced by name, but their formulas aren’t shown here because they live in the model. To see the actual measure logic, you need to look in the formula bar.
 
+![034_dax_query_0](images/034_dax_query_0.JPG)
+
+<br>
+
 5. Switch back to **Report view**. In the **Data** pane, expand the **Sales** table and select the **Sales YoY Growth** measure. The formula bar shows the measure definition:
 
 <br>
@@ -107,6 +125,10 @@ Code
      CALCULATE([Total Sales], SAMEPERIODLASTYEAR('Date'[Date]))
  )
 ```
+<br>
+
+![035_Sales_YoY_Growth](images/035_Sales_YoY_Growth.jpg)
+
 <br>
 
 6. Look at the formula. The `CALCULATE**([Total Sales], SAMEPERIODLASTYEAR('Date'[Date]))` expression appears twice, in the numerator and the denominator, but it calculates the same value both times. This means the engine evaluates the prior-year sales calculation twice per row in the query, which is wasteful.
@@ -144,6 +166,10 @@ The `VAR` stores the prior-year result once. The `RETURN` expression references 
 
 3. Press **Enter** to confirm the formula change.
 
+![043_optimized_version](images/043_optimized_version.jpg)
+
+<br>
+
 4. To verify the measure still returns the correct values, switch to **DAX query view**, open a new query tab, and run the following query:
 
 <br>
@@ -160,8 +186,9 @@ Code
 
 Compare the results to what you saw earlier. The values should be the same — for example, FY2019 should still show approximately 0.7 and FY2020 approximately 0.18. The optimization changes speed, not results.
 
-![041_16-evaluate-optimized-measure.png](images/041_16-evaluate-optimized-measure.png)
-Screenshot of the DAX query results showing YoY Growth values by year.
+![044_16-evaluate-optimized-measure.png](images/044_16-evaluate-optimized-measure.png)
+
+![044_DAX_new _query_0](images/044_DAX_new%20_query_0.JPG)
 
 <br>
 
@@ -185,6 +212,10 @@ Code
 <br>
 
 >! The result grid returns one row per column in the model, sorted by the number of distinct values. The **FILTER** excludes internal system columns that aren’t part of your model. The columns with the highest cardinality appear at the top.
+
+![052_column_cardinality_0.JPG](images/052_column_cardinality_0.JPG)
+
+<br>
 
 3. Review the results and notice where the highest cardinality columns come from:
 
@@ -213,8 +244,9 @@ In this task, you re-run Performance analyzer to compare against your baseline n
 
 >! **Note**: The absolute difference may be small with this dataset. The important takeaway is the process: measure → diagnose → fix → verify.
 
-![061_16-verify-final](images/061_16-verify-final.png)
-Screenshot of the comparison before and after optimization.
+![065_16-verify-final](images/065_16-verify-final.png)
+
+![065_verify_improvements](images/065_verify_improvements.jpg)
 
 <br>
 
@@ -241,6 +273,8 @@ If Copilot is available in your Power BI Desktop environment, try these addition
     `Write a measure that calculates profit margin percentage using variables for Sales and Cost.`
 
 >! **Note**: Copilot generates new insights and suggestions without changing the measures you already optimized.
+
+<br>
 
 **Unfortunately, Copilot isn't available with Fabric trial account.**
 
