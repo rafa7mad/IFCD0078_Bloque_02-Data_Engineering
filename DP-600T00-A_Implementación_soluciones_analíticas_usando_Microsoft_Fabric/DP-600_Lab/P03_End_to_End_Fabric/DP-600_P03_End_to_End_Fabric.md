@@ -161,6 +161,10 @@ for nombre, df in [("productos", df_prod), ("clientes", df_cli),
 > 🔑 **En un proyecto real**, si el origen ya estuviera en OneLake, ADLS Gen2, Amazon S3 o Google Cloud Storage, la recomendación de Microsoft es **crear un shortcut en Bronze en vez de copiar los datos**.
 > 
 
+![011_LH_Bronze_0](images/011_LH_Bronze_0.jpg)
+
+<br>
+
 ## 2. Capa Silver — limpiar y conformar
 
 Objetivo: corregir errores, estandarizar formatos, eliminar duplicados y escribir **tablas Delta**.
