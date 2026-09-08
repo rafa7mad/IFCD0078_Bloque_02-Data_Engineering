@@ -255,6 +255,10 @@ for nombre, df in [("dim_producto_src", s_prod), ("dim_cliente_src", s_cli),
 > 📊 **Por qué `decimal` y no `float` para importes:** `float` es un tipo aproximado; sumar millones de importes acumula error de redondeo. Es un error de diseño que aparece en auditorías reales. Además, `decimal` es un tipo soportado tanto en Delta como en Fabric Warehouse.
 > 
 
+![021_LH_Silver_0](images/021_LH_Silver_0.jpg)
+
+<br>
+
 ## 3. Capa Gold — construir el star schema en el Warehouse
 
 Aquí aplicamos **todo lo visto clases anteriores**: surrogate keys, special dimension members, SCD tipo 1 y tipo 2, degenerate dimension y role-playing dimension.
