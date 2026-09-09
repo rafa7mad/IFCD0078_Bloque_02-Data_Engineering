@@ -1,24 +1,22 @@
-## DP-700T00A-Implement-data-engineering-solutions-using-Microsoft-Fabric
-
-# [Implement deployment pipelines in Microsoft Fabric]()
-
-Deployment pipelines in Microsoft Fabric let you automate the process of copying changes made to the content in Fabric items between environments like development, test, and production. You can use deployment pipelines to develop and test content before it reaches end users. In this exercise, you create a deployment pipeline, and assign stages to the pipeline. Then you create some content in a development workspace and use deployment pipelines to deploy it between the Development, Test and Production pipeline stages.
-
->! **Note**: To complete this exercise, you need to be an member of the Fabric workspace admin role. To assign roles see Roles in workspaces in Microsoft Fabric.
+# Implement deployment pipelines in Microsoft Fabric
 
 <br>
 
----
+Deployment pipelines in Microsoft Fabric let you automate the process of copying changes made to the content in Fabric items between environments like development, test, and production. You can use deployment pipelines to develop and test content before it reaches end users. In this exercise, you create a deployment pipeline, and assign stages to the pipeline. Then you create some content in a development workspace and use deployment pipelines to deploy it between the Development, Test and Production pipeline stages.
+
+>! **Note**: To complete this exercise, you need to be an member of the Fabric workspace admin role. To assign roles see [Roles in workspaces in Microsoft Fabric](https://learn.microsoft.com/en-us/fabric/get-started/roles-workspaces).
+
+<br>
 
 ## Create workspaces
 
->! **Note**: You need access to a Fabric paid or trial capacity to complete this exercise. For information about the free Fabric trial, see Fabric trial.
+>! **Note**: You need access to a Fabric paid or trial capacity to complete this exercise. For information about the free Fabric trial, see [Fabric trial](https://aka.ms/fabrictrial).
 
-1. Navigate to the [Microsoft Fabric home page](https://app.fabric.microsoft.com/home?experience=fabric) at https://app.fabric.microsoft.com/home?experience=fabric in a browser and sign in with your Fabric credentials.
+1. Navigate to the [Microsoft Fabric home page](https://app.fabric.microsoft.com/home?experience=fabric) at <br> https://app.fabric.microsoft.com/home?experience=fabric in a browser and sign in with your Fabric credentials.
 
 2. In the menu bar on the left, select **Workspaces** (the icon looks similar to 🗇).
 
-3. Create a new workspace named Development, selecting a licensing mode that includes Fabric capacity (Trial, Premium, or Fabric).
+3. Create a new workspace named Development, selecting a licensing mode that includes Fabric capacity (*Trial, Premium, or Fabric*).
 
 4. Repeat steps 1 & 2, creating two more workspaces named Test, and Production. Your workspaces are: Development, Test, and Production.
 
@@ -26,11 +24,9 @@ Deployment pipelines in Microsoft Fabric let you automate the process of copying
 
 >! **Note**: If you are prompted to enter a unique name for the workspaces, append one or more random numbers to the words: Development, Test, or Production.
 
-![imagen](images)
+![011_workspaces_0](images/011_workspaces_0.JPG)
 
 <br>
-
----
 
 ## Create a deployment pipeline
 
@@ -40,15 +36,16 @@ Next, create a deployment pipeline.
 
 2. Select **Deployment Pipelines**, then **New pipeline**.
 
-3. In the **Add a new deployment pipeline** window, give the pipeline a unique name and select Next.
+3. In the **Add a new deployment pipeline** window, give the pipeline a unique name and select **Next**.
 
 4. In the new pipeline window, select **Create and continue**.
 
-![imagen](images)
+![024_deployment_pipeline_0](images/024_deployment_pipeline_0.JPG)
 
 <br>
 
 ### Assign workspaces to stages of a deployment pipeline
+
 Assign workspaces to the stages of the deployment pipeline.
 
 1. On the left menu bar, select the pipeline you created.
@@ -57,12 +54,11 @@ Assign workspaces to the stages of the deployment pipeline.
 
 3. Select the check mark **Assign** for each deployment stage.
 
-Cambiar
-![23_deployment-pipeline](images/23_deployment-pipeline.png)
+![033_pipeline_0](images/033_pipeline_0.JPG)
+
+![033b_pipeline_0](images/033b_pipeline_0.JPG)
 
 <br>
-
----
 
 ## Create content
 
@@ -80,7 +76,9 @@ Fabric items haven’t been created in your workspaces yet. Next, create a lakeh
 
 6. In the Lakehouse Explorer window, select **Start with sample data** to populate the new lakehouse with data.
 
-![31_lakehouse-explorer.png](images/31_lakehouse-explorer.png)
+![046_LabLakehouse](images/046_LabLakehouse.jpg)
+
+![046b_LabLakehouse_0](images/046b_LabLakehouse_0.JPG)
 
 <br>
 
