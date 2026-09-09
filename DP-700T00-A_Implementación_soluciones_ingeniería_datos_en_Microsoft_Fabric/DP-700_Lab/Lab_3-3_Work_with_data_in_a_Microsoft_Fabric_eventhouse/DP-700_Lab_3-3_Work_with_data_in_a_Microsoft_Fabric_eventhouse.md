@@ -68,18 +68,15 @@ Code
 
 !> **NOTE**: The Pipe ( | ) character is used for two purposes in KQL including to separate query operators in a tabular expression statement. It is also used as a logical OR operator within square or round brackets to denote that you may specify one of the items separated by the pipe character.
 
-![033_query_0](images/033_query_0.jpg)
-
 3. Select the query code and run it to return 100 rows from the table.
 
-![image](images) 
-Screenshot of the KQL query editor.
+![033_query_0](images/033_query_0.jpg)
 
 <br>
 
 You can be more precise by adding specific attributes you want to query using the `project` keyword and then using the `take` keyword to tell the engine how many records to return.
 
-Type, select, and run the following query:
+4. Type, select, and run the following query:
 
 Code
 ```code
@@ -88,7 +85,8 @@ Code
  | project Street, No_Bikes
  | take 10
 ```
-![image](images) 
+
+![034_query_0](images/034_query_0.jpg) 
 
 <br>
 
@@ -105,7 +103,7 @@ Code
  | take 10
 ```
 
-![image](images) 
+![035_query_0.jpg](images/035_query_0.jpg) 
 
 <br>
 
