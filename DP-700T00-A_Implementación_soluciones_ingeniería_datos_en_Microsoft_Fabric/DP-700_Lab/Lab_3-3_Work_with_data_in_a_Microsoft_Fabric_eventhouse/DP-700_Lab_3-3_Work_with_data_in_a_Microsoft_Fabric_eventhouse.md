@@ -184,7 +184,7 @@ Code
  | order by Neighbourhood asc
 ```
 
-![image](images) 
+![037_02_query_0.jpg](images/037_02_query_0.jpg) 
 
 <br>
 
@@ -203,7 +203,7 @@ Code
  | sort by Neighbourhood asc
 ```
 
-![image](images) 
+![038_01_query_0.jpg](images/038_01_query_0.jpg) 
 
 <br>
 
@@ -220,7 +220,7 @@ Sql
  SELECT TOP 100 * from Bikestream
 ```
 
-![image](images) 
+![041_TSQL_0.jpg](images/041_TSQL_0.jpg) 
 
 <br>
 
@@ -232,7 +232,7 @@ Sql
  FROM Bikestream
 ```
 
-![image](images) 
+![042_TSQL_0.jpg](images/042_TSQL_0.jpg) 
 
 <br>
 
@@ -244,7 +244,7 @@ Sql
  from Bikestream
 ```
 
-![image](images) 
+![043_TSQL_0](images/043_TSQL_0.jpg)
 
 <br>
 
@@ -258,7 +258,7 @@ Sql
  FROM Bikestream
 ```
 
-![image](images) 
+![044_01_TSQL_0.jpg](images)
 
 <br>
 
@@ -271,7 +271,7 @@ Sql
  GROUP BY Neighbourhood
 ```
 
-![image](images) 
+![044_02_TSQL_0](images/044_02_TSQL_0.jpg) 
 
 <br>
 
@@ -291,7 +291,7 @@ Sql
           END;
 ```
 
-![image](images) 
+![044_03_TSQL_0.jpg](images/044_03_TSQL_0.jpg) 
 
 <br>
 
@@ -314,7 +314,7 @@ Sql
  ORDER BY Neighbourhood ASC;
 ```
 
-![image](images) 
+![045_TSQL_0.jpg](images/045_TSQL_0.jpg) 
 
 <br>
 
@@ -338,7 +338,7 @@ Sql
  ORDER BY Neighbourhood ASC;
 ```
 
-![image](images) 
+![046_TSQL_0.jpg](images/046_TSQL_0.jpg) 
 
 <br>
 
