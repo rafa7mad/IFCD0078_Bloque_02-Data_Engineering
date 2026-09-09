@@ -20,8 +20,9 @@ In the menu bar on the left, select **Workspaces** (the icon looks similar to ðŸ
 Create a new workspace with a name of your choice, selecting a licensing mode that includes Fabric capacity (*Trial, Premium, or Fabric*).
 When your new workspace opens, it should be empty.
 
-![image](images) 
-Screenshot of an empty workspace in Fabric.
+![011_workspace-EH_0](images/011_workspace-EH_0.jpg)
+
+![fff](images/011_workspace-EH_0.jpg)
 
 <br>
 
@@ -30,15 +31,20 @@ Screenshot of an empty workspace in Fabric.
 Now that you have a workspace with support for a Fabric capacity, you can create an eventhouse in it.
 
 1. In the menu bar on the left, select **Workloads**. Then, select the **Real-Time Intelligence** tile.
-2. On the **Real-Time Intelligence** home page, select the **Explore Real-Time Intelligence Sample** tile. It will automatically create an eventhouse called **RTISample**:
+2. On the **Real-Time Intelligence** home page, select the **Explore Real-Time Intelligence Sample** tile. 
+   You 
+<!-- It will automatically create an eventhouse called **RTISample**: -->
 
-![image](images) 
-Screenshot of a new eventhouse with sample data.
+![022_Real-Time_Intelligence_sample_0](images/022_Real-Time_Intelligence_sample_0.jpg)
+
+![022b_Real-Time_Intelligence_sample](images/022b_Real-Time_Intelligence_sample_0.jpg)
+
+![022c_Real-Time_Intelligence_sample](images/022c_Real-Time_Intelligence_sample.jpg)
 
 3. In the pane on the left, note that your eventhouse contains a KQL database with the same name as the eventhouse.
 4. Verify that a **Bikestream** table has also been created.
 
-![image](images) 
+![image](images)
 
 <br>
 
