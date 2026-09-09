@@ -41,12 +41,12 @@ Now that you have a workspace with support for a Fabric capacity, you can create
 
 ![022c_Real-Time_Intelligence_sample](images/022c_Real-Time_Intelligence_sample.jpg)
 
-![024_bike_rentals_eventhouse_0](images/024_bike_rentals_eventhouse_0.jpg)
+![022d_bike_rentals_eventhouse_0](images/022d_bike_rentals_eventhouse_0.jpg)
 
 3. In the pane on the left, note that your eventhouse contains a KQL database with the same name as the eventhouse.
 4. Verify that a **Bikestream** table has also been created.
 
-![image](images)
+![024_kql_table_bikestream_0](images/024_kql_table_bikestream_0.jpg)
 
 <br>
 
