@@ -78,6 +78,9 @@ Code
  | project Street, No_Bikes
  | take 10
 ```
+![image](images) 
+
+<br>
 
 >! **NOTE**: The use of // denotes a comment.
 
@@ -92,6 +95,10 @@ Code
  | take 10
 ```
 
+![image](images) 
+
+<br>
+
 ### Summarize data by using KQL
 
 You can use the summarize keyword with a function to aggregate and otherwise manipulate data.
@@ -104,6 +111,9 @@ Code
  Bikestream
  | summarize ["Total Number of Bikes"] = sum(No_Bikes)
 ```
+![image](images) 
+
+<br>
 
 You can group the summarized data by a specified column or expression.
 
@@ -115,6 +125,10 @@ Code
  | summarize ["Total Number of Bikes"] = sum(No_Bikes) by Neighbourhood
  | project Neighbourhood, ["Total Number of Bikes"]
 ```
+
+![image](images) 
+
+<br>
 
 If any of the bike points has a null or empty entry for neighbourhood, the results of summarization will include a blank value, which is never good for analysis.
 
@@ -128,6 +142,10 @@ Code
 ```
 
 >! **Note**: As this sample dataset is well-maintained, you might not have an ***Unidentified*** field in the query result.
+
+![image](images) 
+
+<br>
 
 ### Sort data by using KQL
 
@@ -143,6 +161,10 @@ Code
  | sort by Neighbourhood asc
 ```
 
+![image](images) 
+
+<br>
+
 2. Modify the query as follows and run it again, and note that the order by operator works the same way as sort by:
 
 Code
@@ -152,6 +174,10 @@ Code
  | project Neighbourhood = case(isempty(Neighbourhood) or isnull(Neighbourhood), "Unidentified", Neighbourhood), ["Total Number of Bikes"]
  | order by Neighbourhood asc
 ```
+
+![image](images) 
+
+<br>
 
 ### Filter data by using KQL
 
@@ -168,12 +194,11 @@ Code
  | sort by Neighbourhood asc
 ```
 
-
+![image](images) 
 
 <br>
 
 ## Query data by using Transact-SQL
-
 
 KQL Database doesn’t support Transact-SQL natively, but it provides a T-SQL endpoint that emulates Microsoft SQL Server and allows you to run T-SQL queries on your data. The T-SQL endpoint has some limitations and differences from the native SQL Server. For example, it doesn’t support creating, altering, or dropping tables, or inserting, updating, or deleting data. It also doesn’t support some T-SQL functions and syntax that aren’t compatible with KQL. It was created to allow systems that didn’t support KQL to use T-SQL to query the data within a KQL Database. So, it’s recommended to use KQL as the primary query language for KQL Database, as it offers more capabilities and performance than T-SQL. You can also use some SQL functions that are supported by KQL, such as count, sum, avg, min, max, and so on.
 
@@ -186,6 +211,10 @@ Sql
  SELECT TOP 100 * from Bikestream
 ```
 
+![image](images) 
+
+<br>
+
 2. Modify the query as follows to retrieve specific columns
 
 Sql
@@ -194,6 +223,10 @@ Sql
  FROM Bikestream
 ```
 
+![image](images) 
+
+<br>
+
 3.Modify the query to assign an alias that renames No_Empty_Docks to a more user-friendly name.
 
 Sql
@@ -201,6 +234,10 @@ Sql
  SELECT TOP 10 Street, No_Empty_Docks as [Number of Empty Docks]
  from Bikestream
 ```
+
+![image](images) 
+
+<br>
 
 ### Summarize data by using Transact-SQL
 
@@ -212,6 +249,10 @@ Sql
  FROM Bikestream
 ```
 
+![image](images) 
+
+<br>
+
 2. Modify the query to group the total number of bikes by neighbourhood:
 
 Sql
@@ -220,6 +261,10 @@ Sql
  FROM Bikestream
  GROUP BY Neighbourhood
 ```
+
+![image](images) 
+
+<br>
 
 3. Modify the query further to use a CASE statement to group bike points with an unknown origin into a ***Unidentified*** category for follow-up.
 
@@ -236,6 +281,10 @@ Sql
             ELSE Neighbourhood
           END;
 ```
+
+![image](images) 
+
+<br>
 
 ### Sort data by using Transact-SQL
 
@@ -255,6 +304,10 @@ Sql
           END
  ORDER BY Neighbourhood ASC;
 ```
+
+![image](images) 
+
+<br>
 
 ### Filter data by using Transact-SQL
 
@@ -276,6 +329,8 @@ Sql
  ORDER BY Neighbourhood ASC;
 ```
 
+![image](images) 
+
 <br>
 
 ## Clean up resources
@@ -288,7 +343,11 @@ When you’ve finished exploring your KQL database, you can delete the workspace
 2. In the toolbar, select **Workspace settings**.
 3. In the **General** section, select **Remove this workspace**.
 
+![image](images)
+
 <br>
+
+---
 
 [Inicio](#work-with-data-in-a-microsoft-fabric-eventhouse)
 
