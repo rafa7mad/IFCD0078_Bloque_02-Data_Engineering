@@ -119,7 +119,8 @@ Code
  Bikestream
  | summarize ["Total Number of Bikes"] = sum(No_Bikes)
 ```
-![image](images) 
+
+![036_01_query_0](images/036_01_query_0.jpg) 
 
 <br>
 
@@ -134,7 +135,7 @@ Code
  | project Neighbourhood, ["Total Number of Bikes"]
 ```
 
-![image](images) 
+![036_02_query_0](images/036_02_query_0.jpg)
 
 <br>
 
@@ -151,7 +152,7 @@ Code
 
 >! **Note**: As this sample dataset is well-maintained, you might not have an ***Unidentified*** field in the query result.
 
-![image](images) 
+![036_03_query_0.jpg](images/036_03_query_0.jpg) 
 
 <br>
 
@@ -169,7 +170,7 @@ Code
  | sort by Neighbourhood asc
 ```
 
-![image](images) 
+![037_01_query_0.jpg](images/037_01_query_0.jpg) 
 
 <br>
 
