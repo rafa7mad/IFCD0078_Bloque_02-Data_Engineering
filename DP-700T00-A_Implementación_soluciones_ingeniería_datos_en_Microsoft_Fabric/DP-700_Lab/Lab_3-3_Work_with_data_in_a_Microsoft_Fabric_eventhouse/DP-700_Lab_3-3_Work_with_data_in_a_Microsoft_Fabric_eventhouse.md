@@ -352,7 +352,7 @@ When you’ve finished exploring your KQL database, you can delete the workspace
 2. In the toolbar, select **Workspace settings**.
 3. In the **General** section, select **Remove this workspace**.
 
-![image](images)
+![053_remove_workspace_0](images/053_remove_workspace_0.jpg)
 
 <br>
 
