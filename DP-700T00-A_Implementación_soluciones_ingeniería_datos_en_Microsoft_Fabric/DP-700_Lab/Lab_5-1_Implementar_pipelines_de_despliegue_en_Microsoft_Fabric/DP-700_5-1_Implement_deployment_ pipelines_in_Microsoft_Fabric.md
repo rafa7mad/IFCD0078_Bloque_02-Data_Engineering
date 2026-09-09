@@ -88,11 +88,9 @@ Fabric items haven’t been created in your workspaces yet. Next, create a lakeh
 
 3. Select the **Test** stage and under the deployment pipeline canvas you can see that the lakehouse you created is only a stage item in the source, which in this case refers to the **Development** stage.
 
-![32_lab-pipeline-compare.png](images/32_lab-pipeline-compare.png)
+![047_03_Test_0](images/047_03_Test_0.JPG)
 
 <br>
-
----
 
 ## Deploy content between stages
 
@@ -104,6 +102,10 @@ Deploy the lakehouse from the **Development** stage to the **Test** and **Produc
 
 3. In the **Deploy to next stage** window that appears, select **Deploy**. There is now an X in a circle in the Production stage in the deployment pipeline canvas. The lakehouse exists in the Development and Test stages but not yet in the Production stage.
 
+![053_Test_0.JPG](images/053_Test_0.JPG)
+
+<br>
+
 4. Select the **Production** stage in the deployment canvas.
 
 5. Under the deployment pipeline canvas, select the checkbox next to the Lakehouse item. Then select the **Deploy** button to copy the lakehouse in its current state to the **Production** stage.
@@ -112,17 +114,25 @@ Deploy the lakehouse from the **Development** stage to the **Test** and **Produc
 
 7. Using deployment pipelines to deploy between stages also updates the content in the workspaces corresponding to the deployment stage. Let’s confirm.
 
+![057_Production_0](images/057_Production_0.JPG)
+
+<br>
+
 8. In the menu bar on the left, select **Workspaces**.
 
 9. Select the **Test** workspace. The lakehouse was copied there.
 
-10. Open the **Production** workspace from the **Workspaces** icon on the left menu. The lakehouse was copied to the Production workspace too.
-
-![imagen](images)
+![059_Test_0.JPG](images/059_Test_0.JPG)
 
 <br>
 
----
+10. Open the **Production** workspace from the **Workspaces** icon on the left menu. The lakehouse was copied to the Production workspace too.
+
+![059_10_Production_0.JPG](images/059P_10_Production_0.JPG)
+
+![059S_History_0.JPG](images/059S_History_0.JPG)
+
+<br>
 
 ## Clean up
 
