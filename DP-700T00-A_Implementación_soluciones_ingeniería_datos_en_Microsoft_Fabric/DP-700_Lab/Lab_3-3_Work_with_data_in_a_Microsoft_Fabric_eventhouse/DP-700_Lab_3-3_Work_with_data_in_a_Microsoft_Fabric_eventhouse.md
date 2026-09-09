@@ -22,8 +22,6 @@ When your new workspace opens, it should be empty.
 
 ![011_workspace-EH_0](images/011_workspace-EH_0.jpg)
 
-![fff](images/011_workspace-EH_0.jpg)
-
 <br>
 
 ## Create an Eventhouse
@@ -32,14 +30,18 @@ Now that you have a workspace with support for a Fabric capacity, you can create
 
 1. In the menu bar on the left, select **Workloads**. Then, select the **Real-Time Intelligence** tile.
 2. On the **Real-Time Intelligence** home page, select the **Explore Real-Time Intelligence Sample** tile. 
-   You 
-<!-- It will automatically create an eventhouse called **RTISample**: -->
+<!-- This has changed ** It will automatically create an eventhouse called **RTISample**: -->
+   Now you can choose one of the examples.
+   Select the "bike rental data" example, then select the workspace in the Location section and click Create.
+   It will automatically create an eventhouse called Bike_Eventhouse.
 
 ![022_Real-Time_Intelligence_sample_0](images/022_Real-Time_Intelligence_sample_0.jpg)
 
 ![022b_Real-Time_Intelligence_sample](images/022b_Real-Time_Intelligence_sample_0.jpg)
 
 ![022c_Real-Time_Intelligence_sample](images/022c_Real-Time_Intelligence_sample.jpg)
+
+![024_bike_rentals_eventhouse_0](images/024_bike_rentals_eventhouse_0.jpg)
 
 3. In the pane on the left, note that your eventhouse contains a KQL database with the same name as the eventhouse.
 4. Verify that a **Bikestream** table has also been created.
