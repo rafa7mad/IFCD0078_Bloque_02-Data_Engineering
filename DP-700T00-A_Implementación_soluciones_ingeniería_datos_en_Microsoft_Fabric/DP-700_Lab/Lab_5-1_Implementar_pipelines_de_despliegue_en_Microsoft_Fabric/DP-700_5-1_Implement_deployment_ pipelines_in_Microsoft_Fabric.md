@@ -156,6 +156,8 @@ In this exercise, you created a deployment pipeline, and assigned stages to the 
 
 ![062c_workspace_development](images/062c_workspace_development.jpg)
 
+![063_workspaces_deleted_0](images/063_workspaces_deleted_0.jpg)
+
 <br>
 
 ---
