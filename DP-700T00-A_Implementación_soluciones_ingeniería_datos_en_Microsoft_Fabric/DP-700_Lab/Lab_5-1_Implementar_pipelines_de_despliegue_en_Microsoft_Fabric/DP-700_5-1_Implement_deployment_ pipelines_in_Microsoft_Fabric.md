@@ -140,7 +140,7 @@ In this exercise, you created a deployment pipeline, and assigned stages to the 
 
 - In the left navigation bar, select **Deployment pipelines**, select your pipeline, and then select **Delete this pipeline** from the settings menu to remove the deployment pipeline.
 
-![51_delete-pipeline.png](images/51_delete-pipeline.png)
+![061_delete-pipeline.png](images/061_delete-pipeline_0.jpg)
 
 <br>
 
@@ -150,7 +150,11 @@ In this exercise, you created a deployment pipeline, and assigned stages to the 
 
 - In the **General** section, select **Remove this workspace**.
 
-![imagen](images)
+![062a_workspace_production](images/062a_workspace_production.jpg)
+
+![062b_workspace_test](images/062b_workspace_test.jpg)
+
+![062c_workspace_development](images/062c_workspace_development.jpg)
 
 <br>
 
