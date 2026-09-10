@@ -615,6 +615,12 @@ FROM gold.Fact_Sales;
 > ⚠️ **El punto crítico de toda la práctica.** Fabric Warehouse **admite** foreign keys pero **no las impone**. Si el lookup falla, no salta ningún error: acabas con datos silenciosamente incorrectos. Por eso esta consulta de auditoría no es opcional — es parte del proceso de carga. En producción se convierte en un paso del pipeline que falla si el umbral se supera.
 > 
 
+En 3.4 Fact_Sales se cargan las 1.200 líneas de venta de Silver en la tabla de hechos de Gold. Se resuelven las claves de fecha, producto, cliente y tienda mediante joins con las dimensiones, asignando -1 si algún lookup falla. Finalmente, se realiza una auditoría para comprobar que no hay claves desconocidas y que se han cargado las 1.200 filas esperadas.
+
+![034_Fact_Sales_0](images/034_Fact_Sales_0.jpg)
+
+<br>
+
 ### 3.5 Declarar las constraints (no impuestas)
 
 Aunque no se validen, conviene crearlas: permiten que **Power BI Desktop detecte y cree las relaciones automáticamente**.
@@ -642,6 +648,13 @@ GO
 > ℹ️ Solo se crea **una** FK hacia `Dim_Date` (la de `OrderDateKey`). La segunda relación, la de `ShipDateKey`, la definiremos en el semantic model como **relación inactiva** — es la esencia de la *role-playing dimension*.
 > 
 
+En 3.5 Constraints NOT ENFORCED se definen las claves primarias de las dimensiones y las claves foráneas de Fact_Sales hacia Dim_Date, Dim_Product, Dim_Customer y Dim_Store.
+Las restricciones se registran como metadatos, pero Fabric Warehouse no fuerza su cumplimiento, por lo que la integridad debe garantizarse mediante el proceso de carga.
+
+![035_Constraints_NOT_ENFORCED_0](images/035_Constraints_NOT_ENFORCED_0.jpg)
+
+<br>
+
 ### 3.6 Vista para la degenerate dimension
 
 `OrderNumber` vive en el fact porque está **al mismo grano que los hechos**. Si el negocio necesita consultarlo como dimensión, se expone mediante una vista:
@@ -651,6 +664,12 @@ CREATE VIEW gold.Dim_Order AS
 SELECT DISTINCT OrderNumber FROM gold.Fact_Sales;
 GO
 ```
+
+En 3.6 se crea la vista Dim_Order con los números de pedido únicos de Fact_Sales. Permite utilizar OrderNumber como una dimensión de análisis sin crear ni mantener una tabla dimensional física separada.
+
+![036_view_0](images/036_view_0.jpg)
+
+<br>
 
 ## 4. Procedimientos de carga incremental y SCD tipo 2
 
