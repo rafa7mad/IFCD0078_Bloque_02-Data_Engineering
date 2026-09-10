@@ -712,8 +712,14 @@ END;
 GO
 ```
 
+
+
 > ⚠️ Ese `MAX(...) + 1` funciona para un lote pequeño como el de la práctica. Con volúmenes reales, genera la clave con `ROW_NUMBER() OVER (...) + (SELECT ISNULL(MAX(Product_SK),0) FROM ...)` en una tabla intermedia, o usa una columna `IDENTITY`.
 > 
+
+![041_sp_Load_Dim_Product_0.jpg](images/041_sp_Load_Dim_Product_0.jpg)
+
+<br>
 
 ### 4.2 SCD tipo 2 en dos operaciones
 
