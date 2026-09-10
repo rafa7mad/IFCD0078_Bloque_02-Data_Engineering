@@ -161,6 +161,10 @@ for nombre, df in [("productos", df_prod), ("clientes", df_cli),
 > 🔑 **En un proyecto real**, si el origen ya estuviera en OneLake, ADLS Gen2, Amazon S3 o Google Cloud Storage, la recomendación de Microsoft es **crear un shortcut en Bronze en vez de copiar los datos**.
 > 
 
+En el notebook **1.1 `NB_01_Bronze_Ingesta`** se generan datos sintéticos de productos, clientes, tiendas y ventas, incluyendo algunos errores intencionados como duplicados, valores nulos y pedidos de prueba.
+
+Después, esos datos se guardan en **`LH_Bronze`** como archivos **CSV** dentro de `Files/raw`, manteniéndolos en formato crudo para tratarlos posteriormente en la capa Silver.
+
 ![011_LH_Bronze_0](images/011_LH_Bronze_0.jpg)
 
 <br>
@@ -380,6 +384,10 @@ Deberías ver las cinco tablas: `Dim_Date`, `Dim_Product`, `Dim_Customer`, `Dim_
 > ⚙️ **Sobre las surrogate keys.** Usamos `bigint` poblado con `ROW_NUMBER()` en lugar de `IDENTITY` porque `IDENTITY` en Fabric Data Warehouse está **en preview**, solo admite `bigint`, no permite `IDENTITY_INSERT` ni configurar `SEED`/`INCREMENT`, y **no garantiza el orden ni la ausencia de huecos** (asigna rangos distintos por nodo de cómputo). Para una práctica reproducible, `ROW_NUMBER()` es más predecible. En producción cualquiera de las dos opciones es válida.
 > 
 
+![031_02_esquema_tables_0.jpg](images/031_02_esquema_tables_0.jpg)
+
+<br>
+
 ### 3.2 Poblar la dimensión de fecha
 
 Fabric Data Warehouse **no soporta CTE recursivas**, así que generamos el calendario con un *cross join* de listas de valores.
@@ -420,6 +428,10 @@ SELECT COUNT(*) AS FilasDimDate FROM gold.Dim_Date;   -- esperado: 1462
 
 > 📅 **Por qué `YYYYMMDD`.** Es la excepción aceptada a la regla de "no dar significado a las surrogate keys": la clave es legible, ocupa un `int` y, sobre todo, **se puede calcular** durante la carga del fact sin necesidad de lookup.
 > 
+
+![031_032_Dim_Date_0](images/032_Dim_Date_0.jpg)
+
+<br>
 
 ### 3.3 Cargar las dimensiones con special members
 
@@ -483,6 +495,10 @@ UNION ALL SELECT 'Customer', COUNT(*) FROM gold.Dim_Customer;
 
 > 🔑 **Special dimension members.** La convención de Microsoft usa `0` = Missing, `-1` = Unknown, `-2` = N/A, `-3` = Error. Aquí usamos `-1` para todo por simplicidad. Su función es permitir que **todas las dimension keys del fact sean `NOT NULL`** sin perder filas de hechos cuando un lookup falla.
 > 
+
+![032_0](images)
+
+<br>
 
 ### 3.4 Cargar la tabla de hechos
 
