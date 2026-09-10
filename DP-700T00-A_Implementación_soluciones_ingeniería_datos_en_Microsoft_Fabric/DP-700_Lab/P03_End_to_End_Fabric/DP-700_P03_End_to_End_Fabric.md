@@ -777,7 +777,7 @@ En 4.2 se crea el procedimiento sp_Load_Dim_Customer, que combina SCD tipo 1 par
 > 🎯 El `WHERE NOT EXISTS` cubre **los dos casos a la vez**: clientes nuevos (nunca existieron) y clientes cuya versión acaba de expirarse en el paso 2. Es el patrón estándar de SCD tipo 2.
 > 
 
-![042_Dim_Customer_0](images/042_Dim_Customer_0.jpg)
+![042_Dim_Customer_0](images/042_Dim_Customer.jpg)
 
 <br>
 
@@ -812,6 +812,12 @@ BEGIN
 END;
 GO
 ```
+
+En 4.3 se crea el procedimiento sp_Load_Fact_Sales, que realiza una carga incremental de la tabla de hechos. Inserta únicamente nuevas líneas de pedido, resuelve las claves de las dimensiones y evita duplicados usando OrderNumber y OrderLine.
+
+![043_cargar_Fact_Sales_0](images/043_cargar_Fact_Sales.jpg)
+
+<br>
 
 ### 4.4 Ejercicio: provocar un cambio SCD tipo 2
 
