@@ -195,6 +195,8 @@ print(b_ven.count(), "líneas en bronze")
 > ⚠️ Si prefieres no escribir la ruta ABFS, añade también `LH_Bronze` al Explorer del notebook y usa el path relativo del lakehouse no predeterminado. La ruta ABFS es más explícita y menos frágil, por eso la usamos aquí.
 > 
 
+![023_01_LH_Silver_0](images/023_01_LH_Silver_0%20.jpg)
+
 ```python
 # Celda 2: limpiar productos y clientes
 from pyspark.sql import functions as F
@@ -216,6 +218,10 @@ s_tie = b_tie.dropDuplicates(["StoreCode"])
 
 display(s_prod)
 ```
+
+![023_02_LH_Silver_0](images/023_02_LH_Silver_0%20.jpg)
+
+<br>
 
 ```python
 # Celda 3: limpiar ventas — el trabajo de verdad
@@ -242,6 +248,10 @@ print("Silver ventas:", s_ven.count(), "filas (esperado: 1200)")
 display(s_ven.limit(10))
 ```
 
+![023_03_LH_Silver_0](images/023_03_LH_Silver_0.jpg)
+
+<br>
+
 ```python
 # Celda 4: escribir las tablas Delta de Silver
 for nombre, df in [("dim_producto_src", s_prod), ("dim_cliente_src", s_cli),
@@ -255,7 +265,7 @@ for nombre, df in [("dim_producto_src", s_prod), ("dim_cliente_src", s_cli),
 > 📊 **Por qué `decimal` y no `float` para importes:** `float` es un tipo aproximado; sumar millones de importes acumula error de redondeo. Es un error de diseño que aparece en auditorías reales. Además, `decimal` es un tipo soportado tanto en Delta como en Fabric Warehouse.
 > 
 
-![021_LH_Silver_0](images/021_LH_Silver_0.jpg)
+![023_04_LH_Silver_0](images/023_04_LH_Silver_0.jpg)
 
 <br>
 
