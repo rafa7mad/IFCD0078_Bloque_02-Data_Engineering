@@ -712,7 +712,7 @@ END;
 GO
 ```
 
-
+En 4.1 se crea el procedimiento almacenado sp_Load_Dim_Product, que implementa una carga SCD tipo 1 sobre Dim_Product: actualiza los atributos de productos existentes y añade los nuevos productos desde Silver.
 
 > ⚠️ Ese `MAX(...) + 1` funciona para un lote pequeño como el de la práctica. Con volúmenes reales, genera la clave con `ROW_NUMBER() OVER (...) + (SELECT ISNULL(MAX(Product_SK),0) FROM ...)` en una tabla intermedia, o usa una columna `IDENTITY`.
 > 
@@ -772,8 +772,14 @@ END;
 GO
 ```
 
+En 4.2 se crea el procedimiento sp_Load_Dim_Customer, que combina SCD tipo 1 para atributos como Email y Segment con SCD tipo 2 para City. Si cambia la ciudad, se cierra la versión actual del cliente y se crea una nueva versión histórica. También inserta nuevos clientes como registros vigentes.
+
 > 🎯 El `WHERE NOT EXISTS` cubre **los dos casos a la vez**: clientes nuevos (nunca existieron) y clientes cuya versión acaba de expirarse en el paso 2. Es el patrón estándar de SCD tipo 2.
 > 
+
+![042_Dim_Customer_0](images/042_Dim_Customer_0.jpg)
+
+<br>
 
 ### 4.3 Carga incremental del fact
 
