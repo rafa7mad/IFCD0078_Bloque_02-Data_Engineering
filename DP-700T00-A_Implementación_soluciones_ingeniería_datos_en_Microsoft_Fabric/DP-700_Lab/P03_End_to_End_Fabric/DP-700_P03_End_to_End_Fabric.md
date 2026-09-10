@@ -361,6 +361,10 @@ CREATE TABLE gold.Fact_Sales (
 GO
 ```
 
+![031_01_create_tables_0](images/031_01_create_tables_0.jpg)
+
+<br>
+
 Verificación rapida al terminar:
 
 ```sql
