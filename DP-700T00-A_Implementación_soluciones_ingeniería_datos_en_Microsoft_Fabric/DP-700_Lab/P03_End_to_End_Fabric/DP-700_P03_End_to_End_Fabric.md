@@ -833,7 +833,15 @@ Vamos a simular que **Ana García se muda de Madrid a Zaragoza**.
     df.write.mode("overwrite").format("delta").saveAsTable("dim_cliente_src")
     print("Cliente C001 movido a Zaragoza")
     ```
-    
+
+En esta celda se modifica en la capa Silver el cliente `C001` para simular un cambio histórico: su ciudad pasa de **Madrid** a **Zaragoza**.
+
+La tabla `dim_cliente_src` se sobrescribe con este cambio para que, en el siguiente paso, el procedimiento `sp_Load_Dim_Customer` pueda aplicar la lógica **SCD tipo 2** en Gold.
+
+![044_01_NB_02_Silver_Limpieza _cambio_0](images/044_01_NB_02_Silver_Limpieza%20_cambio_0.jpg)
+
+<br>
+
 2. En `WH_Gold`, ejecuta el procedimiento y comprueba el resultado:
     
     ```sql
@@ -853,7 +861,12 @@ Vamos a simular que **Ana García se muda de Madrid a Zaragoza**.
     | 1 | Madrid | 2024-01-01 | *(hoy)* | 0 |
     | 7 | Zaragoza | *(hoy)* | 9999-12-31 | 1 |
     
-    ![image.png](image.png)
+
+Nota
+
+![image](images)
+
+<br>
     
 3. Comprueba ahora el efecto sobre los hechos:
     
@@ -865,13 +878,24 @@ Vamos a simular que **Ana García se muda de Madrid a Zaragoza**.
     WHERE c.CustomerCode = 'C001'
     GROUP BY c.City, c.RecIsCurrent;
     ```
-    
+
+Nota
+
+![image](images)
+
+<br>
 
 > 💡 **La lección clave:** el histórico se ha preservado. Las ventas anteriores a la mudanza siguen agregándose bajo Madrid, y solo las nuevas irán a Zaragoza. Con SCD tipo 1 habríamos reescrito la historia: todas las ventas de Ana aparecerían bajo Zaragoza como si siempre hubiera vivido allí.
 > 
 > 
 > **Consecuencia sutil:** el grano de los hechos ya no es "el cliente", sino "la **versión** del cliente". En el informe verás a Ana García dos veces si desglosas por ciudad.
 > 
+
+Nota
+
+![image](images)
+
+<br>
 
 ## 5. Orquestación con un pipeline
 
