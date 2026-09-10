@@ -544,11 +544,6 @@ UNION ALL SELECT 'Store',    COUNT(*) FROM gold.Dim_Store
 UNION ALL SELECT 'Customer', COUNT(*) FROM gold.Dim_Customer;
 ```
 
-**Punto de control 3:** Product = 10 (9 + Unknown), Store = 4, Customer = 7.
-
-> 🔑 **Special dimension members.** La convención de Microsoft usa `0` = Missing, `-1` = Unknown, `-2` = N/A, `-3` = Error. Aquí usamos `-1` para todo por simplicidad. Su función es permitir que **todas las dimension keys del fact sean `NOT NULL`** sin perder filas de hechos cuando un lookup falla.
-> 
-
 En esta celda 3.3, se carga las tres dimensiones de negocio.
 
 - Dim_Product: carga inicial como SCD tipo 1, añade el miembro desconocido -1 y asigna una surrogate key con ROW_NUMBER().
@@ -562,6 +557,11 @@ En esta celda 3.3, se carga las tres dimensiones de negocio.
     > RecIsCurrent = 1
 
 y también se crea el miembro desconocido -1.
+
+**Punto de control 3:** Product = 10 (9 + Unknown), Store = 4, Customer = 7.
+
+> 🔑 **Special dimension members.** La convención de Microsoft usa `0` = Missing, `-1` = Unknown, `-2` = N/A, `-3` = Error. Aquí usamos `-1` para todo por simplicidad. Su función es permitir que **todas las dimension keys del fact sean `NOT NULL`** sin perder filas de hechos cuando un lookup falla.
+> 
 
 ![033_Dim_Product_0](images/033_Dim_Product_0.jpg)
 
