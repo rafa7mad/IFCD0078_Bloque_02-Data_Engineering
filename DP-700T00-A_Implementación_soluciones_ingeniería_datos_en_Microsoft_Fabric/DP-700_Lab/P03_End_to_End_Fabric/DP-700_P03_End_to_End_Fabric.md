@@ -400,11 +400,21 @@ CREATE TABLE gold.Fact_Sales (
 GO
 ```
 
+En **3.1 DDL del star schema** se crea en `WH_Gold` el esquema `gold` y las tablas que formarán el modelo estrella:
+
+* `Dim_Date`
+* `Dim_Product`
+* `Dim_Customer`
+* `Dim_Store`
+* `Fact_Sales`
+
+Se definen sus columnas, tipos de datos, claves sustitutas y campos de auditoría, además del diseño SCD de las dimensiones y el grano de la tabla de hechos: **una fila por línea de pedido**.
+
 ![031_01_create_tables_0](images/031_01_create_tables_0.jpg)
 
 <br>
 
-Verificación rapida al terminar:
+Verificación rápida al terminar:
 
 ```sql
 SELECT s.name AS Esquema, t.name AS Tabla
@@ -413,6 +423,8 @@ JOIN sys.schemas s ON s.schema_id = t.schema_id
 WHERE s.name = 'gold'
 ORDER BY t.name;
 ```
+
+Con este código se consulta el catálogo del Warehouse para comprobar que el esquema gold contiene correctamente las cinco tablas creadas del modelo estrella.
 
 Deberías ver las cinco tablas: `Dim_Date`, `Dim_Product`, `Dim_Customer`, `Dim_Store`, `Fact_Sales`.
 
@@ -463,6 +475,12 @@ SELECT COUNT(*) AS FilasDimDate FROM gold.Dim_Date;   -- esperado: 1462
 
 > 📅 **Por qué `YYYYMMDD`.** Es la excepción aceptada a la regla de "no dar significado a las surrogate keys": la clave es legible, ocupa un `int` y, sobre todo, **se puede calcular** durante la carga del fact sin necesidad de lookup.
 > 
+
+En **3.2 `Dim_Date`** se genera y carga la dimensión de fechas del modelo estrella para el periodo **2024-01-01 a 2027-12-31**.
+
+Para cada fecha se crean atributos como año, trimestre, mes, día, nombre del mes, día de la semana e indicador de fin de semana. Además, se genera una `DateKey` con formato `YYYYMMDD` y se añade un miembro especial con clave `-1` para representar fechas desconocidas.
+
+El resultado esperado es una dimensión con **1.462 filas**.
 
 ![031_032_Dim_Date_0](images/032_Dim_Date_0.jpg)
 
@@ -531,7 +549,21 @@ UNION ALL SELECT 'Customer', COUNT(*) FROM gold.Dim_Customer;
 > 🔑 **Special dimension members.** La convención de Microsoft usa `0` = Missing, `-1` = Unknown, `-2` = N/A, `-3` = Error. Aquí usamos `-1` para todo por simplicidad. Su función es permitir que **todas las dimension keys del fact sean `NOT NULL`** sin perder filas de hechos cuando un lookup falla.
 > 
 
-![032_0](images)
+En esta celda 3.3, se carga las tres dimensiones de negocio.
+
+- Dim_Product: carga inicial como SCD tipo 1, añade el miembro desconocido -1 y asigna una surrogate key con ROW_NUMBER().
+- Dim_Store: mismo enfoque, también SCD tipo 1.
+- Dim_Customer: carga inicial como SCD tipo 2. Todos los clientes se insertan como versión vigente con:
+
+    > RecStartDate = 2024-01-01
+    > 
+    > RecEndDate   = 9999-12-31
+    > 
+    > RecIsCurrent = 1
+
+y también se crea el miembro desconocido -1.
+
+![033_Dim_Product_0](images)
 
 <br>
 
