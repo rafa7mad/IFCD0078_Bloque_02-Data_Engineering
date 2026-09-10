@@ -862,9 +862,17 @@ La tabla `dim_cliente_src` se sobrescribe con este cambio para que, en el siguie
     | 7 | Zaragoza | *(hoy)* | 9999-12-31 | 1 |
     
 
-Nota
+Se ejecuta sp_Load_Dim_Customer para aplicar en Gold el cambio realizado previamente en Silver.
 
-![image](images)
+Como City es un atributo SCD tipo 2, el procedimiento debe conservar el histórico:
+
+- la versión anterior de C001 con Madrid queda cerrada;
+- se crea una nueva versión con Zaragoza;
+- la nueva fila queda marcada como vigente con RecIsCurrent = 1.
+
+La consulta posterior comprueba las distintas versiones de C001 ordenadas por RecStartDate.
+
+![044_02_WH_Gold_check_0.jpg](images/044_02_WH_Gold_check_0.jpg)
 
 <br>
     
@@ -890,6 +898,10 @@ Nota
 > 
 > **Consecuencia sutil:** el grano de los hechos ya no es "el cliente", sino "la **versión** del cliente". En el informe verás a Ana García dos veces si desglosas por ciudad.
 > 
+
+![044_03_WH_Gold_Fact_Sales_0](images/044_03_WH_Gold_Fact_Sales_0.jpg)
+
+<br>
 
 Nota
 
