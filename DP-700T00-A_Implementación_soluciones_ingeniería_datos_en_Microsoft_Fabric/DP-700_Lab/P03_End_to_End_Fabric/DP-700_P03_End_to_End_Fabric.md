@@ -563,7 +563,7 @@ En esta celda 3.3, se carga las tres dimensiones de negocio.
 
 y también se crea el miembro desconocido -1.
 
-![033_Dim_Product_0](images)
+![033_Dim_Product_0](images/033_Dim_Product_0.jpg)
 
 <br>
 
