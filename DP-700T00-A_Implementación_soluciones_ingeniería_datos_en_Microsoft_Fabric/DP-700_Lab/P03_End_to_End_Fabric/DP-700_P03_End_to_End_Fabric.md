@@ -199,6 +199,10 @@ print(b_ven.count(), "líneas en bronze")
 > ⚠️ Si prefieres no escribir la ruta ABFS, añade también `LH_Bronze` al Explorer del notebook y usa el path relativo del lakehouse no predeterminado. La ruta ABFS es más explícita y menos frágil, por eso la usamos aquí.
 > 
 
+En la **Celda 1 de `NB_02_Silver_Limpieza`** se leen desde `LH_Bronze` los archivos CSV de productos, clientes, tiendas y ventas.
+
+Los datos se cargan en DataFrames de Spark con cabecera y detección automática de tipos, y se comprueba que la tabla de ventas contiene las **1.225 filas** esperadas antes de iniciar la limpieza.
+
 ![023_01_LH_Silver_0](images/023_01_LH_Silver_0%20.jpg)
 
 ```python
@@ -222,6 +226,14 @@ s_tie = b_tie.dropDuplicates(["StoreCode"])
 
 display(s_prod)
 ```
+
+En la **Celda 2 de `NB_02_Silver_Limpieza`** se limpian los datos de productos, clientes y tiendas:
+
+* se eliminan duplicados por sus claves de negocio,
+* se sustituyen valores nulos por valores por defecto,
+* se convierte `ListPrice` a tipo decimal,
+* se crea `FullName` para los clientes,
+* y se genera una versión limpia de cada DataFrame para usarla en Silver.
 
 ![023_02_LH_Silver_0](images/023_02_LH_Silver_0%20.jpg)
 
@@ -252,6 +264,16 @@ print("Silver ventas:", s_ven.count(), "filas (esperado: 1200)")
 display(s_ven.limit(10))
 ```
 
+En la **Celda 3 de `NB_02_Silver_Limpieza`** se realiza la limpieza principal de las ventas:
+
+* se eliminan duplicados y pedidos de prueba `TEST-*`,
+* se convierten las fechas a tipo `date`,
+* se tipan correctamente cantidades e importes,
+* se calculan `GrossAmount` y `NetAmount`,
+* y se descartan filas sin fecha de pedido o sin producto.
+
+El resultado esperado es una tabla de ventas limpia con **1.200 filas**.
+
 ![023_03_LH_Silver_0](images/023_03_LH_Silver_0.jpg)
 
 <br>
@@ -268,6 +290,19 @@ for nombre, df in [("dim_producto_src", s_prod), ("dim_cliente_src", s_cli),
 
 > 📊 **Por qué `decimal` y no `float` para importes:** `float` es un tipo aproximado; sumar millones de importes acumula error de redondeo. Es un error de diseño que aparece en auditorías reales. Además, `decimal` es un tipo soportado tanto en Delta como en Fabric Warehouse.
 > 
+
+En la **Celda 4 de `NB_02_Silver_Limpieza`** se guardan los DataFrames ya limpios como **tablas Delta** en `LH_Silver`.
+
+Se crean las tablas:
+
+```text
+dim_producto_src
+dim_cliente_src
+dim_tienda_src
+ventas
+```
+
+usando `overwrite`, de forma que puedan regenerarse al repetir la práctica. Con esto, los datos pasan de archivos crudos en Bronze a tablas estructuradas y preparadas para la capa Gold.
 
 ![023_04_LH_Silver_0](images/023_04_LH_Silver_0.jpg)
 
