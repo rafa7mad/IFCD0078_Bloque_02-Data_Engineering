@@ -991,6 +991,12 @@ Para solucionarlo, he realizado los siguientes ajustes:
 > 🔷 Al crear el modelo desde un Warehouse o desde un SQL analytics endpoint, obtienes **Direct Lake on SQL**. Si lo crearas desde el propio lakehouse o desde el OneLake catalog, obtendrías **Direct Lake on OneLake**. La diferencia está en cómo se resuelve la seguridad y el acceso a los datos.
 > 
 
+![061_4a_semantic_model_0](images/061_4a_semantic_model_0.JPG.JPG)
+
+![061_4b_semantic_model_0](images/061_4b_semantic_model_0.JPG)
+
+<br>
+
 ### 6.2 Crear las relaciones
 
 En la vista de modelo, arrastra las claves para crear:
@@ -1005,6 +1011,10 @@ En la vista de modelo, arrastra las claves para crear:
 
 > ⭐ **Aquí está la role-playing dimension.** Power BI solo permite **una relación activa** entre dos tablas. La segunda queda inactiva y se activa puntualmente con `USERELATIONSHIP` dentro de una medida.
 > 
+
+![062_01_relaciones_0](images/062_01_relaciones_0.JPG)
+![062_01_relaciones_0](images/062_01M_relaciones_0.jpg)
+
 
 ### 6.3 Higiene del modelo
 
