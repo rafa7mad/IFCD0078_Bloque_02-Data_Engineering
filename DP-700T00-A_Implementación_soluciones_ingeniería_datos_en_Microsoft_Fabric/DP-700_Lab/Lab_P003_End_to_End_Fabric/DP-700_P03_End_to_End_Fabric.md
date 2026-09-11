@@ -887,11 +887,7 @@ La consulta posterior comprueba las distintas versiones de C001 ordenadas por Re
     GROUP BY c.City, c.RecIsCurrent;
     ```
 
-Nota
-
-![image](images)
-
-<br>
+En esta consulta se comprueba que las ventas históricas mantienen la referencia a la versión antigua del cliente. Aunque Ana García ahora vive en Zaragoza, sus ventas anteriores siguen asociadas a Madrid, demostrando el funcionamiento correcto de una SCD tipo 2.
 
 > 💡 **La lección clave:** el histórico se ha preservado. Las ventas anteriores a la mudanza siguen agregándose bajo Madrid, y solo las nuevas irán a Zaragoza. Con SCD tipo 1 habríamos reescrito la historia: todas las ventas de Ana aparecerían bajo Zaragoza como si siempre hubiera vivido allí.
 > 
@@ -900,12 +896,6 @@ Nota
 > 
 
 ![044_03_WH_Gold_Fact_Sales_0](images/044_03_WH_Gold_Fact_Sales_0.jpg)
-
-<br>
-
-Nota
-
-![image](images)
 
 <br>
 
@@ -926,12 +916,22 @@ Nota
     | 5 | **Stored procedure** | `gold.sp_Load_Fact_Sales` |
     | 6 | **Semantic model refresh** | Workspace + `SM_Ventas` *(se configura tras la parte 6)* |
     | 7 | **Outlook** o **Teams** | Notificación de fin de carga |
+
+>! **Nota**: Se crea el pipeline PL_Medallion con `las cinco primeras actividades de carga y transformación`, conectadas en secuencia mediante On success. Se guarda y valida antes de añadir el refresco del modelo semántico y la notificación, que se incorporarán más adelante cuando esos elementos ya existan.
+
+![052_PL_Medallion_0](images/052_PL_Medallion_0.JPG)
+
+<br>
+
 3. **Home → Save**, luego **Run**.
-    
+   
     **Punto de control 6:** las siete actividades en verde en la pestaña **Output**.
     
     > ⭐ **El orden 3 → 4 → 5 no es negociable.** Las dimensiones se cargan antes que el fact porque `sp_Load_Fact_Sales` hace lookup de la surrogate key de la **versión vigente** de cada dimensión. Si invirtieras el orden, cada línea de pedido de un cliente nuevo acabaría apuntando a `-1` (Unknown).
     > 
+
+
+
 
 ### 5.2 Notas sobre la actividad Semantic model refresh
 
