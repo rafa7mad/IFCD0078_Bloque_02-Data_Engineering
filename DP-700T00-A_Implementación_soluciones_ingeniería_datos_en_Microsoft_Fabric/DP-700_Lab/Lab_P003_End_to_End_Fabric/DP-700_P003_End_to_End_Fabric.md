@@ -1057,6 +1057,12 @@ Estas tareas parecen cosméticas pero se preguntan en el examen:
 
 Crea una tabla vacía llamada `_Medidas` para agruparlas, y añade:
 
+    >! **Nota**: Se crea la tabla _Medidas como contenedor de medidas DAX. La columna auxiliar generada se oculta y todas las medidas se asignan a _Medidas mediante la propiedad Home table.
+
+![064_01_table_medidas_0](images/064_01_table_medidas_0.jpg)
+
+<br>
+
 **Medidas base**
 
 ```
@@ -1074,6 +1080,10 @@ Unidades = SUM ( Fact_Sales[Quantity] )
 ```
 Descuento Total = SUM ( Fact_Sales[DiscountAmount] )
 ```
+
+![064_02_medidas_0.jpg](images/064_02_medidas_0.jpg)
+
+<br>
 
 **Degenerate dimension en acción**
 
