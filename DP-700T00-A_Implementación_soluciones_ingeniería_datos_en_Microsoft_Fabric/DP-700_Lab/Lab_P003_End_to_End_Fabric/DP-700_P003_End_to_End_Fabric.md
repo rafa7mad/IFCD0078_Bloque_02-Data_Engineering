@@ -1025,13 +1025,32 @@ En la vista de modelo, arrastra las claves para crear:
 Estas tareas parecen cosméticas pero se preguntan en el examen:
 
 1. **Marcar la tabla de fecha:** selecciona `Dim_Date` → **Mark as date table** → columna `FullDate`. Sin esto, las funciones de time intelligence de DAX pueden dar resultados incorrectos.
+
+![063_01_Dim_Date_FullDate_0](images/063_01_Dim_Date_FullDate_0.jpg)
+
+<br>
+
 2. **Ocultar las claves:** oculta `DateKey`, `Product_SK`, `Customer_SK`, `Store_SK`, `OrderDateKey`, `ShipDateKey` y todas las columnas `Rec*`. El usuario no debe verlas.
+
+![063_02_ocultar_claves_0](images/063_02_ocultar_claves_0.jpg)
+
+<br>
+
 3. **Ocultar las columnas numéricas del fact** (`Quantity`, `NetAmount`, …) una vez creadas las medidas, para forzar el uso de las medidas. (haremos esto después de crear las medidas DAX, para no perder de vista los campos mientras las escribes)
+
 4. **Crear la jerarquía de fecha:** en `Dim_Date`, jerarquía `Calendario` con niveles `Year → QuarterName → MonthName → Day`.
+
+![063_03_jerarquia_year_0.jpg](images/063_04_jerarquia_year_0.jpg)
+
+<br>
+
 5. **Ordenar los meses:** selecciona `MonthName` → **Sort by column** → `Month`. Si no, los meses se ordenan alfabéticamente.
+
+
 
 > 🔷 **Recordatorio Direct Lake:** este modelo **no admite columnas calculadas**. Cualquier atributo que necesites para filtrar o agrupar tiene que existir ya en las tablas Gold. Por eso creamos `YearMonth`, `QuarterName`, `DayName` e `IsWeekend` en T-SQL y no en DAX.
 > 
+
 
 ### 6.4 Medidas DAX
 
