@@ -1150,12 +1150,38 @@ AVERAGEX (
     )
 )
 ```
+>! **Nota Importante**: La fórmula original devuelve 0 porque la combinación de RELATED con la relación activa de OrderDateKey no recupera correctamente la fecha de envío mediante la relación inactiva.
+La versión con LOOKUPVALUE busca explícitamente las fechas asociadas a OrderDateKey y ShipDateKey, por lo que calcula correctamente la diferencia media. Su resultado 4,05 coincide con la validación SQL. 
+
+<br>
+
+Code con LOOKUPVALUE 
+```
+Días Medios de Envío =
+AVERAGEX (
+    Fact_Sales,
+    VAR FechaPedido =
+        LOOKUPVALUE (
+            Dim_Date[FullDate],
+            Dim_Date[DateKey], Fact_Sales[OrderDateKey]
+        )
+    VAR FechaEnvio =
+        LOOKUPVALUE (
+            Dim_Date[FullDate],
+            Dim_Date[DateKey], Fact_Sales[ShipDateKey]
+        )
+    RETURN
+        DATEDIFF ( FechaPedido, FechaEnvio, DAY )
+)
+```
 
 ![064_05_Role-playing_dimension](images/064_05_Role-playing_dimension.jpg)
 
 <br>
 
 **Time intelligence**
+
+>! **Nota**: Las medidas de inteligencia temporal utilizan Dim_Date, marcada previamente como tabla de fechas, para calcular acumulados YTD, valores del mismo periodo del año anterior y la variación interanual YoY.
 
 ```
 Ventas Netas AA =
@@ -1199,7 +1225,7 @@ TOTALYTD ( [Ventas Netas], Dim_Date[FullDate] )
 > - `DiscountAmount`
 > - `NetAmount`
 
-![image](images)
+![064_07_formato_0.jpg](images/064_07_formato_0.jpg)
 
 <br>
 
