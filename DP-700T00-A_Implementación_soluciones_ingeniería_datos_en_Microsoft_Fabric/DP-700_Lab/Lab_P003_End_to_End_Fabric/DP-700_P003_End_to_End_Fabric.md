@@ -917,22 +917,47 @@ En esta consulta se comprueba que las ventas históricas mantienen la referencia
     | 6 | **Semantic model refresh** | Workspace + `SM_Ventas` *(se configura tras la parte 6)* |
     | 7 | **Outlook** o **Teams** | Notificación de fin de carga |
 
->! **Nota**: Se crea el pipeline PL_Medallion con `las cinco primeras actividades de carga y transformación`, conectadas en secuencia mediante On success. Se guarda y valida antes de añadir el refresco del modelo semántico y la notificación, que se incorporarán más adelante cuando esos elementos ya existan.
+>! **Nota importante Pipeline**: <br>
+  Se crea el pipeline PL_Medallion con `las cinco primeras actividades de carga y transformación`, conectadas en secuencia mediante On success. Se guarda y valida antes de añadir el refresco del modelo semántico y la notificación, que se incorporarán más adelante cuando esos elementos ya existan.
 
 ![052_PL_Medallion_0](images/052_PL_Medallion_0.JPG)
 
 <br>
 
 3. **Home → Save**, luego **Run**.
-   
+
+Al intentar ejecutar el pipeline se produce el error `TooManyRequestsForCapacity` al iniciar el segundo notebook `NB_02_Silver_Limpieza`. <br>
+
+Para solucionarlo, he realizado los siguientes ajustes:
+
+1. **Workspace settings → Spark settings → High concurrency**:
+    - Activar For pipeline running multiple notebooks = ON.
+    - Puede ayudar a reutilizar sesiones cuando sea posible, aunque en esta práctica los notebooks usan lakehouses predeterminados distintos y no siempre podrán compartir sesión.
+
+    ![052s11_Spark_settings_High_concurrency_0](images/052s11_Spark_settings_High_concurrency_0.jpg)
+
+<br>
+
+2. **Pipeline → actividad Notebook → Settings → Spark settings**
+    Configurar en los dos notebooks:
+
+    ![052s22_Notebooks_Spark_settings_0](images/052s22_Notebooks_Spark_settings_0.jpg)
+
+<br>
+
+3. **Pipeline → actividad Notebook → Advanced settings**
+    Mantener la misma Session tag, por ejemplo:
+
+    ![052s33_Notebooks_Session_tag_0](images/052s33_Notebooks_Session_tag_0.jpg)
+
+<br>
+
     **Punto de control 6:** las siete actividades en verde en la pestaña **Output**.
     
     > ⭐ **El orden 3 → 4 → 5 no es negociable.** Las dimensiones se cargan antes que el fact porque `sp_Load_Fact_Sales` hace lookup de la surrogate key de la **versión vigente** de cada dimensión. Si invirtieras el orden, cada línea de pedido de un cliente nuevo acabaría apuntando a `-1` (Unknown).
     > 
 
-Nota
-
-![image](images)
+![053_Run_PL_Medallion_0](images/053_Run_PL_Medallion_0.JPG)
 
 <br>
 
