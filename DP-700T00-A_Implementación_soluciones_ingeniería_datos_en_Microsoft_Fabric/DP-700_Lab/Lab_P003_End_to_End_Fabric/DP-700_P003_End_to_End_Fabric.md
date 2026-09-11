@@ -1242,7 +1242,15 @@ SELECT
 FROM gold.Fact_Sales;
 ```
 
+>! **Nota**: En 6.5 se valida el modelo semántico comparando sus medidas DAX con agregados calculados directamente en WH_Gold. Si los valores coinciden, se confirma que el modelo, las relaciones y las medidas están funcionando correctamente.
+
 **Punto de control 7:** los cuatro valores deben coincidir con las medidas DAX en una tarjeta sin filtros.
+
+![065a_validacion_cruzada_0](images/065a_validacion_cruzada_0.jpg)
+
+![065b_validacion_cruzada_0](images/065b_validacion_cruzada_0.jpg)
+
+<br>
 
 ---
 
