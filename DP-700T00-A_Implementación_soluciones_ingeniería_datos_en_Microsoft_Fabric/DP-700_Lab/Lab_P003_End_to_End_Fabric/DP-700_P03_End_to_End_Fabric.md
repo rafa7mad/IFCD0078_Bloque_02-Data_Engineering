@@ -930,8 +930,11 @@ En esta consulta se comprueba que las ventas históricas mantienen la referencia
     > ⭐ **El orden 3 → 4 → 5 no es negociable.** Las dimensiones se cargan antes que el fact porque `sp_Load_Fact_Sales` hace lookup de la surrogate key de la **versión vigente** de cada dimensión. Si invirtieras el orden, cada línea de pedido de un cliente nuevo acabaría apuntando a `-1` (Unknown).
     > 
 
+Nota
 
+![image](images)
 
+<br>
 
 ### 5.2 Notas sobre la actividad Semantic model refresh
 
