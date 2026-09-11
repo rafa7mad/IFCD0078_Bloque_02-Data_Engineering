@@ -1046,11 +1046,12 @@ Estas tareas parecen cosméticas pero se preguntan en el examen:
 
 5. **Ordenar los meses:** selecciona `MonthName` → **Sort by column** → `Month`. Si no, los meses se ordenan alfabéticamente.
 
+![063_05_sort_by_month_0.jpg](images/063_05_sort_by_month_0.jpg)
 
+<br>
 
 > 🔷 **Recordatorio Direct Lake:** este modelo **no admite columnas calculadas**. Cualquier atributo que necesites para filtrar o agrupar tiene que existir ya en las tablas Gold. Por eso creamos `YearMonth`, `QuarterName`, `DayName` e `IsWeekend` en T-SQL y no en DAX.
 > 
-
 
 ### 6.4 Medidas DAX
 
