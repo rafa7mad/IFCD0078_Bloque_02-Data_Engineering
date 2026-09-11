@@ -1095,7 +1095,13 @@ Nº Pedidos = DISTINCTCOUNT ( Fact_Sales[OrderNumber] )
 Nº Líneas = COUNTROWS ( Fact_Sales )
 ```
 
+![064_03_degenerate_dimension_0.jpg](images/064_03_degenerate_dimension_0.jpg)
+
+<br>
+
 **El patrón del ratio — la lección de la sección 2.4**
+
+En el patrón del ratio, los porcentajes se calculan a partir de medidas agregadas y no se almacenan como valores aditivos en la tabla de hechos. Esto garantiza resultados correctos en cualquier nivel de agregación.
 
 ```
 % Descuento =
@@ -1112,6 +1118,10 @@ DIVIDE (
     [Nº Pedidos]
 )
 ```
+
+![064_04_patron_ratio_0.jpg](images/064_04_patron_ratio_0.jpg)
+
+<br>
 
 > ⭐ **Por qué esto funciona.** Almacenamos `DiscountAmount` y `GrossAmount` en el fact, **no el porcentaje**. Si hubiéramos guardado `DiscountPct` como columna, sumarlo o promediarlo daría resultados sin sentido. Al calcular el ratio con `DIVIDE` sobre las medidas agregadas, el porcentaje es correcto **en cualquier nivel de agregación**. `DIVIDE` además gestiona la división por cero sin errores.
 > 
@@ -1139,6 +1149,10 @@ AVERAGEX (
 )
 ```
 
+![image](images)
+
+<br>
+
 **Time intelligence**
 
 ```
@@ -1162,6 +1176,10 @@ Ventas Netas YTD =
 TOTALYTD ( [Ventas Netas], Dim_Date[FullDate] )
 ```
 
+![image](images)
+
+<br>
+
 **Formato**
 
 - `Ventas Netas`, `Ventas Brutas`, `Descuento Total`, `Ticket Medio` → moneda, 2 decimales.
@@ -1178,6 +1196,10 @@ TOTALYTD ( [Ventas Netas], Dim_Date[FullDate] )
 > - `GrossAmount`
 > - `DiscountAmount`
 > - `NetAmount`
+
+![image](images)
+
+<br>
 
 ### 6.5 Validación cruzada
 
