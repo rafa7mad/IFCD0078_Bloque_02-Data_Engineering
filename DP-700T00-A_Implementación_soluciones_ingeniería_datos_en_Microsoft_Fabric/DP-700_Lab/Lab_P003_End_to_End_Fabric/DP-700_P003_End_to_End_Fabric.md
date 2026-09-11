@@ -1012,9 +1012,13 @@ En la vista de modelo, arrastra las claves para crear:
 > ⭐ **Aquí está la role-playing dimension.** Power BI solo permite **una relación activa** entre dos tablas. La segunda queda inactiva y se activa puntualmente con `USERELATIONSHIP` dentro de una medida.
 > 
 
-![062_01_relaciones_0](images/062_01_relaciones_0.JPG)
-![062_01_relaciones_0](images/062_01M_relaciones_0.jpg)
+![062_01_relaciones_0](images/062_01_relaciones_0.JPG) 
 
+![062_02_relaciones_0](images/062_02_relaciones_0.JPG)
+
+![062c_relaciones_0](images/062c_relaciones_0.JPG)
+
+<br>
 
 ### 6.3 Higiene del modelo
 
