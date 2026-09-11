@@ -1101,7 +1101,7 @@ Nº Líneas = COUNTROWS ( Fact_Sales )
 
 **El patrón del ratio — la lección de la sección 2.4**
 
-En el patrón del ratio, los porcentajes se calculan a partir de medidas agregadas y no se almacenan como valores aditivos en la tabla de hechos. Esto garantiza resultados correctos en cualquier nivel de agregación.
+>! **Nota**: En el patrón del ratio, los porcentajes se calculan a partir de medidas agregadas y no se almacenan como valores aditivos en la tabla de hechos. Esto garantiza resultados correctos en cualquier nivel de agregación.
 
 ```
 % Descuento =
@@ -1128,6 +1128,8 @@ DIVIDE (
 
 **Role-playing dimension con USERELATIONSHIP**
 
+>! **Nota**: En esta parte se aprovecha la role-playing dimension Dim_Date. La relación con OrderDateKey permanece activa por defecto y la relación con ShipDateKey se activa solo dentro de medidas específicas mediante USERELATIONSHIP.
+
 ```
 Ventas por Fecha de Envío =
 CALCULATE (
@@ -1149,7 +1151,7 @@ AVERAGEX (
 )
 ```
 
-![image](images)
+![064_05_Role-playing_dimension](images/064_05_Role-playing_dimension.jpg)
 
 <br>
 
@@ -1176,7 +1178,7 @@ Ventas Netas YTD =
 TOTALYTD ( [Ventas Netas], Dim_Date[FullDate] )
 ```
 
-![image](images)
+![064_06_time_intelligence](images/064_06_time_intelligence.jpg)
 
 <br>
 
