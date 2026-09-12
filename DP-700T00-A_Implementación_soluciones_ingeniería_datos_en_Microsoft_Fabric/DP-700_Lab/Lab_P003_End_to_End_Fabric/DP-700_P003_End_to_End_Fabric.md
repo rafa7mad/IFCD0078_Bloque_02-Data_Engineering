@@ -1272,6 +1272,12 @@ ROW(
 
 Desde `SM_Ventas` → New **report → Start from scratch**. Nombre: `RPT_Ventas`.
 
+![071_new_report](images/071_new_report.jpg)
+
+![071s_RPT_Ventas_0.jpg](images/071s_RPT_Ventas_0.jpg)
+
+<br>
+
 ### 7.2 Página 1 — Resumen ejecutivo
 
 | Visual | Campos | Qué demuestra |
@@ -1285,6 +1291,10 @@ Desde `SM_Ventas` → New **report → Start from scratch**. Nombre: `RPT_Ventas
 
 > Prueba el **drill-down** en la matriz: Year → Quarter → Month → Day. Esto solo funciona porque construimos la jerarquía en una **única tabla desnormalizada**. Si `Dim_Date` estuviera normalizada en snowflake, tendrías que crear una vista que la volviera a unir.
 > 
+
+![072_p1_resumen_ejecutivo_0](images/072_p1_resumen_ejecutivo_0.JPG)
+
+<br>
 
 ### 7.3 Página 2 — Logística (role-playing dimension)
 
