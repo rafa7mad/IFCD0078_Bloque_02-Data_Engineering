@@ -1331,10 +1331,10 @@ Desde `SM_Ventas` → New **report → Start from scratch**. Nombre: `RPT_Ventas
 > 
 
 > **Para mostrar también la versión de Zaragoza:**
-1. Selecciona la tabla.
-2. En Visualizations → Columns, localiza City.
-3. Pulsa la flecha/desplegable de City.
-4. Activa Show items with no data.
+ 1. Selecciona la tabla.
+ 2. En Visualizations → Columns, localiza City.
+ 3. Pulsa la flecha/desplegable de City.
+ 4. Activa Show items with no data.
 
 ![074c_SCD_tipo_2](images/074c_SCD_tipo_2.JPG)
 
