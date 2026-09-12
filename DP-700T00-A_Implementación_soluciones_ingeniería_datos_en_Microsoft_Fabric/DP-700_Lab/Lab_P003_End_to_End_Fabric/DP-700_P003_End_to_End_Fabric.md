@@ -1330,11 +1330,11 @@ Desde `SM_Ventas` → New **report → Start from scratch**. Nombre: `RPT_Ventas
 > **Ejercicio de discusión con los alumnos:** ¿cómo mostrarías las ventas totales de Ana consolidadas, independientemente de la ciudad? *(Pista: agrupa por `CustomerCode` o `FullName`, no por `City` — el código natural es estable entre versiones.)*
 > 
 
->**Para mostrar también la versión de Zaragoza:**
-   1. Selecciona la tabla.
-   2. En Visualizations → Columns, localiza City.
-   3. Pulsa la flecha/desplegable de City.
-   4. Activa Show items with no data.
+> **Para mostrar también la versión de Zaragoza:**
+> 1. Selecciona la tabla.
+> 2. En Visualizations → Columns, localiza City.
+> 3. Pulsa la flecha/desplegable de City.
+> 4. Activa Show items with no data.
 
 ![074c_SCD_tipo_2](images/074c_SCD_tipo_2.JPG)
 
