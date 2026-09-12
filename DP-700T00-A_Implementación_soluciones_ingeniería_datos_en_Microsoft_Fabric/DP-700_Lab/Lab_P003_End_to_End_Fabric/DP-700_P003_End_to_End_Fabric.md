@@ -1307,6 +1307,10 @@ Desde `SM_Ventas` → New **report → Start from scratch**. Nombre: `RPT_Ventas
 > 🎯 **Observa la diferencia entre las dos series.** Las mismas ventas, agrupadas por dos fechas distintas usando **una sola tabla física** `Dim_Date`. Eso es una role-playing dimension. Cambia el mes y verás cómo las barras se desplazan: los pedidos de finales de mes se envían el mes siguiente.
 > 
 
+![073_p2_logistica_0](images/073_p2_logistica_0.JPG)
+
+<br>
+
 ### 7.4 Página 3 — Efecto del SCD tipo 2
 
 | Visual | Campos |
