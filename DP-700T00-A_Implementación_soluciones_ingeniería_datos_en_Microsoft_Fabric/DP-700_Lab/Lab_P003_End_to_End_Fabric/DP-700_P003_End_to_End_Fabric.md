@@ -1233,6 +1233,7 @@ TOTALYTD ( [Ventas Netas], Dim_Date[FullDate] )
 
 Comprueba que el modelo devuelve lo mismo que el warehouse. En `WH_Gold`:
 
+SQL
 ```sql
 SELECT
     SUM(NetAmount)                  AS VentasNetas,
@@ -1247,6 +1248,17 @@ FROM gold.Fact_Sales;
 **Punto de control 7:** los cuatro valores deben coincidir con las medidas DAX en una tarjeta sin filtros.
 
 ![065a_validacion_cruzada_0](images/065a_validacion_cruzada_0.jpg)
+
+DAX
+```code
+EVALUATE
+ROW(
+    "Ventas Netas", [Ventas Netas],
+    "Unidades", [Unidades],
+    "Nº Pedidos", [Nº Pedidos],
+    "% Descuento", [% Descuento]
+)
+```
 
 ![065b_validacion_cruzada_0](images/065b_validacion_cruzada_0.jpg)
 
