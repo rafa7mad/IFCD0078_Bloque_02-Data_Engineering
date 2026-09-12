@@ -1318,11 +1318,21 @@ Desde `SM_Ventas` → New **report → Start from scratch**. Nombre: `RPT_Ventas
 | **Tabla** | `Dim_Customer[FullName]`, `Dim_Customer[City]`, `Ventas Netas`, `Nº Pedidos` |
 | **Segmentación** | `Dim_Customer[CustomerCode]` filtrado a `C001` |
 
+![074_SCD_tipo_2_0](images/074_SCD_tipo_2_0.JPG)
+
+![074b_SCD_tipo_2_0](images/074b_SCD_tipo_2_0.JPG)
+
+<br>
+
 > 🔍 **Ana García aparece dos filas: Madrid y Zaragoza.** Sus ventas históricas se mantienen asignadas a Madrid. Este es exactamente el comportamiento que buscábamos, pero también explica por qué **no se debe aplicar SCD tipo 2 a todos los atributos**: el modelo se llena de versiones duplicadas de la misma entidad y los usuarios se confunden.
 > 
 > 
 > **Ejercicio de discusión con los alumnos:** ¿cómo mostrarías las ventas totales de Ana consolidadas, independientemente de la ciudad? *(Pista: agrupa por `CustomerCode` o `FullName`, no por `City` — el código natural es estable entre versiones.)*
 > 
+
+![074c_SCD_tipo_2](images/074c_SCD_tipo_2.JPG)
+
+<br>
 
 # Volver al pipeline PL_Medallion para configurar las demas actividades
 
