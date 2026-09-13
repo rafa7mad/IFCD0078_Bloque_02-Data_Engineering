@@ -1455,8 +1455,7 @@ Desde `SM_Ventas` → New **report → Start from scratch**. Nombre: `RPT_Ventas
 
 Para liberar capacidad al terminar: **Workspace settings → General → Remove this workspace**. Elimina todos los ítems de forma irreversible.
 
-
-[090_Remove_this_workspace_0](images/090_Remove_this_workspace_0.JPG)
+![090_Remove_this_workspace_0](images/090_Remove_this_workspace_0.JPG)
 
 ---
 
