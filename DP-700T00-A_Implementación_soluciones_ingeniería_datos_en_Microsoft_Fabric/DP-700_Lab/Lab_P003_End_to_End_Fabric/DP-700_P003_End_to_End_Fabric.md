@@ -1443,7 +1443,7 @@ Desde `SM_Ventas` → New **report → Start from scratch**. Nombre: `RPT_Ventas
 
 ![089a_Teams_0](images/089a_Teams_0.JPG)
 
-![089b_Teams_0](images)
+![089b_Teams_0](images/089b_Teams_0.JPG)
 
 <br>
 
@@ -1454,7 +1454,7 @@ Desde `SM_Ventas` → New **report → Start from scratch**. Nombre: `RPT_Ventas
 Para liberar capacidad al terminar: **Workspace settings → General → Remove this workspace**. Elimina todos los ítems de forma irreversible.
 
 
-<!-- ![image.png](images) -->
+[090_Remove_this_workspace_0](images/090_Remove_this_workspace_0.JPG)
 
 ---
 
