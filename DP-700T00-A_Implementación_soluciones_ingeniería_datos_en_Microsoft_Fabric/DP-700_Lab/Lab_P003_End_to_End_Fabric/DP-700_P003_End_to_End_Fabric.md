@@ -1406,17 +1406,20 @@ Desde `SM_Ventas` → New **report → Start from scratch**. Nombre: `RPT_Ventas
 3. El pipeline se ejecuta de principio a fin (las 7 actividades). Puedes seguir el progreso en el panel inferior **Output**, con auto-refresh activo.
 4. Al terminar, revisa que las 7 actividades queden en verde (`Succeeded`), y comprueba tu bandeja de entrada de Outlook para confirmar que llegó el correo de notificación.
 
-![image.png](image%201.png)
+![088_pipeline_0](images/088_pipeline_0.JPG)
 
-![image.png](image%202.png)
+![088_Outlook_0.JPG](images/088_pipeline_0.JPG)
 
-![image.png](image%203.png)
+<br>
 
 ---
 
 ## 9. Limpieza
 
 Para liberar capacidad al terminar: **Workspace settings → General → Remove this workspace**. Elimina todos los ítems de forma irreversible.
+
+
+<!-- ![image.png](images) -->
 
 ---
 
