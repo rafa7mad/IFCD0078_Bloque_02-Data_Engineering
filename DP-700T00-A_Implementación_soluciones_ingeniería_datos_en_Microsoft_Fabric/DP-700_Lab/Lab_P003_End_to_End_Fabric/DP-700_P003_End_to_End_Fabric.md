@@ -1445,6 +1445,8 @@ Desde `SM_Ventas` → New **report → Start from scratch**. Nombre: `RPT_Ventas
 
 ![089b_Teams_0](images/089b_Teams_0.JPG)
 
+![089c_Teams_0](images/089c_Teams_0.JPG)
+
 <br>
 
 ---
