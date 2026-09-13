@@ -1363,7 +1363,7 @@ Desde `SM_Ventas` → New **report → Start from scratch**. Nombre: `RPT_Ventas
     - **Semantic model**: `SM_Ventas`
     - **Table(s)**: déjalo vacío (`No results found`) para que sea un full refresh de todo el modelo.
 
-![087_pipeline_SM_Ventas_0](images/087_pipeline_SM_Ventas_0.JPG)
+![086_pipeline_SM_Ventas_0](images/086_pipeline_SM_Ventas_0.JPG)
 
 <br>
 
@@ -1392,6 +1392,10 @@ Desde `SM_Ventas` → New **report → Start from scratch**. Nombre: `RPT_Ventas
         ```
         
 7. Los campos de **Sensitivity** y **Advanced** (From, Cc, Bcc, Reply to, Importance) se dejan vacíos/por defecto — no son obligatorios.
+
+![087_pipeline_Outlook_0.JPG](images/087_pipeline_Outlook_0.JPG)
+
+<br>
 
 ---
 
