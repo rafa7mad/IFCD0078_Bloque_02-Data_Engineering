@@ -1414,6 +1414,41 @@ Desde `SM_Ventas` → New **report → Start from scratch**. Nombre: `RPT_Ventas
 
 ---
 
+**Actividad Adicional — Notificación con Teams**
+
+1. En `PL_Medallion`, ve a la pestaña **Activities** → busca **"Microsoft Teams"** → añade la actividad **Microsoft Teams** al lienzo.
+2. Conéctala arrastrando desde el icono verde ✓ (On success) de `Semantic model refresh` hasta este nuevo bloque.
+    Si quieres mantener Outlook también, puedes:
+    * poner Semantic model refresh → Outlook → Teams, o
+    * sacar dos ramas desde Semantic model refresh, una a Outlook y otra a Teams.
+3. Selecciona la actividad **Teams** y ve a **Settings**.
+4. En **Connection**, crea o selecciona una conexión de Teams con tu usuario.
+5. En Post in, selecciona Channel.
+6. Elige:
+    - Team
+    - Channel
+7. Añade **Subject**: `PL_Medallion completado`
+En Message, escribe el mensaje. También puedes usar contenido dinámico del pipeline mediante View in expression builder.
+    - **Body**: un resumen del proceso, por ejemplo:
+        
+        ```
+             El pipeline PL_Medallion ha finalizado correctamente.
+        
+             Resumen de la carga:
+             - Bronze: ingesta completada
+             - Silver: limpieza y conformación completada
+             - Gold: dimensiones y Fact_Sales cargados
+             - Semantic model SM_Ventas actualizado (Direct Lake framing)
+        ```
+
+![089a_Teams_0](images/089a_Teams_0.JPG)
+
+![089b_Teams_0](images)
+
+<br>
+
+---
+
 ## 9. Limpieza
 
 Para liberar capacidad al terminar: **Workspace settings → General → Remove this workspace**. Elimina todos los ítems de forma irreversible.
