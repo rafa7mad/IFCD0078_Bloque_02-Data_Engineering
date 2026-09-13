@@ -1419,16 +1419,16 @@ Desde `SM_Ventas` → New **report → Start from scratch**. Nombre: `RPT_Ventas
 1. En `PL_Medallion`, ve a la pestaña **Activities** → busca **"Microsoft Teams"** → añade la actividad **Microsoft Teams** al lienzo.
 2. Conéctala arrastrando desde el icono verde ✓ (On success) de `Semantic model refresh` hasta este nuevo bloque.
     Si quieres mantener Outlook también, puedes:
-    * poner Semantic model refresh → Outlook → Teams, o
-    * sacar dos ramas desde Semantic model refresh, una a Outlook y otra a Teams.
+    * poner `Semantic model refresh` → `Outlook` → `Teams`, o
+    * sacar dos ramas desde `Semantic model refresh`, una a `Outlook` y otra a `Teams`.
 3. Selecciona la actividad **Teams** y ve a **Settings**.
 4. En **Connection**, crea o selecciona una conexión de Teams con tu usuario.
-5. En Post in, selecciona Channel.
+5. En **Post in**, selecciona `Channel` .
 6. Elige:
-    - Team
-    - Channel
+    - `Team`
+    - `Channel`
 7. Añade **Subject**: `PL_Medallion completado`
-En Message, escribe el mensaje. También puedes usar contenido dinámico del pipeline mediante View in expression builder.
+    En **Message**, escribe el mensaje. También puedes usar contenido dinámico del pipeline mediante View in expression builder.
     - **Body**: un resumen del proceso, por ejemplo:
         
         ```
