@@ -4,7 +4,9 @@
 
 ## Ejercicio 1: Azure SQL Database hacia ADLS Gen2
 
-![image.png](image.png)
+![001_azure_sql_database_adls_gens_0](images/001_azure_sql_database_adls_gens_0.png)
+
+<br>
 
 ## Fase 1. Crear Azure SQL Database
 
