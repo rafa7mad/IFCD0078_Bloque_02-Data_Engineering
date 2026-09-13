@@ -1417,7 +1417,7 @@ Desde `SM_Ventas` → New **report → Start from scratch**. Nombre: `RPT_Ventas
 **Actividad Adicional — Notificación con Teams**
 
 1. En `PL_Medallion`, ve a la pestaña **Activities** → busca **"Microsoft Teams"** → añade la actividad **Microsoft Teams** al lienzo.
-2. Conéctala arrastrando desde el icono verde ✓ (On success) de `Semantic model refresh` hasta este nuevo bloque.
+2. Conéctala arrastrando desde el icono verde ✓ (On success) de `Semantic model refresh` hasta este nuevo bloque. <br>
     Si quieres mantener Outlook también, puedes:
     * poner `Semantic model refresh` → `Outlook` → `Teams`, o
     * sacar dos ramas desde `Semantic model refresh`, una a `Outlook` y otra a `Teams`. Opción elegida.
