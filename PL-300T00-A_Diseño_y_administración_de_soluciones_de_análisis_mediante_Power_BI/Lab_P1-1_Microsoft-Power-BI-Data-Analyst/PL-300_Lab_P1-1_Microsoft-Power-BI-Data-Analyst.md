@@ -10,6 +10,10 @@ Ideally, you should complete these labs in a hosted lab environment. If you want
 
 ***You may experience unexpected dialogs and behavior when using your own environment. Due to the wide range of possible local configurations, the course team cannot support issues you may encounter in your own environment.***
 
+![001_folder_Allfiles_0](images/001_folder_Allfiles_0.jpg)
+
+<br>
+
 ## Instructions using Windows 11
 
 >! The instructions below are for a Windows 11 computer. Connecting from a different OS may not result in the same experience.
@@ -20,10 +24,15 @@ Ideally, you should complete these labs in a hosted lab environment. If you want
 
    - Use the default options in the installer.
 
+![011_power_bi_desktop_0](images/011_power_bi_desktop_0.jpg)
+
+<br>
 
 ### Microsoft 365 Developer account
 
 For some of the exercises, you will need to log into Power BI with an organizational account. You can use your own, but if you don’t have access, you can create a free [Microsoft 365 Developer account](https://developer.microsoft.com/microsoft-365/dev-program).
+
+> Since I have a valid organizational account and can log in to Power BI, I do not need to create a free Microsoft 365 developer account.
 
 ### SQL Server Database Engine
 
