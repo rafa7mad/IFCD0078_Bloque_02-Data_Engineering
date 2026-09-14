@@ -37,3 +37,4 @@ The lab connects to a localhost SQL Server instance. The following instructions 
 ### Microsoft Edge
 
 1. Install the latest version of [Microsoft Edge](https://microsoft.com/edge) to access Power BI service online.
+
