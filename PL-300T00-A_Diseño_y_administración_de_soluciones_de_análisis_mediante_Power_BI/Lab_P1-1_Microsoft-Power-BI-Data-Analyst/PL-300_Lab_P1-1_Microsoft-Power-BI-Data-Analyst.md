@@ -45,11 +45,17 @@ The lab connects to a localhost SQL Server instance. The following instructions 
 
 ![013_SQL_Server_Database_Engine_0](images/013_SQL_Server_Database_Engine_0.jpg)
 
+We need to install SSMS, SQL Server Management Studio, to be able to connect to the databases on localhost.
 
+![014a_SQL_Server_Management_Studio_0](images/014a_SQL_Server_Management_Studio_0.jpg)
+
+![014b_SQL_Server_Management_Studio_0](images/014b_SQL_Server_Management_Studio_0.jpg)
 
 <br>
 
 ### Microsoft Edge
 
 1. Install the latest version of [Microsoft Edge](https://microsoft.com/edge) to access Power BI service online.
+
+
 
