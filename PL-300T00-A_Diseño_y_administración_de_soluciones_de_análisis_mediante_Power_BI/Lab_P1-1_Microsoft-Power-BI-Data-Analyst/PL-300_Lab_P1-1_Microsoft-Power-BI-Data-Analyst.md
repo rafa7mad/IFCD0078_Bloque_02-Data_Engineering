@@ -43,6 +43,12 @@ The lab connects to a localhost SQL Server instance. The following instructions 
 
 >! You can use an existing SQL Server instance if you have access, instead of installing a local version. However, you’ll need to modify the connection string from “localhost” to your instance name.
 
+![013_SQL_Server_Database_Engine_0](images/013_SQL_Server_Database_Engine_0.jpg)
+
+
+
+<br>
+
 ### Microsoft Edge
 
 1. Install the latest version of [Microsoft Edge](https://microsoft.com/edge) to access Power BI service online.
