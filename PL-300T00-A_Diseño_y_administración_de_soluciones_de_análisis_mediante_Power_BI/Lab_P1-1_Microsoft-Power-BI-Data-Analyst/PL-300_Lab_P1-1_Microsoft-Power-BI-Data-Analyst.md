@@ -53,6 +53,43 @@ We need to install SSMS, SQL Server Management Studio, to be able to connect to 
 
 <br>
 
+Open SSMS (SQL Server Management Studio)
+
+![015a_Restore_Database](images/015a_Restore_Database.jpg)
+
+<br>
+
+
+
+![015b_Restore_Database](images/015b_Restore_Database.jpg)
+
+
+<br>
+
+
+
+![015c_Restore_Database_0](images/015c_Restore_Database_0.jpg)
+
+<br>
+
+
+
+![015d_Restore_Database_0](images/015d_Restore_Database_0.jpg)
+
+<br>
+
+
+
+![015e_Restore_Database_0](images/015e_Restore_Database_0.jpg)
+
+<br>
+
+
+
+![015f_Restore_Database_0](images/015f_Restore_Database_0.jpg)
+
+<br>
+
 ### Microsoft Edge
 
 1. Install the latest version of [Microsoft Edge](https://microsoft.com/edge) to access Power BI service online.
