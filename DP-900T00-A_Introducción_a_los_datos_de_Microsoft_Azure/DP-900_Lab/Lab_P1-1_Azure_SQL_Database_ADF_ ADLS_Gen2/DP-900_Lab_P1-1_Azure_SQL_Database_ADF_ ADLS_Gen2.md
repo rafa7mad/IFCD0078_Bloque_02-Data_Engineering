@@ -29,12 +29,12 @@
 
 1. Buscar **SQL database**
     
-    ![image.png](image%201.png)
+    ![002_01_azure_sql_database_0](images/002_01_azure_sql_database_0.png)
     
 2. Seleccionar **Crear**.
 3. Selecciona Free offer
     
-    ![image.png](image%202.png)
+    ![002_03_azure_sql_database_0](images/002_03_azure_sql_database_0.png)
     
 4. Configurar:
     
@@ -45,7 +45,7 @@
     
 5. En **Servidor**, seleccionar **Crear nuevo**.
     
-    ![image.png](image%203.png)
+    ![002_05_azure_sql_database_0](images/002_05_azure_sql_database_0.png)
     
 6. Indicar:
     
@@ -57,21 +57,19 @@
     Contraseña: Azure12345
     ```
     
-    ![image.png](image%204.png)
-    
-    ![image.png](image%205.png)
-    
+    ![002_06_azure_sql_database_0](images/002_06_azure_sql_database_0.JPG)
+       
     Pulsar en OK.
     
 7. Para una práctica educativa como esta, seleccionar una configuración pequeña de desarrollo o pruebas.
 8. No habilitar redundancias avanzadas (o configuración necesaria) innecesarias para el laboratorio.
 9. Seleccionar **Revisar y crear**.
     
-    ![image.png](image%206.png)
+    ![002_09_azure_sql_database_0](images/002_09_azure_sql_database_0.JPG)
     
 10. Seleccionar **Crear/Create**.
     
-    ![image.png](image%207.png)
+    ![002_10_azure_sql_database_0](images/002_10_azure_sql_database_0.JPG)
     
 11. Tras un par de minutos,  deberias ver esto:
     
@@ -1841,3 +1839,9 @@ Para esta primera práctica se recomienda una **carga completa**, porque:
 ## Arquitectura final implementada
 
 ![image.png](image%20147.png)
+
+<br>
+
+--- 
+
+[Inicio](#ejercicio-1-azure-sql-database-hacia-adls-gen2)
