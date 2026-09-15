@@ -1,6 +1,6 @@
 # IFCD0078_Bloque_02-Data_Engineering
 
-## CERTIFICACIÓN:Certificación Oficial de la Comunidad de Madrid
+## CERTIFICACIÓN: Certificación Oficial de la Comunidad de Madrid
 
 ## AZ-900: Microsoft Azure Fundamentals
 ## AI-900: Microsoft Azure AI Fundamentals
