@@ -820,11 +820,11 @@ ADLS Gen2 se implementa mediante una cuenta de almacenamiento con el espacio de 
 
 1. Buscar **Storage accounts**.
     
-    ![image.png](images %2032.png)
+    ![F003_001_ADLSGen2](images/F003_001_ADLSGen2.jpg)
     
 2. Seleccionar **Crear**.
     
-    ![image.png](images %2033.png)
+    ![image](images %2033.png)
     
 3. Configurar:
     
@@ -837,7 +837,7 @@ ADLS Gen2 se implementa mediante una cuenta de almacenamiento con el espacio de 
     Redundancia: LRS-Locally redundant storage
     ```
     
-    ![image.png](images %2034.png)
+    ![image](images %2034.png)
     
 4. No pulses todavía **Review + create**. Entra en la pestaña **Advanced** y busca la sección: **`Azure Blob Storage`**y activa:
     
@@ -852,7 +852,7 @@ ADLS Gen2 se implementa mediante una cuenta de almacenamiento con el espacio de 
     - **Enable network file system v3:** desactivado
     - Resto de opciones: valores predeterminados
         
-        ![image.png](images %2035.png)
+        ![image](images %2035.png)
         
     - 
 6. Después pulsa **Review + create**.
@@ -868,11 +868,11 @@ ADLS Gen2 se implementa mediante una cuenta de almacenamiento con el espacio de 
     > ```
     > 
     
-    ![image.png](images %2036.png)
+    ![image](images %2036.png)
     
 7. Pulsar en **Create**.
     
-    ![image.png](images %2037.png)
+    ![image](images %2037.png)
     
     Pulsa en `Go to resource` para seguir el siguiente paso
     
@@ -884,15 +884,15 @@ ADLS Gen2 se implementa mediante una cuenta de almacenamiento con el espacio de 
 1. Abrir la cuenta de almacenamiento (lo que viene despues pulsar en Go to resource).
 2. Acceder a **Storage browser**.
     
-    ![image.png](images %2038.png)
+    ![image](images %2038.png)
     
 3. Seleccionar **Blob containers**.
     
-    ![image.png](image%2039.png)
+    ![image](images image%2039.png)
     
 4. Pulsa **Add container** o **+ Container**.
     
-    ![image.png](image%2040.png)
+    ![image](images image%2040.png)
     
 5. Configura:
     
@@ -901,22 +901,22 @@ ADLS Gen2 se implementa mediante una cuenta de almacenamiento con el espacio de 
     Anonymous access level: Private (no anonymous access)
     ```
     
-    ![image.png](image%2041.png)
+    ![image](images image%2041.png)
     
 6. Pulsar en Create.
     
-    ![image.png](image%2042.png)
+    ![image](images image%2042.png)
     
 
 ### Paso 3. Crear la estructura inicial
 
 - Dentro del contenedor `datalake`
     
-    ![image.png](image%2043.png)
+    ![image](images image%2043.png)
     
 - Pulsa **Add directory** o **New directory**.
     
-    ![image.png](image%2044.png)
+    ![image](images image%2044.png)
     
 - Crea el directorio:
     
@@ -924,11 +924,11 @@ ADLS Gen2 se implementa mediante una cuenta de almacenamiento con el espacio de 
     raw
     ```
     
-    ![image.png](image%2045.png)
+    ![image](images image%2045.png)
     
 - Entra en raw y crea `ventas`
     
-    ![image.png](image%2046.png)
+    ![image](images image%2046.png)
     
 - La estructura quedará:
     
@@ -938,7 +938,7 @@ ADLS Gen2 se implementa mediante una cuenta de almacenamiento con el espacio de 
         └── ventas/
     ```
     
-    ![image.png](image%2047.png)
+    ![image](images image%2047.png)
     
 
 > ADF podrá crear automáticamente las subcarpetas de fecha cuando ejecute el pipeline.
@@ -955,11 +955,11 @@ ADLS Gen2 se implementa mediante una cuenta de almacenamiento con el espacio de 
 
 1. Buscar **Data factories**.
     
-    ![image.png](image%2048.png)
+    ![image](images image%2048.png)
     
 2. Seleccionar **Create**.
     
-    ![image.png](image%2049.png)
+    ![image](images image%2049.png)
     
 3. Configurar:
     
@@ -970,30 +970,30 @@ ADLS Gen2 se implementa mediante una cuenta de almacenamiento con el espacio de 
     Versión: V2
     ```
     
-    ![image.png](image%2050.png)
+    ![image](images image%2050.png)
     
 4. No es obligatorio configurar Git para esta práctica.
 5. Pulsar en **Review + create** 
     
-    ![image.png](image%2051.png)
+    ![image](images image%2051.png)
     
 6. Pulsar en **Create**.
     
-    ![image.png](image%2052.png)
+    ![image](images image%2052.png)
     
 7. Abrir el recurso. Pulsa en **Go to resource**
     
-    ![image.png](image%2053.png)
+    ![image](images image%2053.png)
     
 8. Pulsa en adf-practica1
     
-    ![image.png](image%2054.png)
+    ![image](images image%2054.png)
     
 9. Seleccionar **Launch Studio**.
     
-    ![image.png](image%2055.png)
+    ![image](images image%2055.png)
     
-    ![image.png](image%2056.png)
+    ![image](images image%2056.png)
     
 
 ---
@@ -1008,15 +1008,15 @@ Data Factory dispone de una identidad administrada. Esta identidad puede recibir
 > 
 1. Abre `storageaccountpractica1`.
     
-    ![image.png](image%2057.png)
+    ![image](images image%2057.png)
     
 2. En el menú lateral, entra en **Access control (IAM)**.
     
-    ![image.png](image%2058.png)
+    ![image](images image%2058.png)
     
 3. Pulsa **Add → Add role assignment**.
     
-    ![image.png](image%2059.png)
+    ![image](images image%2059.png)
     
 4. Busca y selecciona:
     
@@ -1024,19 +1024,19 @@ Data Factory dispone de una identidad administrada. Esta identidad puede recibir
     Storage Blob Data Contributor
     ```
     
-    ![image.png](image%2060.png)
+    ![image](images image%2060.png)
     
 5. Pulsa en Next:
     
-    ![image.png](image%2061.png)
+    ![image](images image%2061.png)
     
 6. En **Assign access to**, selecciona: `Managed identity`
     
-    ![image.png](image%2062.png)
+    ![image](images image%2062.png)
     
 7. Pulsa **Select members**.
     
-    ![image.png](image%2063.png)
+    ![image](images image%2063.png)
     
 8. Configura:
     
@@ -1046,21 +1046,21 @@ Data Factory dispone de una identidad administrada. Esta identidad puede recibir
     Select: adf-practica1
     ```
     
-    ![image.png](image%2064.png)
+    ![image](images image%2064.png)
     
     > Debes pulsar en adf-practica1 para que se mueva a Selected members
     > 
     
-    ![image.png](image%2065.png)
+    ![image](images image%2065.png)
     
 9. Pulsa **Select**.
 10. Termina con **Review + assign** y nuevamente **Review + assign**.
     
-    ![image.png](image%2066.png)
+    ![image](images image%2066.png)
     
-    ![image.png](image%2067.png)
+    ![image](image%2067.png)
     
-    ![image.png](image%2068.png)
+    ![image](images image%2068.png)
     
     > Este rol permite a la identidad de Data Factory leer, crear, modificar y eliminar archivos o blobs dentro del almacenamiento.
     > 
@@ -1081,19 +1081,19 @@ Data Factory dispone de una identidad administrada. Esta identidad puede recibir
 
 Vuelve a la pestaña de Data Factory Studio:
 
-![image.png](image%2069.png)
+![image](images image%2069.png)
 
 1. Abrir **Manage**.
     
-    ![image.png](image%2070.png)
+    ![image](images image%2070.png)
     
 2. Seleccionar **Linked services**.
     
-    ![image.png](image%2071.png)
+    ![image](images image%2071.png)
     
 3. Seleccionar **New**.
     
-    ![image.png](image%2072.png)
+    ![image](images image%2072.png)
     
 4. Buscar:
     
@@ -1101,11 +1101,11 @@ Vuelve a la pestaña de Data Factory Studio:
     Azure SQL Database
     ```
     
-    ![image.png](image%2073.png)
+    ![image](images image%2073.png)
     
 5. Pulsar en Azure SQL Database, luego en Continue:
     
-    ![image.png](image%2074.png)
+    ![image](images image%2074.png)
     
 6. Configurar:
     
@@ -1124,16 +1124,16 @@ Vuelve a la pestaña de Data Factory Studio:
     Host name in certificate: vacío
     ```
     
-    ![image.png](image%2075.png)
+    ![image](images image%2075.png)
     
-    ![image.png](image%2076.png)
+    ![image](images image%2076.png)
     
 7. Ahora pulsa **Test connection** antes de crear el Linked Service. Si aparece: `Connection successful`pulsa **Create**.
     
-    ![image.png](image%2077.png)
+    ![image](images image%2077.png)
     
 
-![image.png](image%2078.png)
+![image](images image%2078.png)
 
 > La contraseña queda almacenada cifrada dentro del servicio, pero para una solución empresarial debería usarse una identidad administrada o Azure Key Vault.
 > 
@@ -1153,13 +1153,13 @@ Si la prueba falla:
 
 1. En Azure Data Factory Studio: Ve a **Manage → Linked services**, seleccionar **New**.
     
-    ![image.png](image%2079.png)
+    ![image](images image%2079.png)
     
-    ![image.png](image%2080.png)
+    ![image](images image%2080.png)
     
 2. Busca y selecciona: `Azure Data Lake Storage Gen2`
     
-    ![image.png](image%2081.png)
+    ![image](images image%2081.png)
     
 3. Pulsar en Continue
 4. Configurar:
@@ -1183,17 +1183,17 @@ Si la prueba falla:
 5. En test connection seleccionar: **To linked service**
 6. Pulsar en Test connection y si aparece `Connection succesfull` pulsa en `Create`
     
-    ![image.png](image%2082.png)
+    ![image](images image%2082.png)
     
-    ![image.png](image%2083.png)
+    ![image](images image%2083.png)
     
 7. Pulsar en Validate all y luego Publish all.
     
-    ![image.png](image%2084.png)
+    ![image](images image%2084.png)
     
 8. Espera al mensaje **Successfully published**. Si no tienes errores te debería salir:
     
-    ![image.png](image%2085.png)
+    ![image](images image%2085.png)
     
     > Tener en cuenta que **Publish all publica todos los cambios pendientes a la vez**, no solamente el elemento que tienes seleccionado. Después de publicarlo, la insignia amarilla debería desaparecer. Los Linked Services publicados podrán ser utilizados posteriormente por los datasets y pipelines.
     > 
