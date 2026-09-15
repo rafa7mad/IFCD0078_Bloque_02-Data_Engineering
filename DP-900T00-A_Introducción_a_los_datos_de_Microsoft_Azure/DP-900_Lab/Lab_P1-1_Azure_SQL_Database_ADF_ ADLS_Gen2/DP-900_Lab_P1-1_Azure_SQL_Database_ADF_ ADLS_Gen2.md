@@ -824,7 +824,7 @@ ADLS Gen2 se implementa mediante una cuenta de almacenamiento con el espacio de 
     
 2. Seleccionar **Crear**.
     
-    ![image](images %2033.png)
+    ![F003_002_ADLSGen2_0.jpg](images/F003_002_ADLSGen2_0.jpg)
     
 3. Configurar:
     
@@ -837,7 +837,7 @@ ADLS Gen2 se implementa mediante una cuenta de almacenamiento con el espacio de 
     Redundancia: LRS-Locally redundant storage
     ```
     
-    ![image](images %2034.png)
+    ![F003_003_ADLSGen2_0.jpg](images/F003_003_ADLSGen2_0.jpg)
     
 4. No pulses todavía **Review + create**. Entra en la pestaña **Advanced** y busca la sección: **`Azure Blob Storage`**y activa:
     
@@ -852,7 +852,7 @@ ADLS Gen2 se implementa mediante una cuenta de almacenamiento con el espacio de 
     - **Enable network file system v3:** desactivado
     - Resto de opciones: valores predeterminados
         
-        ![image](images %2035.png)
+        ![F003_005_ADLSGen2_0](images/F003_005_ADLSGen2_0.jpg)
         
     - 
 6. Después pulsa **Review + create**.
@@ -868,11 +868,11 @@ ADLS Gen2 se implementa mediante una cuenta de almacenamiento con el espacio de 
     > ```
     > 
     
-    ![image](images %2036.png)
+    ![F003_006_ADLSGen2_0](images/F003_006_ADLSGen2_0.jpg)
     
 7. Pulsar en **Create**.
     
-    ![image](images %2037.png)
+    ![F003_007_ADLSGen2_0](images/F003_007_ADLSGen2_0.jpg)
     
     Pulsa en `Go to resource` para seguir el siguiente paso
     
