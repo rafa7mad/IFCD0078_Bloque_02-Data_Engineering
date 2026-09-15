@@ -45,9 +45,9 @@ The lab connects to a localhost SQL Server instance. The following instructions 
 
 ![013_SQL_Server_Database_Engine_0](images/013_SQL_Server_Database_Engine_0.jpg)
 
-### Aditional installation of SQL Server Management Studio
+### Additional installation: SQL Server Management Studio (SSMS)
 
-We need to install SSMS, SQL Server Management Studio, to be able to connect to the databases on localhost.
+We need to install SSMS (SQL Server Management Studio) to connect to the databases on `localhost`.
 
 ![014a_SQL_Server_Management_Studio_0](images/014a_SQL_Server_Management_Studio_0.jpg)
 
@@ -59,45 +59,39 @@ Open SSMS (SQL Server Management Studio)
 
 <br>
 
-Check
-Now we are to add the two databases ablaible in the Allfiles, specifically in the folder DatabaseBackup.
-In `Databases`, select `Restore Databse...`
+Now we are going to add the two databases available in `Allfiles`, specifically in the `DatabaseBackup` folder.
+
+In `Databases`, select `Restore Database...`
 
 ![015a_Restore_Database](images/015a_Restore_Database.jpg)
 
 <br>
 
-Check
-Select `Device`, in three points, click `Add` and lookup the the file `bak` of the database you want to restore.
+Select `Device`, click the three dots (`...`), then click `Add` and locate the `.bak` file of the database you want to restore.
 
 ![015b_Restore_Database](images/015b_Restore_Database.jpg)
 
 <br>
 
-Check
-Once it has been added, confirm it click `OK`
+Once the backup file has been added, confirm the selection by clicking `OK`.
 
 ![015c_Restore_Database_0](images/015c_Restore_Database_0.jpg)
 
 <br>
 
-Check
-We receive a confirmation message about the restoration
+A confirmation message is displayed when the database has been restored successfully.
 
 ![015d_Restore_Database_0](images/015d_Restore_Database_0.jpg)
 
 <br>
 
-Check
-Check that the database has been restored.
+Check that the database has been restored and appears under `Databases`.
 
 ![015e_Restore_Database_0](images/015e_Restore_Database_0.jpg)
 
 <br>
 
-Check
-We repeat in the same way with the other database of 
-
+Repeat the same procedure to restore the other database.
 
 ![015f_Restore_Database_0](images/015f_Restore_Database_0.jpg)
 
