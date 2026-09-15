@@ -73,12 +73,13 @@
     
 11. Tras un par de minutos,  deberias ver esto:
     
-    ![image.png](image%208.png)
+    ![002_11_azure_sql_database_0](images/002_11_azure_sql_database_0.JPG)
     
 12. Despliega Deployment details y deberias ver esto:
     
-    ![image.png](image%209.png)
+    ![002_12_azure_sql_database_0](images/002_12_azure_sql_database_0.JPG)
     
+<br>
 
 ### Paso 3. Configurar la conectividad
 
