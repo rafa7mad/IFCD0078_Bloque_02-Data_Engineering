@@ -59,37 +59,44 @@ Open SSMS (SQL Server Management Studio)
 
 <br>
 
-Open SSMS (SQL Server Management Studio)
+Check
+Now we are to add the two databases ablaible in the Allfiles, specifically in the folder DatabaseBackup.
+In `Databases`, select `Restore Databse...`
 
 ![015a_Restore_Database](images/015a_Restore_Database.jpg)
 
 <br>
 
-
+Check
+Select `Device`, in three points, click `Add` and lookup the the file `bak` of the database you want to restore.
 
 ![015b_Restore_Database](images/015b_Restore_Database.jpg)
 
-
 <br>
 
-
+Check
+Once it has been added, confirm it click `OK`
 
 ![015c_Restore_Database_0](images/015c_Restore_Database_0.jpg)
 
 <br>
 
-
+Check
+We receive a confirmation message about the restoration
 
 ![015d_Restore_Database_0](images/015d_Restore_Database_0.jpg)
 
 <br>
 
-
+Check
+Check that the database has been restored.
 
 ![015e_Restore_Database_0](images/015e_Restore_Database_0.jpg)
 
 <br>
 
+Check
+We repeat in the same way with the other database of 
 
 
 ![015f_Restore_Database_0](images/015f_Restore_Database_0.jpg)
