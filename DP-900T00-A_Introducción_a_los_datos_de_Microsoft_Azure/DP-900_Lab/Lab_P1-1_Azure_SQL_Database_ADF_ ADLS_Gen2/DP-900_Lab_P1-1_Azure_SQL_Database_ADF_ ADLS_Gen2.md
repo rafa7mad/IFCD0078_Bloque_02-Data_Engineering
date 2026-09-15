@@ -29,7 +29,7 @@
 
 1. Buscar **SQL database**
     
-    ![002_01_azure_sql_database_0](images/002_01_azure_sql_database_0.png)
+    ![002_01_azure_sql_database_0](images/002_01_azure_sql_database_0.JPG)
     
 2. Seleccionar **Crear**.
 3. Selecciona Free offer
