@@ -29,7 +29,7 @@
 
 1. Buscar **SQL database**
     
-    ![002_01_azure_sql_database_0](images/002_01_azure_sql_database_0.JPG)
+    ![002_01_azure_sql_database_0](images/002_01_azure_sql_database.jpg)
     
 2. Seleccionar **Crear**.
 3. Selecciona Free offer
@@ -92,14 +92,14 @@ En la barra de búsqueda superior, escribe **SQL servers** o **Servidores SQL**.
 
 </aside>
 
-![image.png](image%2010.png)
+![003_00_sql_server](images/003_00_sql_server.jpg)
 
-![image.png](image%2011.png)
+![003_00b_sql_server_0](images/003_00b_sql_server_0.JPG)
 
 1. Acceder a Security/**Networking** o **Redes**.
 2. Seleccionar acceso mediante **Public access** → **Public network access y** debes dejar seleccionada `Selected networks`
     
-    ![image.png](image%2012.png)
+    ![003_02a_sql_server_0.JPG](images/003_02a_sql_server_0.JPG)
     
     <aside>
     💡
@@ -110,7 +110,7 @@ En la barra de búsqueda superior, escribe **SQL servers** o **Servidores SQL**.
     
     En **Firewall rules**, pulsa: Add your client IPv4 address…
     
-    ![image.png](image%2013.png)
+    ![003_02b_sql_server](images/003_02b_sql_server.jpg)
     
 3. Agregar la dirección IP actual del equipo.
 4. Para permitir la conexión desde Azure Data Factory durante el laboratorio, habilitar temporalmente:
@@ -121,11 +121,13 @@ En la barra de búsqueda superior, escribe **SQL servers** o **Servidores SQL**.
     
 5. Guardar los cambios, pulsar en Save.
     
-    ![image.png](image%2014.png)
+    ![003_05_sql_server_0](images/003_05_sql_server_0.JPG)
     
 
 > Esta configuración simplifica el laboratorio. En producción deberían utilizarse redes privadas, endpoints privados y autenticación administrada.
 > 
+
+<br>
 
 ## Fase 2. Crear el modelo relacional
 
@@ -159,11 +161,11 @@ El editor de consultas de Azure Portal permite conectarse a Azure SQL Database y
 
 - Abrir la base de datos, pulsa en `sqldb-ventas (server-practica1/sqldb-ventas)`
     
-    ![image.png](image%2015.png)
+    ![image](images)
     
 - En el menú lateral busca: **Query editor (preview)** o **Editor de consultas (versión preliminar).**
     
-    ![image.png](image%2016.png)
+    ![image](images)
     
     > Puedes escribir `Query editor` en el buscador del menú lateral si no aparece a primera vista. Este editor permite ejecutar sentencias T-SQL directamente desde el navegador.
     > 
