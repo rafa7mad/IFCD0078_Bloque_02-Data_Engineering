@@ -45,6 +45,10 @@ The lab connects to a localhost SQL Server instance. The following instructions 
 
 ![013_SQL_Server_Database_Engine_0](images/013_SQL_Server_Database_Engine_0.jpg)
 
+<br>
+
+--- 
+
 ### Additional installation: SQL Server Management Studio (SSMS)
 
 We need to install SSMS (SQL Server Management Studio) to connect to the databases on `localhost`.
@@ -96,6 +100,8 @@ Repeat the same procedure to restore the other database.
 ![015f_Restore_Database_0](images/015f_Restore_Database_0.jpg)
 
 <br>
+
+---
 
 ### Microsoft Edge
 
