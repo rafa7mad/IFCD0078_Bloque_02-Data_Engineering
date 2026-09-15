@@ -1,1 +1,1 @@
-[Setup local lab environment](https://microsoftlearning.github.io/PL-300-Microsoft-Power-BI-Data-Analyst/Instructions/Labs/00-setup.html)
+Link to [Setup local lab environment](https://microsoftlearning.github.io/PL-300-Microsoft-Power-BI-Data-Analyst/Instructions/Labs/00-setup.html)
