@@ -34,7 +34,7 @@
 2. Seleccionar **Crear**.
 3. Selecciona Free offer
     
-    ![002_03_azure_sql_database_0](images/002_03_azure_sql_database_0.png)
+    ![002_03_azure_sql_database_0](images/002_03_azure_sql_database_0.JPG)
     
 4. Configurar:
     
@@ -45,7 +45,7 @@
     
 5. En **Servidor**, seleccionar **Crear nuevo**.
     
-    ![002_05_azure_sql_database_0](images/002_05_azure_sql_database_0.png)
+    ![002_05_azure_sql_database_0](images/002_05_azure_sql_database.jpg)
     
 6. Indicar:
     
