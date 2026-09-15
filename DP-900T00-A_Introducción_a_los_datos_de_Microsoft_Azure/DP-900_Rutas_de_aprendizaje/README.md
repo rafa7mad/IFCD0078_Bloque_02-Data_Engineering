@@ -1,0 +1,14 @@
+# [DP-900T00-A: Introducción a los datos de Microsoft Azure](https://learn.microsoft.com/es-es/training/courses/dp-900t00)
+
+## Rutas de aprendizaje:
+
+## [Introducción a los conceptos de datos principales de Microsoft Azure](https://learn.microsoft.com/es-es/training/paths/azure-data-fundamentals-explore-core-data-concepts/)
+
+## [Introducción a los datos relacionales de datos de Microsoft Azure en Azure](https://learn.microsoft.com/es-es/training/paths/azure-data-fundamentals-explore-relational-data/)
+
+## [Introducción a los datos no relacionales de Microsoft Azure](https://learn.microsoft.com/es-es/training/paths/azure-data-fundamentals-explore-non-relational-data/)
+
+## [Preparación de los datos de análisis listos para la inteligencia artificial en Microsoft Fabric](https://learn.microsoft.com/es-es/training/paths/prepare-ai-ready-analytics-data/)
+
+## [Introducción al análisis de datos de Microsoft Azure en Azure](https://learn.microsoft.com/es-es/training/paths/azure-data-fundamentals-explore-data-warehouse-analytics/)
+
