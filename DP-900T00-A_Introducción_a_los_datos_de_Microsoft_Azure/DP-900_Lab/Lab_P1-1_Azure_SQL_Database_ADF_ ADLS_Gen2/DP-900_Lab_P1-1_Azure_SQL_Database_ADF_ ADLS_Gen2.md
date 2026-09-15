@@ -769,7 +769,7 @@ GROUP BY Categoria
 ORDER BY VentasNetas DESC;
 ```
 
-![image.png](images %2029.png)
+![F002_001_06g8_modelo_relacional_0](images/F002_001_06g8_modelo_relacional_0.JPG)
 
 #### Ventas por tienda
 
@@ -786,7 +786,7 @@ GROUP BY
 ORDER BY VentasNetas DESC;
 ```
 
-![image.png](images %2030.png)
+![F002_001_06g9_modelo_relacional_0](images/F002_001_06g9_modelo_relacional_0.JPG)
 
 #### Ventas por cliente
 
@@ -803,10 +803,14 @@ GROUP BY
 ORDER BY VentasNetas DESC;
 ```
 
-![image.png](images %2031.png)
+![F002_001_06g10_modelo_relacional_0.JPG](images/F002_001_06g10_modelo_relacional_0.JPG)
 
 > Estas consultas son únicamente de validación. Azure Data Factory copiará las filas de la vista sin agregar los datos.
 > 
+
+<br>
+
+---
 
 ## Fase 3. Crear Azure Data Lake Storage Gen2
 
