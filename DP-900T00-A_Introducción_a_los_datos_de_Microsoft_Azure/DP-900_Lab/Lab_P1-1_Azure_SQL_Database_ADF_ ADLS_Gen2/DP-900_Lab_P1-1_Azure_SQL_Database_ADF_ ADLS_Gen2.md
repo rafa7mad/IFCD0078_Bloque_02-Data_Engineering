@@ -161,11 +161,11 @@ El editor de consultas de Azure Portal permite conectarse a Azure SQL Database y
 
 - Abrir la base de datos, pulsa en `sqldb-ventas (server-practica1/sqldb-ventas)`
     
-    ![image](images)
+    ![F002_001_06a_modelo_relacional](images/F002_001_06a_modelo_relacional.jpg)
     
 - En el menú lateral busca: **Query editor (preview)** o **Editor de consultas (versión preliminar).**
     
-    ![image](images)
+    ![F002_001_06b_modelo_relacional](images/F002_001_06b_modelo_relacional.jpg)
     
     > Puedes escribir `Query editor` en el buscador del menú lateral si no aparece a primera vista. Este editor permite ejecutar sentencias T-SQL directamente desde el navegador.
     > 
@@ -176,12 +176,12 @@ El editor de consultas de Azure Portal permite conectarse a Azure SQL Database y
     Password: la contraseña que configuraste al crear el servidor
     ```
     
-    ![image.png](image%2017.png)
+    ![F002_001_06c_modelo_relacional_0](images/F002_001_06c_modelo_relacional_0.JPG)
     
 - Pulsa en Connect.
 - Pulsa en New Query
     
-    ![image.png](image%2018.png)
+    ![F002_001_06d_modelo_relacional_0](images/F002_001_06d_modelo_relacional_0.JPG)
     
 - Ahora, dentro del **Query Editor**, haz primero una prueba rápida:
     
@@ -198,7 +198,7 @@ El editor de consultas de Azure Portal permite conectarse a Azure SQL Database y
     UsuarioConectado: practica
     ```
     
-    ![image.png](image%2019.png)
+    ![F002_001_06e_modelo_relacional_0](images/F002_001_06e_modelo_relacional_0.JPG)
     
 - Borra la consulta de prueba.
 - Copia todo el contenido que tienes abajo
@@ -686,10 +686,8 @@ El editor de consultas de Azure Portal permite conectarse a Azure SQL Database y
     
 - Pégalo en el editor, y luego pulsa en Run:
     
-    ![image.png](image%2020.png)
-    
-    ![image.png](image%2021.png)
-    
+    ![F002_001_06f_modelo_relacional_0](images/F002_001_06f_modelo_relacional_0.JPG)
+            
 - El script creará:
     - `dbo.Clientes`
     - `dbo.Productos`
@@ -699,7 +697,7 @@ El editor de consultas de Azure Portal permite conectarse a Azure SQL Database y
     - la vista `etl.vw_ventas_extraccion`
     - índices y datos de ejemplo.
         
-        ![image.png](image%2022.png)
+        ![F002_001_06f2_modelo_relacional_0](images/F002_001_06f2_modelo_relacional_0.JPG)
         
 - Ejecuta también estas comprobaciones:
     
@@ -707,32 +705,32 @@ El editor de consultas de Azure Portal permite conectarse a Azure SQL Database y
     SELECT COUNT(*) AS Clientes FROM dbo.Clientes;
     ```
     
-    ![image.png](image%2023.png)
+    ![F002_001_06g1_modelo_relacional_0](images)
     
     ```sql
     SELECT COUNT(*) AS Productos FROM dbo.Productos;
     ```
     
-    ![image.png](image%2024.png)
+    ![F002_001_06g2_modelo_relacional_0](images/F002_001_06g2_modelo_relacional_0.JPG)
     
     ```sql
     SELECT COUNT(*) AS Tiendas FROM dbo.Tiendas;
     ```
     
-    ![image.png](image%2025.png)
+    ![F002_001_06g3_modelo_relacional_0](images/F002_001_06g3_modelo_relacional_0.JPG)
     
     ```sql
     SELECT COUNT(*) AS Ventas FROM dbo.Ventas;
     ```
     
-    ![image.png](image%2026.png)
+    ![F002_001_06g4_modelo_relacional_0](images/F002_001_06g4_modelo_relacional_0.JPG)
     
     ```sql
     SELECT TOP (10) *
     FROM etl.vw_ventas_extraccion;
     ```
     
-    ![image.png](image%2027.png)
+    ![F002_001_06g5_modelo_relacional_0](images/F002_001_06g5_modelo_relacional_0.JPG)
     
 
 ### Resultado que debe devolver la validación
@@ -744,6 +742,9 @@ Tiendas       4
 Ventas       30
 ```
 
+![F002_001_06g6_modelo_relacional_0.JPG](images/F002_001_06g6_modelo_relacional_0.JPG)
+
+
 La vista también debe devolver exactamente 30 filas:
 
 ```sql
@@ -751,7 +752,7 @@ SELECT COUNT(*) AS FilasVista
 FROM etl.vw_ventas_extraccion;
 ```
 
-![image.png](image%2028.png)
+![F002_001_06g7_modelo_relacional_0](images/F002_001_06g7_modelo_relacional_0.JPG)
 
 ---
 
@@ -768,7 +769,7 @@ GROUP BY Categoria
 ORDER BY VentasNetas DESC;
 ```
 
-![image.png](image%2029.png)
+![image.png](images %2029.png)
 
 #### Ventas por tienda
 
@@ -785,7 +786,7 @@ GROUP BY
 ORDER BY VentasNetas DESC;
 ```
 
-![image.png](image%2030.png)
+![image.png](images %2030.png)
 
 #### Ventas por cliente
 
@@ -802,7 +803,7 @@ GROUP BY
 ORDER BY VentasNetas DESC;
 ```
 
-![image.png](image%2031.png)
+![image.png](images %2031.png)
 
 > Estas consultas son únicamente de validación. Azure Data Factory copiará las filas de la vista sin agregar los datos.
 > 
@@ -815,11 +816,11 @@ ADLS Gen2 se implementa mediante una cuenta de almacenamiento con el espacio de 
 
 1. Buscar **Storage accounts**.
     
-    ![image.png](image%2032.png)
+    ![image.png](images %2032.png)
     
 2. Seleccionar **Crear**.
     
-    ![image.png](image%2033.png)
+    ![image.png](images %2033.png)
     
 3. Configurar:
     
@@ -832,7 +833,7 @@ ADLS Gen2 se implementa mediante una cuenta de almacenamiento con el espacio de 
     Redundancia: LRS-Locally redundant storage
     ```
     
-    ![image.png](image%2034.png)
+    ![image.png](images %2034.png)
     
 4. No pulses todavía **Review + create**. Entra en la pestaña **Advanced** y busca la sección: **`Azure Blob Storage`**y activa:
     
@@ -847,7 +848,7 @@ ADLS Gen2 se implementa mediante una cuenta de almacenamiento con el espacio de 
     - **Enable network file system v3:** desactivado
     - Resto de opciones: valores predeterminados
         
-        ![image.png](image%2035.png)
+        ![image.png](images %2035.png)
         
     - 
 6. Después pulsa **Review + create**.
@@ -863,11 +864,11 @@ ADLS Gen2 se implementa mediante una cuenta de almacenamiento con el espacio de 
     > ```
     > 
     
-    ![image.png](image%2036.png)
+    ![image.png](images %2036.png)
     
 7. Pulsar en **Create**.
     
-    ![image.png](image%2037.png)
+    ![image.png](images %2037.png)
     
     Pulsa en `Go to resource` para seguir el siguiente paso
     
@@ -879,7 +880,7 @@ ADLS Gen2 se implementa mediante una cuenta de almacenamiento con el espacio de 
 1. Abrir la cuenta de almacenamiento (lo que viene despues pulsar en Go to resource).
 2. Acceder a **Storage browser**.
     
-    ![image.png](image%2038.png)
+    ![image.png](images %2038.png)
     
 3. Seleccionar **Blob containers**.
     
