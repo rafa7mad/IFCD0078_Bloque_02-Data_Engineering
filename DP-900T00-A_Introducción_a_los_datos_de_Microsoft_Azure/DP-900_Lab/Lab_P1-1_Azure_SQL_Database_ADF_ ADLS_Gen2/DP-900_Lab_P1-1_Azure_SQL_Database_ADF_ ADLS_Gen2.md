@@ -884,15 +884,15 @@ ADLS Gen2 se implementa mediante una cuenta de almacenamiento con el espacio de 
 1. Abrir la cuenta de almacenamiento (lo que viene despues pulsar en Go to resource).
 2. Acceder a **Storage browser**.
     
-    ![image](images %2038.png)
+    ![F003_P2002_Storage_browser](images/F003_P2002_Storage_browser.jpg)
     
 3. Seleccionar **Blob containers**.
     
-    ![image](images image%2039.png)
+    ![F003_P2003_Storage_browser](images/F003_P2003_Storage_browser.jpg)
     
 4. Pulsa **Add container** o **+ Container**.
     
-    ![image](images image%2040.png)
+    ![F003_P2004_Storage_browser](images/F003_P2004_Storage_browser.jpg)
     
 5. Configura:
     
@@ -901,11 +901,11 @@ ADLS Gen2 se implementa mediante una cuenta de almacenamiento con el espacio de 
     Anonymous access level: Private (no anonymous access)
     ```
     
-    ![image](images image%2041.png)
+    ![F003_P2005_Storage_browser.jpg](images/F003_P2005_Storage_browser.jpg)
     
 6. Pulsar en Create.
     
-    ![image](images image%2042.png)
+    ![F003_P2006_Storage_browser](images/F003_P2006_Storage_browser.jpg)
     
 
 ### Paso 3. Crear la estructura inicial
