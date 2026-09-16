@@ -970,32 +970,35 @@ ADLS Gen2 se implementa mediante una cuenta de almacenamiento con el espacio de 
     Versión: V2
     ```
     
-    ![image](images image%2050.png)
+    ![F004_P1003_Data_Factory_0](images/F004_P1003_Data_Factory_0.jpg)
+
+    >! Nota:
+    Nombre: adfactory-practica
+    adf-practica1 no está disponible y vamos a utilizar el mismo ADF en las tres ingestas.
     
 4. No es obligatorio configurar Git para esta práctica.
 5. Pulsar en **Review + create** 
     
-    ![image](images image%2051.png)
+    ![F004_P1005_Data_Factory_0.jpg](images/F004_P1005_Data_Factory_0.jpg)
     
 6. Pulsar en **Create**.
     
-    ![image](images image%2052.png)
+    ![F004_P1006_Data_Factory_0.jpg](images/F004_P1006_Data_Factory_0.jpg)
     
 7. Abrir el recurso. Pulsa en **Go to resource**
     
-    ![image](images image%2053.png)
+    ![F004_P1007_Data_Factory_0](images/F004_P1007_Data_Factory_0.jpg)
     
-8. Pulsa en adf-practica1
+8. Pulsa en adf-practica1, en mi práctica adfactory-practica.
     
-    ![image](images image%2054.png)
-    
+    [F004_P1008_Data_Factory](images/F004_P1008_Data_Factory.jpg)
+
 9. Seleccionar **Launch Studio**.
     
-    ![image](images image%2055.png)
+    ![F004_P1009_Data_Factory](images/F004_P1009_Data_Factory.jpg)
     
-    ![image](images image%2056.png)
+    ![F004_P1009b_Data_Factory_0.jpg](images/F004_P1009b_Data_Factory_0.jpg)
     
-
 ---
 
 # Fase 5. Autorizar a Data Factory sobre ADLS Gen2
