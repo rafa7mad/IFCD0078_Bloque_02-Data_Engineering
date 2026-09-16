@@ -912,11 +912,11 @@ ADLS Gen2 se implementa mediante una cuenta de almacenamiento con el espacio de 
 
 - Dentro del contenedor `datalake`
     
-    ![image](images image%2043.png)
+    ![F003_P2001_Storage_browser](images/F003_P3001_Storage_browser.jpg)
     
 - Pulsa **Add directory** o **New directory**.
     
-    ![image](images image%2044.png)
+    ![F003_P3002_Storage_browser](images/F003_P3002_Storage_browser.jpg)
     
 - Crea el directorio:
     
@@ -924,11 +924,11 @@ ADLS Gen2 se implementa mediante una cuenta de almacenamiento con el espacio de 
     raw
     ```
     
-    ![image](images image%2045.png)
+    ![F003_P3003_Storage_browser_0.JPG](images/F003_P3003_Storage_browser_0.JPG)
     
 - Entra en raw y crea `ventas`
     
-    ![image](images image%2046.png)
+    ![F003_P3004_Storage_browser_0.JPG](images/F003_P3004_Storage_browser_0.JPG)
     
 - La estructura quedará:
     
@@ -938,7 +938,7 @@ ADLS Gen2 se implementa mediante una cuenta de almacenamiento con el espacio de 
         └── ventas/
     ```
     
-    ![image](images image%2047.png)
+    ![F003_P3005_Storage_browser](images/F003_P3005_Storage_browser.jpg)
     
 
 > ADF podrá crear automáticamente las subcarpetas de fecha cuando ejecute el pipeline.
@@ -955,11 +955,11 @@ ADLS Gen2 se implementa mediante una cuenta de almacenamiento con el espacio de 
 
 1. Buscar **Data factories**.
     
-    ![image](images image%2048.png)
+    ![F004_P1001_Data_Factory](images/F004_P1001_Data_Factory.jpg)
     
 2. Seleccionar **Create**.
     
-    ![image](images image%2049.png)
+    ![F004_P1002_Data_Factory_0](images/F004_P1002_Data_Factory_0.jpg)
     
 3. Configurar:
     
