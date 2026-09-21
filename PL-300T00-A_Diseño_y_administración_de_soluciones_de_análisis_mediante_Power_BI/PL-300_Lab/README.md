@@ -3,7 +3,9 @@
 
 <br>
 
-## Content Directory
+## [Content Directory PL-300-Microsoft-Power-BI-Data-Analyst](https://microsoftlearning.github.io/PL-300-Microsoft-Power-BI-Data-Analyst/)
+
+### Configurar el entorno de laboratorio local (Labs-00-setup)
 ### [Set up your own environment](https://microsoftlearning.github.io/PL-300-Microsoft-Power-BI-Data-Analyst/Instructions/Labs/00-setup.html)
 
 <br>
