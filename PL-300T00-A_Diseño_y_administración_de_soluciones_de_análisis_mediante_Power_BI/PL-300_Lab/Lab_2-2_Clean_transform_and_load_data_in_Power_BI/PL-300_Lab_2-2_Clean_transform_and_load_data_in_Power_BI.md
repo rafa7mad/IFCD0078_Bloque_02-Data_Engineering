@@ -4,483 +4,493 @@
 
 ## Lab story
 
-In this lab, you will clean and transform data in Power Query and then load the resulting queries into the Power BI semantic model.
+In this lab, you'll use data cleansing and transformation techniques to start shaping your data model. You'll then apply the queries to load each as a table to the semantic model.
 
-In this lab, you will:
+In this lab, you learn how to:
 
-- Apply data-cleaning and transformation operations.
-- Shape several queries for the model.
-- Merge data from different sources.
-- Configure query loading.
-- Load the transformed data into the semantic model.
+- Apply various data transformations.
+- Load queries to the semantic model.
 
-Estimated time: approximately 45 minutes.
-
-Source:  
-https://microsoftlearning.github.io/PL-300-Microsoft-Power-BI-Data-Analyst/Instructions/Labs/02-transform-data-power-bi.html
-
----
+**This lab should take approximately 45 minutes.**
 
 ## Get started
 
-1. Download the lab files from:
+To complete this exercise, first open a web browser and enter the following URL to download the zip folder:
 
-   https://github.com/MicrosoftLearning/PL-300-Microsoft-Power-BI-Data-Analyst/raw/Main/Allfiles/Labs/02-transform-data-power-bi/02-transform-data.zip
+> https://github.com/MicrosoftLearning/PL-300-Microsoft-Power-BI-Data-Analyst/raw/Main/Allfiles/Labs/02-transform-data-power-bi/02-transform-data.zip
 
-2. Extract the ZIP file to:
+Extract the folder to the **C:\Users\Student\Downloads\02-transform-data** folder.
 
-   `C:\Users\Student\Downloads\02-transform-data`
+Open the **02-Starter-Sales Analysis.pbix** file.
 
-3. Open:
+>*! **Note**: You may see a sign-in dialog as the file loads. Select **Cancel** to dismiss the sign-in dialog. Close any other informational windows. Select **Apply Later**, if prompted to apply changes.*
 
-   `02-Starter-Sales Analysis.pbix`
-
-> **Note:** If a sign-in dialog appears while the file is loading, select **Cancel**. Close any other informational windows. If Power BI asks you to apply pending changes, select **Apply Later**.
-
----
+<br>
 
 ## Configure the Salesperson query
 
-In this task, you will configure the `DimEmployee` query and transform it into the `Salesperson` table.
+In this task, you'll use Power Query Editor to configure the **Salesperson** query.
 
-> **Important:** Rename columns exactly as indicated because later steps depend on these names.
+>*! **Important**: When instructed to rename columns, it’s important that you rename them exactly as described.*
 
-1. In Power BI Desktop, go to the **Home** ribbon and select **Transform data** to open Power Query Editor.
+1. To open the **Power Query Editor** window, on the **Home** ribbon tab, from inside the **Queries** group, select the **Transform Data** icon.
 
-2. In the **Queries** pane, select `DimEmployee`.
+Transform Data on Home ribbon
 
-> **Note:** If Power BI asks how to connect to the data source, select **Edit Credentials**, use your current Windows credentials, and allow the unencrypted connection if required.
+[image](images)
 
-3. In **Query Settings**, rename the query:
+<br>
 
-   `DimEmployee` → `Salesperson`
+1. In the **Power Query Editor** window, in the **Queries** pane, select the **DimEmployee** query.
 
-4. Use **Home > Choose Columns > Go to Column** to locate a column quickly.
+Picture 1
 
-5. Sort the column list alphabetically and locate `SalesPersonFlag`.
+[image](images)
 
-6. Filter `SalesPersonFlag` so that only rows with the value `TRUE` remain.
+<br>
 
-7. Confirm that a **Filtered Rows** step has been added under **Applied Steps**.
+>! **Note:** If you receive a warning message asking to specify how to connect, select **Edit Credentials**, connect using current credentials, and select **OK** to use an unencrypted connection.
 
-8. Select **Choose Columns**.
+3. To rename the query, in the **Query Settings** pane (located at the right), in the **Name** box, replace the text with **Salesperson**, and then press **Enter**. Then verify the name has been updated in **Queries** pane.
 
-9. Clear **Select All Columns**.
+>*! The query name determines the model table name. It’s recommended to define concise and user-friendly names.*
 
-10. Keep only these columns:
+4. To locate a specific column, on the **Home** ribbon tab, from inside the **Manage Columns** group, select the **Choose Columns** down-arrow, and then select **Go to Column**.
 
-    - `EmployeeKey`
-    - `EmployeeNationalIDAlternateKey`
-    - `FirstName`
-    - `LastName`
-    - `Title`
-    - `EmailAddress`
+>*! **Go to Column** is a useful feature with many columns. Otherwise, you can horizontally scroll to find columns.*
 
-11. Confirm that Power Query has added a new step for the removed columns.
+Manage columns > Choose columns > Go to column
 
-12. Select `FirstName`, hold **Ctrl**, and also select `LastName`.
+[image](images)
 
-13. Right-click either selected column and choose **Merge Columns**.
+<br>
 
-14. Use **Space** as the separator.
+5. In the **Go to Column** window, to order the list by column name, select the **AZ** sort button, and then select **Name**.
 
-15. Name the new column:
+Go to column sort options
 
-    `Salesperson`
+[image](images)
 
-16. Rename:
+<br>
 
-    `EmployeeNationalIDAlternateKey` → `EmployeeID`
+6. Locate the **SalesPersonFlag** column, then filter the column to select only Salespeople (that is, **TRUE**), and click **OK**.
 
-17. Rename:
+7. In the **Query Settings** pane, in the **Applied Steps** list, notice the addition of the **Filtered Rows** step.
 
-    `EmailAddress` → `UPN`
+>*! Each transformation you create results in another step logic. It’s possible to edit or delete steps. It’s also possible to select a step to preview the query results at that stage of the query transformation.*
 
-> `UPN` means **User Principal Name**.
+Applied steps
 
-Check that the query contains:
+[image](images)
 
-- **5 columns**
-- **18 rows**
+<br>
 
----
+8. To remove columns, on the **Home** ribbon tab, from inside the **Manage Columns** group, select the **Choose Columns** icon.
+
+9. In the **Choose Columns** window, to uncheck all columns, uncheck the **(Select All Columns)** item.
+
+10. To include columns, check the following six columns:
+
+   - EmployeeKey
+   - EmployeeNationalIDAlternateKey
+   - FirstName
+   - LastName
+   - Title
+   - EmailAddress
+
+11. In the **Applied Steps** list, notice the addition of another query step.
+
+Removed other columns step
+
+[image](images)
+
+<br>
+
+12. To create a single name column, first select the **FirstName** column header. While pressing the **Ctrl** key, select the **LastName** column.
+
+Multi-select two columns to create single column
+
+[image](images)
+
+<br>
+
+13. Right-click either of the select column headers, and then in the context menu, select **Merge Columns**.
+
+>*! Many common transformations can be applied by right-clicking the column header, and then choosing them from the context menu. Note that additional transformations are available in the ribbon.*
+
+14. In the **Merge Columns** window, in the **Separator** dropdown list, select **Space**.
+
+15. In the **New Column Name** box, replace the text with **Salesperson**.
+
+16. To rename the **EmployeeNationalIDAlternateKey** column, double-click the **EmployeeNationalIDAlternateKey** column header and replace the text with **EmployeeID**, and then press **Enter**.
+
+17. Rename the **EmailAddress** column to **UPN**.
+
+>*! UPN is an acronym for User Principal Name.*
+
+**In the status bar at the bottom-left corner of the Power Query Editor, verify that the query has 5 columns and 18 rows.**
+
+<br>
 
 ## Configure the SalespersonRegion query
 
-1. Select the `DimEmployeeSalesTerritory` query.
+In this task, you'll configure the **SalespersonRegion** query.
 
-2. Rename it:
+1. In the **Queries** pane, select the **DimEmployeeSalesTerritory** query.
 
-   `DimEmployeeSalesTerritory` → `SalespersonRegion`
+1. In the **Query Settings** pane, rename the query to **SalespersonRegion**.
 
-3. Select the `DimEmployee` column.
+1. To remove the last two columns, first select the **DimEmployee** column header.
 
-4. Hold **Ctrl** and also select `DimSalesTerritory`.
+1. While pressing the **Ctrl** key, select the **DimSalesTerritory** column header.
 
-5. Right-click one of the selected columns and choose **Remove Columns**.
+1. Right-click either of the select column headers, and then in the context menu, select **Remove Columns**.
 
-Check that the query contains:
-
-- **2 columns**
-- **39 rows**
-
----
+**In the status bar, verify that the query has 2 columns and 39 rows.**
 
 ## Configure the Product query
 
-1. Select `DimProduct` and rename it:
+In this task, you'll configure the **Product** query.
 
-   `DimProduct` → `Product`
+> ! **Important**: When detailed instructions have already been provided, lab steps will provide more concise instructions. If you need the detailed instructions, you can refer back to the steps of previous tasks.
 
-2. Filter `FinishedGoodsFlag` so that only `TRUE` values remain.
+1. Select the **DimProduct** query and rename the query to **Product**.
 
-3. Keep only these columns:
+1. Locate the **FinishedGoodsFlag** column, and then filter the column to retrieve products that are finished goods (that is, TRUE).
 
-   - `ProductKey`
-   - `EnglishProductName`
-   - `StandardCost`
-   - `Color`
-   - `DimProductSubcategory`
+1. Remove all columns, **except** the following:
 
-4. Expand `DimProductSubcategory`.
+   - ProductKey
+   - EnglishProductName
+   - StandardCost
+   - Color
+   - DimProductSubcategory
 
-5. Clear **Select All Columns**.
+1. Notice that the **DimProductSubcategory** column represents a related table (it contains **Value** links).
 
-6. Select:
+1. In the **DimProductSubcategory** column header, at the right of the column name, select the expand button.
 
-   - `EnglishProductSubcategoryName`
-   - `DimProductCategory`
+Column expand icon
 
-7. Clear **Use Original Column Name as Prefix**, and confirm the operation.
+1. See the full list of columns, then select the **Select All Columns** box to unselect all columns.
 
-8. Expand `DimProductCategory`.
+1. Select **EnglishProductSubcategoryName** and **DimProductCategory**, and uncheck the **Use Original Column Name as Prefix** checkbox before selecting **OK**.
 
-9. Keep only:
+Expand column
 
-   `EnglishProductCategoryName`
+> By selecting these two columns, a transformation will be applied to join to the **DimProductSubcategory** table, and then include these columns. The **DimProductCategory** column is, in fact, another related table in the data source.
 
-10. Rename these columns:
+> Query column names must always be unique. If left checked, this checkbox would prefix each column with the expanded column name (in this case **DimProductSubcategory**). Because it’s known that the selected column names don’t collide with column names in the **Product** query, the option is deselected.
 
-    - `EnglishProductName` → `Product`
-    - `StandardCost` → `Standard Cost`
-    - `EnglishProductSubcategoryName` → `Subcategory`
-    - `EnglishProductCategoryName` → `Category`
+1. Notice that the transformation resulted in the addition of two columns, and that the **DimProductSubcategory** column has been removed.
 
-Check that the query contains:
+1. Expand the **DimProductCategory** column, and then introduce only the **EnglishProductCategoryName** column.
 
-- **6 columns**
-- **397 rows**
+1. Rename the following four columns:
 
----
+   - **EnglishProductName** to **Product**
+   - **StandardCost** to **Standard Cost** (include a space)
+   - **EnglishProductSubcategoryName** to **Subcategory**
+   - **EnglishProductCategoryName** to **Category**
+
+**In the status bar, verify that the query has 6 columns and 397 rows.**
 
 ## Configure the Reseller query
 
-1. Select `DimReseller` and rename it:
+In this task, you'll configure the **Reseller** query.
 
-   `DimReseller` → `Reseller`
+1. Select the **DimReseller** query and rename to **Reseller**.
 
-2. Keep only:
+1. Remove all columns, **except** the following:
 
-   - `ResellerKey`
-   - `BusinessType`
-   - `ResellerName`
-   - `DimGeography`
+   - ResellerKey
+   - BusinessType
+   - ResellerName
+   - DimGeography
 
-3. Expand `DimGeography` and include only:
+1. Expand the **DimGeography** column, to include **only** the following three columns:
 
-   - `City`
-   - `StateProvinceName`
-   - `EnglishCountryRegionName`
+   - City
+   - StateProvinceName
+   - EnglishCountryRegionName
 
-4. Review the distinct values in `BusinessType`.
+1. On the **BusinessType** column header, select the down-arrow, and then review the distinct column values, and notice both values **Warehouse** and **Ware House**.
 
-   Notice that both `Warehouse` and `Ware House` are present.
+1. Right-click the **BusinessType** column header, and then select **Replace Values**.
 
-5. Right-click `BusinessType` and select **Replace Values**.
+1. In the **Replace Values** window, configure the following values:
 
-6. Configure the replacement:
+   - In the **Value to Find** box, enter **Ware House**
+   - In the **Replace With** box, enter **Warehouse**
 
-   - **Value to Find:** `Ware House`
-   - **Replace With:** `Warehouse`
+Replace values dialog
 
-7. Rename:
+1. Rename the following four columns:
 
-   - `BusinessType` → `Business Type`
-   - `ResellerName` → `Reseller`
-   - `StateProvinceName` → `State-Province`
-   - `EnglishCountryRegionName` → `Country-Region`
+   - **BusinessType** to **Business Type** (include a space)
+   - **ResellerName** to **Reseller**
+   - **StateProvinceName** to **State-Province**
+   - **EnglishCountryRegionName** to **Country-Region**
 
-Check that the query contains:
-
-- **6 columns**
-- **701 rows**
-
----
+**In the status bar, verify that the query has 6 columns and 701 rows.**
 
 ## Configure the Region query
 
-1. Select `DimSalesTerritory` and rename it:
+In this task, you'll configure the **Region** query.
 
-   `DimSalesTerritory` → `Region`
+1. Select the **DimSalesTerritory** query and rename the query to **Region**.
 
-2. Filter `SalesTerritoryAlternateKey` to exclude the value `0`.
+1. Apply a filter to the **SalesTerritoryAlternateKey** column to remove the value 0 (zero).
 
-3. Keep only:
+> This will remove one row.
 
-   - `SalesTerritoryKey`
-   - `SalesTerritoryRegion`
-   - `SalesTerritoryCountry`
-   - `SalesTerritoryGroup`
+1. Remove all columns, **except** the following:
 
-4. Rename:
+   - SalesTerritoryKey
+   - SalesTerritoryRegion
+   - SalesTerritoryCountry
+   - SalesTerritoryGroup
 
-   - `SalesTerritoryRegion` → `Region`
-   - `SalesTerritoryCountry` → `Country`
-   - `SalesTerritoryGroup` → `Group`
+1. Rename the following three columns:
 
-Check that the query contains:
+   - **SalesTerritoryRegion** to **Region**
+   - **SalesTerritoryCountry** to **Country**
+   - **SalesTerritoryGroup** to **Group**
 
-- **4 columns**
-- **10 rows**
-
----
+**In the status bar, verify that the query has 4 columns and 10 rows.**
 
 ## Configure the Sales query
 
-1. Select `FactResellerSales` and rename it:
+In this task, you'll configure the **Sales** query.
 
-   `FactResellerSales` → `Sales`
+1. Select the **FactResellerSales** query and rename it to **Sales**.
 
-2. Keep only these columns:
+1. Remove all columns, **except** the following:
 
-   - `SalesOrderNumber`
-   - `OrderDate`
-   - `ProductKey`
-   - `ResellerKey`
-   - `EmployeeKey`
-   - `SalesTerritoryKey`
-   - `OrderQuantity`
-   - `UnitPrice`
-   - `TotalProductCost`
-   - `SalesAmount`
-   - `DimProduct`
+   - SalesOrderNumber
+   - OrderDate
+   - ProductKey
+   - ResellerKey
+   - EmployeeKey
+   - SalesTerritoryKey
+   - OrderQuantity
+   - UnitPrice
+   - TotalProductCost
+   - SalesAmount
+   - DimProduct
 
-> `DimProduct` is retained temporarily so that `StandardCost` can be used when `TotalProductCost` is missing.
+> ! **Note**: You may recall in the **Prepare Data in Power BI Desktop** lab that a small percentage of **FactResellerSales** rows had missing **TotalProductCost** values. The **DimProduct** column has been included to retrieve the product standard cost column to assist fixing the missing values.
 
-3. Expand `DimProduct` and include only:
+1. Expand the **DimProduct** column, uncheck all columns, and then include only the **StandardCost** column.
 
-   `StandardCost`
+1. To create a custom column, on the **Add Column** ribbon tab, from inside the **General** group, select **Custom Column**.
 
-4. On the **Add Column** ribbon, select **Custom Column**.
+Picture 5664
 
-5. Name the new column:
+1. In the **Custom Column** window, in the **New Column Name** box, replace the text with **Cost**.
 
-   `Cost`
+1. In the **Custom Column Formula** box, enter the following expression (after the equals symbol), then save the new column:
 
-6. Enter this formula:
+   ` if [TotalProductCost] = null then [OrderQuantity] * [StandardCost] else [TotalProductCost] `
 
-```powerquery
-if [TotalProductCost] = null then [OrderQuantity] * [StandardCost] else [TotalProductCost]
-```
+> ! **Note**: You can copy the expression from the **Snippets.txt** file in the 02-transform-data folder.
 
-This calculates the cost from quantity and standard cost when `TotalProductCost` is null; otherwise, it keeps the existing value.
+> This expression tests if the **TotalProductCost** value is missing. If missing, it produces a value by multiplying the **OrderQuantity** value by the **StandardCost** value; otherwise, it uses the existing **TotalProductCost** value.
 
-7. Remove:
+1. Remove the following two columns:
 
-   - `TotalProductCost`
-   - `StandardCost`
+   - TotalProductCost
+   - StandardCost
 
-8. Rename:
+1. Rename the following three columns:
 
-   - `OrderQuantity` → `Quantity`
-   - `UnitPrice` → `Unit Price`
-   - `SalesAmount` → `Sales`
+   - **OrderQuantity** to **Quantity**
+   - **UnitPrice** to **Unit Price** (include a space)
+   - **SalesAmount** to **Sales**
 
-9. Change `Quantity` to **Whole Number**.
+1. To modify the column data type, in the **Quantity** column header, at the left of the column name, select the **1.2** icon, and then select **Whole Number**.
 
-10. Change these columns to **Fixed Decimal Number**:
+> Configuring the correct data type is important. When the column contains numeric value, it’s also important to choose the correct type if you expect to perform mathematic calculations.
 
-    - `Unit Price`
-    - `Sales`
-    - `Cost`
+Picture 5667
 
-Check that the query contains:
+1. Modify the following three column data types to **Fixed Decimal Number**.
 
-- **10 columns**
-- **999+ rows**
+> The fixed decimal number data type allows for 19 digits, and allows for more precision to avoid rounding errors. It’s important to use the fixed decimal number type for financial values, or rates (like exchange rates).
 
-> Power Query displays a maximum of 1,000 rows in the preview for each query.
+   - Unit Price
+   - Sales
+   - Cost
 
----
+**In the status bar, verify that the query has 10 columns and 999+ rows.** *A maximum of 1000 rows will be loaded as preview data for each query.*
 
 ## Configure the Targets query
 
-1. Select `ResellerSalesTargets` and rename it:
+In this task, you'll configure the **Targets** query.
 
-   `ResellerSalesTargets` → `Targets`
+1. Select the **ResellerSalesTargets** query and rename to **Targets**.
 
-> **Note:** If Power BI asks for credentials for this source, select **Edit Credentials** and use **Anonymous** access.
+> ! **Note:** If you receive a warning message asking to specify how to connect, select **Edit Credentials**, and use anonymous access.
 
-2. Select `Year` and `EmployeeID`.
+1. To unpivot the 12 month columns (**M01**-**M12**), first multi-select the **Year** and **EmployeeID** column headers.
 
-3. Right-click either selected column and choose **Unpivot Other Columns**.
+1. Right-click either of the select column headers, and then in the context menu, select **Unpivot Other Columns**.
 
-4. The former month column names (`M01` to `M12`) now appear in `Attribute`, and their contents appear in `Value`.
+1. Notice that the column names now appear in the **Attribute** column, and the values appear in the **Value** column.
 
-5. Filter `Value` to remove rows containing a hyphen (`-`).
+1. Apply a filter to the **Value** column to remove hyphen (-) values.
 
-6. Rename:
+> You may recall that the hyphen character was used in the source CSV file to represent zero (0).
 
-   - `Attribute` → `MonthNumber`
-   - `Value` → `Target`
+1. Rename the following two columns:
 
-7. In `MonthNumber`, use **Replace Values**.
+   - **Attribute** to **MonthNumber** (there's no space)
+   - **Value** to **Target**
 
-8. Replace:
+1. To prepare the **MonthNumber** column values, right-click the **MonthNumber** column header, and then select **Replace Values**.
 
-   `M` → *(empty value)*
+> You’ll now apply transformations to produce a date column. The date will be derived from the **Year** and **MonthNumber** columns. You’ll create the column by using the **Columns From Examples** feature.
 
-9. Change `MonthNumber` to **Whole Number**.
+1. In the **Replace Values** window, in the **Value To Find** box, enter **M** and leave the **Replace with** empty.
 
-10. Go to **Add Column > Column From Examples**.
+1. Modify the **MonthNumber** column data type to **Whole Number**.
 
-11. For the first row, corresponding to year 2017 and month 7, enter a date representing July 1, 2017.
+1. On the **Add Column** ribbon tab, from inside the **General** group, select The **Column From Examples** icon.
 
-> **Regional settings:** The Microsoft-hosted VM uses U.S. date formatting (`7/1/2017`). With other regional settings, enter the equivalent valid date for your system.
+Picture 5675
 
-12. Confirm that Power Query predicts the remaining date values.
+1. Notice that the first row is for year **2017** and month number **7**.
 
-13. Rename the generated column:
+1. In the **Column1** column, in the first grid cell, commence entering **7/1/2017**, and then press **Enter**.
 
-   `Merged` → `TargetMonth`
+> ! **Note**: The virtual machine uses US regional settings, so this date is in fact July 1, 2017. Other regional settings may require a **0** before the date.
 
-14. Remove:
+1. Notice that the grid cells update with predicted values.
 
-   - `Year`
-   - `MonthNumber`
+> The feature has accurately predicted that you're combining values from the **Year** and **MonthNumber** columns.
 
-15. Change the data types:
+1. Notice also the formula presented above the query grid.
 
-   - `Target` → **Fixed Decimal Number**
-   - `TargetMonth` → **Date**
+Picture 5679
 
-16. Select `Target`.
+1. To rename the new column, double-click the **Merged** column header and rename the column as **TargetMonth**.
 
-17. Go to **Transform > Standard > Multiply**.
+1. Remove the following columns:
 
-18. Multiply the values by:
+   - Year
+   - MonthNumber
 
-   `1000`
+1. Modify the following column data types:
 
-> The source target values are stored in thousands.
+   - **Target** as fixed decimal number
+   - **TargetMonth** as date
 
-Check that the query contains:
+1. To multiply the **Target** values by 1000, select the **Target** column header, and then on the **Transform** ribbon tab, from inside the **Number Column** group, select **Standard**, and then select **Multiply**.
 
-- **3 columns**
-- **809 rows**
+> You may recall that the target values were stored as thousands.
 
----
+Picture 5682
+
+1. In the **Multiply** window, in the **Value** box, enter **1000**, and select **OK**.
+
+**In the status bar, verify that the query has 3 columns and 809 rows.**
 
 ## Configure the ColorFormats query
 
-1. Select `ColorFormats`.
+In this task, you'll configure the **ColorFormats** query.
 
-2. Notice that the first row contains the column names.
+1. Select the **ColorFormats** query and notice that the first row contains the column names.
 
-3. Go to **Home > Use First Row as Headers**.
+1. On the **Home** ribbon tab, from inside the **Transform** group, select **Use First Row as Headers**.
 
-Check that the query contains:
+Picture 5688
 
-- **3 columns**
-- **10 rows**
-
----
+**In the status bar, verify that the query has 3 columns and 10 rows.**
 
 ## Update the Product query
 
-In this task, you will merge `ColorFormats` into `Product`.
+In this task, you'll update the **Product** query by merging the **ColorFormats** query.
 
-1. Select `Product`.
+1. Select the **Product** query.
 
-2. Go to **Home > Merge Queries**.
+1. To merge the **ColorFormats** query, on the **Home** ribbon tab, from inside the **Combine** group, select **Merge Queries**.
 
-3. In the `Product` table, select the `Color` column.
+> Merging queries allows integrating data, in this case from different data sources (SQL Server and a CSV file).
 
-4. In the second table list, select `ColorFormats`.
+Picture 5654
 
-5. In `ColorFormats`, select the `Color` column.
+1. In the **Merge** window, in the **Product** query grid, select the **Color** column header.
 
-6. If the **Privacy Levels** dialog appears, set both data sources to:
+Picture 5655
 
-   `Organizational`
+1. Beneath the **Product** query grid, in the dropdown list, select the **ColorFormats** query.
 
-   Then save the settings.
+Picture 21
 
-7. Keep the default join type:
+1. In the **ColorFormats** query grid, select the **Color** column header.
 
-   `Left Outer`
+1. When the **Privacy Levels** window opens, for each of the two data sources, in the corresponding dropdown list, select **Organizational**, then **Save**.
 
-8. Expand the resulting `ColorFormats` column and include:
+> Privacy levels can be configured for data source to determine whether data can be shared between sources. Setting each data source as **Organizational** allows them to share data, if necessary. Private data sources can never be shared with other data sources. It doesn’t mean that Private data can't be shared; it means that the Power Query engine can't share data between the sources.
 
-   - `Background Color Format`
-   - `Font Color Format`
+Picture 5691
 
-Check that the `Product` query now contains:
+1. In the **Merge** window, use the default **Join Kind** - maintaining the selection of Left Outer and select **OK**.
 
-- **8 columns**
-- **397 rows**
+1. Expand the **ColorFormats** column to include the following two columns:
 
----
+   - Background Color Format
+   - Font Color Format
+
+**In the status bar, verify that the query now has 8 columns and 397 rows.**
 
 ## Update the ColorFormats query
 
-1. Select `ColorFormats`.
+In this task, you'll update the **ColorFormats** to disable its load.
 
-2. In **Query Settings**, select **All Properties**.
+1. Select the **ColorFormats** query.
 
-3. In **Query Properties**, clear:
+1. In the **Query Settings** pane, select the **All Properties** link.
 
-   **Enable Load To Report**
+Picture 322
 
-> `ColorFormats` is only used as a supporting query for the merge with `Product`, so it does not need to be loaded as a separate model table.
+1. In the **Query Properties** window, uncheck the **Enable Load To Report** checkbox.
 
----
+> Disabling the load means it will not load as a table to the data model. This is done because the query was merged with the **Product** query, which is enabled to load to the data model.
+
+Picture 323
 
 ## Review final product
 
-In Power Query Editor, verify that the eight queries have these names:
+1. In Power Query Editor, verify that you have **8 queries**, correctly named as follows:
 
-- `Salesperson`
-- `SalespersonRegion`
-- `Product`
-- `Reseller`
-- `Region`
-- `Sales`
-- `Targets`
-- `ColorFormats`
+   - Salesperson
+   - SalespersonRegion
+   - Product
+   - Reseller
+   - Region
+   - Sales
+   - Targets
+   - ColorFormats (which won't load to the data model)
 
-`ColorFormats` should have loading disabled.
+1. Select **Close & Apply** to load the data to the model, and close Power Query Editor window.
 
-1. Select **Close & Apply**.
+Picture 326
 
-2. Return to Power BI Desktop.
+1. You can now see the canvas in Power BI Desktop, with Filters, Visualizations, and Data panes on the right. In the Data pane, notice the **7 tables** loaded to the data model.
 
-3. In the **Data** pane, verify that **7 tables** have been loaded into the semantic model.
-
----
+Picture 3
 
 ## Lab complete
 
-Saving the Power BI file is optional for this lab.
+You may choose to save your Power BI report, though it’s not necessary for this lab. In the next exercise, you’ll work with a pre-made starter file.
 
-If you want to save it:
-
-1. Go to **File > Save As**.
-2. Select **Browse this device**.
-3. Choose a destination folder and enter a descriptive file name.
-4. Save the report as a `.pbix` file.
-5. If prompted to apply pending query changes, select **Apply**.
-6. Close Power BI Desktop.
+1. Navigate to the **"File"** menu in the top left corner and select **"Save As"**.
+1. Select **Browse this device**.
+1. Select the folder where you want to save the file and give it a descriptive name.
+1. Select the **Save** button to save your report as a .pbix file.
+1. If a dialog box appears prompting you to apply pending query changes, select **Apply**.
+1. Close Power BI Desktop.
 
 ---
 
