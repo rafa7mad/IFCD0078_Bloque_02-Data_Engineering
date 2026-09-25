@@ -115,7 +115,7 @@ Column Quality selection in ribbon
 
 <br>
 
-6. Notice that the Position column has 94% empty (null) rows.
+6. Notice that the **Position** column has 94% empty (null) rows.
 
 Column quality showing 94% empty rows
 
@@ -123,39 +123,47 @@ Column quality showing 94% empty rows
 
 <br>
 
-7. To assess column distribution, on the View ribbon tab, from inside the Data Preview group, check Column Distribution.
+7. To assess column distribution, on the **View** ribbon tab, from inside the Data Preview group, check Column Distribution.
 
-Review the Position column again, and notice that there are four distinct values, and one unique value.
+8. Review the **Position** column again, and notice that there are four distinct values, and one unique value.
 
-Review the column distribution for the EmployeeKey column—there are 296 distinct values, and 296 unique values.
+9. Review the column distribution for the **EmployeeKey** column—there are 296 distinct values, and 296 unique values.
+
+![409_01-get-data-in-power-bi_image26](images/409_01-get-data-in-power-bi_image26.png)
 
 Column distribution showing 296 distinct, 296 unique values
 
-Note: When the distinct and unique counts are the same, it means the column contains unique values. When modeling, it’s important that some model tables have unique columns. These unique columns can be used to create one-to-many relationships, which you’ll do in the Model Data in Power BI Desktop lab.
+<br>
 
-In the Queries pane, select the DimProduct query.
+>*! **Note**: When the distinct and unique counts are the same, it means the column contains unique values. When modeling, it’s important that some model tables have unique columns. These unique columns can be used to create one-to-many relationships, which you’ll do in the **Model Data in Power BI Desktop** lab.*
 
-The DimProduct table contains one row per product sold by the company.
+10. In the **Queries** pane, select the **DimProduct** query.
 
-In the Queries pane, select the DimReseller query.
+>*! The **DimProduct** table contains one row per product sold by the company.*
 
-The DimReseller table contains one row per reseller. Resellers sell, distribute, or value add to the Adventure Works products.
+11. In the **Queries** pane, select the **DimReseller** query.
 
-To view column values, on the View ribbon tab, from inside the Data Preview group, check Column Profile.
+>*! The **DimReseller** table contains one row per reseller. Resellers sell, distribute, or value add to the Adventure Works products.*
 
-Select the BusinessType column header, and notice the new pane beneath the data preview pane. Review the column statistics and value distribution in the data preview pane.
+12. To view column values, on the **View** ribbon tab, from inside the **Data Preview** group, check **Column Profile**.
 
-Notice the data quality issue: there are two labels for warehouse (Warehouse, and the misspelled Ware House).
+13. Select the **BusinessType** column header, and notice the new pane beneath the data preview pane. Review the column statistics and value distribution in the data preview pane.
+
+>*! Notice the data quality issue: there are two labels for warehouse (**Warehouse**, and the misspelled **Ware House**).*
+
+![413_01-get-data-in-power-bi_image31](images/413_01-get-data-in-power-bi_image31.png)
 
 Value distribution for the BusinessType column
 
-Hover the cursor over the Ware House bar, and notice that there are five rows with this value.
+<br>
 
-In the Queries pane, select the DimSalesTerritory query.
+14. Hover the cursor over the **Ware House** bar, and notice that there are five rows with this value.
 
-The DimSalesTerritory table contains one row per sales region, including Corporate HQ (headquarters). Regions are assigned to a country, and countries are assigned to groups. In the Model Data in Power BI Desktop lab, you’ll create a hierarchy to support analysis at region, country, or group level.
+15. In the **Queries** pane, select the **DimSalesTerritory** query.
 
-In the Queries pane, select the FactResellerSales query.
+>*! The **DimSalesTerritory** table contains one row per sales region, including **Corporate HQ** (headquarters). Regions are assigned to a country, and countries are assigned to groups. In the **Model Data in Power BI Desktop** lab, you’ll create a hierarchy to support analysis at region, country, or group level.*
+
+16. In the **Queries** pane, select the **FactResellerSales** query.
 
 The FactResellerSales table contains one row per sales order line—a sales order contains one or more line items.
 
