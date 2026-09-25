@@ -41,7 +41,7 @@ This task teaches you how to connect to a SQL Server database and import tables,
 1. On the **Home** ribbon tab, from inside the **Data** group, select **SQL Server**.
 
 SQL Server Get Data icon
-![21_01-get-data-in-power-bi_image11](images/21_01-get-data-in-power-bi_image11.png)
+![201_01-get-data-in-power-bi_image11](images/201_01-get-data-in-power-bi_image11.png)
 
 <br>
 
@@ -61,7 +61,7 @@ SQL Server Get Data icon
 
 AdventureWorksDW2020 database with DimEmployee indicated
 
-![36_01-get-data-in-power-bi_image18](images/36_01-get-data-in-power-bi_image18.png)
+![306_01-get-data-in-power-bi_image18](images/306_01-get-data-in-power-bi_image18.png)
 
 <br>
 
@@ -90,7 +90,7 @@ This task introduces the Power Query Editor and allows you to review and profile
 
 List of loaded queries
 
-![41_01-get-data-in-power-bi_image20.png](images/41_01-get-data-in-power-bi_image20.png)
+![401_01-get-data-in-power-bi_image20.png](images/401_01-get-data-in-power-bi_image20.png)
 
 <br>
 
@@ -110,7 +110,7 @@ List of loaded queries
 
 Column Quality selection in ribbon
 
-![45_01-get-data-in-power-bi_image23](images/45_01-get-data-in-power-bi_image23.png)
+![405_01-get-data-in-power-bi_image23](images/405_01-get-data-in-power-bi_image23.png)
 ![image](images)
 
 <br>
@@ -119,7 +119,7 @@ Column Quality selection in ribbon
 
 Column quality showing 94% empty rows
 
-![46_01-get-data-in-power-bi_image24](images/46_01-get-data-in-power-bi_image24.png)
+![406_01-get-data-in-power-bi_image24](images/406_01-get-data-in-power-bi_image24.png)
 
 <br>
 
