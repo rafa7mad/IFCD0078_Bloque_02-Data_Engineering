@@ -225,3 +225,4 @@ You may choose to save your Power BI report, though it’s not necessary for thi
 
 [Up](#get-data-in-power-bi)
 
+---
