@@ -1,3 +1,6 @@
+### DP-900 Introducción a los datos de Microsoft Azure
+### DP-900 Azure Data Fundamentals
+
 # 🧑🏽‍💻 Clase 18 - Ejercicio 1 (Ingesta EL)
 
 ---
@@ -1856,3 +1859,5 @@ Para esta primera práctica se recomienda una **carga completa**, porque:
 --- 
 
 [Inicio](#ejercicio-1-azure-sql-database-hacia-adls-gen2)
+
+---

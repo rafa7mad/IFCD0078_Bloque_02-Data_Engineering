@@ -1,3 +1,6 @@
+### DP-900 Introducción a los datos de Microsoft Azure
+### DP-900 Azure Data Fundamentals
+
 # 🧑🏽‍💻 Clase 20 - Ingesta EL desde Cosmos DB
 
 ---
@@ -2184,3 +2187,9 @@ Para que se ejecute automáticamente:
 ¿En que casos se aplica una o la otra?** 
 
 </aside>
+
+---
+
+[Inicio](#ejercicio-2-azure-cosmos-db-for-nosql-hacia-azure-data-lake-storage-gen2)
+
+---
