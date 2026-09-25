@@ -1,6 +1,7 @@
-## DP-900T00A-Azure-Data-Fundamentals
+### DP-900 Introducción a los datos de Microsoft Azure
+### DP-900 Azure Data Fundamentals
 
-# [Exploración de Azure Storage](https://microsoftlearning.github.io/DP-900T00A-Azure-Data-Fundamentals/Instructions/Labs/dp900-02-storage-lab.html)
+# [Explore Azure Storage](https://microsoftlearning.github.io/DP-900T00A-Azure-Data-Fundamentals/Instructions/Labs/dp900-02-storage-lab.html)
 
 In this lab, you’ll create an Azure Storage account, which is a secure place in the cloud to keep different kinds of data. You’ll then explore its four core services and see what each one is for:
 
@@ -359,3 +360,11 @@ We verified that the resource group had been removed.
 <br>
 
 In this lab, you created an Azure Storage account and explored blob storage, Data Lake Storage Gen2, and Azure Files. You’ve now seen the main ways Azure stores non-relational data!
+
+<br>
+
+---
+
+[Up](#explore-azure-data-lake-storage-gen2)
+
+---

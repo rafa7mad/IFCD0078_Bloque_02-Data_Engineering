@@ -1,4 +1,5 @@
-## DP-900T00A-Azure-Data-Fundamentals
+### DP-900 Introducción a los datos de Microsoft Azure
+### DP-900 Azure Data Fundamentals
 
 # Explore real-time analytics in Microsoft Fabric
 
@@ -276,7 +277,7 @@ If you’ve finished exploring Real-Time Intelligence in Fabric, you can delete 
 
 ---
 
-[Volver al inicio](#dp-900t00a-azure-data-fundamentals)
+[Up](#explore-real-time-analytics-in-microsoft-fabric)
 
 ---
 

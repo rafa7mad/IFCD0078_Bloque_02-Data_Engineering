@@ -1,6 +1,7 @@
-## DP-900T00A-Azure-Data-Fundamentals
+### DP-900 Introducción a los datos de Microsoft Azure
+### DP-900 Azure Data Fundamentals
 
-# [Exploración de Azure Cosmos DB](https://microsoftlearning.github.io/DP-900T00A-Azure-Data-Fundamentals/Instructions/Labs/dp900-03-cosmos-lab.html)
+# [Explore Azure Cosmos DB](https://microsoftlearning.github.io/DP-900T00A-Azure-Data-Fundamentals/Instructions/Labs/dp900-03-cosmos-lab.html)
 
 In this lab, you’ll create your first NoSQL database using Azure Cosmos DB. “NoSQL” databases store data in a flexible way, rather than in the strict rows-and-columns tables of a relational database. Cosmos DB stores each piece of data as a JSON item (a simple text format that lists properties and their values, like "price": 48.74).
 
@@ -249,3 +250,11 @@ We verified that the resource group had been removed.
 <br>
 
 In this lab, you created an Azure Cosmos DB account, added JSON items, and queried them using a SQL-like language. You’ve taken your first steps with NoSQL data in the cloud!
+
+<br>
+
+---
+
+[Up](#explore-azure-cosmos-db)
+
+---

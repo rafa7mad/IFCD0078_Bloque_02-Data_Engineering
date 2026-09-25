@@ -1,4 +1,5 @@
-## DP-900T00A-Azure-Data-Fundamentals
+### DP-900 Introducción a los datos de Microsoft Azure
+### DP-900 Azure Data Fundamentals
 
 # Explore fundamentals of data visualization with Power BI
 
@@ -259,6 +260,6 @@ In this lab, you imported data from multiple sources into Power BI Desktop, conn
 
 ---
 
-[Volver al inicio](#dp-900t00a-azure-data-fundamentals)
+[Up](#explore-fundamentals-of-data-visualization-with-power-bi)
 
 ---

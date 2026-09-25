@@ -1,4 +1,5 @@
-## DP-900T00A-Azure-Data-Fundamentals
+### DP-900 Introducción a los datos de Microsoft Azure
+### DP-900 Azure Data Fundamentals
 
 # [Explore data analytics in Microsoft Fabric](https://microsoftlearning.github.io/DP-900T00A-Azure-Data-Fundamentals/Instructions/Labs/dp900-04b-fabric-lake-lab.html)
 
@@ -253,6 +254,6 @@ If you’ve finished exploring Microsoft Fabric, you can delete the workspace yo
 
 ---
 
-[Volver al inicio](#dp-900t00a-azure-data-fundamentals)
+[Up](#explore-data-analytics-in-microsoft-fabric)
 
 ---

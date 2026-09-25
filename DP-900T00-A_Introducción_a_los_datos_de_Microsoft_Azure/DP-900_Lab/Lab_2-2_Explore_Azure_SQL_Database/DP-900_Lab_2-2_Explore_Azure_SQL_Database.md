@@ -1,6 +1,7 @@
-## DP-900T00A-Azure-Data-Fundamentals
+### DP-900 Introducción a los datos de Microsoft Azure
+### DP-900 Azure Data Fundamentals
 
-# [Explore Azure SQL Database]([https://](https://microsoftlearning.github.io/DP-900T00A-Azure-Data-Fundamentals/Instructions/Labs/dp900-01-sql-lab.html))
+# [Explore Azure SQL Database](https://microsoftlearning.github.io/DP-900T00A-Azure-Data-Fundamentals/Instructions/Labs/dp900-01-sql-lab.html)
 
 ## Provision an Azure SQL Database resource
 
@@ -141,7 +142,11 @@ We verified that the resource group had been removed.
 
 ![220_rg](images/220_rg.JPG)
 
+<br>
 
+---
+
+[up](#explore-azure-sql-database)
 
 
 
