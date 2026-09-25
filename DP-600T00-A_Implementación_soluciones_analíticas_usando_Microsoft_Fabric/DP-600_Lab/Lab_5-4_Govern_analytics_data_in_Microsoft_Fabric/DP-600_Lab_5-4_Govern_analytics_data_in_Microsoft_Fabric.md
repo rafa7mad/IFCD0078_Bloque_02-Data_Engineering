@@ -1,3 +1,5 @@
+### DP-600 Implementación de soluciones de análisis mediante Microsoft Fabric
+
 # Govern analytics data in Microsoft Fabric
 
 In a growing analytics environment, data assets multiply quickly across workspaces. Lakehouses, semantic models, and reports are created by different teams, and without governance, it becomes difficult to tell which assets are trustworthy and ready for organizational use. Governance practices like endorsement, documentation, and lineage analysis help users find and trust the right data.

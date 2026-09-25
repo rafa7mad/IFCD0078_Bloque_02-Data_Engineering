@@ -1,3 +1,5 @@
+### DP-600 Implementación de soluciones de análisis mediante Microsoft Fabric
+
 # Prepare a semantic model for AI
 
 <br>
