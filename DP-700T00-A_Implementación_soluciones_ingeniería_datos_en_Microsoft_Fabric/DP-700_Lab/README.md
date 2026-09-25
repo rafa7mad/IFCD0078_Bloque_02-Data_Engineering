@@ -69,5 +69,11 @@
 
 <br>
 
+### IFCD0078_Bloque_02-Data_Engineering
+### Práctica Adiccional
+### [Práctica guiada — De los orígenes al informe: medallion + star schema en Microsoft Fabric](https://github.com/rodbalza/IFCD0078_Bloque_02-Data_Engineering/blob/main/Clase_40-Practica_End_to_End_Fabric/md/%F0%9F%A7%91%F0%9F%8F%BD%E2%80%8D%F0%9F%92%BB%20Clase%2040%20-%20Practica_End_to_End.md)
+
+<br>
+
 [Inicio](#dp-700t00-a-implementación-de-soluciones-de-ingeniería-de-datos-mediante-microsoft-fabric)
 

@@ -1,3 +1,5 @@
+### DP-700 Implementación de soluciones de ingeniería de datos mediante Microsoft Fabric
+
 # Práctica guiada — De los orígenes al informe: medallion + star schema en Microsoft Fabric
 
 ---
