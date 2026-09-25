@@ -492,6 +492,10 @@ You may choose to save your Power BI report, though it’s not necessary for thi
 1. If a dialog box appears prompting you to apply pending query changes, select **Apply**.
 1. Close Power BI Desktop.
 
+<br>
+
 ---
 
 [Up](#pl-300-microsoft-power-bi-data-analyst)
+
+---
