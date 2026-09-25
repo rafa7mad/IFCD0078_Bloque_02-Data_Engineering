@@ -165,43 +165,53 @@ Value distribution for the BusinessType column
 
 16. In the **Queries** pane, select the **FactResellerSales** query.
 
-The FactResellerSales table contains one row per sales order line—a sales order contains one or more line items.
+>*! The **FactResellerSales** table contains one row per sales order line—a sales order contains one or more line items.*
 
-Review the column quality for the TotalProductCost column, and notice that 8% of the rows are empty.
+17. Review the column quality for the **TotalProductCost** column, and notice that 8% of the rows are empty.
 
-Missing TotalProductCost column values is a data quality issue.
+>*! Missing **TotalProductCost** column values is a data quality issue.*
 
-Get data from a CSV file
+<br>
+
+## Get data from a CSV file
+
 In this task, you’ll create a new query based on CSV files.
 
-To add a new query, in the Power Query Editor window, on the Home ribbon tab, from inside the New Query group, select the New Source down-arrow, and then select Text/CSV.
+1. To add a new query, in the **Power Query Editor** window, on the **Home** ribbon tab, from inside the **New Query** group, select the **New Source** down-arrow, and then select **Text/CSV**.
 
-Navigate to the Downloads > 01-get-data folder you extracted earlier and select the ResellerSalesTargets.csv file. Select Open.
+2. Navigate to the **Downloads > 01-get-data** folder you extracted earlier and select the **ResellerSalesTargets.csv** file. Select **Open**.
 
-In the ResellerSalesTargets.csv window, review the preview data. Select OK.
+3. In the **ResellerSalesTargets.csv** window, review the preview data. Select **OK**.
 
-In the Queries pane, notice the addition of the ResellerSalesTargets query.
+4. In the Queries pane, notice the addition of the **ResellerSalesTargets** query.
 
-The ResellerSalesTargets CSV file contains one row per salesperson, per year. Each row records 12 monthly sales targets (expressed in thousands). The business year for the Adventure Works company commences on July 1.
+>*! The **ResellerSalesTargets** CSV file contains one row per salesperson, per year. Each row records 12 monthly sales targets (expressed in thousands). The business year for the Adventure Works company commences on July 1.*
 
-Notice that no column contains empty values. If a monthly sales target is missing, the column shows a hyphen instead.
+5. Notice that no column contains empty values. If a monthly sales target is missing, the column shows a hyphen instead.
 
-Review the icons in each column header, to the left of the column name. The icons represent the column data type. 123 is whole number, and ABC is text.
+6. Review the icons in each column header, to the left of the column name. The icons represent the column data type. **123** is whole number, and **ABC** is text.
+
+![506_01-get-data-in-power-bi_image38](images/506_01-get-data-in-power-bi_image38.png)
 
 Column data type
 
-Repeat the steps to create a query based on the ColorFormats.csv file.
+7. Repeat the steps to create a query based on the **ColorFormats.csv** file.
 
-The ColorFormats CSV file contains one row per product color. Each row records the HEX codes to format background and font colors.
+>*! The **ColorFormats** CSV file contains one row per product color. Each row records the HEX codes to format background and font colors.*
 
-You should now have two new queries, ResellerSalesTargets and ColorFormats.
+You should now have two new queries, **ResellerSalesTargets** and **ColorFormats**.
+
+![507_01-get-data-in-power-bi_image43](images/507_01-get-data-in-power-bi_image43.png)
 
 Queries list
 
-Lab complete
+<br>
+
+## Lab complete
+
 You may choose to save your Power BI report, though it’s not necessary for this lab. In the next exercise, you’ll work with a pre-made starter file.
 
-Navigate to the “File” menu in the top left corner and select “Save As”.
+1. Navigate to the “File” menu in the top left corner and select “Save As”.
 Select Browse this device.
 Select the folder where you want to save the file and give it a descriptive name.
 Select the Save button to save your report as a .pbix file.
