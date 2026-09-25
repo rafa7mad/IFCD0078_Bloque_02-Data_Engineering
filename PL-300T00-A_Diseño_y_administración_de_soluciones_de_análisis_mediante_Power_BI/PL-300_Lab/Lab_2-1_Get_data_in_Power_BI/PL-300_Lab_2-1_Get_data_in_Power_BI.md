@@ -111,7 +111,6 @@ List of loaded queries
 Column Quality selection in ribbon
 
 ![405_01-get-data-in-power-bi_image23](images/405_01-get-data-in-power-bi_image23.png)
-![image](images)
 
 <br>
 
@@ -211,13 +210,14 @@ Queries list
 
 You may choose to save your Power BI report, though it’s not necessary for this lab. In the next exercise, you’ll work with a pre-made starter file.
 
-1. Navigate to the “File” menu in the top left corner and select “Save As”.
-Select Browse this device.
-Select the folder where you want to save the file and give it a descriptive name.
-Select the Save button to save your report as a .pbix file.
-If a dialog box appears prompting you to apply pending query changes, select Apply.
-Close Power BI Desktop.
+1. Navigate to the **“File”** menu in the top left corner and select **“Save As”**.
+2. Select **Browse this device**.
+3. Select the folder where you want to save the file and give it a descriptive name.
+4. Select the **Save** button to save your report as a .pbix file.
+5. If a dialog box appears prompting you to apply pending query changes, select **Apply**.
+6. Close Power BI Desktop.
 
+![image](images)
 
 <br>
 
