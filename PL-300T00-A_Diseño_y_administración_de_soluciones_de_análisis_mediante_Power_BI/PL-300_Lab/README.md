@@ -38,7 +38,7 @@
 
 ### IFCD0078_Bloque_02-Data_Engineering
 ### Práctica Adiccional
-### Link a [Practica 04 - PostgreSQL en Docker para Ingeniería de Datos] (https://github.com/rodbalza/IFCD0078_Bloque_02-Data_Engineering/blob/main/Clase_44-Docker_Comandos_B%C3%A1sicos/Practica_04/Practica_04/%F0%9F%A7%91%F0%9F%8F%BD%E2%80%8D%F0%9F%92%BBPractica_04-PostgreSQL_en_Docker_para_Ingenieria_Datos.md) 
+### Link a [Practica 04 - PostgreSQL en Docker para Ingeniería de Datos](https://github.com/rodbalza/IFCD0078_Bloque_02-Data_Engineering/blob/main/Clase_44-Docker_Comandos_B%C3%A1sicos/Practica_04/Practica_04/%F0%9F%A7%91%F0%9F%8F%BD%E2%80%8D%F0%9F%92%BBPractica_04-PostgreSQL_en_Docker_para_Ingenieria_Datos.md) 
 ### Práctica [PL-300_Lab_P04_PostgreSQL_en_Docker_para_Ingeniería_de_Datos](https://github.com/rafa7mad/IFCD0078_Bloque_02-Data_Engineering/blob/main/PL-300T00-A_Dise%C3%B1o_y_administraci%C3%B3n_de_soluciones_de_an%C3%A1lisis_mediante_Power_BI/PL-300_Lab/Lab_P04_PostgreSQL_en_Docker_para_Ingenier%C3%ADa_de_Datos/PL-300_Lab_P04_PostgreSQL_en_Docker_para_Ingenier%C3%ADa_de_Datos.md)
 
 <br>
