@@ -12,6 +12,8 @@
 
 ## Ruta 1 Introducción al análisis de datos de Microsoft
 
+### No hay laboratorios
+
 <br>
 
 ## Ruta 2 Preparación de datos para el análisis con Power BI
