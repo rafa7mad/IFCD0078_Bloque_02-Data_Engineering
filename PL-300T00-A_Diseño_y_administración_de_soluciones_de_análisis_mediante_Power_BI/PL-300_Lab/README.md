@@ -32,7 +32,17 @@
 
 <br>
 
-### 
+## Ruta 3 Modelar datos con Power BI
+
+### Módulo 3.1 Configurar un modelo semántico 
+### Ejercicio: Configurar un modelo semántico en Power BI Desktop
+### [Configure a semantic model in Power BI](https://microsoftlearning.github.io/PL-300-Microsoft-Power-BI-Data-Analyst/Instructions/Labs/03-configure-semantic-model.html)
+
+<br>
+
+### Módulo 3.3 Crear cálculos DAX en modelos semánticos
+### Ejercicio: Crear cálculos DAX
+### [Create DAX calculations in semantic models](https://microsoftlearning.github.io/PL-300-Microsoft-Power-BI-Data-Analyst/Instructions/Labs/04-create-dax-calculations.html)
 
 <br>
 
