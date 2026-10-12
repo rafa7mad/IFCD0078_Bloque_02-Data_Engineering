@@ -76,6 +76,8 @@ AdventureWorksDW2020 database with DimEmployee indicated
      - DimSalesTerritory
      - FactResellerSales
 
+![307_01_tables_0](images/307_01_tables_0.JPG)
+
 8. Complete this task by selecting **Transform Data**, which will open Power Query Editor - leave this open for the next task.
 
 You’ve now connected to six tables from a SQL Server database.
@@ -122,6 +124,10 @@ Column quality showing 94% empty rows
 
 <br>
 
+![406_01_position_0](images/406_02_position_0.JPG)
+
+<br>
+
 7. To assess column distribution, on the **View** ribbon tab, from inside the Data Preview group, check Column Distribution.
 
 8. Review the **Position** column again, and notice that there are four distinct values, and one unique value.
@@ -130,7 +136,11 @@ Column quality showing 94% empty rows
 
 ![409_01-get-data-in-power-bi_image26](images/409_01-get-data-in-power-bi_image26.png)
 
+<br>
+
 Column distribution showing 296 distinct, 296 unique values
+
+![409_02_employeeKey_0](images/409_02_employeeKey_0.JPG)
 
 <br>
 
@@ -152,11 +162,15 @@ Column distribution showing 296 distinct, 296 unique values
 
 ![413_01-get-data-in-power-bi_image31](images/413_01-get-data-in-power-bi_image31.png)
 
-Value distribution for the BusinessType column
-
 <br>
 
+Value distribution for the BusinessType column
+
 14. Hover the cursor over the **Ware House** bar, and notice that there are five rows with this value.
+
+![414_01_BusineesType_0](images/414_01_BusineesType_0.jpg)
+
+<br>
 
 15. In the **Queries** pane, select the **DimSalesTerritory** query.
 
