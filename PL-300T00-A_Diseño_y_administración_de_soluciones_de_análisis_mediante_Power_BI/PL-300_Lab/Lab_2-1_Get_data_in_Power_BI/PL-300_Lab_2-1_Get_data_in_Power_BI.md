@@ -40,7 +40,6 @@ This task teaches you how to connect to a SQL Server database and import tables,
 
 1. On the **Home** ribbon tab, from inside the **Data** group, select **SQL Server**.
 
-SQL Server Get Data icon
 ![201_01-get-data-in-power-bi_image11](images/201_01-get-data-in-power-bi_image11.png)
 
 <br>
@@ -58,8 +57,6 @@ SQL Server Get Data icon
 >*! **Note**: The **AdventureWorksDW2020** database is based on the **AdventureWorksDW2017** sample database. It has been modified to support the learning objectives of the course labs.*
 
 6. Select the **DimEmployee** table, and notice the preview of the table data.
-
-AdventureWorksDW2020 database with DimEmployee indicated
 
 ![306_01-get-data-in-power-bi_image18](images/306_01-get-data-in-power-bi_image18.png)
 
@@ -90,8 +87,6 @@ This task introduces the Power Query Editor and allows you to review and profile
 
 1. In the **Power Query Editor** window, at the left, notice the **Queries** pane. The **Queries** pane contains one query for each table you checked.
 
-List of loaded queries
-
 ![401_01-get-data-in-power-bi_image20.png](images/401_01-get-data-in-power-bi_image20.png)
 
 <br>
@@ -102,7 +97,9 @@ List of loaded queries
 
 3. At the bottom left corner of the status bar, some table statistics are provided—the table has 33 columns, and 296 rows.
 
-> Count of 33 columns, 296 rows
+![403_01-get-data-in-power-bi_image22](images/403_01-get-data-in-power-bi_image22.png)
+
+<br>
 
 4. In the data preview pane, scroll horizontally to review all columns. Notice that the last five columns contain **Table** or **Value** links.
 
@@ -110,15 +107,11 @@ List of loaded queries
 
 5. To assess column quality, on the **View** ribbon tab, from inside the **Data Preview** group, check **Column Quality**. The column quality feature allows you to easily determine the percentage of valid, error, or empty values found in columns.
 
-Column Quality selection in ribbon
-
 ![405_01-get-data-in-power-bi_image23](images/405_01-get-data-in-power-bi_image23.png)
 
 <br>
 
 6. Notice that the **Position** column has 94% empty (null) rows.
-
-Column quality showing 94% empty rows
 
 ![406_01-get-data-in-power-bi_image24](images/406_01-get-data-in-power-bi_image24.png)
 
@@ -164,8 +157,6 @@ Column distribution showing 296 distinct, 296 unique values
 
 <br>
 
-Value distribution for the BusinessType column
-
 14. Hover the cursor over the **Ware House** bar, and notice that there are five rows with this value.
 
 ![414_01_BusineesType_0](images/414_01_BusineesType_0.jpg)
@@ -194,6 +185,10 @@ In this task, you’ll create a new query based on CSV files.
 
 1. To add a new query, in the **Power Query Editor** window, on the **Home** ribbon tab, from inside the **New Query** group, select the **New Source** down-arrow, and then select **Text/CSV**.
 
+![501_02_New_Source_0](images/501_02_New_Source_0.JPG)
+
+<br>
+
 2. Navigate to the **Downloads > 01-get-data** folder you extracted earlier and select the **ResellerSalesTargets.csv** file. Select **Open**.
 
 3. In the **ResellerSalesTargets.csv** window, review the preview data. Select **OK**.
@@ -204,11 +199,13 @@ In this task, you’ll create a new query based on CSV files.
 
 5. Notice that no column contains empty values. If a monthly sales target is missing, the column shows a hyphen instead.
 
+![505_01_values_0](images/505_01_values_0.JPG)
+
+<br>
+
 6. Review the icons in each column header, to the left of the column name. The icons represent the column data type. **123** is whole number, and **ABC** is text.
 
 ![506_01-get-data-in-power-bi_image38](images/506_01-get-data-in-power-bi_image38.png)
-
-Column data type
 
 7. Repeat the steps to create a query based on the **ColorFormats.csv** file.
 
@@ -218,7 +215,9 @@ You should now have two new queries, **ResellerSalesTargets** and **ColorFormats
 
 ![507_01-get-data-in-power-bi_image43](images/507_01-get-data-in-power-bi_image43.png)
 
-Queries list
+<br>
+
+![507_02_Queries_0](images/507_02_Queries_0.jpg)
 
 <br>
 
@@ -233,7 +232,7 @@ You may choose to save your Power BI report, though it’s not necessary for thi
 5. If a dialog box appears prompting you to apply pending query changes, select **Apply**.
 6. Close Power BI Desktop.
 
-![image](images)
+![606_2-1_Get_data_0](images/606_2-1_Get_data_0.JPG)
 
 <br>
 
