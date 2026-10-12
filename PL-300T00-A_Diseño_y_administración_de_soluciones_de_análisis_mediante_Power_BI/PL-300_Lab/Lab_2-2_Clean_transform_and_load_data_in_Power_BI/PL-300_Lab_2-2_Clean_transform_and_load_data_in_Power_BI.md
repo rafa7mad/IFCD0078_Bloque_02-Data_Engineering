@@ -51,7 +51,7 @@ In this task, you'll use Power Query Editor to configure the **Salesperson** que
 
 >*! The query name determines the model table name. It’s recommended to define concise and user-friendly names.*
 
-![303_Salesperson_0](images/303_Salesperson_0.JPG)
+![303_Salesperson_0](images/303_01_Salesperson_0.JPG)
 
 <br>
 
@@ -59,17 +59,13 @@ In this task, you'll use Power Query Editor to configure the **Salesperson** que
 
 >*! **Go to Column** is a useful feature with many columns. Otherwise, you can horizontally scroll to find columns.*
 
-Manage columns > Choose columns > Go to column
-
-[image](images)
+![304_02-transform-data-power-bi_image13](images/304_02-transform-data-power-bi_image13.png)
 
 <br>
 
 5. In the **Go to Column** window, to order the list by column name, select the **AZ** sort button, and then select **Name**.
 
-Go to column sort options
-
-[image](images)
+![305_02-transform-data-power-bi_image14](images/305_02-transform-data-power-bi_image14.png)
 
 <br>
 
@@ -79,9 +75,7 @@ Go to column sort options
 
 >*! Each transformation you create results in another step logic. It’s possible to edit or delete steps. It’s also possible to select a step to preview the query results at that stage of the query transformation.*
 
-Applied steps
-
-[image](images)
+![307_02-transform-data-power-bi_image17](images/307_02-transform-data-power-bi_image17.png)
 
 <br>
 
@@ -100,17 +94,13 @@ Applied steps
 
 11. In the **Applied Steps** list, notice the addition of another query step.
 
-Removed other columns step
-
-[image](images)
+![311_02-transform-data-power-bi_image21](images/311_02-transform-data-power-bi_image21.png)
 
 <br>
 
 12. To create a single name column, first select the **FirstName** column header. While pressing the **Ctrl** key, select the **LastName** column.
 
-Multi-select two columns to create single column
-
-[image](images)
+![312_02-transform-data-power-bi_image22](images/312_02-transform-data-power-bi_image22.png)
 
 <br>
 
