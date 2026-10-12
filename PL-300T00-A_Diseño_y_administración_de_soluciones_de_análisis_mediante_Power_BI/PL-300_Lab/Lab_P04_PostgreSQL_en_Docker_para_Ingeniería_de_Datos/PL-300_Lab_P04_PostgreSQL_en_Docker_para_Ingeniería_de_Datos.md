@@ -1,4 +1,4 @@
-### ### PL-300 Microsoft Power-BI Data Analyst
+### PL-300 Microsoft Power-BI Data Analyst
 
 # Practica 04 - PostgreSQL en Docker para Ingeniería de Datos
 
