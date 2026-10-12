@@ -35,17 +35,13 @@ In this task, you'll use Power Query Editor to configure the **Salesperson** que
 
 1. To open the **Power Query Editor** window, on the **Home** ribbon tab, from inside the **Queries** group, select the **Transform Data** icon.
 
-Transform Data on Home ribbon
-
-[image](images)
+![301_01-transform-data-power-bi_image10](images/301_01-transform-data-power-bi_image10.png)
 
 <br>
 
 1. In the **Power Query Editor** window, in the **Queries** pane, select the **DimEmployee** query.
 
-Picture 1
-
-[image](images)
+![302_01-transform-data-power-bi_image11](images/302_01-transform-data-power-bi_image11.png)
 
 <br>
 
@@ -54,6 +50,10 @@ Picture 1
 3. To rename the query, in the **Query Settings** pane (located at the right), in the **Name** box, replace the text with **Salesperson**, and then press **Enter**. Then verify the name has been updated in **Queries** pane.
 
 >*! The query name determines the model table name. It’s recommended to define concise and user-friendly names.*
+
+![303_Salesperson_0](images/303_Salesperson_0.JPG)
+
+<br>
 
 4. To locate a specific column, on the **Home** ribbon tab, from inside the **Manage Columns** group, select the **Choose Columns** down-arrow, and then select **Go to Column**.
 
