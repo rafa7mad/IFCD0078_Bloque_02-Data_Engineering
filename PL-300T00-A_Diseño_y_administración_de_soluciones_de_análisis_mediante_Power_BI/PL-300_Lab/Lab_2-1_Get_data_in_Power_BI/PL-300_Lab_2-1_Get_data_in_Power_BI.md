@@ -184,6 +184,8 @@ Value distribution for the BusinessType column
 
 >*! Missing **TotalProductCost** column values is a data quality issue.*
 
+![417_TotalProductCost_0](images/417_TotalProductCost_0.jpg)
+
 <br>
 
 ## Get data from a CSV file
