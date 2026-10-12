@@ -71,6 +71,14 @@ In this task, you'll use Power Query Editor to configure the **Salesperson** que
 
 6. Locate the **SalesPersonFlag** column, then filter the column to select only Salespeople (that is, **TRUE**), and click **OK**.
 
+![306_01_SalesPersonFlag_0](images/306_01_SalesPersonFlag_0.JPG)
+
+<br>
+
+![306_02_SalesPersonFlag_0](images/306_02_SalesPersonFlag_0.JPG)
+
+<br>
+
 7. In the **Query Settings** pane, in the **Applied Steps** list, notice the addition of the **Filtered Rows** step.
 
 >*! Each transformation you create results in another step logic. It’s possible to edit or delete steps. It’s also possible to select a step to preview the query results at that stage of the query transformation.*
@@ -92,9 +100,17 @@ In this task, you'll use Power Query Editor to configure the **Salesperson** que
    - Title
    - EmailAddress
 
+![310_01_columns_0](images/310_01_columns_0.JPG)
+
+<br>
+
 11. In the **Applied Steps** list, notice the addition of another query step.
 
 ![311_02-transform-data-power-bi_image21](images/311_02-transform-data-power-bi_image21.png)
+
+<br>
+
+![311_03_Removed_columns_0](images/311_03_Removed_columns_0.JPG)
 
 <br>
 
