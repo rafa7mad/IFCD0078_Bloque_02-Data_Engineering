@@ -351,6 +351,10 @@ In this task, you'll configure the **Sales** query.
 
 > ! **Note**: You may recall in the **Prepare Data in Power BI Desktop** lab that a small percentage of **FactResellerSales** rows had missing **TotalProductCost** values. The **DimProduct** column has been included to retrieve the product standard cost column to assist fixing the missing values.
 
+![802_01_remove_columns_0](images/802_01_remove_columns_0.JPG)
+
+<br>
+
 3. Expand the **DimProduct** column, uncheck all columns, and then include only the **StandardCost** column.
 
 4. To create a custom column, on the **Add Column** ribbon tab, from inside the **General** group, select **Custom Column**.
@@ -368,6 +372,10 @@ In this task, you'll configure the **Sales** query.
 > ! **Note**: You can copy the expression from the **Snippets.txt** file in the 02-transform-data folder.
 
 > This expression tests if the **TotalProductCost** value is missing. If missing, it produces a value by multiplying the **OrderQuantity** value by the **StandardCost** value; otherwise, it uses the existing **TotalProductCost** value.
+
+![806_01_new_column_Cost_0](images/806_01_new_column_Cost_0.JPG)
+
+<br>
 
 7. Remove the following two columns:
 
@@ -397,6 +405,8 @@ In this task, you'll configure the **Sales** query.
    - Cost
 
 **In the status bar, verify that the query has 10 columns and 999+ rows.** *A maximum of 1000 rows will be loaded as preview data for each query.*
+
+![810_01_status_bar_0](images/810_01_status_bar_0.JPG)
 
 <br>
 
