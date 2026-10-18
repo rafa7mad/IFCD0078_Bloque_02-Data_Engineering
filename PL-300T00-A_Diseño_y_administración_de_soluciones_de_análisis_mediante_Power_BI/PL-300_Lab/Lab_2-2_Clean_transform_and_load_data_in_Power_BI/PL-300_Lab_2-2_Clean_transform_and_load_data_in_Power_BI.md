@@ -160,6 +160,10 @@ In this task, you'll configure the **SalespersonRegion** query.
 
 **In the status bar, verify that the query has 2 columns and 39 rows.**
 
+![405_01_SalespersonRegion_0](images/405_01_SalespersonRegion_0.JPG)
+
+<br>
+
 ## Configure the Product query
 
 In this task, you'll configure the **Product** query.
@@ -170,6 +174,10 @@ In this task, you'll configure the **Product** query.
 
 2. Locate the **FinishedGoodsFlag** column, and then filter the column to retrieve products that are finished goods (that is, TRUE).
 
+![502_01_FinishedGoodsFlag_0](images/502_01_FinishedGoodsFlag_0.JPG)
+
+<br>
+
 3. Remove all columns, **except** the following:
 
    - ProductKey
@@ -177,6 +185,10 @@ In this task, you'll configure the **Product** query.
    - StandardCost
    - Color
    - DimProductSubcategory
+
+![503_01_Remove_columns_0](images/503_01_Remove_columns_0.JPG)
+
+<br>
 
 4. Notice that the **DimProductSubcategory** column represents a related table (it contains **Value** links).
 
@@ -200,7 +212,15 @@ In this task, you'll configure the **Product** query.
 
 8. Notice that the transformation resulted in the addition of two columns, and that the **DimProductSubcategory** column has been removed.
 
+![508_add_two_columns_0](images/508_01_add_two_columns_0.JPG)
+
+<br>
+
 9. Expand the **DimProductCategory** column, and then introduce only the **EnglishProductCategoryName** column.
+
+![509_01_EnglishProductCategoryName_0](images/509_01_EnglishProductCategoryName_0.JPG)
+
+<br>
 
 10. Rename the following four columns:
 
@@ -210,6 +230,10 @@ In this task, you'll configure the **Product** query.
    - **EnglishProductCategoryName** to **Category**
 
 **In the status bar, verify that the query has 6 columns and 397 rows.**
+
+![510_01_rename_columns_0](images/510_01_rename_columns_0.JPG)
+
+<br>
 
 ## Configure the Reseller query
 
