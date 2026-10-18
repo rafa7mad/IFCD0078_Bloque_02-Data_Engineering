@@ -422,6 +422,10 @@ In this task, you'll configure the **Targets** query.
 
 3. Right-click either of the select column headers, and then in the context menu, select **Unpivot Other Columns**.
 
+![903_01_Unpivot_Other_Columns_0](images/903_01_Unpivot_Other_Columns_0.JPG)
+
+<br>
+
 4. Notice that the column names now appear in the **Attribute** column, and the values appear in the **Value** column.
 
 5. Apply a filter to the **Value** column to remove hyphen (-) values.
@@ -433,11 +437,19 @@ In this task, you'll configure the **Targets** query.
    - **Attribute** to **MonthNumber** (there's no space)
    - **Value** to **Target**
 
+![906_01_rename_colums_0](images/906_01_rename_colums_0.JPG)
+
+<br>
+
 7. To prepare the **MonthNumber** column values, right-click the **MonthNumber** column header, and then select **Replace Values**.
 
 > You’ll now apply transformations to produce a date column. The date will be derived from the **Year** and **MonthNumber** columns. You’ll create the column by using the **Columns From Examples** feature.
 
 8. In the **Replace Values** window, in the **Value To Find** box, enter **M** and leave the **Replace with** empty.
+
+![908_01_Replace_Values_0](images/908_01_Replace_Values_0.JPG)
+
+<br>
 
 9. Modify the **MonthNumber** column data type to **Whole Number**.
 
@@ -457,6 +469,10 @@ In this task, you'll configure the **Targets** query.
 
 > The feature has accurately predicted that you're combining values from the **Year** and **MonthNumber** columns.
 
+![913_01_add_column_0](images/913_01_add_column_0.JPG)
+
+<br>
+
 14. Notice also the formula presented above the query grid.
 
 ![914_02-transform-data-power-bi_image60](images/914_02-transform-data-power-bi_image60.png)
@@ -475,6 +491,10 @@ In this task, you'll configure the **Targets** query.
    - **Target** as fixed decimal number
    - **TargetMonth** as date
 
+![917_01_rename_columns_0](images/917_01_rename_columns_0.JPG)
+
+<br>
+
 18. To multiply the **Target** values by 1000, select the **Target** column header, and then on the **Transform** ribbon tab, from inside the **Number Column** group, select **Standard**, and then select **Multiply**.
 
 > You may recall that the target values were stored as thousands.
@@ -486,6 +506,12 @@ In this task, you'll configure the **Targets** query.
 19. In the **Multiply** window, in the **Value** box, enter **1000**, and select **OK**.
 
 **In the status bar, verify that the query has 3 columns and 809 rows.**
+
+![919_01_Multiply_0](images/919_01_Multiply_0.JPG)
+
+<br>
+
+![919_02_status_bar_0](images/919_02_status_bar_0.JPG)
 
 <br>
 
