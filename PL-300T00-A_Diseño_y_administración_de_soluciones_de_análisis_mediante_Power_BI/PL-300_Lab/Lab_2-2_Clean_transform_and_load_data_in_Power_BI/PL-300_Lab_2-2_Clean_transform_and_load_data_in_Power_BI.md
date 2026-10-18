@@ -575,12 +575,18 @@ In this task, you'll update the **Product** query by merging the **ColorFormats*
 
 7. In the **Merge** window, use the default **Join Kind** - maintaining the selection of Left Outer and select **OK**.
 
+![1107_01_Join_Kind_0](images/1107_01_Join_Kind_0.JPG)
+
+<br>
+
 8. Expand the **ColorFormats** column to include the following two columns:
 
    - Background Color Format
    - Font Color Format
 
 **In the status bar, verify that the query now has 8 columns and 397 rows.**
+
+![1108_01_status_bar_0](images/1108_01_status_bar_0.JPG)
 
 <br>
 
@@ -604,6 +610,10 @@ In this task, you'll update the **ColorFormats** to disable its load.
 
 <br>
 
+![1203_03_Enable_Load_To_Report_0](images/1203_03_Enable_Load_To_Report_0.JPG)
+
+<br>
+
 ## Review final product
 
 1. In Power Query Editor, verify that you have **8 queries**, correctly named as follows:
@@ -619,13 +629,17 @@ In this task, you'll update the **ColorFormats** to disable its load.
 
 2. Select **Close & Apply** to load the data to the model, and close Power Query Editor window.
 
-![1302_02-transform-data-power-bi_image83](images/1203_02-transform-data-power-bi_image81.png)
+![1302_02-transform-data-power-bi_image83](images/1302_02-transform-data-power-bi_image83.png)
+
+![1302_03_Close_Apply_0](images/1302_03_Close_Apply_0.JPG)
 
 <br>
 
 3. You can now see the canvas in Power BI Desktop, with Filters, Visualizations, and Data panes on the right. In the Data pane, notice the **7 tables** loaded to the data model.
 
 ![1303_02-transform-data-power-bi_image84](images/1303_02-transform-data-power-bi_image84.png)
+
+![1303_01_tables_0](images/1303_03_tables_0.JPG)
 
 <br>
 
