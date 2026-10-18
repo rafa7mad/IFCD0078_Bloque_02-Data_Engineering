@@ -248,11 +248,19 @@ In this task, you'll configure the **Reseller** query.
    - ResellerName
    - DimGeography
 
+![602_01_remove_columns_0](images/602_01_remove_columns_0.JPG)
+
+<br>
+
 3. Expand the **DimGeography** column, to include **only** the following three columns:
 
    - City
    - StateProvinceName
    - EnglishCountryRegionName
+
+![603_01_three_columns_0](images/603_01_three_columns_0.JPG)
+
+<br>
 
 4. On the **BusinessType** column header, select the down-arrow, and then review the distinct column values, and notice both values **Warehouse** and **Ware House**.
 
@@ -267,6 +275,14 @@ In this task, you'll configure the **Reseller** query.
 
 <br>
 
+![606_03_BusinessType_0](images/606_03_BusinessType_0.JPG)
+
+<br>
+
+![606_04_Warehouse_0](images/606_04_Warehouse_0.JPG)
+
+<br>
+
    1. Rename the following four columns:
 
       - **BusinessType** to **Business Type** (include a space)
@@ -275,6 +291,8 @@ In this task, you'll configure the **Reseller** query.
       - **EnglishCountryRegionName** to **Country-Region**
 
 **In the status bar, verify that the query has 6 columns and 701 rows.**
+
+![610_01_rename_colums_0](images/610_01_rename_colums_0.JPG)
 
 <br>
 
@@ -287,6 +305,10 @@ In this task, you'll configure the **Region** query.
 2. Apply a filter to the **SalesTerritoryAlternateKey** column to remove the value 0 (zero).
 
 > This will remove one row.
+
+![702_01_SalesTerritoryAlternateKey_0](images/702_01_SalesTerritoryAlternateKey_0.JPG)
+
+<br>
 
 3. Remove all columns, **except** the following:
 
@@ -302,6 +324,8 @@ In this task, you'll configure the **Region** query.
    - **SalesTerritoryGroup** to **Group**
 
 **In the status bar, verify that the query has 4 columns and 10 rows.**
+
+![704_01_status_bar_0](images/704_01_status_bar_0.JPG)
 
 <br>
 
