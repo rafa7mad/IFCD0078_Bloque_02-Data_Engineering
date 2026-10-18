@@ -46,6 +46,18 @@
 
 <br>
 
+### Módulo 3.4 Modificar el contexto del filtro DAX en los modelos semánticos
+### Ejercicio: Modificar el contexto de filtro DAX
+### [Modify DAX filter context in Power BI](https://microsoftlearning.github.io/PL-300-Microsoft-Power-BI-Data-Analyst/Instructions/Labs/05-modify-dax-filter-context.html)
+
+<br>
+
+### Módulo 3.5 Usar las funciones de inteligencia de tiempo de DAX en modelos semánticos
+### Ejercicio: Usar las funciones de inteligencia de tiempo
+### [Use DAX time intelligence functions in Power BI](https://microsoftlearning.github.io/PL-300-Microsoft-Power-BI-Data-Analyst/Instructions/Labs/06-use-dax-time-intelligence.html)
+
+<br>
+
 ---
 
 ### IFCD0078_Bloque_02-Data_Engineering
