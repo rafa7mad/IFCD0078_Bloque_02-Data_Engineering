@@ -521,6 +521,10 @@ In this task, you'll configure the **ColorFormats** query.
 
 1. Select the **ColorFormats** query and notice that the first row contains the column names.
 
+![1001_01_first_row_0](images/1001_01_first_row_0.JPG)
+
+<br>
+
 2. On the **Home** ribbon tab, from inside the **Transform** group, select **Use First Row as Headers**.
 
 ![1002_02-transform-data-power-bi_image68](images/1002_02-transform-data-power-bi_image68.png)
@@ -528,6 +532,8 @@ In this task, you'll configure the **ColorFormats** query.
 <br>
 
 **In the status bar, verify that the query has 3 columns and 10 rows.**
+
+![1002_03_first_row_headers_0](images/1002_03_first_row_headers_0.JPG)
 
 <br>
 
