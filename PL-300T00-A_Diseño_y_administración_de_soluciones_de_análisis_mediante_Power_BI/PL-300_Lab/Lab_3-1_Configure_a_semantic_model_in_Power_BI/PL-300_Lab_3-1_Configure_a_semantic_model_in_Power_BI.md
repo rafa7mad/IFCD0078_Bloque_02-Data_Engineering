@@ -184,11 +184,15 @@ In this task, you'll configure the `Product` table with a hierarchy and display 
 
     ![0505_01-configure-semantic-model-create-hierarchy-levels](images/0505_01-configure-semantic-model-create-hierarchy-levels.png)
 
+    ![0505_02_add_levels_0](images/0505_02_add_levels_0.JPG)
+
 <br>
 
 6. In the **Data** pane, notice the `Products` hierarchy. To reveal the hierarchy levels, expand it.
 
     ![0506_01-configure-semantic-model_image28](images/0506_01-configure-semantic-model_image28.png)
+
+    ![0506_02_hierarchy_levels_0](images/0506_02_hierarchy_levels_0.JPG)
 
 <br>
 
@@ -209,6 +213,8 @@ In this task, you'll configure the `Product` table with a hierarchy and display 
 <br>
 
     >! _Display folders are a great way to organize tables, especially for tables that comprise many fields. They're logical presentation only._
+
+![0510_02_Formatting_0](images/0510_02_Formatting_0.JPG)
 
 <br>
 
