@@ -139,6 +139,10 @@ There's an easier way to create a relationship. In the model diagram, you can dr
 
 3. In the **New relationship** window, review the configuration, and then select **Save**.
 
+![0403_01_New_relationship_0](images/0403_01_New_relationship_0.JPG)
+
+<br>
+
 4. Use the new technique to create the following two model relationships:
 
      - `Region | SalesTerritoryKey` to `Sales | SalesTerritoryKey`
@@ -151,6 +155,8 @@ There's an easier way to create a relationship. In the model diagram, you can dr
 <br>
 
 6. Save the Power BI Desktop file.
+
+![0406_01_relationships_0](images/0406_01_relationships_0.JPG)
 
 <br>
 
