@@ -264,7 +264,7 @@ In this task, you'll configure the `Reseller` table to add a hierarchy and updat
     - `State-Province` to **State or Province**
     - `City` to **City**
 
-![](images)
+![0703_01_Reseller_0](images/0703_01_Reseller_0.JPG)
 
 <br>
 
