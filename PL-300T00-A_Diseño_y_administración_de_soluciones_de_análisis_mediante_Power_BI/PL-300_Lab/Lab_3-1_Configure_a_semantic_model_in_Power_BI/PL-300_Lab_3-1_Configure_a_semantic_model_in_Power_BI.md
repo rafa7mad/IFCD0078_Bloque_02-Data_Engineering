@@ -405,6 +405,10 @@ In this task, you'll create two quick measures to calculate profit and profit ma
 
 5. Select **Add**.
 
+    ![1105_01_Quick_Measure_0](images/1105_01_Quick_Measure_0.JPG)
+
+<br>
+
 6. In the **Data** pane, inside the `Sales` table, notice that new measure.
 
     > _Measures are indicated by the calculator icon._
@@ -416,6 +420,10 @@ In this task, you'll create two quick measures to calculate profit and profit ma
 7. To rename the measure, right-click it, select **Rename**, then rename as _Profit_.
 
     > _Tip: To rename a field, you can also double-click it, or select it and press **F2**._
+
+    ![1107_01_Profit_0](images/1107_01_Profit_0.JPG)
+
+<br>
 
 8. In the `Sales` table, add a second quick measure, based on the following requirements:
 
@@ -429,6 +437,8 @@ In this task, you'll create two quick measures to calculate profit and profit ma
 9. Ensure the `Profit Margin` measure is selected, and then on the **Measure Tools** contextual ribbon, set the format to **Percentage**, with two decimal places.
 
     ![1109_01-configure-semantic-model_image54](images/1109_01-configure-semantic-model_image54.png)
+
+    ![1109_02_Profit_Margin_0](images/1109_02_Profit_Margin_0.JPG)
 
 <br>
 
@@ -452,7 +462,7 @@ In this task, you'll create two quick measures to calculate profit and profit ma
 
 <br>
 
-![](images)
+   ![1113_02_table_visual_0](images/1113_02_table_visual_0.JPG)
 
 <br>
 
