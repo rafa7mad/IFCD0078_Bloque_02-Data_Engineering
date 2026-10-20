@@ -432,7 +432,7 @@ In this task, you'll create a many-to-many relationship between the `Salesperson
      - `Salesperson | Salesperson`
      - `Sales | Sales`
 
-    ![1202_01-configure-semantic-model_u_image9](images/03-configure-semantic-model_u_image9.png)
+    ![1202_01-configure-semantic-model_u_image9](images/1202_01-configure-semantic-model_u_image9.png)
 
 <br>
 
@@ -456,7 +456,7 @@ In this task, you'll create a many-to-many relationship between the `Salesperson
 
     > _Consider that the `Salesperson` table filters the `Sales` table. It also filters the `SalespersonRegion` table, but it doesn't continue by propagating filters to the `Region` table (the arrowhead is pointing the wrong direction)._
 
-    ![1207_01-configure-semantic-model_u_image11](images/03-configure-semantic-model_u_image11.png)
+    ![1207_01-configure-semantic-model_u_image11](images/1207_01-configure-semantic-model_u_image11.png)
 
 <br>
 
@@ -466,7 +466,7 @@ In this task, you'll create a many-to-many relationship between the `Salesperson
 
 10. Check the **Apply Security Filter in Both Directions** checkbox.
 
-    ![1210_01-configure-semantic-model_u_image12](images/03-configure-semantic-model_u_image12.png)
+    ![1210_01-configure-semantic-model_u_image12](images/1210_01-configure-semantic-model_u_image12.png)
 
 <br>
 
@@ -474,7 +474,7 @@ In this task, you'll create a many-to-many relationship between the `Salesperson
 
 12. Notice that the relationship has a double arrowhead now.
 
-    ![1212_01-configure-semantic-model_u_image14](images/03-configure-semantic-model_u_image14.png)
+    ![1212_01-configure-semantic-model_u_image14](images/1212_01-configure-semantic-model_u_image14.png)
 
 <br>
 
@@ -488,7 +488,7 @@ In this task, you'll create a many-to-many relationship between the `Salesperson
 
 16. In the **Edit Relationship** window, uncheck the **Make This Relationship Active** checkbox.
 
-    ![1216_01-configure-semantic-model_u_image14a](images/03-configure-semantic-model_u_image14a.png)
+    ![1216_01-configure-semantic-model_u_image14a](images/1216_01-configure-semantic-model_u_image14a.png)
 
 <br>
 
@@ -500,7 +500,7 @@ In this task, you'll create a many-to-many relationship between the `Salesperson
 
 18. In the model diagram, notice that the inactive relationship is represented by a dotted line.
 
-    ![1218_01-configure-semantic-model_u_image17](Linked_imagesimage_Files/03-configure-semantic-model_u_image17.png)
+    ![1218_01-configure-semantic-model_u_image17](images/1218_01-configure-semantic-model_u_image17.png)
 
 <br>
 
@@ -532,7 +532,7 @@ In this task, you'll create a relationship to the `Targets` table.
 
 1. Resize the table visual so all columns are visible.
 
-    ![1303_01-configure-semantic-model_u_image19](images/03-configure-semantic-model_u_image19.png)
+    ![1303_01-configure-semantic-model_u_image19](images/1303_01-configure-semantic-model_u_image19.png)
 
 <br>
 
