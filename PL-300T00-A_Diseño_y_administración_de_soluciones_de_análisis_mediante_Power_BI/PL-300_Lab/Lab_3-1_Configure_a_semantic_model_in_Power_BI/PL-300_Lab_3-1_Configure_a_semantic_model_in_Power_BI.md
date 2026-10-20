@@ -53,6 +53,10 @@ In this task, you'll create model relationships. The file was configured to not 
 
     >! _The issue is that the table is based on fields from different tables. The expectation is that each product category displays the sales for that category. However, because there isn't a model relationship between these tables, the `Sales` table isn't filtered. You'll now add a relationship to propagate filters between the tables._
 
+![0304_02_table_visual_0](images/0304_02_table_visual_0.JPG)
+
+<br>
+
 5. To switch to the model designer, at the left select the **Model view** icon.
 
     ![0305_01-configure-semantic-model-model-view](images/0305_01-configure-semantic-model-model-view.png)
@@ -66,6 +70,10 @@ In this task, you'll create model relationships. The file was configured to not 
 <br>
 
 7. In the **Manage Relationships** window, notice that no relationships are yet defined.
+
+![0307_01_Manage_Relationships_0](images/0307_01_Manage_Relationships_0.JPG)
+
+<br>
 
 8. To create a relationship, select **+ New relationship**.
 
@@ -87,6 +95,12 @@ In this task, you'll create model relationships. The file was configured to not 
 
 11. Select **Save**, notice in the **Manage Relationships** window that the new relationship is listed, and then select **Close**.
 
+![0311_01_Manage_Relationships_0](images/0311_01_Manage_Relationships_0.JPG)
+
+![0311_02_Manage_Relationships_0](images/0311_02_Manage_Relationships_0.JPG)
+
+<br>
+
 12. In the model diagram, notice there's now a connector between the two tables (you might choose to reposition the tables to see the relationship more clearly).
 
     ![0312_01-configure-semantic-model_image21](images/0312_01-configure-semantic-model_image21.png)
@@ -106,6 +120,9 @@ In this task, you'll create model relationships. The file was configured to not 
     > _Filters applied to the `Product` table now propagate to the `Sales` table._
 
     ![0313_01-configure-semantic-model-table-with-relationship](images/0313_01-configure-semantic-model-table-with-relationship.png)
+
+![0313_02_Report_view_0](images/0313_02_Report_view_0.JPG)
+
 
 <br>
 
