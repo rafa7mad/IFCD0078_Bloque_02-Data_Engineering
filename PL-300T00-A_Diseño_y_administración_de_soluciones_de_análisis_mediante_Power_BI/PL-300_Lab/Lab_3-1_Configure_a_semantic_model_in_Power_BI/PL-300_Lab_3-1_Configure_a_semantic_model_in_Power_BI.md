@@ -365,11 +365,13 @@ In this task you'll switch to **Report view**, review the data model interface, 
 
     ![1005_01-configure-semantic-model_image43](images/1005_01-configure-semantic-model_image43.png)
 
+    ![1005_02_Auto_Date-Time_1](images/1005_02_Auto_Date-Time_1.jpg)
+
 <br>
 
 6. In the **Data** pane, notice that the date hierarchies are no longer available.
 
-![](images)
+![1006_01_date_hierarchies_1](images/1006_01_date_hierarchies_1.jpg)
 
 <br>
 
