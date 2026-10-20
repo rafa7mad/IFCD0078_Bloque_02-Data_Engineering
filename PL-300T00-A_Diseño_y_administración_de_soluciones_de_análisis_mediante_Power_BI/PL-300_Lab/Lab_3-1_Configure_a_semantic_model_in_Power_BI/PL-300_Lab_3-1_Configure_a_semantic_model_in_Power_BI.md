@@ -290,7 +290,7 @@ In this task, you'll configure the `Sales` table with updated descriptions, form
 
     > _By default, numeric columns will summarize by summing values together. This default behavior isn't suitable for a column like `Unit Price`, which represents a rate. Setting the default summarization to average will produce a meaningful result._
 
-![](images)
+![0807_01_Sales_0](images/0807_01_Sales_0.JPG)
 
 <br>
 
