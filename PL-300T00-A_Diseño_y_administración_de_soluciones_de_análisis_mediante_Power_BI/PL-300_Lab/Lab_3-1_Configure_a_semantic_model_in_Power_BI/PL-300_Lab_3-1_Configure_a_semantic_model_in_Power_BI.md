@@ -238,7 +238,7 @@ In this task, you'll configure the `Region` table with a hierarchy and updated c
 
     > _Data categorization can provide hints to the report designer. In this case, categorizing the column as country or region provides more accurate information to Power BI when it renders a map visualization._
 
-![](images)
+![0603_02_Region_0](images/0603_02_Region_0.JPG)
 
 <br>
 
