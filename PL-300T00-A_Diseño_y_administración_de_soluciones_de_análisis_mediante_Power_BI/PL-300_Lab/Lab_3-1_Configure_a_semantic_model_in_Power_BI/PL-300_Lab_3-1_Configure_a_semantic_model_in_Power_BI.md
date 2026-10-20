@@ -521,6 +521,8 @@ In this task, you'll create a many-to-many relationship between the `Salesperson
 
     ![1212_01-configure-semantic-model_u_image14](images/1212_01-configure-semantic-model_u_image14.png)
 
+    ![1212_01_Cross_Filter_Direction_0](images/1212_02_Cross_Filter_Direction_0.JPG)
+
 <br>
 
 13. Switch to **Report view**, and then notice that the sales values have still not changed.
@@ -547,9 +549,15 @@ In this task, you'll create a many-to-many relationship between the `Salesperson
 
     ![1218_01-configure-semantic-model_u_image17](images/1218_01-configure-semantic-model_u_image17.png)
 
+    ![1218_02_Sales_Salesperson_0](images/1218_02_Sales_Salesperson_0.JPG)
+
 <br>
 
 19. Switch to **Report view**, and then notice that the sales for Michael Blythe are now nearly 22 million dollars.
+
+   ![1219_01_Michael_Blythe_0](images/1219_01_Michael_Blythe_0.JPG)
+
+<br>
 
 20. Notice also, that the sales for each salesperson—if added—would exceed the table total.
 
@@ -563,7 +571,7 @@ In this task, you'll create a many-to-many relationship between the `Salesperson
 
     > _The renamed table now reflects its purpose: it's used to report and analyze the performance of salespeople based on the sales of their assigned sales regions._
 
-![](images)
+![1222_01_Salesperson_Performance_0](images/1222_01_Salesperson_Performance_0.JPG)
 
 <br>
 
@@ -573,11 +581,15 @@ In this task, you'll create a relationship to the `Targets` table.
 
 1. Create a relationship from the `Salesperson (Performance) | EmployeeID` column and the `Targets | EmployeeID` column.
 
-1. In **Report view**, add the `Targets | Target` field to the table visual.
+   ![1301_01_Targets_0](images/1301_01_Targets_0.JPG)
 
-1. Resize the table visual so all columns are visible.
+2. In **Report view**, add the `Targets | Target` field to the table visual.
+
+3. Resize the table visual so all columns are visible.
 
     ![1303_01-configure-semantic-model_u_image19](images/1303_01-configure-semantic-model_u_image19.png)
+
+    ![1303_02_table_visual_0](images/1303_02_table_visual_0.JPG)
 
 <br>
 
@@ -585,19 +597,18 @@ In this task, you'll create a relationship to the `Targets` table.
 
 1. Save the Power BI Desktop file.
 
-![](images)
-
 <br>
 
 ## Lab complete
 
 You may choose to save your Power BI report, though it’s not necessary for this lab. In the next exercise, you’ll work with a pre-made starter file.
+
 1. Navigate to the **"File"** menu in the top left corner and select **"Save As"**.
-1. Select **Browse this device**.
-1. Select the folder where you want to save the file and give it a descriptive name.
-1. Select the **Save** button to save your report as a .pbix file.
-1. If a dialog box appears prompting you to apply pending query changes, select **Apply**.
-1. Close Power BI Desktop.
+2. Select **Browse this device**.
+3. Select the folder where you want to save the file and give it a descriptive name.
+4. Select the **Save** button to save your report as a .pbix file.
+5. If a dialog box appears prompting you to apply pending query changes, select **Apply**.
+6. Close Power BI Desktop.
 
 <br>
 
