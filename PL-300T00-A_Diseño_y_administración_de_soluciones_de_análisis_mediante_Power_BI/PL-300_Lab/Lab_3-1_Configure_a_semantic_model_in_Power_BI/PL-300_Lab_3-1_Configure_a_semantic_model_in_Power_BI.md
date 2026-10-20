@@ -321,6 +321,10 @@ In this task, you'll update multiple columns using single bulk updates. You'll u
     >
     > _You'll use the `SalesOrderNumber` column in a calculation in the **Create DAX Calculations in Power BI Desktop** lab._
 
+![0903_01_Is_Hidden_0](images/0903_01_Is_Hidden_0.JPG)
+
+<br>
+
 4. Multi-select the following three columns:
 
      - `Product | Standard Cost`
@@ -329,7 +333,7 @@ In this task, you'll update multiple columns using single bulk updates. You'll u
 
 5. In the **Properties** pane, from inside the **Formatting** section, set the **Decimal Places** property to _0_ (zero).
 
-![](images)
+![0905_01_Decimal_Places_0](images/0905_01_Decimal_Places_0.JPG)
 
 <br>
 
