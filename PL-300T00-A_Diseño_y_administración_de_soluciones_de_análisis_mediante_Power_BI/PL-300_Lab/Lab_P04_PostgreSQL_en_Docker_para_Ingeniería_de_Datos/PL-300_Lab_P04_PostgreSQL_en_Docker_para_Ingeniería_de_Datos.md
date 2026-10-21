@@ -554,6 +554,12 @@ Utilizamos otro comando de la Clase 1:
 docker inspect postgres-data
 ```
 
+<br>
+
+![1301_docker_inspect_0](images/1301_docker_inspect_0.jpg)
+
+<br>
+
 Busca visualmente información relacionada con:
 
 ```
@@ -566,7 +572,7 @@ Name
 
 <br>
 
-![image](images)
+![1302_docker_inspect_0](images/1302_docker_inspect_0.jpg)
 
 ---
 
@@ -594,7 +600,7 @@ Ubuntu :5432
 
 <br>
 
-![image](images)
+![1401_port](images/1401_port.jpg)
 
 ---
 
@@ -623,7 +629,7 @@ Ctrl + C
 
 <br>
 
-![image](images)
+![1501_stats](images/1501_stats.jpg)
 
 ---
 
@@ -664,7 +670,7 @@ Exited
 > **Detener un contenedor no significa eliminarlo.**
 > 
 
-![image](images)
+![1601_stop](images/1601_stop.jpg)
 
 ---
 
