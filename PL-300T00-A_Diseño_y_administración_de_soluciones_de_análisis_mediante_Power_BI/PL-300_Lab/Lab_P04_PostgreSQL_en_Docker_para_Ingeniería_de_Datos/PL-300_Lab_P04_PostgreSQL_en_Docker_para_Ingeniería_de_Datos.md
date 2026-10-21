@@ -106,6 +106,12 @@ Ejecutamos:
 docker run -d --name postgres-data -e POSTGRES_PASSWORD=curso123 -e POSTGRES_DB=empresa -p 5432:5432 postgres:16
 ```
 
+<br>
+
+![0301_docker_postgres16](images/0301_docker_postgres16.jpg)
+
+<br>
+
 Vamos a analizar el comando.
 
 ## `-d`
@@ -189,6 +195,12 @@ CONTAINER ID   IMAGE         PORTS                    NAMES
 abc123...      postgres:16   0.0.0.0:5432->5432/tcp   postgres-data
 ```
 
+<br>
+
+![0401_docker_p](images/0401_docker_p.jpg)
+
+<br>
+
 Ahora tenemos:
 
 ```
@@ -237,6 +249,8 @@ Ctrl + C
 
 El contenedor continuará funcionando.
 
+![image](images)
+
 ---
 
 # 6. Entrar en PostgreSQL
@@ -268,6 +282,8 @@ empresa=#
 ```
 
 Ya estamos dentro de PostgreSQL.
+
+![image](images)
 
 ---
 
@@ -352,6 +368,8 @@ id,fecha,producto,cantidad,precio
 
 Aquí tenemos nuestro pequeño **dataset de origen**.
 
+![image](images)
+
 ---
 
 # 9. Copiar el CSV al contenedor
@@ -392,6 +410,8 @@ También podemos visualizarlo desde fuera del contenedor:
 docker exec postgres-data cat /tmp/ventas.csv
 ```
 
+![image](images)
+
 ---
 
 # 10. Cargar el CSV en PostgreSQL
@@ -422,6 +442,8 @@ Eso significa que ha cargado:
 ```
 5 filas
 ```
+
+![image](images)
 
 ---
 
@@ -473,6 +495,10 @@ Validación
 Agregación
 ```
 
+<br>
+
+![image](images)
+
 ---
 
 # 12. Salir de PostgreSQL
@@ -480,6 +506,10 @@ Agregación
 ```
 \q
 ```
+
+<br>
+
+![image](images)
 
 ---
 
@@ -500,6 +530,10 @@ State
 Image
 Name
 ```
+
+<br>
+
+![image](images)
 
 ---
 
@@ -525,6 +559,10 @@ Container :5432
 Ubuntu :5432
 ```
 
+<br>
+
+![image](images)
+
 ---
 
 # 15. Consultar recursos utilizados
@@ -549,6 +587,10 @@ Para salir:
 ```
 Ctrl + C
 ```
+
+<br>
+
+![image](images)
 
 ---
 
@@ -589,6 +631,8 @@ Exited
 > **Detener un contenedor no significa eliminarlo.**
 > 
 
+![image](images)
+
 ---
 
 # 17. Volver a iniciar PostgreSQL
@@ -606,6 +650,8 @@ docker ps
 ```
 
 PostgreSQL vuelve a estar funcionando.
+
+![image](images)
 
 ---
 
@@ -659,6 +705,10 @@ Comprobamos:
 docker ps
 ```
 
+<br>
+
+![image](images)
+
 ---
 
 # 20. Eliminar el contenedor
@@ -709,6 +759,10 @@ Crear otro contenedor
 Recuperar los mismos datos
 ```
 
+<br>
+
+![image](images)
+
 ---
 
 # 21. La imagen PostgreSQL todavía existe
@@ -735,6 +789,8 @@ La imagen es la plantilla.
 
 El contenedor era una instancia creada a partir de ella.
 
+![image](images)
+
 ---
 
 # 22. Eliminar la imagen
@@ -750,6 +806,10 @@ Comprobamos:
 ```bash
 docker images
 ```
+
+<br>
+
+![image](images)
 
 ---
 
