@@ -247,6 +247,12 @@ También podemos seguir los logs en tiempo real:
 docker logs -f postgres-data
 ```
 
+<br>
+
+![0501_logs_f_postgres-data](images/0501_logs_f_postgres-data.jpg)
+
+<br>
+
 Para salir:
 
 ```
@@ -254,8 +260,6 @@ Ctrl + C
 ```
 
 El contenedor continuará funcionando.
-
-![image](images)
 
 ---
 
