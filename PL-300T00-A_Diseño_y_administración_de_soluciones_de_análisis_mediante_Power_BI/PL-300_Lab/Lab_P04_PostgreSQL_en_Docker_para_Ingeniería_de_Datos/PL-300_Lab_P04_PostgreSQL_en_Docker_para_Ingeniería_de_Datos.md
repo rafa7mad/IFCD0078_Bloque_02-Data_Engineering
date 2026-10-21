@@ -324,6 +324,9 @@ Salimos:
 ```
 \q
 ```
+<br>
+
+![0701_create_table](images/0701_create_table.jpg)
 
 ---
 
@@ -378,7 +381,7 @@ id,fecha,producto,cantidad,precio
 
 Aquí tenemos nuestro pequeño **dataset de origen**.
 
-![image](images)
+![0801_ventas_csv](images/0801_ventas_csv.jpg)
 
 ---
 
@@ -389,6 +392,12 @@ Utiliza:
 ```bash
 docker cp ventas.csv postgres-data:/tmp/ventas.csv
 ```
+
+<br>
+
+![0901_docker_cp_ventas](images/0901_docker_cp_ventas.jpg)
+
+<br>
 
 El flujo es:
 
@@ -420,7 +429,7 @@ También podemos visualizarlo desde fuera del contenedor:
 docker exec postgres-data cat /tmp/ventas.csv
 ```
 
-![image](images)
+![0902_docker_ventas](images/0902_docker_ventas.jpg)
 
 ---
 
@@ -453,7 +462,7 @@ Eso significa que ha cargado:
 5 filas
 ```
 
-![image](images)
+![Paso 10. Cargar el CSV en PostgreSQL](images/1001_cargar_csv.jpg)
 
 ---
 
