@@ -92,6 +92,10 @@ docker pull
 docker images
 ```
 
+<br>
+
+![0201_postgres16](images/0201_postgres16.jpg)
+
 ---
 
 # 3. Crear el contenedor PostgreSQL
