@@ -235,6 +235,12 @@ Entre los mensajes deberíamos terminar encontrando algo parecido a:
 database system is ready to accept connections
 ```
 
+<br>
+
+![0501_logs_postgres-data](images/0501_logs_postgres-data.png)
+
+<br>
+
 También podemos seguir los logs en tiempo real:
 
 ```bash
