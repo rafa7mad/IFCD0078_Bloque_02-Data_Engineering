@@ -670,6 +670,8 @@ Exited
 > **Detener un contenedor no significa eliminarlo.**
 > 
 
+<br>
+
 ![1601_stop](images/1601_stop.jpg)
 
 ---
@@ -925,6 +927,6 @@ ventas.csv
 
 ---
 
-[Subir](#practica-04---postgresql-en-docker-para-ingeniería-de-datos)
+[Subir](#pl-300-microsoft-power-bi-data-analyst)
 
 ---
