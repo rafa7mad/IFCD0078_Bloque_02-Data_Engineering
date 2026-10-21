@@ -24,6 +24,8 @@ Open the **05-Starter-Sales Analysis.pbix** file.
 
 > _**Note**: You may see a sign-in dialog as the file loads. Select **Cancel** to dismiss the sign-in dialog. Close any other informational windows. Select **Apply Later**, if prompted to apply changes._
 
+<br>
+
 ## Create a matrix visual
 
 In this task, you’ll create a matrix visual to support testing your new measures.
@@ -32,8 +34,12 @@ In this task, you’ll create a matrix visual to support testing your new measur
     
 2.  On **Page 3**, add a matrix visual.
     
+    ![0302_01-modify-dax-filter-context_image23](images/0302_01-modify-dax-filter-context_image23.png)
+
     [![Picture 1](https://microsoftlearning.github.io/PL-300-Microsoft-Power-BI-Data-Analyst/Instructions/Labs/Linked_image_Files/05-modify-dax-filter-context_image23.png)](https://microsoftlearning.github.io/PL-300-Microsoft-Power-BI-Data-Analyst/Instructions/Labs/Linked_image_Files/05-modify-dax-filter-context_image23.png)
-    
+
+<br>
+
 3.  Resize the matrix visual to fill the entire page.
     
 4.  To configure the matrix visual fields, from the **Data** pane, drag the `Region | Regions` hierarchy, and drop it inside the visual.
@@ -44,26 +50,44 @@ In this task, you’ll create a matrix visual to support testing your new measur
     
 6.  To expand the entire hierarchy, at the top-right of the matrix visual, select the forked-double arrow icon twice.
     
+    ![0306_01-modify-dax-filter-context_image11](images/0306_01-modify-dax-filter-context_image11.png)
+
     [![Picture 2](https://microsoftlearning.github.io/PL-300-Microsoft-Power-BI-Data-Analyst/Instructions/Labs/Linked_image_Files/05-modify-dax-filter-context_image11.png)](https://microsoftlearning.github.io/PL-300-Microsoft-Power-BI-Data-Analyst/Instructions/Labs/Linked_image_Files/05-modify-dax-filter-context_image11.png)
-    
+
+<br>
+
 7.  To format the visual, in the **Visualizations** pane, select the **Format** pane.
     
+    ![0307_0105-modify-dax-filter-context_image12](images/0307_0105-modify-dax-filter-context_image12.png)
+
     [![Picture 3](https://microsoftlearning.github.io/PL-300-Microsoft-Power-BI-Data-Analyst/Instructions/Labs/Linked_image_Files/05-modify-dax-filter-context_image12.png)](https://microsoftlearning.github.io/PL-300-Microsoft-Power-BI-Data-Analyst/Instructions/Labs/Linked_image_Files/05-modify-dax-filter-context_image12.png)
-    
+
+<br>
+
 8.  In the **Search** box, enter _Layout_.
     
 9.  Set the **Matrix Layout** property to _Tabular_.
     
+    ![0309_01-modify-dax-filter-context_image14](images/0309_01-modify-dax-filter-context_image14.png)
+
     [![Picture 4](https://microsoftlearning.github.io/PL-300-Microsoft-Power-BI-Data-Analyst/Instructions/Labs/Linked_image_Files/05-modify-dax-filter-context_image14.png)](https://microsoftlearning.github.io/PL-300-Microsoft-Power-BI-Data-Analyst/Instructions/Labs/Linked_image_Files/05-modify-dax-filter-context_image14.png)
-    
+
+<br>
+
 10.  Verify that the matrix visual now has 4 column headers.
-     
+
+    ![0310_01-modify-dax-filter-context_image15](images/0310_01-modify-dax-filter-context_image15.png)
+
      [![Picture 5](https://microsoftlearning.github.io/PL-300-Microsoft-Power-BI-Data-Analyst/Instructions/Labs/Linked_image_Files/05-modify-dax-filter-context_image15.png)](https://microsoftlearning.github.io/PL-300-Microsoft-Power-BI-Data-Analyst/Instructions/Labs/Linked_image_Files/05-modify-dax-filter-context_image15.png)
-     
+
+<br>
+
      > _At Adventure Works, the sales regions are organized into groups, countries, and regions. All countries—except the United States—have just one region, which is named after the country. As the United States is such a large sales territory, it’s divided into five sales regions._
      
 
 You’ll create various measures in this exercise, and then test them by adding them to the matrix visual.
+
+<br>
 
 ## Manipulate filter context
 
@@ -91,8 +115,12 @@ In this task, you’ll create several measures with DAX expressions that use the
     
 2.  Add the `Sales All Region` measure to the matrix visual.
     
+    ![0402_01-modify-dax-filter-context_image16](images/0402_01-modify-dax-filter-context_image16.png)
+
     [![Picture 6](https://microsoftlearning.github.io/PL-300-Microsoft-Power-BI-Data-Analyst/Instructions/Labs/Linked_image_Files/05-modify-dax-filter-context_image16.png)](https://microsoftlearning.github.io/PL-300-Microsoft-Power-BI-Data-Analyst/Instructions/Labs/Linked_image_Files/05-modify-dax-filter-context_image16.png)
     
+<br>
+
 3.  Notice that the measure computes the total of all region sales for each region, country (subtotal) and group (subtotal).
     
     > _The new measure is yet to deliver a useful result. When the sales for a group, country, or region is divided by this value it will produce a useful ratio known as “percent of grand total”._
@@ -122,8 +150,12 @@ In this task, you’ll create several measures with DAX expressions that use the
     
 7.  In the matrix visual, review the `Sales % All Region` measure values.
     
+    ![0407_01-modify-dax-filter-context_image17](images/0407_01-modify-dax-filter-context_image17.png)
+
     [![Picture 7](https://microsoftlearning.github.io/PL-300-Microsoft-Power-BI-Data-Analyst/Instructions/Labs/Linked_image_Files/05-modify-dax-filter-context_image17.png)](https://microsoftlearning.github.io/PL-300-Microsoft-Power-BI-Data-Analyst/Instructions/Labs/Linked_image_Files/05-modify-dax-filter-context_image17.png)
     
+<br>
+
 8.  Add another measure to the `Sales` table, based on the following expression, and format as a percentage:
     
     code
@@ -146,9 +178,12 @@ In this task, you’ll create several measures with DAX expressions that use the
 10.  Add the `Sales % Country` measure to the matrix visual.
      
 11.  Notice that only the regions of the United States produce a value that isn’t 100 percent.
-     
+
+    ![] 
      [![Picture 8](https://microsoftlearning.github.io/PL-300-Microsoft-Power-BI-Data-Analyst/Instructions/Labs/Linked_image_Files/05-modify-dax-filter-context_image18.png)](https://microsoftlearning.github.io/PL-300-Microsoft-Power-BI-Data-Analyst/Instructions/Labs/Linked_image_Files/05-modify-dax-filter-context_image18.png)
-     
+
+<br>
+
      > _You might recall that only the United States has multiple regions. All other countries comprise a single region, which explains why they’re all 100 percent._
      
 12.  To improve the readability of this measure in visual, overwrite the `Sales % Country` measure with the following improved formula.
@@ -175,6 +210,8 @@ In this task, you’ll create several measures with DAX expressions that use the
      
      [![Picture 9](https://microsoftlearning.github.io/PL-300-Microsoft-Power-BI-Data-Analyst/Instructions/Labs/Linked_image_Files/05-modify-dax-filter-context_image19.png)](https://microsoftlearning.github.io/PL-300-Microsoft-Power-BI-Data-Analyst/Instructions/Labs/Linked_image_Files/05-modify-dax-filter-context_image19.png)
      
+<br>
+
 14.  Add another measure to the `Sales` table, based on the following expression, and format as a percentage:
      
      code
@@ -224,7 +261,9 @@ In this task, you’ll create several measures with DAX expressions that use the
 18.  In **Model view**, place the three new measures into a display folder named _Ratios_.
      
      [![Picture 10](https://microsoftlearning.github.io/PL-300-Microsoft-Power-BI-Data-Analyst/Instructions/Labs/Linked_image_Files/05-modify-dax-filter-context_image20.png)](https://microsoftlearning.github.io/PL-300-Microsoft-Power-BI-Data-Analyst/Instructions/Labs/Linked_image_Files/05-modify-dax-filter-context_image20.png)
-     
+
+<br>
+
 19.  Save the Power BI Desktop file.
      
 
