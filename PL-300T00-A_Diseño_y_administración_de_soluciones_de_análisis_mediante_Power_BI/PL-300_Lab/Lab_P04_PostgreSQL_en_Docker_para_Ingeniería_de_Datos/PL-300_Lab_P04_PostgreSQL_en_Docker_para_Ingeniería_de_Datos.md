@@ -542,7 +542,7 @@ Agregación
 
 <br>
 
-![image](images)
+![1201_salir_postgres](images/1201_salir_postgres.jpg)
 
 ---
 
