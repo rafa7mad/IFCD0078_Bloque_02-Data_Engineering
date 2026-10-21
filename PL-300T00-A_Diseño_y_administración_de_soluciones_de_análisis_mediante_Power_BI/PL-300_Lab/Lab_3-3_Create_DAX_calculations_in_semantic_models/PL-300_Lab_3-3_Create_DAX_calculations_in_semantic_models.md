@@ -37,7 +37,7 @@ You enter a valid DAX formula in the _formula bar_. The formula bar includes fea
 
 1. In Power BI Desktop, in **Report view**, on the **Modeling** ribbon, from inside the **Calculations** group, select **New Table**.
 
-    ![0201_01-create-dax-calculations_image9](images/0201_01-create-dax-calculations_image9.png)
+    ![0301_01-create-dax-calculations_image9](images/0301_01-create-dax-calculations_image9.png)
 
 <br>
 
@@ -45,7 +45,7 @@ You enter a valid DAX formula in the _formula bar_. The formula bar includes fea
 
     > _**Note**: For your convenience, all DAX definitions in this lab can be copied from the snippets file, located in the **04-dax-calculations\Snippets.txt** file._
 
-    ![0202_01-create-dax-calculations_image10](images/0202_01-create-dax-calculations_image10.png)
+    ![0302_01-create-dax-calculations_image10](images/0302_01-create-dax-calculations_image10.png)
 
 <br>
 
@@ -53,7 +53,7 @@ You enter a valid DAX formula in the _formula bar_. The formula bar includes fea
 
 3. In the **Data** pane, notice that the icon for the new table has an additional calculator in front of it (denoting a calculated table).
 
-    ![0203_01-create-dax-calculations_image11](images/0203_01-create-dax-calculations_image11.png)
+    ![0303_01-create-dax-calculations_image11](images/0303_01-create-dax-calculations_image11.png)
 
 <br>
 
@@ -94,7 +94,7 @@ In this task, you'll create the `Date` table.
 
 1. Switch to **Table view**. On the **Home** ribbon tab, from inside the **Calculations** group, select **New Table**.
 
-    ![Picture 4](images/0301_01-create-dax-calculations_image15.png)
+    ![0401_01-create-dax-calculations_image15](images/0401_01-create-dax-calculations_image15.png)
 
 <br>
 
@@ -105,7 +105,7 @@ In this task, you'll create the `Date` table.
     CALENDARAUTO(6)
     ```
 
-    ![Picture 5](images/0402_01-create-dax-calculations_image16.png04-create-dax-calculations_image16.png)
+    ![0402_01-create-dax-calculations_image16](images/0402_01-create-dax-calculations_image16.png)
 
 <br>
 
@@ -115,13 +115,13 @@ In this task, you'll create the `Date` table.
 
 3. Notice the column of date values which might be formatted using US regional settings (that is, mm/dd/yyyy).
 
-    ![Picture 6](images/04-create-dax-calculations_image17.png)
+    ![0403_01-create-dax-calculations_image17](images/0403_01-create-dax-calculations_image17.png)
 
 <br>
 
 4. At the bottom-left corner, in the status bar, notice the table statistics, confirming that 1826 rows of data have been generated, which represents five full years' data.
 
-    ![Picture 7](images/04-create-dax-calculations_image18.png)
+    ![0404_01-create-dax-calculations_image18](images/0404_01-create-dax-calculations_image18.png)
 
 <br>
 
@@ -134,7 +134,7 @@ In this task, you'll add more columns to enable filtering and grouping by differ
 1. On the **Table Tools** contextual ribbon, from inside the **Calculations** group, select **New Column**.
     > _A calculated column is created by first entering the column name, followed by the equals symbol (=), followed by a DAX formula that returns a single-value result. The column name can't already exist in the table._
 
-    ![Picture 8](images/04-create-dax-calculations_image19.png)
+    ![0501_01-create-dax-calculations_image19](images/0501_01-create-dax-calculations_image19.png)
 
 <br>
 
@@ -153,7 +153,7 @@ In this task, you'll add more columns to enable filtering and grouping by differ
 
 4. Verify the new columns have been added.
 
-    ![Picture 9](images/04-create-dax-calculations_image21.png)
+    ![0504_01-create-dax-calculations_image21](images/0504_01-create-dax-calculations_image21.png)
 
 <br>
 
@@ -161,7 +161,7 @@ In this task, you'll add more columns to enable filtering and grouping by differ
 
 6. To create a new report page, select the plus icon next to **Page 1**.
 
-    ![Picture 10](images/04-create-dax-calculations_image22.png)
+    ![0506_01-create-dax-calculations_image22](images/0506_01-create-dax-calculations_image22.png)
 
 <br>
 
@@ -169,13 +169,13 @@ In this task, you'll add more columns to enable filtering and grouping by differ
 
     > _Tip: You can hover the cursor over each icon to reveal a tooltip describing the visual type._
 
-    ![Picture 11](images/04-create-dax-calculations_image23.png)
+    ![0507_01-create-dax-calculations_image23](images/0507_01-create-dax-calculations_image23.png)
 
 <br>
 
 8. In the **Data** pane, from inside the `Date` table, drag the `Year` field into the **Rows** well.
 
-    ![Picture 12](images/04-create-dax-calculations_image24.png)
+    ![0508_01-create-dax-calculations_image24](images/0508_01-create-dax-calculations_image24.png)
 
 <br>
 
@@ -183,13 +183,13 @@ In this task, you'll add more columns to enable filtering and grouping by differ
 
 10. At the top-right of the matrix visual (or bottom, depending on the location of the visual), select the forked-double arrow icon (which will expand all years down one level).
 
-    ![Picture 13](images/04-create-dax-calculations_image26.png)
+    ![0510_01-create-dax-calculations_image26](images/0510_01-create-dax-calculations_image26.png)
 
 <br>
 
 11. Notice that the years expand to months, and that the months are sorted alphabetically rather than chronologically.
 
-    ![Picture 14](images/04-create-dax-calculations_image27.png)
+    ![0511_01-create-dax-calculations_image27](images/0511_01-create-dax-calculations_image27.png)
 
 <br>
 
@@ -208,7 +208,7 @@ In this task, you'll add more columns to enable filtering and grouping by differ
 
 14. In **Table view**, verify that the new column contains numeric values (for example, 201707 for July 2017, and so on).
 
-    ![Picture 15](images/04-create-dax-calculations_image28.png)
+    ![0514_01-create-dax-calculations_image28](images/0514_01-create-dax-calculations_image28.png)
 
 <br>
 
@@ -218,13 +218,13 @@ In this task, you'll add more columns to enable filtering and grouping by differ
 
 17. On the **Column Tools** contextual ribbon, from inside the **Sort** group, select **Sort by Column**, and then select **MonthKey**.
 
-    ![Picture 16](images/04-create-dax-calculations_image29.png)
+    ![0517_01-create-dax-calculations_image29](images/0517_01-create-dax-calculations_image29.png)
 
 <br>
 
 18. In the matrix visual, notice that the months are now chronologically sorted.
 
-    ![Picture 17](images/04-create-dax-calculations_image30.png)
+    ![0518_01-create-dax-calculations_image30](images/0518_01-create-dax-calculations_image30.png)
 
     ![image](images)
 
@@ -240,19 +240,19 @@ In this task, you'll complete the design of the `Date` table by hiding a column 
 
 3. In the **Data** pane, select the `Date` table, right-click the `Year` column, and the select **Create hierarchy**.
 
-    ![Picture 18](images/04-create-dax-calculations_image30a.png)
+    ![0603_01-create-dax-calculations_image30a](images/0603_01-create-dax-calculations_image30a.png)
 
 <br>
 
 4. In the **Properties** pane, in the **Name** box, replace the value with _Fiscal_.
 
-    ![Picture 19](images/04-create-dax-calculations_image30b.png)
+    ![0604_01-create-dax-calculations_image30b](images/0604_01-create-dax-calculations_image30b.png)
 
 <br>
 
 5. Two add levels to the hierarchy, in the **Hierarchy** dropdown list, select **Quarter** and then select **Month**, and then select **Apply Level Changes**.
 
-    ![Picture 20](images/04-create-dax-calculations_image31.png)
+    ![0605_01-create-dax-calculations_image31](images/0605_01-create-dax-calculations_image31.png)
 
 <br>
 
