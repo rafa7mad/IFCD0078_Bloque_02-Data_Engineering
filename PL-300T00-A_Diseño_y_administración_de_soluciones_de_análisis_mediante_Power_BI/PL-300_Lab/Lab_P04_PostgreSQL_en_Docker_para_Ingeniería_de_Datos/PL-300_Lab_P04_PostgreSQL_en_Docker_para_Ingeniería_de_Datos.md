@@ -478,6 +478,12 @@ Ejecutamos:
 SELECT * FROM staging_ventas;
 ```
 
+<br>
+
+![1101_select](images/1101_select.jpg)
+
+<br>
+
 ## Contar registros
 
 ```sql
@@ -491,6 +497,12 @@ Resultado esperado:
 5
 ```
 
+<br>
+
+![1102_count](images/1102_count.jpg)
+
+<br>
+
 ## Calcular ventas
 
 ```sql
@@ -501,6 +513,12 @@ FROM staging_ventas
 GROUP BY producto
 ORDER BY importe_ventas DESC;
 ```
+
+<br>
+
+![1103_sum](images/1103_sum.jpg)
+
+<br>
 
 Ahora ya estamos realizando una pequeña transformación analítica:
 
@@ -513,10 +531,6 @@ Validación
  ↓
 Agregación
 ```
-
-<br>
-
-![image](images)
 
 ---
 
