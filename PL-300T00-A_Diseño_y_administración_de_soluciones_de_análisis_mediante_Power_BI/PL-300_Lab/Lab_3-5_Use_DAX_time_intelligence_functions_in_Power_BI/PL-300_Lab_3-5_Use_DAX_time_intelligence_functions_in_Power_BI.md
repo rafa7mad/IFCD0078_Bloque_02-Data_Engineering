@@ -24,6 +24,8 @@ Open the **06-Starter-Sales Analysis.pbix** file.
 
 > _**Note**: You may see a sign-in dialog as the file loads. Select **Cancel** to dismiss the sign-in dialog. Close any other informational windows. Select **Apply Later**, if prompted to apply changes._
 
+<br>
+
 ## Create a YTD measure
 
 In this task, you’ll create a sales year-to-date (YTD) measure by using time intelligence functions.
@@ -51,12 +53,18 @@ In this task, you’ll create a sales year-to-date (YTD) measure by using time i
     
 4.  Notice the accumulation of sales values within the year.
     
+
+    ![0304_01-use-dax-time-intelligence-functions_image21](images/0304_01-use-dax-time-intelligence-functions_image21.png)
+
     [![Picture 1](https://microsoftlearning.github.io/PL-300-Microsoft-Power-BI-Data-Analyst/Instructions/Labs/Linked_image_Files/06-use-dax-time-intelligence-functions_image21.png)](https://microsoftlearning.github.io/PL-300-Microsoft-Power-BI-Data-Analyst/Instructions/Labs/Linked_image_Files/06-use-dax-time-intelligence-functions_image21.png)
-    
+
+<br>    
 
 > _The `TOTALYTD` function performs filter manipulation, specifically time filter manipulation. For example, to compute YTD sales for September 2017 (the third month of the fiscal year), all filters on the `Date` table are removed and replaced with a new filter of dates commencing at the beginning of the year (July 1, 2017) and extending through to the last date of the in-context date period (September 30, 2017)._
 > 
 > _Many [time intelligence functions](https://microsoftlearning.github.io/dax/time-intelligence-functions-dax/?azure-portal=true) are available in DAX to support common time filter manipulations._
+
+<br>
 
 ## Create a YoY growth measure
 
@@ -91,8 +99,12 @@ In this task, you’ll create a sales YoY growth measure by using a variable.
     
 4.  Notice that the `Sales YoY Growth` measure value for _2018 Jul_ is the sales value for _2017 Jul_.
     
+    ![0404_01-use-dax-time-intelligence-functions_image22](images/0404_01-use-dax-time-intelligence-functions_image22.png)
+
     [![Picture 2](https://microsoftlearning.github.io/PL-300-Microsoft-Power-BI-Data-Analyst/Instructions/Labs/Linked_image_Files/06-use-dax-time-intelligence-functions_image22.png)](https://microsoftlearning.github.io/PL-300-Microsoft-Power-BI-Data-Analyst/Instructions/Labs/Linked_image_Files/06-use-dax-time-intelligence-functions_image22.png)
-    
+
+<br>
+
     > _Now that the “difficult part” of the formula has been tested, you can overwrite the measure with the final formula that computes the growth result._
     
 5.  To complete the measure, overwrite the `Sales YoY Growth` measure with this formula, formatting it as a percentage with two decimal places:
@@ -121,16 +133,25 @@ In this task, you’ll create a sales YoY growth measure by using a variable.
     
 7.  Verify that the YoY growth for _2018 Jul_ is 392.83 percent.
     
+    ![0407_01-use-dax-time-intelligence-functions_image23](images/0407_01-use-dax-time-intelligence-functions_image23.png)
+
     [![Picture 3](https://microsoftlearning.github.io/PL-300-Microsoft-Power-BI-Data-Analyst/Instructions/Labs/Linked_image_Files/06-use-dax-time-intelligence-functions_image23.png)](https://microsoftlearning.github.io/PL-300-Microsoft-Power-BI-Data-Analyst/Instructions/Labs/Linked_image_Files/06-use-dax-time-intelligence-functions_image23.png)
-    
+
+<br>
+
     > _The YoY growth measure identifies almost 400 percent (or 4x) increase of sales during the same period of the previous year._
     
 8.  In **Model view**, place the two new measures into a display folder named _Time intelligence_.
     
+    ![0408_01-use-dax-time-intelligence-functions_image24](images/0408_01-use-dax-time-intelligence-functions_image24.png)
+
     [![Picture 4](https://microsoftlearning.github.io/PL-300-Microsoft-Power-BI-Data-Analyst/Instructions/Labs/Linked_image_Files/06-use-dax-time-intelligence-functions_image24.png)](https://microsoftlearning.github.io/PL-300-Microsoft-Power-BI-Data-Analyst/Instructions/Labs/Linked_image_Files/06-use-dax-time-intelligence-functions_image24.png)
-    
+
+<br>
+
 9.  Save the Power BI Desktop file.
-    
+
+<br>
 
 ## Lab complete
 
@@ -144,6 +165,7 @@ You may choose to save your Power BI report, though it’s not necessary for thi
 6.  Close Power BI Desktop.
 
 ---
+
 *Source: [Use DAX time intelligence functions in Power BI](https://microsoftlearning.github.io/PL-300-Microsoft-Power-BI-Data-Analyst/Instructions/Labs/06-use-dax-time-intelligence.html)*
 
 <br>
