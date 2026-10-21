@@ -13,6 +13,7 @@ In this lab, you learn how to:
 - Create measures.
 
 **This lab should take approximately 45 minutes.**
+
 ## Get started
 
 To complete this exercise, first open a web browser and enter the following URL to download the zip file:
@@ -22,7 +23,11 @@ To complete this exercise, first open a web browser and enter the following URL 
 Extract the file to the **C:\Users\Student\Downloads\04-dax-calculations** folder.
 
 Open the **04-Starter-Sales Analysis.pbix** file.
+
 > _**Note**: You may see a sign-in dialog as the file loads. Select **Cancel** to dismiss the sign-in dialog. Close any other informational windows. Select **Apply Later**, if prompted to apply changes._
+
+<br>
+
 ## Create the Salesperson calculated table
 
 In this task, you'll create the `Salesperson` calculated table (that will have a direct relationship to the `Sales` table).
@@ -65,7 +70,6 @@ You enter a valid DAX formula in the _formula bar_. The formula bar includes fea
 6. Right-click the inactive relationship (dotted line) between the `Salesperson (Performance)` and `Sales` tables, and then select **Delete**. When prompted to confirm the deletion, select **Yes**.
 
 7. In the `Salesperson` table, multi-select the following columns, and then hide them (set the **Is Hidden** property to _Yes_):
-
     - `EmployeeID`
     - `EmployeeKey`
     - `UPN`
@@ -77,6 +81,7 @@ You enter a valid DAX formula in the _formula bar_. The formula bar includes fea
     > _You may recall that descriptions appear as tooltips in the **Data** pane whenever the user hovers their cursor over a table or field._
 
 10. For the `Salesperson (Performance)` table, set the description to: _Salesperson related to region(s)_
+
 > _The data model now provides two alternatives when analyzing salespeople. The `Salesperson` table allows analyzing sales made by a salesperson, while the `Salesperson (Performance)` table allows analyzing sales made in the sales region(s) assigned to the salesperson._
 
    ![images](images)
@@ -89,7 +94,7 @@ In this task, you'll create the `Date` table.
 
 1. Switch to **Table view**. On the **Home** ribbon tab, from inside the **Calculations** group, select **New Table**.
 
-    ![Picture 4](images/04-create-dax-calculations_image15.png)
+    ![Picture 4](images/0301_01-create-dax-calculations_image15.png)
 
 <br>
 
@@ -100,7 +105,10 @@ In this task, you'll create the `Date` table.
     CALENDARAUTO(6)
     ```
 
-    ![Picture 5](images/04-create-dax-calculations_image16.png)
+    ![Picture 5](images/0402_01-create-dax-calculations_image16.png04-create-dax-calculations_image16.png)
+
+<br>
+
     > _The `CALENDARAUTO` function returns a single-column table comprising date values. The "auto" behavior scans all data model date columns to determine the earliest and latest date values stored in the data model. It then creates one row for each date within this range, extending the range in either direction to ensure full years of data is stored._
     >
     > _This function can take a single optional argument that is the last month number of a year. When omitted, the value is 12, meaning that December is the last month of the year. In this case, 6 is entered, meaning that June is the last month of the year._
