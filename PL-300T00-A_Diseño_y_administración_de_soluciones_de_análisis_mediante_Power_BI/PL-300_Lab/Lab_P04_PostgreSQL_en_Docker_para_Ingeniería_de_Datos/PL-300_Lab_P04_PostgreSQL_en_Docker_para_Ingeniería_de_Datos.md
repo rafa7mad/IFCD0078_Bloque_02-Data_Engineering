@@ -58,9 +58,9 @@ Y las imágenes disponibles:
 docker images
 ```
 
-![0101_comprobar_docker_0](images/0101_comprobar_docker_0.jpg)
-
 <br>
+
+![0101_comprobar_docker_0](images/0101_comprobar_docker_0.jpg)
 
 ---
 
