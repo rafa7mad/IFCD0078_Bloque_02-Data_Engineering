@@ -690,7 +690,7 @@ docker ps
 
 PostgreSQL vuelve a estar funcionando.
 
-![image](images)
+![1701_start_postgres-data](images/1701_start_postgres-data.jpg)
 
 ---
 
@@ -715,6 +715,12 @@ Salimos:
 ```
 \q
 ```
+
+<br>
+
+![1801_comprobar_datos](images/1801_comprobar_datos.jpg)
+
+<br>
 
 Esto refuerza la diferencia entre:
 
