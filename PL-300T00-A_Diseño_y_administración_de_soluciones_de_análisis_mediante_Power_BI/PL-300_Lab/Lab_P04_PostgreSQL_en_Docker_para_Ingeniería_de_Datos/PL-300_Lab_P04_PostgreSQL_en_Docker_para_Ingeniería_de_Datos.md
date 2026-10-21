@@ -293,7 +293,7 @@ empresa=#
 
 Ya estamos dentro de PostgreSQL.
 
-![image](images)
+![0601_docker_exec](images/0601_docker_exec.jpg)
 
 ---
 
