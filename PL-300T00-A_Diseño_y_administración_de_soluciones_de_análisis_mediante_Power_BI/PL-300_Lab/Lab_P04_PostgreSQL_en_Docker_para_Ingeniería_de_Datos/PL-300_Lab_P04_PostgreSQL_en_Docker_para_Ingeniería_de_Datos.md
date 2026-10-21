@@ -858,7 +858,7 @@ docker images
 
 <br>
 
-![image](images)
+![2201_eliminar_imagen](images/2201_eliminar_imagen.jpg)
 
 ---
 
