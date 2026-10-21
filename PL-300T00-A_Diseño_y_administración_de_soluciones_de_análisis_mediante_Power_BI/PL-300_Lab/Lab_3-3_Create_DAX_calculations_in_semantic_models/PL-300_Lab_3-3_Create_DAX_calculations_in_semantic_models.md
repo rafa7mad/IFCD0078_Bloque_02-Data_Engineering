@@ -280,7 +280,7 @@ In this task, you'll mark the `Date` table as a date table.
 
 3. On the **Table Tools** contextual ribbon, from inside the **Calendars** group, select **Mark as Date Table**.
 
-    ![Picture 21](images/04-create-dax-calculations_image31a.png)
+    ![0703_01-create-dax-calculations_image31a](images/0703_01-create-dax-calculations_image31a.png)
 
 <br>
 
@@ -288,7 +288,7 @@ In this task, you'll mark the `Date` table as a date table.
 
 5. In the **Choose a date column** dropdown list, select **Date**.
 
-    ![Picture 22](images/04-create-dax-calculations_date-table.png)
+    ![0705_01-create-dax-calculations_date-table](images/0705_01-create-dax-calculations_date-table.png)
 
 <br>
 
@@ -310,13 +310,13 @@ In this task, you'll create simple measures. Simple measures aggregate values in
 
 1. In **Report view**, on **Page 2**, from the **Data** pane, drag the `Sales | Unit Price` field into the matrix visual.
 
-    ![Picture 23](images/04-create-dax-calculations_image35.png)
+    ![0801_01-create-dax-calculations_image35](images/0801_01-create-dax-calculations_image35.png)
 
 <br>
 
 2. In the visual fields pane (located in the **Visualizations** pane), in the **Values** well, notice that `Unit Price` field is configured as **Average of Unit Price**.
 
-    ![Picture 24](images/04-create-dax-calculations_image36.png)
+    ![0802_01-create-dax-calculations_image36](images/0802_01-create-dax-calculations_image36.png)
 
 <br>
 
@@ -339,12 +339,11 @@ In this task, you'll create simple measures. Simple measures aggregate values in
 
 7. In the **Values** well, open the context menu for the `Avg Price` field, and notice that it isn't possible to change the aggregation technique.
 
-    ![Picture 25](images/04-create-dax-calculations_image39.png)
+    ![0807_01-create-dax-calculations_image39](images/0807_01-create-dax-calculations_image39.png)
 
     > _It's not possible to modify the aggregation behavior of a measure._
 
 8. Use the snippets file definitions to create the following five measures for the `Sales` table:
-
     - `Median Price`
     - `Min Price`
     - `Max Price`
@@ -358,11 +357,10 @@ In this task, you'll create simple measures. Simple measures aggregate values in
 9. Switch to **Model view**, and then multi-select the four price measures: `Avg Price`, `Max Price`, `Median Price`, and `Min Price`.
 
 10. For the multi-selection of measures, configure the following requirements:
-
     - Set the format to two decimal places.
     - Assign to a display folder named _Pricing_ (use the **Display folder** property in the **Properties** pane).
 
-    ![Picture 26](images/04-create-dax-calculations_image40.png)
+    ![0810_01-create-dax-calculations_image40](images/0810_01-create-dax-calculations_image40.png)
 
 <br>
 
@@ -374,13 +372,13 @@ In this task, you'll create simple measures. Simple measures aggregate values in
     - Set the format use the thousands separator.
     - Assign to a display folder named _Counts_.
 
-    ![Picture 27](images/04-create-dax-calculations_image41.png)
+    ![0812_01-create-dax-calculations_image41](images/0812_01-create-dax-calculations_image41.png)
 
 <br>
 
 13. In **Report view**, in the **Values** well of the matrix visual, for **Average of Unit Price**, select **X** to remove it.
 
-    ![Picture 28](images/04-create-dax-calculations_image41a.png)
+    ![0813_01-create-dax-calculations_image41a](images/0813_01-create-dax-calculations_image41a.png)
 
 <br>
 
@@ -395,7 +393,7 @@ In this task, you'll create simple measures. Simple measures aggregate values in
 
 16. Verify that the results look sensible and are correctly formatted.
 
-    ![Picture 29](images/04-create-dax-calculations_image43.png)
+    ![0816_01-create-dax-calculations_image43](images/0816_01-create-dax-calculations_image43.png)
 
     ![image](images)
 
@@ -407,7 +405,7 @@ In this task, you'll create more measures that use more complex formulas.
 
 1. In **Report view**, select **Page 1** and review the table visual of salespeople (on the right), noticing the total for the **Sum of Target** column.
 
-    ![Picture 30](images/04-create-dax-calculations_image45.png)
+    ![0901_01-create-dax-calculations_image45](images/0901_01-create-dax-calculations_image45.png)
 
 <br>
 
@@ -439,7 +437,7 @@ In this task, you'll create more measures that use more complex formulas.
 
 7. Notice that the `Targets` table now appears at the top of the list.
 
-    ![Picture 31](images/04-create-dax-calculations_image50.png)
+    ![0907_01-create-dax-calculations_image50](images/0907_01-create-dax-calculations_image50.png)
 
 <br>
 
@@ -449,7 +447,7 @@ In this task, you'll create more measures that use more complex formulas.
 
 9. Notice that the **Target** column total is now `BLANK`.
 
-    ![Picture 32](images/04-create-dax-calculations_image47.png)
+    ![0909_01-create-dax-calculations_image47](images/0909_01-create-dax-calculations_image47.png)
 
 <br>
 
@@ -465,9 +463,9 @@ In this task, you'll create more measures that use more complex formulas.
 
 14. Resize the table visual so all columns and rows can be seen.
 
-    ![Picture 33](images/04-create-dax-calculations_image48.png)
+    ![0914_01-create-dax-calculations_image48](images/0914_01-create-dax-calculations_image48.png)
 
-    ![Picture 33](images/04-create-dax-calculations_image48.png)
+    ![imagen](images)
 
     > _While it appears all salespeople aren't meeting target, remember that the table visual isn't yet filtered by a specific time period. You'll produce sales performance reports that filter by a user-selected time period in the **Design a Report in Power BI Desktop** lab._
 
