@@ -752,7 +752,7 @@ docker ps
 
 <br>
 
-![image](images)
+![1901_restart](images/1901_restart.jpg)
 
 ---
 
