@@ -778,6 +778,12 @@ docker ps -a
 
 `postgres-data` ya no existe.
 
+<br>
+
+![2001_eliminar](images/2001_eliminar.jpg)
+
+<br>
+
 Aquí aparece una lección importante para futuras clases:
 
 > Los datos estaban almacenados dentro del contenedor. Al eliminar el contenedor, esos datos dejan de estar disponibles con él.
@@ -806,8 +812,6 @@ Recuperar los mismos datos
 
 <br>
 
-![image](images)
-
 ---
 
 # 21. La imagen PostgreSQL todavía existe
@@ -834,7 +838,7 @@ La imagen es la plantilla.
 
 El contenedor era una instancia creada a partir de ella.
 
-![image](images)
+![2101_docker_images](images/2101_docker_images.jpg)
 
 ---
 
