@@ -36,8 +36,6 @@ In this task, you’ll create a matrix visual to support testing your new measur
     
     ![0302_01-modify-dax-filter-context_image23](images/0302_01-modify-dax-filter-context_image23.png)
 
-    [![Picture 1](https://microsoftlearning.github.io/PL-300-Microsoft-Power-BI-Data-Analyst/Instructions/Labs/Linked_image_Files/05-modify-dax-filter-context_image23.png)](https://microsoftlearning.github.io/PL-300-Microsoft-Power-BI-Data-Analyst/Instructions/Labs/Linked_image_Files/05-modify-dax-filter-context_image23.png)
-
 <br>
 
 3.  Resize the matrix visual to fill the entire page.
