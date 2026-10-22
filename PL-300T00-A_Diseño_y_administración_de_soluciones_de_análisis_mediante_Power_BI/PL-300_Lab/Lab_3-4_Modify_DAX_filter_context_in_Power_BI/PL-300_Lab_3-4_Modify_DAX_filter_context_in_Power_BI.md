@@ -52,7 +52,7 @@ In this task, you’ll create a matrix visual to support testing your new measur
 
 7.  To format the visual, in the **Visualizations** pane, select the **Format** pane.
     
-    ![0307_0105-modify-dax-filter-context_image12](images/0307_0105-modify-dax-filter-context_image12.png)
+    ![0307_01-modify-dax-filter-context_image12](images/0307_01-modify-dax-filter-context_image12.png)
 
 
 8.  In the **Search** box, enter _Layout_.

@@ -55,10 +55,7 @@ In this task, you’ll create a sales year-to-date (YTD) measure by using time i
     
 
     ![0304_01-use-dax-time-intelligence-functions_image21](images/0304_01-use-dax-time-intelligence-functions_image21.png)
-
-    [![Picture 1](https://microsoftlearning.github.io/PL-300-Microsoft-Power-BI-Data-Analyst/Instructions/Labs/Linked_image_Files/06-use-dax-time-intelligence-functions_image21.png)](https://microsoftlearning.github.io/PL-300-Microsoft-Power-BI-Data-Analyst/Instructions/Labs/Linked_image_Files/06-use-dax-time-intelligence-functions_image21.png)
-
-<br>    
+  
 
 > _The `TOTALYTD` function performs filter manipulation, specifically time filter manipulation. For example, to compute YTD sales for September 2017 (the third month of the fiscal year), all filters on the `Date` table are removed and replaced with a new filter of dates commencing at the beginning of the year (July 1, 2017) and extending through to the last date of the in-context date period (September 30, 2017)._
 > 
