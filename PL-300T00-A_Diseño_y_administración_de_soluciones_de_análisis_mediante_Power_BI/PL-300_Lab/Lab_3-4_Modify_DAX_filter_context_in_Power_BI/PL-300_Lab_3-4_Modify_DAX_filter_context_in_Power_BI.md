@@ -36,7 +36,6 @@ In this task, you’ll create a matrix visual to support testing your new measur
     
     ![0302_01-modify-dax-filter-context_image23](images/0302_01-modify-dax-filter-context_image23.png)
 
-<br>
 
 3.  Resize the matrix visual to fill the entire page.
     
