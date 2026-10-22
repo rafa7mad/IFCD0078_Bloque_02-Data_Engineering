@@ -49,17 +49,11 @@ In this task, you’ll create a matrix visual to support testing your new measur
     
     ![0306_01-modify-dax-filter-context_image11](images/0306_01-modify-dax-filter-context_image11.png)
 
-    [![Picture 2](https://microsoftlearning.github.io/PL-300-Microsoft-Power-BI-Data-Analyst/Instructions/Labs/Linked_image_Files/05-modify-dax-filter-context_image11.png)](https://microsoftlearning.github.io/PL-300-Microsoft-Power-BI-Data-Analyst/Instructions/Labs/Linked_image_Files/05-modify-dax-filter-context_image11.png)
-
-<br>
 
 7.  To format the visual, in the **Visualizations** pane, select the **Format** pane.
     
     ![0307_0105-modify-dax-filter-context_image12](images/0307_0105-modify-dax-filter-context_image12.png)
 
-    [![Picture 3](https://microsoftlearning.github.io/PL-300-Microsoft-Power-BI-Data-Analyst/Instructions/Labs/Linked_image_Files/05-modify-dax-filter-context_image12.png)](https://microsoftlearning.github.io/PL-300-Microsoft-Power-BI-Data-Analyst/Instructions/Labs/Linked_image_Files/05-modify-dax-filter-context_image12.png)
-
-<br>
 
 8.  In the **Search** box, enter _Layout_.
     
@@ -67,21 +61,16 @@ In this task, you’ll create a matrix visual to support testing your new measur
     
     ![0309_01-modify-dax-filter-context_image14](images/0309_01-modify-dax-filter-context_image14.png)
 
-    [![Picture 4](https://microsoftlearning.github.io/PL-300-Microsoft-Power-BI-Data-Analyst/Instructions/Labs/Linked_image_Files/05-modify-dax-filter-context_image14.png)](https://microsoftlearning.github.io/PL-300-Microsoft-Power-BI-Data-Analyst/Instructions/Labs/Linked_image_Files/05-modify-dax-filter-context_image14.png)
-
-<br>
 
 10.  Verify that the matrix visual now has 4 column headers.
 
     ![0310_01-modify-dax-filter-context_image15](images/0310_01-modify-dax-filter-context_image15.png)
 
-     [![Picture 5](https://microsoftlearning.github.io/PL-300-Microsoft-Power-BI-Data-Analyst/Instructions/Labs/Linked_image_Files/05-modify-dax-filter-context_image15.png)](https://microsoftlearning.github.io/PL-300-Microsoft-Power-BI-Data-Analyst/Instructions/Labs/Linked_image_Files/05-modify-dax-filter-context_image15.png)
 
 <br>
 
      > _At Adventure Works, the sales regions are organized into groups, countries, and regions. All countries—except the United States—have just one region, which is named after the country. As the United States is such a large sales territory, it’s divided into five sales regions._
      
-
 You’ll create various measures in this exercise, and then test them by adding them to the matrix visual.
 
 <br>
