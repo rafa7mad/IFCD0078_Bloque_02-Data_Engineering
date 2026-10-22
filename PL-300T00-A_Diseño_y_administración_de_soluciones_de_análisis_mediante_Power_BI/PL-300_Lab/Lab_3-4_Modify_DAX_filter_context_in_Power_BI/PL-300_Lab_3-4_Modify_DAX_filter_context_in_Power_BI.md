@@ -47,7 +47,7 @@ In this task, you’ll create a matrix visual to support testing your new measur
     
 6.  To expand the entire hierarchy, at the top-right of the matrix visual, select the forked-double arrow icon twice.
 
-    ![0306_01-modify-dax-filter-context_image11](images/0306_01-modify-dax-filter-context_image11.png)
+    ![0306_01-modify-dax-filter-context_image11C](images/0306_01-modify-dax-filter-context_image11C.jpg)
 
 
 7.  To format the visual, in the **Visualizations** pane, select the **Format** pane.
