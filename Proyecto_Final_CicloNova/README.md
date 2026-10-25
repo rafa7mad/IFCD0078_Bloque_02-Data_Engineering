@@ -239,6 +239,34 @@ Los procedimientos incluyen propagación de errores mediante `THROW;`. **Se veri
 
 Script: [`scripts/automation/job_carga_diaria.sql`](scripts/automation/job_carga_diaria.sql).
 
+### 6.1. Evidencias de la automatización
+
+La automatización del Data Warehouse se implementa mediante **SQL Server Agent**, utilizando el trabajo `DWH - Carga diaria`.
+
+El trabajo ejecuta secuencialmente los procedimientos almacenados `bronze.load_bronze` y `silver.load_silver`, garantizando que la transformación de Silver comienza únicamente cuando la ingesta de Bronze finaliza correctamente.
+
+**Configuración de los pasos del trabajo**
+
+El trabajo contiene dos pasos T-SQL. Si la carga de Bronze finaliza correctamente, se ejecuta Silver. Si cualquiera de los pasos falla, el trabajo termina notificando el error.
+
+![Configuración de los pasos de SQL Server Agent](images/automation/F010_003_Configuracion_Job_Steps.JPG)
+
+**Programación de la ejecución diaria**
+
+Se configura y habilita una programación automática para ejecutar el trabajo todos los días a las **06:00**.
+
+![Programación del trabajo SQL Server Agent](images/automation/F010_004_Programacion_Job.JPG)
+
+**Validación del historial de ejecución**
+
+Se consulta el historial almacenado en `msdb.dbo.sysjobhistory` para comprobar el resultado de la ejecución.
+
+La prueba realizada el **24 de octubre de 2026** confirma que ambos pasos finalizaron correctamente y que el trabajo terminó con estado satisfactorio.
+
+![Historial de ejecución de SQL Server Agent](images/automation/F010_006_Historial_Job_Carga_Diaria.JPG)
+
+<br>
+
 ## 7. Resultados del análisis
 
 ### Indicadores generales
