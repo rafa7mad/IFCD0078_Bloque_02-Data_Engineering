@@ -297,6 +297,36 @@ El análisis identifica a **Estados Unidos y Australia** como los dos principale
 
 Los datos incluyen ventas de **2010 a 2014**, pero **2010 y 2014 son períodos parciales**. Por ello, su comparación directa con años completos puede inducir a conclusiones equivocadas. Además, 19 líneas sin fecha válida no se incluyen en los gráficos de evolución por año.
 
+### 7.1. Evidencias de las consultas de negocio
+
+Las consultas SQL realizadas sobre las vistas de la capa Gold permiten validar los principales indicadores comerciales y comprobar la coherencia de los datos utilizados posteriormente en Power BI.
+
+**Indicadores generales de ventas**
+
+Se obtienen los resultados globales del Data Warehouse: 29.356.250 en ventas, 60.423 unidades vendidas, 27.659 pedidos distintos y 18.484 clientes con compras.
+
+![Indicadores principales de CicloNova](images/gold/F011_001_Indicadores_Principales.JPG)
+
+**Distribución de ventas por categoría**
+
+La categoría `Bikes` concentra el 96,46 % de las ventas, seguida de `Accessories` (2,39 %) y `Clothing` (1,16 %).
+
+![Ventas por categoría](images/gold/F011_002_Ventas_Por_Categoria.JPG)
+
+**Análisis de ventas por país**
+
+Estados Unidos lidera las ventas con 9.162.327, seguido de Australia con 9.060.172. También se identifican ventas correspondientes a clientes sin país determinado (`n/a`).
+
+![Ventas por país](images/gold/F011_003_Ventas_Por_Pais.JPG)
+
+**Validación de la coherencia de los importes**
+
+Se comprueba que no existen líneas de venta con importes nulos, no positivos o diferentes del producto entre cantidad y precio. El resultado de la validación es **0 líneas incoherentes**.
+
+![Validación de importes de ventas](images/gold/F011_007_Validacion_Importes.JPG)
+
+<br>
+
 ## 8. Dashboard de Power BI
 
 Se desarrolló **`CicloNova — Sales Dashboard`**, conectado a las vistas Gold de `DataWarehouse` en modo **Import**.
