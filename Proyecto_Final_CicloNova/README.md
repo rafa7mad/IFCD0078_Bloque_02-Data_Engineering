@@ -156,6 +156,38 @@ Se comprueba que las seis tablas contienen los registros esperados, coincidiendo
 
 <br>
 
+### 5.2. Evidencias de la capa Silver
+
+La capa Silver transforma, limpia y estandariza los datos originales de Bronze mediante el procedimiento almacenado `silver.load_silver`.
+
+Se aplican reglas de calidad para eliminar duplicados, normalizar atributos, corregir formatos y garantizar la coherencia de los datos antes de su exposición en Gold.
+
+**Validación de clientes**
+
+Se comprueba que la tabla `silver.crm_cust_info` contiene 18.484 clientes, sin identificadores duplicados o nulos. También se verifica la distribución de los atributos de género y estado civil.
+
+![Validación de clientes Silver](images/silver/F008_006_Validacion_Clientes_Silver.JPG)
+
+**Validación de productos**
+
+Se comprueba que la tabla `silver.crm_prd_info` contiene 397 versiones de productos, de las cuales 295 están vigentes, sin inconsistencias en sus periodos de validez.
+
+![Validación de productos Silver](images/silver/F008_011_Validacion_Productos_Silver.JPG)
+
+**Validación de ventas**
+
+La tabla `silver.crm_sales_details` contiene 60.398 líneas de venta. Las comprobaciones identifican 19 registros sin fecha de pedido y confirman que no existen importes incorrectos ni diferencias entre ventas, cantidades y precios.
+
+![Validación de ventas Silver](images/silver/F008_016_Validacion_Ventas_Silver.JPG)
+
+**Normalización de países del ERP**
+
+La tabla `silver.erp_loc_a101` contiene los países normalizados, correspondientes a seis países identificados y el valor `n/a`. También se comprueba que los identificadores de cliente no conservan guiones.
+
+![Validación de países ERP](images/silver/F008_024_Validacion_Paises_ERP.JPG)
+
+<br>
+
 ## 6. Automatización — SQL Server Agent
 
 Se creó el trabajo **`DWH - Carga diaria`**, programado para ejecutarse **todos los días a las 06:00**, con dos pasos secuenciales:
