@@ -212,11 +212,11 @@ Ticket Medio = DIVIDE([Ventas Totales], [Pedidos], 0)
 
 **Archivo de Power BI:** [`powerbi/CicloNova_Dashboard.pbix`](powerbi/CicloNova_Dashboard.pbix).
 
-**Captura final:** `images/powerbi/FPBI_016_Dashboard_Final.JPG`. Una vez subida a esa ubicación, se podrá insertar en este README con:
+### Dashboard final
 
-```markdown
 ![Dashboard final de CicloNova](images/powerbi/FPBI_016_Dashboard_Final.JPG)
-```
+
+<br>
 
 ## 9. Organización del repositorio
 
