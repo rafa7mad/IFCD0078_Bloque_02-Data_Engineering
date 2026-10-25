@@ -214,7 +214,8 @@ La vista `gold.fact_sales` contiene 60.398 líneas de venta. Se comprueba la est
 
 **Comprobación de integridad entre Silver y Gold**
 
-Se verifica que las 60.398 líneas de venta de `silver.crm_sales_details` están representadas en `gold.fact_sales`, sin pérdida de registros durante la integración.
+Se verifica que las 60.398 líneas de venta de `silver.crm_sales_details` están representadas en `gold.fact_sales`.
+Se comprueba que ambas vistas presentan el mismo número de líneas de venta: 60.398 registros en Silver y 60.398 en Gold.
 
 ![Validación de registros Silver y Gold](images/gold/F009_009_Resultados_Quality_Checks_Gold.JPG)
 
@@ -402,7 +403,7 @@ Proyecto_Final_CicloNova/
     └── quality_checks_gold.sql
 ```
 
-> La estructura indica la organización acordada para el proyecto. Antes de activar los enlaces de evidencias, se debe verificar la presencia de cada imagen en la carpeta correspondiente.
+<br>
 
 ## 10. Documentación técnica y evidencias
 
@@ -414,7 +415,11 @@ Proyecto_Final_CicloNova/
 | [Catálogo de datos](docs/data_catalog.md) | Columnas, tipos, significado y procedencia de Gold |
 | [Convenciones de nombres](docs/naming_conventions.md) | Reglas para SQL, archivos y artefactos |
 
-Las capturas del desarrollo se organizan en [`images/`](images/), separadas por capa o componente. Entre las evidencias del dashboard figuran las validaciones de medidas, los segmentadores y la captura final `FPBI_016_Dashboard_Final.JPG`.
+
+Las evidencias del proyecto se organizan en [`images/`](images/), agrupadas por las capas Bronze, Silver y Gold, la automatización con SQL Server Agent y Power BI.
+
+Las capturas documentan la ejecución de los procedimientos, las validaciones de calidad, los resultados de las consultas SQL y el dashboard final de CicloNova.
+
 
 ## 11. Limitaciones y mejoras posibles
 
