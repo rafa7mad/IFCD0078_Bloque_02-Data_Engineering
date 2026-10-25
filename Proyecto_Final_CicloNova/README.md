@@ -419,8 +419,28 @@ Las evidencias del proyecto se organizan en [`images/`](images/), agrupadas por 
 
 Las capturas documentan la ejecución de los procedimientos, las validaciones de calidad, los resultados de las consultas SQL y el dashboard final de CicloNova.
 
+## 11. Presentación y entregables del proyecto
 
-## 11. Limitaciones y mejoras posibles
+Como parte de la entrega final, se ha elaborado una presentación PowerPoint que resume los objetivos, la arquitectura Medallion, las transformaciones de datos, el modelo dimensional en estrella, la automatización con SQL Server Agent y los resultados obtenidos mediante Power BI.
+
+### Presentación PowerPoint
+
+📊 **[Descargar presentación final de CicloNova (.pptx)](presentation/CicloNova_Presentacion_Final.pptx)**
+
+### Archivos de entrega
+
+| Entregable | Archivo o ubicación |
+|---|---|
+| Repositorio completo | [Proyecto Final CicloNova](https://github.com/rafa7mad/IFCD0078_Bloque_02-Data_Engineering/tree/main/Proyecto_Final_CicloNova) |
+| Presentación PowerPoint | [CicloNova_Presentacion_Final.pptx](presentation/CicloNova_Presentacion_Final.pptx) |
+| Dashboard de Power BI | [CicloNova_Dashboard.pbix](powerbi/CicloNova_Dashboard.pbix) |
+| Scripts SQL | [Carpeta scripts](scripts/) |
+| Consultas de validación | [Carpeta tests](tests/) |
+| Documentación técnica | [Carpeta docs](docs/) |
+
+La entrega incluye tanto los archivos necesarios para revisar el desarrollo técnico como las evidencias de ejecución, validación y visualización de los resultados.
+
+## 12. Limitaciones y mejoras posibles
 
 - **Cargas completas:** Bronze y Silver se recargan por completo; una evolución podría introducir cargas incrementales.
 - **Dependencia del entorno local:** SQL Server Agent requiere servicios y VM activos.
@@ -428,7 +448,7 @@ Las capturas documentan la ejecución de los procedimientos, las validaciones de
 - **Calidad de origen:** se conservan las 19 ventas sin fecha de pedido válida y la incidencia de los siete pedales sin categoría ERP.
 - **Ampliaciones propuestas, no implementadas en esta entrega:** tabla `dbo.dwh_load_log` y vista `gold.report_customers` de segmentación VIP/Regular/New.
 
-## 12. Referencia y contexto formativo
+## 13. Referencia y contexto formativo
 
 Proyecto desarrollado a partir del material **«Caso_01-Simple-Ejemplo_de_un_modelo_estrella»**, especialmente sus apartados de arquitectura, construcción por capas, validaciones, documentación y ejercicios propuestos.
 
