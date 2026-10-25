@@ -22,6 +22,37 @@ Proyecto de integración y análisis de datos para **CicloNova**, una empresa fi
 
 ```mermaid
 flowchart LR
+    subgraph SOURCE[Fuentes de datos]
+      CRM[CRM: 3 CSV]
+      ERP[ERP: 3 CSV]
+    end
+    subgraph SQL[SQL Server - DataWarehouse]
+      B[(Bronze<br/>6 tablas originales)]
+      S[(Silver<br/>6 tablas depuradas)]
+      G[[Gold<br/>3 vistas de negocio]]
+    end
+    PBI[Power BI Desktop<br/>Modelo importado y DAX]
+    CRM -->|BULK INSERT| B
+    ERP -->|BULK INSERT| B
+    B -->|silver.load_silver| S
+    S -->|Vistas y JOIN| G
+    G -->|Import| PBI
+    AGENT[SQL Server Agent<br/>DWH - Carga diaria] -.->|1. bronze.load_bronze| B
+    AGENT -.->|2. silver.load_silver| S
+    classDef source fill:#E0F2FE,stroke:#0284C7,color:#082F49
+    classDef bronze fill:#FFEDD5,stroke:#C2410C,color:#7C2D12
+    classDef silver fill:#E2E8F0,stroke:#64748B,color:#0F172A
+    classDef gold fill:#FEF3C7,stroke:#D97706,color:#78350F
+    classDef output fill:#DBEAFE,stroke:#2563EB,color:#1E3A8A
+    class CRM,ERP source
+    class B bronze
+    class S silver
+    class G gold
+    class PBI output
+```
+
+```mermaid
+flowchart LR
     subgraph SRC[Fuentes de datos]
         CRM[CRM · 3 CSV]
         ERP[ERP · 3 CSV]
