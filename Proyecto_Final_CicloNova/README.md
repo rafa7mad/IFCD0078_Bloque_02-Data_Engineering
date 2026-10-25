@@ -188,6 +188,38 @@ La tabla `silver.erp_loc_a101` contiene los países normalizados, correspondient
 
 <br>
 
+### 5.3. Evidencias de la capa Gold
+
+La capa Gold integra los datos depurados de Silver mediante tres vistas SQL que conforman un modelo dimensional en estrella: `gold.dim_customers`, `gold.dim_products` y `gold.fact_sales`.
+
+Estas vistas permiten consultar información consolidada de clientes, productos y ventas, preparada para su análisis desde Power BI.
+
+**Validación de la dimensión de clientes**
+
+La vista `gold.dim_customers` contiene 18.484 clientes, integrando la información del CRM y ERP. Se comprueba la distribución por género, con 9.341 hombres, 9.128 mujeres y 15 registros con valor `n/a`.
+
+![Validación de clientes Gold](images/gold/F009_003_Validacion_Dim_Customers.JPG)
+
+**Validación de la dimensión de productos**
+
+La vista `gold.dim_products` contiene 295 productos vigentes. Se identifican siete productos de tipo pedal, asociados al código `CO_PE`, sin correspondencia en el catálogo de categorías del ERP.
+
+![Validación de productos Gold](images/gold/F009_005_Validacion_Dim_Products.JPG)
+
+**Validación de la tabla de hechos de ventas**
+
+La vista `gold.fact_sales` contiene 60.398 líneas de venta. Se comprueba la estructura de los registros, las claves de relación con las dimensiones y los principales atributos de las operaciones comerciales.
+
+![Validación de ventas Gold](images/gold/F009_007_Validacion_Fact_Sales.JPG)
+
+**Comprobación de integridad entre Silver y Gold**
+
+Se verifica que las 60.398 líneas de venta de `silver.crm_sales_details` están representadas en `gold.fact_sales`, sin pérdida de registros durante la integración.
+
+![Validación de registros Silver y Gold](images/gold/F009_009_Resultados_Quality_Checks_Gold.JPG)
+
+<br>
+
 ## 6. Automatización — SQL Server Agent
 
 Se creó el trabajo **`DWH - Carga diaria`**, programado para ejecutarse **todos los días a las 06:00**, con dos pasos secuenciales:
