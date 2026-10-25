@@ -214,8 +214,7 @@ La vista `gold.fact_sales` contiene 60.398 líneas de venta. Se comprueba la est
 
 **Comprobación de integridad entre Silver y Gold**
 
-Se verifica que las 60.398 líneas de venta de `silver.crm_sales_details` están representadas en `gold.fact_sales`.
-Se comprueba que ambas vistas presentan el mismo número de líneas de venta: 60.398 registros en Silver y 60.398 en Gold.
+Se comprueba que `silver.crm_sales_details` y `gold.fact_sales` presentan el mismo número de líneas de venta: 60.398 registros en cada capa.
 
 ![Validación de registros Silver y Gold](images/gold/F009_009_Resultados_Quality_Checks_Gold.JPG)
 
