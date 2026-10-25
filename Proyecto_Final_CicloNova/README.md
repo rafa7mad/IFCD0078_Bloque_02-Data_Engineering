@@ -51,26 +51,6 @@ flowchart LR
     class PBI output
 ```
 
-```mermaid
-flowchart LR
-    subgraph SRC[Fuentes de datos]
-        CRM[CRM · 3 CSV]
-        ERP[ERP · 3 CSV]
-    end
-    subgraph DWH[SQL Server · DataWarehouse]
-        B[(Bronze · 6 tablas)]
-        S[(Silver · 6 tablas)]
-        G[[Gold · 3 vistas]]
-        B -->|Limpieza y normalización| S
-        S -->|Integración y modelado| G
-    end
-    CRM -->|BULK INSERT| B
-    ERP -->|BULK INSERT| B
-    G -->|Import| PBI[Power BI Desktop · Sales Dashboard]
-    JOB[SQL Server Agent · 06:00] -.->|Carga Bronze y Silver| B
-    JOB -.->|Orquestación| S
-```
-
 | Capa | Objetivo | Implementación |
 |---|---|---|
 | **Bronze** | Ingesta de los CSV | 6 tablas; procedimiento `bronze.load_bronze` |
