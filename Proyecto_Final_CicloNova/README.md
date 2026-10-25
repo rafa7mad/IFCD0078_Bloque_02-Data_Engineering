@@ -136,6 +136,26 @@ Los datos con fecha de pedido `NULL` participan en los KPI globales, pero no en 
 
 Scripts de validación: [`quality_checks_silver.sql`](tests/quality_checks_silver.sql) y [`quality_checks_gold.sql`](tests/quality_checks_gold.sql).
 
+### 5.1. Evidencias de la capa Bronze
+
+La capa Bronze conserva los datos originales procedentes de los sistemas CRM y ERP en seis tablas físicas de SQL Server.
+
+La ingesta se realiza mediante `BULK INSERT`, utilizando el procedimiento almacenado `bronze.load_bronze`.
+
+**Ejecución del procedimiento de carga Bronze**
+
+La ejecución del procedimiento finaliza correctamente, confirmando la carga de los datos de origen.
+
+![Ejecución del procedimiento Bronze](images/bronze/F007_006_Ejecucion_Procedimiento_Bronze.JPG)
+
+**Validación de las seis tablas Bronze**
+
+Se comprueba que las seis tablas contienen los registros esperados, coincidiendo con los volúmenes originales de los archivos CSV.
+
+![Validación de las tablas Bronze](images/bronze/F007_007_Validacion_Tablas_Bronze.JPG)
+
+<br>
+
 ## 6. Automatización — SQL Server Agent
 
 Se creó el trabajo **`DWH - Carga diaria`**, programado para ejecutarse **todos los días a las 06:00**, con dos pasos secuenciales:
