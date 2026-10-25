@@ -367,7 +367,6 @@ La estructura conserva las carpetas originales del ejercicio e incorpora las amp
 ```text
 Proyecto_Final_CicloNova/
 ├── README.md
-├── Proyecto_Final_SQL_Server_PowerBI.md
 ├── datasets/
 │   ├── source_crm/
 │   └── source_erp/
@@ -376,7 +375,8 @@ Proyecto_Final_CicloNova/
 │   ├── data_lineage.md
 │   ├── data_model.md
 │   ├── data_catalog.md
-│   └── naming_conventions.md
+│   ├── naming_conventions.md
+│   └── development_log.md
 ├── images/
 │   ├── bronze/
 │   ├── silver/
@@ -385,6 +385,8 @@ Proyecto_Final_CicloNova/
 │   └── powerbi/
 ├── powerbi/
 │   └── CicloNova_Dashboard.pbix
+├── presentation/
+│   └── CicloNova_Presentacion_Final.pptx
 ├── scripts/
 │   ├── init_database.sql
 │   ├── bronze/
@@ -413,6 +415,7 @@ Proyecto_Final_CicloNova/
 | [Modelo dimensional](docs/data_model.md) | Esquema estrella, grano, claves y relaciones |
 | [Catálogo de datos](docs/data_catalog.md) | Columnas, tipos, significado y procedencia de Gold |
 | [Convenciones de nombres](docs/naming_conventions.md) | Reglas para SQL, archivos y artefactos |
+| [Memoria de desarrollo](docs/development_log.md) | Desarrollo paso a paso, consultas SQL, pruebas y resolución de incidencias |
 
 
 Las evidencias del proyecto se organizan en [`images/`](images/), agrupadas por las capas Bronze, Silver y Gold, la automatización con SQL Server Agent y Power BI.
